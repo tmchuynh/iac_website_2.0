@@ -21,23 +21,21 @@ export default function IntroHeader() {
 
   return (
     <>
-      <HeroSection imageSrc="/images/Class_Photos/Soccer/soccer-5.jpg" />
-
       <div className="">
-        <div className="mx-auto w-11/12 md:py-24 py-12 flex flex-col-reverse lg:flex-row items-center justify-between">
-          <div className="mx-8 flex flex-col md:py-12 lg:py-0">
-            <div className="hidden sm:mb-8 md:flex">
-              <div className="relative rounded-full px-3 py-1 text-sm/6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+        <div className="flex lg:flex-row flex-col-reverse justify-between items-center mx-auto py-12 md:py-24 w-11/12">
+          <div className="flex flex-col mx-8 md:py-12 lg:py-0">
+            <div className="md:flex hidden sm:mb-8">
+              <div className="relative px-3 py-1 rounded-full ring-1 ring-gray-900/10 hover:ring-gray-900/20 text-sm/6">
                 <a
                   href="/register"
-                  className="font-[CuteRabbit] tracking-widest text-xl"
+                  className="font-[CuteRabbit] text-xl tracking-widest"
                 >
                   Registration is now open. Book before classes fill up!{" "}
                 </a>
               </div>
             </div>
 
-            <h2 className="max-w-2xl text-4xl font-semibold tracking-wider text-balance  sm:text-5xl font-[Luckiest]">
+            <h2 className="max-w-2xl font-[Luckiest] font-semibold text-4xl text-balance sm:text-5xl tracking-wider">
               Superior classes, exceptional instructors, outstanding outcomes.
             </h2>
             <p>
@@ -48,7 +46,7 @@ export default function IntroHeader() {
               for everyone!
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-6">
+            <div className="flex flex-wrap items-center gap-6 mt-10">
               <Button onClick={() => router.push("/register")}>
                 Book Classes Today!
               </Button>
@@ -65,13 +63,13 @@ export default function IntroHeader() {
             <img
               alt="IAC Logo"
               src="/images/whiteLogo.png"
-              className="h-28 w-auto object-contain"
+              className="w-auto h-28 object-contain"
             />
           ) : (
             <img
               alt="IAC Logo"
               src="/images/tShirtLogo.png"
-              className="h-40 xl:h-64 w-auto object-contain"
+              className="w-auto h-40 xl:h-64 object-contain"
             />
           )}
         </div>
