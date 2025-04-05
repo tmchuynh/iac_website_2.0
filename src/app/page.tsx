@@ -10,7 +10,7 @@ export default function Home() {
       <FeaturedTestimonial />
 
       <section className="mb-12">
-        <h1 className="my-4 font-[Luckiest] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Our Programs
         </h1>
         <ProgramsSection />
