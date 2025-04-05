@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils/utils";
 import React from "react";
 import { LuArrowBigRightDash } from "react-icons/lu";
-import { DynamicButtonProps } from "@/lib/types";
+import { DynamicButtonProps } from "@/lib/types/types";
 import { Button } from "../ui/button";
 
 const DynamicButton: React.FC<DynamicButtonProps> = ({
