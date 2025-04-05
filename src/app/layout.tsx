@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import BackToTop from "@/components/buttons/BackToTop";
 import StaticBreadcrumb from "@/components/breadcrumb/BreadcrumbWrapper";
+import NavBar from "@/components/navigation/NavBar";
 
 export default function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default function RootLayout({
           <NotFoundProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <main className="flex-grow">
+                <NavBar />
                 <StaticBreadcrumb />
                 {children}
               </main>
