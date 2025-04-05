@@ -1,4 +1,4 @@
-import { testimonialsInfo } from "../types/information";
+import { testimonialsInfo } from "../types/cards";
 
 export const testimonials: testimonialsInfo[] = [
   {
