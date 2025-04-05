@@ -1,4 +1,5 @@
 import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Apply() {
   return (
@@ -44,11 +45,12 @@ export default function Apply() {
               Arcu sed malesuada et magna.
             </p>
             <div className="lg:flex-none lg:mt-6 lg:w-80">
-              <img
+              <Image
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"
-                className="h-12 w-auto"
+                className="w-auto h-12"
               />
+
               <figure className="mt-10">
                 <blockquote className="font-semibold text-gray-900 text-lg/8">
                   <p>
@@ -58,10 +60,10 @@ export default function Apply() {
                   </p>
                 </blockquote>
                 <figcaption className="flex gap-x-6 mt-10">
-                  <img
+                  <Image
                     alt=""
                     src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
-                    className="size-12 flex-none rounded-full bg-gray-50"
+                    className="flex-none bg-gray-50 rounded-full size-12"
                   />
 
                   <div>
