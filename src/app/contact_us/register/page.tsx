@@ -17,13 +17,13 @@ const Register: FC = () => {
       <main className="mx-auto px-4 py-8 w-11/12">
         <section className="mb-5">
           <div className="text-center">
-            <h1 className="my-4 text-balance uppercase font-[Luckiest] tracking-wider lg:text-4xl text-lg text-secondary font-extrabold text-center">
+            <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
               Register Today
             </h1>
           </div>
 
-          <div className="mb-12 w-11/12 mx-auto">
-            <h2 className="text-2xl font-semibold mb-2 font-[CuteRabbit] tracking-widest text-destructive underline">
+          <div className="mx-auto mb-12 w-11/12">
+            <h2 className="mb-2 font-[CuteRabbit] font-semibold text-2xl text-destructive underline tracking-widest">
               New Credit Card Processing Procedure
             </h2>
             <ol className="list-decimal">
@@ -35,7 +35,7 @@ const Register: FC = () => {
             </ol>
           </div>
 
-          <div className="mb-12 w-11/12 mx-auto">
+          <div className="mx-auto mb-12 w-11/12">
             <div className="w-full h-[4150px]">
               <iframe
                 title="Registration Form"
