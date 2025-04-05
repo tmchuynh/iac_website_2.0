@@ -36,7 +36,7 @@ export const ProgramDetails: React.FC = () => {
             <div className="" id={`${programIndex}`}>
               {/* Content */}
               <div className="pb-6">
-                <h2 className="flex justify-between mb-4 font-[MorningBakery] font-bold text-2xl tracking-widest">
+                <h2 className="flex justify-between mb-4 font-bold text-2xl tracking-widest">
                   <div className="text-secondary">{program.title}</div>
                   {program.icons.map((Icon, iconIndex) => (
                     <span
@@ -51,7 +51,7 @@ export const ProgramDetails: React.FC = () => {
                 {/* Overview */}
                 {program.overview && (
                   <>
-                    <h3 className="mt-4 font-[CuteRabbit] font-semibold text-lg tracking-widest">
+                    <h3 className="mt-4 font-semibold text-lg tracking-widest">
                       Overview
                     </h3>
                     <p className="mb-4">{program.overview}</p>
@@ -61,7 +61,7 @@ export const ProgramDetails: React.FC = () => {
                 {/* Keypoints */}
                 {program.keypoints.length > 0 && (
                   <>
-                    <h3 className="mt-4 font-[CuteRabbit] font-semibold text-lg tracking-widest">
+                    <h3 className="mt-4 font-semibold text-lg tracking-widest">
                       Key Components
                     </h3>
                     <ul className="space-y-2 pl-6 list-disc">
@@ -78,7 +78,7 @@ export const ProgramDetails: React.FC = () => {
                 {/* Outcomes */}
                 {program.outcome && (
                   <>
-                    <h3 className="mt-4 font-[CuteRabbit] font-semibold text-lg tracking-widest">
+                    <h3 className="mt-4 font-semibold text-lg tracking-widest">
                       Learning Outcomes
                     </h3>
                     <p className="mb-4">{program.outcome}</p>
@@ -88,7 +88,7 @@ export const ProgramDetails: React.FC = () => {
                 {/* Goals */}
                 {program.goal && (
                   <>
-                    <h3 className="mt-4 font-[CuteRabbit] font-semibold text-lg tracking-widest">
+                    <h3 className="mt-4 font-semibold text-lg tracking-widest">
                       Program Goals
                     </h3>
                     <p className="">{program.goal}</p>
@@ -99,7 +99,7 @@ export const ProgramDetails: React.FC = () => {
                 {program.images.length > 0 ? (
                   <div className="py-2">
                     <div className="flex justify-between items-start pb-7">
-                      <h3 className="m-0 font-[CuteRabbit] font-semibold text-lg tracking-widest">
+                      <h3 className="m-0 font-semibold text-lg tracking-widest">
                         Class Images
                       </h3>
                       <Button

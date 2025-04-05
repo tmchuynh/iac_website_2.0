@@ -1,19 +1,19 @@
 import Image from "next/image";
 export default function ImageTiles() {
   return (
-    <div className="bg-white py-32 overflow-hidden">
+    <div className="py-32 overflow-hidden">
       <div className="lg:flex mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="lg:flex-none gap-x-12 gap-y-16 lg:gap-y-8 grid grid-cols-1 mx-auto lg:mx-0 lg:min-w-full max-w-2xl lg:max-w-none">
           <div className="lg:col-end-1 lg:pb-8 lg:w-full lg:max-w-lg">
-            <h2 className="font-semibold text-4xl text-gray-900 sm:text-5xl tracking-tight">
+            <h2 className="font-semibold text-4xl sm:text-5xl tracking-tight">
               Our people
             </h2>
-            <p className="mt-6 text-gray-600 text-xl/8">
+            <p className="mt-6 text-xl/8">
               Quasi est quaerat. Sit molestiae et. Provident ad dolorem
               occaecati eos iste. Soluta rerum quidem minus ut molestiae velit
               error quod. Excepturi quidem expedita molestias quas.
             </p>
-            <p className="mt-6 text-base/7 text-gray-600">
+            <p className="mt-6 text-base/7">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
               fugiat. Quasi aperiam sit non sit neque reprehenderit.
@@ -21,7 +21,7 @@ export default function ImageTiles() {
             <div className="flex mt-10">
               <a
                 href="#"
-                className="bg-indigo-600 hover:bg-indigo-500 shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm"
               >
                 Join our team <span aria-hidden="true">&rarr;</span>
               </a>
@@ -32,7 +32,7 @@ export default function ImageTiles() {
               <Image
                 alt=""
                 src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
-                className="bg-gray-50 rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
+                className="rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
                 width={1152}
                 height={842}
               />
@@ -42,7 +42,7 @@ export default function ImageTiles() {
                 <Image
                   alt=""
                   src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
-                  className="flex-none bg-gray-50 rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
+                  className="flex-none rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
                   width={768}
                   height={604}
                 />
@@ -51,7 +51,7 @@ export default function ImageTiles() {
                 <Image
                   alt=""
                   src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
-                  className="flex-none bg-gray-50 rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
+                  className="flex-none rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
                   width={1152}
                   height={842}
                 />
@@ -60,7 +60,7 @@ export default function ImageTiles() {
                 <Image
                   alt=""
                   src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
-                  className="bg-gray-50 rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
+                  className="rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
                   width={768}
                   height={604}
                 />

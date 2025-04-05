@@ -12,9 +12,7 @@ export default function StudentWorkCard({
   return (
     <Card key={index} className={index % 2 === 0 ? "border-r-8" : "border-l-8"}>
       <CardHeader className="pb-3">
-        <h4 className="font-[CuteRabbit] text-lg tracking-widest">
-          {work.title}
-        </h4>
+        <h4 className="text-lg tracking-widest">{work.title}</h4>
         <p className="text-xs meta">
           <span className="font-bold">By: </span>
           {work.author}

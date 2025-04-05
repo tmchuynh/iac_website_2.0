@@ -1,10 +1,10 @@
 import Image from "next/image";
 export default function Testimonial() {
   return (
-    <section className="bg-white px-6 lg:px-8 overflow-hidden isolate">
+    <section className="px-6 lg:px-8 overflow-hidden isolate">
       <div className="relative mx-auto py-24 sm:py-32 max-w-2xl lg:max-w-4xl">
         <div className="top-0 left-1/2 lg:left-36 -z-10 absolute bg-[radial-gradient(50%_100%_at_top,var(--color-indigo-100),white)] opacity-20 w-[90rem] h-[50rem] -translate-x-1/2" />
-        <div className="right-1/2 lg:right-full -z-10 absolute inset-y-0 bg-white shadow-indigo-600/10 shadow-xl mr-12 sm:mr-20 md:mr-0 lg:-mr-36 ring-1 ring-indigo-50 w-[150vw] origin-bottom-left lg:origin-center skew-x-[-30deg]" />
+        <div className="right-1/2 lg:right-full -z-10 absolute inset-y-0 shadow-indigo-600/10 shadow-xl mr-12 sm:mr-20 md:mr-0 lg:-mr-36 ring-1 w-[150vw] origin-bottom-left lg:origin-center skew-x-[-30deg]" />
         <figure className="items-center gap-x-6 gap-y-8 lg:gap-x-10 grid grid-cols-1">
           <div className="relative col-span-2 lg:col-start-1 lg:row-start-2">
             <svg
@@ -19,7 +19,7 @@ export default function Testimonial() {
               />
               <use x={86} href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" />
             </svg>
-            <blockquote className="font-semibold text-gray-900 text-xl/8 sm:text-2xl/9">
+            <blockquote className="font-semibold text-xl/8 sm:text-2xl/9">
               <p>
                 Commodo amet fugiat excepteur sunt qui ea elit cupidatat ullamco
                 consectetur ipsum elit consequat. Elit sunt proident ea nulla ad
@@ -31,12 +31,12 @@ export default function Testimonial() {
             <Image
               alt=""
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=576&h=576&q=80"
-              className="bg-indigo-50 rounded-xl lg:rounded-3xl"
+              className="rounded-xl lg:rounded-3xl"
             />
           </div>
           <figcaption className="lg:col-start-1 lg:row-start-3 text-base">
-            <div className="font-semibold text-gray-900">Judith Black</div>
-            <div className="mt-1 text-gray-500">CEO of Workcation</div>
+            <div className="font-semibold">Judith Black</div>
+            <div className="mt-1">CEO of Workcation</div>
           </figcaption>
         </figure>
       </div>

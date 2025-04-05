@@ -17,7 +17,7 @@ export default function OffsetImage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="">
       <header className="top-0 z-50 absolute inset-x-0">
         <nav
           aria-label="Global"
@@ -38,7 +38,7 @@ export default function OffsetImage() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="inline-flex justify-center items-center -m-2.5 p-2.5 rounded-md text-gray-700"
+              className="inline-flex justify-center items-center -m-2.5 p-2.5 rounded-md"
             >
               <span className="sr-only">Open main menu</span>
               <FaBars aria-hidden="true" className="size-6" />
@@ -49,14 +49,14 @@ export default function OffsetImage() {
               <a
                 key={item.name}
                 href={item.href}
-                className="font-semibold text-gray-900 text-sm/6"
+                className="font-semibold text-sm/6"
               >
                 {item.name}
               </a>
             ))}
           </div>
           <div className="lg:flex lg:flex-1 lg:justify-end hidden">
-            <a href="#" className="font-semibold text-gray-900 text-sm/6">
+            <a href="#" className="font-semibold text-sm/6">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -67,7 +67,7 @@ export default function OffsetImage() {
           className="lg:hidden"
         >
           <div className="z-50 fixed inset-0" />
-          <DialogPanel className="right-0 z-50 fixed inset-y-0 bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full sm:max-w-sm overflow-y-auto">
+          <DialogPanel className="right-0 z-50 fixed inset-y-0 px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full sm:max-w-sm overflow-y-auto">
             <div className="flex justify-between items-center">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
@@ -82,7 +82,7 @@ export default function OffsetImage() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 p-2.5 rounded-md text-gray-700"
+                className="-m-2.5 p-2.5 rounded-md"
               >
                 <span className="sr-only">Close menu</span>
                 <IoIosAdd aria-hidden="true" className="size-6" />
@@ -95,7 +95,7 @@ export default function OffsetImage() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block hover:bg-gray-50 -mx-3 px-3 py-2 rounded-lg font-semibold text-base/7 text-gray-900"
+                      className="block -mx-3 px-3 py-2 rounded-lg font-semibold text-base/7"
                     >
                       {item.name}
                     </a>
@@ -104,7 +104,7 @@ export default function OffsetImage() {
                 <div className="py-6">
                   <a
                     href="#"
-                    className="block hover:bg-gray-50 -mx-3 px-3 py-2.5 rounded-lg font-semibold text-base/7 text-gray-900"
+                    className="block -mx-3 px-3 py-2.5 rounded-lg font-semibold text-base/7"
                   >
                     Log in
                   </a>
@@ -117,15 +117,15 @@ export default function OffsetImage() {
       <div className="relative bg-linear-to-b from-indigo-100/20 pt-14 overflow-hidden isolate">
         <div
           aria-hidden="true"
-          className="right-1/2 -z-10 absolute inset-y-0 bg-white shadow-indigo-600/10 shadow-xl -mr-96 sm:-mr-80 lg:-mr-96 ring-1 ring-indigo-50 w-[200%] origin-top-right skew-x-[-30deg]"
+          className="right-1/2 -z-10 absolute inset-y-0 shadow-indigo-600/10 shadow-xl -mr-96 sm:-mr-80 lg:-mr-96 ring-1 w-[200%] origin-top-right skew-x-[-30deg]"
         />
         <div className="mx-auto px-6 lg:px-8 py-32 sm:py-40 max-w-7xl">
           <div className="lg:gap-x-16 lg:gap-y-8 xl:gap-x-8 lg:grid lg:grid-cols-2 xl:grid-cols-1 xl:grid-rows-1 mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
-            <h1 className="lg:col-span-2 max-w-2xl font-semibold text-5xl text-balance text-gray-900 sm:text-7xl tracking-tight xl:col-auto">
+            <h1 className="lg:col-span-2 max-w-2xl font-semibold text-5xl text-balance sm:text-7xl tracking-tight xl:col-auto">
               We’re changing the way people connect
             </h1>
             <div className="xl:col-end-1 xl:row-start-1 mt-6 lg:mt-0 max-w-xl">
-              <p className="font-medium text-gray-500 text-lg text-pretty sm:text-xl/8">
+              <p className="font-medium text-lg text-pretty sm:text-xl/8">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
                 lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
                 fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt
@@ -134,11 +134,11 @@ export default function OffsetImage() {
               <div className="flex items-center gap-x-6 mt-10">
                 <a
                   href="#"
-                  className="bg-indigo-600 hover:bg-indigo-500 shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm"
                 >
                   Get started
                 </a>
-                <a href="#" className="font-semibold text-gray-900 text-sm/6">
+                <a href="#" className="font-semibold text-sm/6">
                   Learn more <span aria-hidden="true">→</span>
                 </a>
               </div>

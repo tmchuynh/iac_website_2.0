@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Testimonial() {
   return (
-    <div className="relative bg-white py-24 sm:py-32 overflow-hidden isolate">
+    <div className="relative py-24 sm:py-32 overflow-hidden isolate">
       <div
         aria-hidden="true"
         className="-top-80 md:top-20 xl:top-3 left-[max(6rem,33%)] sm:left-1/2 -z-10 absolute blur-3xl lg:ml-20 xl:ml-56 transform-gpu"
@@ -18,13 +18,11 @@ export default function Testimonial() {
       </div>
       <div className="mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="mx-auto lg:mx-0 max-w-2xl">
-          <p className="font-semibold text-base/7 text-indigo-600">
-            Deploy faster
-          </p>
-          <h1 className="mt-2 font-semibold text-4xl text-gray-900 text-pretty sm:text-5xl tracking-tight">
+          <p className="font-semibold text-base/7">Deploy faster</p>
+          <h1 className="mt-2 font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
             A better workflow
           </h1>
-          <p className="mt-6 text-gray-700 text-xl/8">
+          <p className="mt-6 text-xl/8">
             Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
             arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
             feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
@@ -54,8 +52,8 @@ export default function Testimonial() {
                 strokeWidth={0}
               />
             </svg>
-            <figure className="pl-8 border-indigo-600 border-l">
-              <blockquote className="font-semibold text-gray-900 text-xl/8 tracking-tight">
+            <figure className="pl-8 border-l">
+              <blockquote className="font-semibold text-xl/8 tracking-tight">
                 <p>
                   “Vel ultricies morbi odio facilisi ultrices accumsan donec
                   lacus purus. Lectus nibh ullamcorper ac dictum justo in
@@ -67,20 +65,18 @@ export default function Testimonial() {
                 <Image
                   alt="Author avatar"
                   src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  className="flex-none bg-gray-50 mt-1 rounded-full size-10"
+                  className="flex-none mt-1 rounded-full size-10"
                   width={40}
                   height={40}
                 />
                 <div className="text-sm/6">
-                  <div className="font-semibold text-gray-900">
-                    Brenna Goyette
-                  </div>
-                  <div className="text-gray-600">@brenna</div>
+                  <div className="font-semibold">Brenna Goyette</div>
+                  <div className="">@brenna</div>
                 </div>
               </figcaption>
             </figure>
           </div>
-          <div className="lg:col-span-7 max-w-xl text-base/7 text-gray-700">
+          <div className="lg:col-span-7 max-w-xl text-base/7">
             <p>
               Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
               enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
@@ -89,30 +85,20 @@ export default function Testimonial() {
               Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
               sed turpis id.
             </p>
-            <ul role="list" className="space-y-8 mt-8 max-w-xl text-gray-600">
+            <ul role="list" className="space-y-8 mt-8 max-w-xl">
               <li className="flex gap-x-3">
-                <FaCloud
-                  aria-hidden="true"
-                  className="flex-none mt-1 text-indigo-600 size-5"
-                />
+                <FaCloud aria-hidden="true" className="flex-none mt-1 size-5" />
                 <span>
-                  <strong className="font-semibold text-gray-900">
-                    Push to deploy.
-                  </strong>{" "}
+                  <strong className="font-semibold">Push to deploy.</strong>{" "}
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Maiores impedit perferendis suscipit eaque, iste dolor
                   cupiditate blanditiis ratione.
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <FaLock
-                  aria-hidden="true"
-                  className="flex-none mt-1 text-indigo-600 size-5"
-                />
+                <FaLock aria-hidden="true" className="flex-none mt-1 size-5" />
                 <span>
-                  <strong className="font-semibold text-gray-900">
-                    SSL certificates.
-                  </strong>{" "}
+                  <strong className="font-semibold">SSL certificates.</strong>{" "}
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
                   qui lorem cupidatat commodo.
                 </span>
@@ -120,12 +106,10 @@ export default function Testimonial() {
               <li className="flex gap-x-3">
                 <FaDatabase
                   aria-hidden="true"
-                  className="flex-none mt-1 text-indigo-600 size-5"
+                  className="flex-none mt-1 size-5"
                 />
                 <span>
-                  <strong className="font-semibold text-gray-900">
-                    Database backups.
-                  </strong>{" "}
+                  <strong className="font-semibold">Database backups.</strong>{" "}
                   Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
                   Et magna sit morbi lobortis.
                 </span>
@@ -138,7 +122,7 @@ export default function Testimonial() {
               ultrices hac adipiscing egestas. Iaculis convallis ac tempor et
               ut. Ac lorem vel integer orci.
             </p>
-            <h2 className="mt-16 font-bold text-2xl text-gray-900 tracking-tight">
+            <h2 className="mt-16 font-bold text-2xl tracking-tight">
               No server? No problem.
             </h2>
             <p className="mt-6">

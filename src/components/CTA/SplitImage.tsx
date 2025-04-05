@@ -40,10 +40,10 @@ export default function SplitImage() {
           <h2 className="font-semibold text-base/7 text-indigo-400">
             Award winning support
           </h2>
-          <p className="mt-2 font-semibold text-4xl text-white sm:text-5xl tracking-tight">
+          <p className="mt-2 font-semibold text-4xl sm:text-5xl tracking-tight">
             We’re here to help
           </p>
-          <p className="mt-6 text-base/7 text-gray-300">
+          <p className="mt-6 text-base/7300">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas
             tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim
             et fermentum, augue. Aliquet amet volutpat quisque ut interdum
@@ -52,7 +52,7 @@ export default function SplitImage() {
           <div className="mt-8">
             <a
               href="#"
-              className="inline-flex bg-white/10 hover:bg-white/20 shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex/10 hover:bg-white/20 shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm focus-visible:outline-white"
             >
               Visit the help center
             </a>

@@ -25,11 +25,8 @@ export default function IntroHeader() {
         <div className="flex lg:flex-row flex-col-reverse justify-between items-center mx-auto py-12 md:py-24 w-11/12">
           <div className="flex flex-col mx-8 md:py-12 lg:py-0">
             <div className="md:flex hidden sm:mb-8">
-              <div className="relative px-3 py-1 rounded-full ring-1 ring-gray-900/10 hover:ring-gray-900/20 text-sm/6">
-                <a
-                  href="/register"
-                  className="font-[CuteRabbit] text-xl tracking-widest"
-                >
+              <div className="relative px-3 py-1 rounded-full ring-1 hover:ring-gray-900/20 text-sm/6">
+                <a href="/register" className="text-xl tracking-widest">
                   Registration is now open. Book before classes fill up!{" "}
                 </a>
               </div>

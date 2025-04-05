@@ -1,8 +1,8 @@
 import Image from "next/image";
 export default function FeaturedTestimonial() {
   return (
-    <div className="bg-white pt-24 sm:pt-32 pb-16 sm:pb-24 xl:pb-32">
-      <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
+    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24 xl:pb-32">
+      <div className="pb-20 sm:pb-24 xl:pb-0">
         <div className="flex xl:flex-row flex-col items-center xl:items-stretch gap-x-8 gap-y-10 sm:gap-y-8 mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="xl:flex-none -mt-8 xl:-mb-8 w-full xl:w-96 max-w-2xl">
             <div className="relative md:-mx-8 xl:mx-0 h-full aspect-2/1 xl:aspect-auto">
@@ -27,7 +27,7 @@ export default function FeaturedTestimonial() {
                 />
                 <use x={86} href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" />
               </svg>
-              <blockquote className="font-semibold text-white text-xl/8 sm:text-2xl/9">
+              <blockquote className="font-semibold text-xl/8 sm:text-2xl/9">
                 <p>
                   Gravida quam mi erat tortor neque molestie. Auctor aliquet at
                   porttitor a enim nunc suscipit tincidunt nunc. Et non lorem
@@ -36,8 +36,8 @@ export default function FeaturedTestimonial() {
                 </p>
               </blockquote>
               <figcaption className="mt-8 text-base">
-                <div className="font-semibold text-white">Judith Black</div>
-                <div className="mt-1 text-gray-400">CEO of Workcation</div>
+                <div className="font-semibold">Judith Black</div>
+                <div className="mt-1">CEO of Workcation</div>
               </figcaption>
             </figure>
           </div>
