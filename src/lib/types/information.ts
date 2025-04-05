@@ -53,12 +53,3 @@ export type staffInfo = {
     };
   }[];
 };
-
-export type testimonialsInfo = {
-  name: string;
-  title: string;
-  school: string;
-  image?: string;
-  class: string;
-  text: string;
-};

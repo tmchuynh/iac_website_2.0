@@ -22,3 +22,12 @@ export type StudentProject = {
   preview?: string;
   images?: string[];
 };
+
+export type testimonialsInfo = {
+  name: string;
+  title: string;
+  school: string;
+  image?: string;
+  class: string;
+  text: string;
+};
