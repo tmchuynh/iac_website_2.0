@@ -1,10 +1,8 @@
-import { ThemeProvider } from "next-themes";
-import { NotFoundProvider } from "./context/NotFoundContext";
+import StaticBreadcrumb from "@/components/breadcrumb/BreadcrumbWrapper";
+import BackToTop from "@/components/buttons/BackToTop";
+import NavBar from "@/components/navigation/NavBar";
 import "./globals.css";
 import { Providers } from "./providers";
-import BackToTop from "@/components/buttons/BackToTop";
-import StaticBreadcrumb from "@/components/breadcrumb/BreadcrumbWrapper";
-import NavBar from "@/components/navigation/NavBar";
 
 export default function RootLayout({
   children,
@@ -15,16 +13,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <Providers>
-          <NotFoundProvider>
-            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <main className="flex-grow">
-                <NavBar />
-                <StaticBreadcrumb />
-                {children}
-              </main>
-              <BackToTop />
-            </ThemeProvider>
-          </NotFoundProvider>
+          <main className="flex-grow">
+            <NavBar />
+            <StaticBreadcrumb />
+            {children}
+          </main>
+          <BackToTop />
         </Providers>
       </body>
     </html>
