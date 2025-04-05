@@ -2,7 +2,13 @@ import { StudentProject } from "@/lib/types/cards";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import Image from "next/image";
 
-export default function StudentWorkCard(work: StudentProject, index: number) {
+export default function StudentWorkCard({
+  work,
+  index,
+}: {
+  work: StudentProject;
+  index: number;
+}) {
   return (
     <Card key={index} className={index % 2 === 0 ? "border-r-8" : "border-l-8"}>
       <CardHeader className="pb-3">
