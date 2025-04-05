@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { JSX, ReactNode } from "react";
 import { NotFoundProvider } from "./context/NotFoundContext";
 import { TabsProvider } from "./context/TabsContext";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 /**
  * A component that provides various context providers to its children.
@@ -18,7 +19,9 @@ export function Providers({ children }: { children: ReactNode }): JSX.Element {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
       <NotFoundProvider>
-        <TabsProvider>{children}</TabsProvider>
+        <TabsProvider>
+          <TooltipProvider>{children}</TooltipProvider>
+        </TabsProvider>
       </NotFoundProvider>
     </ThemeProvider>
   );
