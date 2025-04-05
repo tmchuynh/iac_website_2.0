@@ -1,7 +1,10 @@
 import { Person } from "@/lib/types/cards";
-import { formatURL } from "@/lib/utils/format";
+import { formatIconName, formatURL } from "@/lib/utils/format";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import DynamicButton from "../buttons/button-dynamic";
+import { Tooltip, TooltipContent } from "../ui/tooltip";
+import { TooltipTrigger } from "@radix-ui/react-tooltip";
 
 export const StaffCards = (person: Person) => {
   const router = useRouter();
@@ -11,7 +14,7 @@ export const StaffCards = (person: Person) => {
     }
   };
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleClick} className="group">
       <Image
         alt=""
         src={person.image}
@@ -23,7 +26,24 @@ export const StaffCards = (person: Person) => {
         {person.name}
       </h3>
       <p className="text-md">{person.role}</p>
-      {person.description && <p className="text-sm">{person.description}</p>}
+      {person.icons && (
+        <div className="flex gap-4">
+          {person.icons.map((Icon, index) => (
+            <Tooltip key={index}>
+              <TooltipTrigger>
+                <Icon className="w-5 h-5" />
+              </TooltipTrigger>
+              <TooltipContent>{formatIconName(Icon.name)}</TooltipContent>
+            </Tooltip>
+          ))}
+        </div>
+      )}
+      {person.description && (
+        <>
+          <p className="text-sm">{person.description}</p>
+          <DynamicButton text="Learn More" onClick={handleClick} />
+        </>
+      )}
     </div>
   );
 };
