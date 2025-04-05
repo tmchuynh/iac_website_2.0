@@ -65,9 +65,34 @@ export const formatItemName = (itemName: string) => {
     })
     .join(" "); // Join the words back into a string
 };
-
+/**
+ * Formats a string by replacing spaces with underscores and converting to lowercase.
+ *
+ * @param str - The string to format
+ * @returns The formatted string
+ *
+ * @example
+ * formatString("Hello World") // returns "hello_world"
+ */
 export const formatURL = (url: string): string => {
   return url.toLowerCase().replaceAll(" ", "_");
+};
+
+/**
+ * Unformats a string by replacing underscores with spaces and capitalizing each word.
+ *
+ * @param str - The string to unformat
+ * @returns The unformatted string
+ *
+ * @example
+ * unformatString("hello_world") // returns "Hello World"
+ */
+export const unformatURL = (url: string): string => {
+  const segments = url.split("_");
+  const formattedSegments = segments.map(
+    (segment) => segment.charAt(0).toUpperCase() + segment.slice(1)
+  );
+  return formattedSegments.join(" ");
 };
 
 export const formatIconName = (iconName: string): string => {
