@@ -1,4 +1,4 @@
-import { LoaderSizeMarginProps } from "@/lib/interfaces";
+import { LoaderSizeMarginProps } from "@/lib/interfaces/interfaces";
 import { cssValue, sync } from "@/lib/loading-animation";
 import * as React from "react";
 
