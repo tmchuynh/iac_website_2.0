@@ -35,7 +35,7 @@ export default function IntroHeader() {
               </div>
             </div>
 
-            <h2 className="max-w-2xl font-[Luckiest] font-semibold text-4xl text-balance sm:text-5xl tracking-wider">
+            <h2 className="max-w-2xl font-semibold text-4xl text-balance sm:text-5xl tracking-wider">
               Superior classes, exceptional instructors, outstanding outcomes.
             </h2>
             <p>
