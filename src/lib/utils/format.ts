@@ -70,6 +70,32 @@ export const formatURL = (url: string): string => {
   return url.toLowerCase().replaceAll(" ", "_");
 };
 
+export const formatIconName = (iconName: string): string => {
+  const segments = iconName
+    .replace("Fa", "")
+    .replace("Tb", "")
+    .replace("Si", "")
+    .replace("Ai", "")
+    .replace("Bi", "")
+    .replace("Cg", "")
+    .replace("Gi", "")
+    .replace("Im", "")
+    .replace("Io", "")
+    .replace("Lu", "")
+    .replace("Md", "")
+    .replace("Ri", "")
+    .replace("Sl", "")
+    .replace("Pi", "")
+    .split(/(?=[A-Z])/);
+
+  if (segments[0] === "Microphone") {
+    return "Public Speaking";
+  } else if (segments[0] === "Pencil") {
+    return "Creative Writing";
+  }
+  return segments[0];
+};
+
 /**
  * Sorts an array of strings alphabetically.
  *
