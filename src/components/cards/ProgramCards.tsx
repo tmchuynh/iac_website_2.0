@@ -4,8 +4,15 @@ import { LuArrowBigRightDash } from "react-icons/lu";
 import { useRouter } from "next/navigation";
 import { useTabs } from "@/app/context/TabsContext";
 import { Program } from "@/lib/types/cards";
+import Image from "next/image";
 
-export const ProgramCards = (program: Program, index: number) => {
+export const ProgramCards = ({
+  program,
+  index,
+}: {
+  program: Program;
+  index: number;
+}) => {
   const router = useRouter();
   const { setDefaultTab } = useTabs();
   function handleClick(program: string) {
@@ -21,11 +28,13 @@ export const ProgramCards = (program: Program, index: number) => {
         "rounded-3xl p-8 xl:p-10 flex flex-col justify-between gap-3"
       )}
     >
-      <div className="flex flex-col items-center justify-between gap-x-4">
-        <img
+      <div className="flex flex-col justify-between items-center gap-x-4">
+        <Image
           src={program.image}
           alt={program.title + " image"}
-          className="min-w-full pb-5 h-48 object-cover object-center"
+          width={400}
+          height={192}
+          className="pb-5 min-w-full h-48 object-cover object-center"
         />
         <h3
           id={program.title}
@@ -41,10 +50,10 @@ export const ProgramCards = (program: Program, index: number) => {
       <Button
         variant={index % 2 === 0 ? "outline" : "default"}
         onClick={() => handleClick(program.title)}
-        className="mt-2 group w-full text-wrap"
+        className="group mt-2 w-full text-wrap"
       >
         More Information
-        <span className="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-4">
+        <span className="inline-block transition-transform group-hover:translate-x-4 duration-300 ease-in-out">
           <LuArrowBigRightDash />
         </span>
       </Button>
