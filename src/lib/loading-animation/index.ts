@@ -1,4 +1,4 @@
-import { LengthObject } from "../interfaces";
+import { LengthObject } from "../interfaces/interfaces";
 
 /**
  * Creates a CSS animation for a loader with the specified name, frames, and suffix.
