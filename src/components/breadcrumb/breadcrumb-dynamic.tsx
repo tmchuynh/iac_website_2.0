@@ -11,14 +11,14 @@ import { capitalize } from "@/lib/utils/format";
 import { usePathname, useRouter } from "next/navigation";
 import React, { JSX, useMemo, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { Button } from "../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { Button } from "./ui/button";
+} from "../ui/dropdown-menu";
 
 /**
  * DynamicBreadcrumb Component

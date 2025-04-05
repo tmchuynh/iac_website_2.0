@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, JSX } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 /**
  * A React component that renders a "Back to Top" button which appears when the user scrolls down the page.

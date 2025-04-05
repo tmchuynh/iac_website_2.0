@@ -7,7 +7,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-} from "./ui/breadcrumb";
+} from "../ui/breadcrumb";
 
 const StaticBreadcrumb: React.FC = () => {
   const pathname = usePathname();
