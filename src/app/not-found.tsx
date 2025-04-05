@@ -62,12 +62,12 @@ const NotFound = (): JSX.Element => {
   }, [router, redirect]);
 
   return (
-    <main className="grid place-items-center px-6 py-24 sm:py-32 lg:px-8 min-h-screen">
+    <main className="place-items-center grid px-6 lg:px-8 py-24 sm:py-32 min-h-screen">
       <div className="text-center">
-        <h1 className="my-4 text-balance uppercase font-Luckiest tracking-wider lg:text-4xl text-lg text-primary font-extrabold text-center">
+        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-primary lg:text-4xl uppercase tracking-wider">
           404 Page not found
         </h1>
-        <div className="mt-6 text-pretty text-lg font-medium sm:text-xl/8">
+        <div className="mt-6 font-medium text-lg text-pretty sm:text-xl/8">
           Sorry, we couldn’t find the page you’re looking for.
           {redirect && (
             <p>
@@ -76,7 +76,7 @@ const NotFound = (): JSX.Element => {
             </p>
           )}
         </div>
-        <div className="mt-10 flex flex-col items-center justify-center gap-x-6">
+        <div className="flex flex-col justify-center items-center gap-x-6 mt-10">
           <DynamicButton
             text="Go back home"
             onClick={() => {
