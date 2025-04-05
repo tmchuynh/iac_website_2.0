@@ -8,6 +8,7 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
 } from "../ui/breadcrumb";
+import { TbSlashes } from "react-icons/tb";
 
 const StaticBreadcrumb: React.FC = () => {
   const pathname = usePathname();
@@ -35,7 +36,7 @@ const StaticBreadcrumb: React.FC = () => {
       <BreadcrumbItem key="home">
         <BreadcrumbLink
           href="/"
-          className="bg-muted px-3 py-2 rounded-lg cursor-default"
+          className="px-2 py-1 rounded-md text-primary underline-offset-4 hover:underline"
         >
           Home
         </BreadcrumbLink>
@@ -47,13 +48,17 @@ const StaticBreadcrumb: React.FC = () => {
       const href = `/${pathSegments.slice(0, index + 1).join("/")}`;
       const capitalizedSegment = capitalizedSegments[index];
 
-      items.push(<BreadcrumbSeparator key={`sep-${href}`} />);
+      items.push(
+        <BreadcrumbSeparator key={`sep-${href}`} className="mr-0 ml-4">
+          <TbSlashes />
+        </BreadcrumbSeparator>
+      );
 
       items.push(
         <BreadcrumbItem key={href}>
           <BreadcrumbLink
             href={href}
-            className="bg-muted px-3 py-2 rounded-lg cursor-default"
+            className="py-1 rounded-md text-primary underline-offset-4 hover:underline"
           >
             {capitalizedSegment}
           </BreadcrumbLink>
@@ -67,14 +72,16 @@ const StaticBreadcrumb: React.FC = () => {
   if (!breadcrumbItems) return null;
 
   return (
-    <nav
-      aria-label="Breadcrumb"
-      className="flex flex-row items-center gap-4 w-full border-t text-sm"
-    >
-      <ul className="text-sm w-full mx-auto py-9 flex flex-row items-center gap-4 md:w-11/12 md:mx-auto lg:w-10/12 ">
-        {breadcrumbItems}
-      </ul>
-    </nav>
+    <div className="py-4">
+      <nav
+        aria-label="Breadcrumb"
+        className="flex flex-row items-center gap-2 w-full text-sm"
+      >
+        <ul className="flex flex-row items-center gap-2 px-4">
+          {breadcrumbItems}
+        </ul>
+      </nav>
+    </div>
   );
 };
 
