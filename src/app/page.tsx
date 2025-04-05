@@ -6,8 +6,15 @@ export default function Home() {
   return (
     <>
       <SplitImageTiles />
+
       <FeaturedTestimonial />
-      <ProgramsSection />
+
+      <section className="mb-12">
+        <h1 className="my-4 font-[Luckiest] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          Our Programs
+        </h1>
+        <ProgramsSection />
+      </section>
     </>
   );
 }
