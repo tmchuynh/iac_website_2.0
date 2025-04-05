@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-export function RequestForm() {
+export function RequestFormParentStudent() {
   const router = useRouter();
 
   return (
