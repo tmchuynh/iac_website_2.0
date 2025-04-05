@@ -2,7 +2,7 @@
 
 import { capitalize } from "@/lib/utils/format";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import {
   BreadcrumbItem,
   BreadcrumbLink,
@@ -12,10 +12,6 @@ import {
 const StaticBreadcrumb: React.FC = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const [categories, setCategories] = useState<any[]>([]);
-  const [parentCategories, setParentCategories] = useState<any[]>([]);
-  const [genders, setGenders] = useState<any[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
 
   // Compute the path segments and their capitalized versions
   const pathSegments = useMemo(
@@ -66,15 +62,7 @@ const StaticBreadcrumb: React.FC = () => {
     });
 
     return items;
-  }, [
-    pathname,
-    capitalizedSegments,
-    pathSegments,
-    router,
-    categories,
-    parentCategories,
-    genders,
-  ]);
+  }, [pathname, capitalizedSegments, pathSegments, router]);
 
   if (!breadcrumbItems) return null;
 
