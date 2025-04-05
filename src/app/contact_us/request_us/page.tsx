@@ -1,10 +1,11 @@
 import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import Image from "next/image";
 
 export default function RequestUs() {
   return (
     <div className="relative bg-white">
       <div className="lg:left-1/2 lg:absolute lg:inset-0">
-        <img
+        <Image
           alt=""
           src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
           className="lg:absolute bg-gray-50 w-full h-64 sm:h-80 lg:h-full object-cover"
