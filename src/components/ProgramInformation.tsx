@@ -13,14 +13,14 @@ export const ProgramDetails: React.FC = () => {
   return (
     <>
       <Tabs defaultValue={defaultTab} className="w-full" id="programTabs">
-        <TabsList className="flex-wrap justify-start gap-3 h-full py-3 mb-10">
+        <TabsList className="flex-wrap justify-start gap-3 mb-10 py-3 h-full">
           {programs.map((program) => (
             <TabsTrigger value={program.title} key={program.title}>
               {program.icons.map((Icon, iconIndex) =>
                 iconIndex === 0 ? (
                   <span
                     key={`icon-${program.title}-${iconIndex}`}
-                    className="inline-block w-4 h-4 mr-2"
+                    className="inline-block mr-2 w-4 h-4"
                   >
                     <Icon />
                   </span>
@@ -35,12 +35,12 @@ export const ProgramDetails: React.FC = () => {
             <div className="" id={`${programIndex}`}>
               {/* Content */}
               <div className="pb-6">
-                <h2 className="text-2xl font-bold mb-4 font-[MorningBakery] tracking-widest  flex justify-between">
+                <h2 className="flex justify-between mb-4 font-[MorningBakery] font-bold text-2xl tracking-widest">
                   <div className="text-secondary">{program.title}</div>
                   {program.icons.map((Icon, iconIndex) => (
                     <span
                       key={`icon-${program.title}-${iconIndex}`}
-                      className="inline-block w-4 h-4 mr-2"
+                      className="inline-block mr-2 w-4 h-4"
                     >
                       <Icon />
                     </span>
@@ -50,7 +50,7 @@ export const ProgramDetails: React.FC = () => {
                 {/* Overview */}
                 {program.overview && (
                   <>
-                    <h3 className="text-lg font-semibold mt-4 font-[CuteRabbit] tracking-widest">
+                    <h3 className="mt-4 font-[CuteRabbit] font-semibold text-lg tracking-widest">
                       Overview
                     </h3>
                     <p className="mb-4">{program.overview}</p>
@@ -60,10 +60,10 @@ export const ProgramDetails: React.FC = () => {
                 {/* Keypoints */}
                 {program.keypoints.length > 0 && (
                   <>
-                    <h3 className="text-lg font-semibold mt-4 font-[CuteRabbit] tracking-widest">
+                    <h3 className="mt-4 font-[CuteRabbit] font-semibold text-lg tracking-widest">
                       Key Components
                     </h3>
-                    <ul className="list-disc pl-6 space-y-2">
+                    <ul className="space-y-2 pl-6 list-disc">
                       {program.keypoints.map((point, pointIndex) => (
                         <li key={pointIndex}>
                           <strong>{point.split(":")[0]}:</strong>{" "}
@@ -77,7 +77,7 @@ export const ProgramDetails: React.FC = () => {
                 {/* Outcomes */}
                 {program.outcome && (
                   <>
-                    <h3 className="text-lg font-semibold mt-4 font-[CuteRabbit] tracking-widest">
+                    <h3 className="mt-4 font-[CuteRabbit] font-semibold text-lg tracking-widest">
                       Learning Outcomes
                     </h3>
                     <p className="mb-4">{program.outcome}</p>
@@ -87,7 +87,7 @@ export const ProgramDetails: React.FC = () => {
                 {/* Goals */}
                 {program.goal && (
                   <>
-                    <h3 className="text-lg font-semibold mt-4 font-[CuteRabbit] tracking-widest">
+                    <h3 className="mt-4 font-[CuteRabbit] font-semibold text-lg tracking-widest">
                       Program Goals
                     </h3>
                     <p className="">{program.goal}</p>
@@ -97,8 +97,8 @@ export const ProgramDetails: React.FC = () => {
                 {/* Images */}
                 {program.images.length > 0 ? (
                   <div className="py-2">
-                    <div className="flex items-start justify-between pb-7">
-                      <h3 className="text-lg font-semibold font-[CuteRabbit] m-0 tracking-widest">
+                    <div className="flex justify-between items-start pb-7">
+                      <h3 className="m-0 font-[CuteRabbit] font-semibold text-lg tracking-widest">
                         Class Images
                       </h3>
                       <Button
@@ -107,7 +107,7 @@ export const ProgramDetails: React.FC = () => {
                             activeIndex === programIndex ? null : programIndex
                           )
                         }
-                        className="mt-2 group"
+                        className="group mt-2"
                       >
                         {activeIndex === programIndex
                           ? "Hide Images"
@@ -129,12 +129,12 @@ export const ProgramDetails: React.FC = () => {
                     </div>
                     <div>
                       {activeIndex === programIndex && (
-                        <div className="flex flex-wrap gap-5 justify-between">
+                        <div className="flex flex-wrap justify-between gap-5">
                           {program.images.map((image, imageIndex) => (
-                            <img
+                            <Image
                               key={imageIndex}
                               src={image}
-                              className="object-cover object-center aspect-video w-1/5"
+                              className="w-1/5 object-cover object-center aspect-video"
                               alt={`${program.title} Image ${imageIndex + 1}`}
                             />
                           ))}

@@ -18,7 +18,7 @@ const HeroSection: FC<HeroProps> = ({ imageSrc }) => {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="relative h-[30em] w-full">
+      <div className="relative w-full h-[30em]">
         <img
           className="object-cover object-center w-full h-full"
           src={imageSrc}

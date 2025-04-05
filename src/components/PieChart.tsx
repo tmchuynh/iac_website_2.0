@@ -111,7 +111,7 @@ const DoughnutChartLabel = () => {
   if (!mounted) return null;
 
   return (
-    <div className="mx-auto w-[500px] h-[500px] my-5">
+    <div className="mx-auto my-5 w-[500px] h-[500px]">
       <Doughnut data={chartData} options={options} />
     </div>
   );
