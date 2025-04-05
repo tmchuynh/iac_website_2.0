@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/utils";
+import { cn } from "@/lib/utils";
 import React from "react";
 import { LuArrowBigRightDash } from "react-icons/lu";
 import { DynamicButtonProps } from "@/lib/types/types";
