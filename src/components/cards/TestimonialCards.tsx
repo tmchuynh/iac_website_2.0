@@ -2,7 +2,11 @@ import { testimonialsInfo } from "@/lib/types/cards";
 import { FaQuoteLeft } from "react-icons/fa6";
 import Image from "next/image";
 
-export const TestimonialCards = (testimonial: testimonialsInfo) => {
+export const TestimonialCards = ({
+  testimonial,
+}: {
+  testimonial: testimonialsInfo;
+}) => {
   return (
     <section className="px-6 lg:px-8 border rounded-2xl lg:rounded-4xl h-full overflow-hidden isolate">
       <div className="relative mx-auto py-20 max-w-2xl lg:max-w-4xl h-max min-h-full">
