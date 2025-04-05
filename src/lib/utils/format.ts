@@ -67,7 +67,7 @@ export const formatItemName = (itemName: string) => {
 };
 
 export const formatURL = (url: string): string => {
-  return url.toLowerCase().replaceAll(" ", "-").replaceAll("'s", "");
+  return url.toLowerCase().replaceAll(" ", "_");
 };
 
 /**
