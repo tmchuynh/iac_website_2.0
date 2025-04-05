@@ -12,7 +12,7 @@ export default function Example() {
   return (
     <Popover className="relative z-50 shadow-sm isolate">
       <div className="py-5">
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="mx-auto px-6 lg:px-4 w-11/12">
           <PopoverButton className="inline-flex items-center gap-x-1 font-semibold focus-visible:outline-none">
             International Activities Club
             <ChevronDownIcon aria-hidden="true" className="size-5" />
