@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import HeroSection from "./hero";
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 export default function IntroHeader() {
@@ -60,16 +60,18 @@ export default function IntroHeader() {
           </div>
 
           {theme === "dark" ? (
-            <img
+            <Image
               alt="IAC Logo"
               src="/images/whiteLogo.png"
               className="w-auto h-28 object-contain"
+              priority={true}
             />
           ) : (
-            <img
+            <Image
               alt="IAC Logo"
               src="/images/tShirtLogo.png"
               className="w-auto h-40 xl:h-64 object-contain"
+              priority={true}
             />
           )}
         </div>

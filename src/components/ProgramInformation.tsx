@@ -2,6 +2,7 @@ import { useTabs } from "@/app/context/TabsContext";
 import { programs } from "@/lib/constants/programs";
 import { TabsContent } from "@radix-ui/react-tabs";
 import React, { useState } from "react";
+import Image from "next/image";
 import { LuArrowBigLeftDash, LuArrowBigRightDash } from "react-icons/lu";
 import { Button } from "./ui/button";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";

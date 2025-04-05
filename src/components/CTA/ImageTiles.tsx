@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function ImageTiles() {
   return (
     <div className="bg-white py-32 overflow-hidden">
@@ -38,7 +39,7 @@ export default function ImageTiles() {
             </div>
             <div className="lg:flex lg:justify-end lg:items-start lg:gap-x-8 lg:col-span-2 lg:col-end-2 lg:ml-auto lg:w-[37rem] contents">
               <div className="flex flex-none justify-end order-first w-64 lg:w-auto self-end">
-                <img
+                <Image
                   alt=""
                   src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
                   className="flex-none bg-gray-50 rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
@@ -47,17 +48,21 @@ export default function ImageTiles() {
                 />
               </div>
               <div className="flex flex-auto lg:flex-none justify-end w-96 lg:w-auto">
-                <img
+                <Image
                   alt=""
                   src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
-                  className="aspect-7/5 w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                  className="flex-none bg-gray-50 rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
+                  width={1152}
+                  height={842}
                 />
               </div>
               <div className="sm:block sm:flex-auto lg:flex-none hidden sm:w-0 lg:w-auto">
-                <img
+                <Image
                   alt=""
                   src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
-                  className="aspect-4/3 w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                  className="bg-gray-50 rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
+                  width={768}
+                  height={604}
                 />
               </div>
             </div>

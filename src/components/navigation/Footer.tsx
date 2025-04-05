@@ -1,4 +1,5 @@
 import { JSX } from "react";
+import Image from "next/image";
 
 interface NavigationItem {
   name: string;
@@ -96,10 +97,12 @@ export default function Example() {
     <footer className="bg-white">
       <div className="mx-auto px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-8 max-w-7xl">
         <div className="xl:gap-8 xl:grid xl:grid-cols-3">
-          <img
+          <Image
             alt="Company name"
             src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
             className="h-9"
+            width={768}
+            height={604}
           />
           <div className="gap-8 grid grid-cols-2 xl:col-span-2 mt-16 xl:mt-0">
             <div className="md:gap-8 md:grid md:grid-cols-2">

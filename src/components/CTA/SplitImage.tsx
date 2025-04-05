@@ -1,11 +1,14 @@
+import Image from "next/image";
 export default function SplitImage() {
   return (
     <div className="relative bg-gray-900">
       <div className="relative md:left-0 md:absolute bg-indigo-600 md:w-1/3 lg:w-1/2 h-80 md:h-full overflow-hidden">
-        <img
+        <Image
           alt=""
           src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
           className="size-full object-cover"
+          width={1920}
+          height={1080}
         />
         <svg
           viewBox="0 0 926 676"

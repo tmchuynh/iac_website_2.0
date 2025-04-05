@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function FeaturedTestimonial() {
   return (
     <div className="bg-white pt-24 sm:pt-32 pb-16 sm:pb-24 xl:pb-32">
@@ -5,10 +6,10 @@ export default function FeaturedTestimonial() {
         <div className="flex xl:flex-row flex-col items-center xl:items-stretch gap-x-8 gap-y-10 sm:gap-y-8 mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="xl:flex-none -mt-8 xl:-mb-8 w-full xl:w-96 max-w-2xl">
             <div className="relative md:-mx-8 xl:mx-0 h-full aspect-2/1 xl:aspect-auto">
-              <img
+              <Image
                 alt=""
                 src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                className="absolute inset-0 size-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                className="absolute inset-0 bg-gray-800 shadow-2xl rounded-2xl size-full object-cover"
               />
             </div>
           </div>

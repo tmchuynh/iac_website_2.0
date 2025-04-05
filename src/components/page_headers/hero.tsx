@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Image from "next/image";
 
 interface HeroProps {
   imageSrc: string;
@@ -19,10 +20,13 @@ const HeroSection: FC<HeroProps> = ({ imageSrc }) => {
   return (
     <section className="relative overflow-hidden">
       <div className="relative w-full h-[30em]">
-        <img
-          className="object-cover object-center w-full h-full"
+        <Image
+          className="w-full h-full object-cover object-center"
           src={imageSrc}
           alt={titleCase(imageTitle[0]) + " Image"}
+          layout="fill"
+          objectFit="cover"
+          priority={true}
         />
       </div>
     </section>
