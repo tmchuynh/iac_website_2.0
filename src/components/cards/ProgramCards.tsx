@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/utils";
+import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { LuArrowBigRightDash } from "react-icons/lu";
 import { useRouter } from "next/navigation";
