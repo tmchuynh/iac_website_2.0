@@ -19,3 +19,8 @@ export type DynamicButtonProps = {
   className?: string;
   iconClassName?: string;
 };
+
+export type NotFoundContextType = {
+  isNotFound: boolean;
+  setNotFound: (value: boolean) => void;
+};
