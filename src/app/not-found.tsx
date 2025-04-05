@@ -1,5 +1,5 @@
 "use client";
-import DynamicButton from "@/components/button-dynamic";
+import DynamicButton from "@/components/buttons/button-dynamic";
 import { useRouter } from "next/navigation";
 import { JSX, useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
