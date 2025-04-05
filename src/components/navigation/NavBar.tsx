@@ -11,8 +11,8 @@ import Image from "next/image";
 export default function Example() {
   return (
     <Popover className="relative z-50 shadow-sm isolate">
-      <div className="py-5">
-        <div className="mx-auto px-6 lg:px-4 w-11/12">
+      <div className="bg-primary py-5 text-primary-foreground">
+        <div className="flex justify-between items-center mx-auto w-11/12">
           <PopoverButton className="inline-flex items-center gap-x-1 font-semibold focus-visible:outline-none">
             International Activities Club
             <ChevronDownIcon aria-hidden="true" className="size-5" />
@@ -22,9 +22,9 @@ export default function Example() {
 
       <PopoverPanel
         transition
-        className="top-0 -z-10 absolute inset-x-0 bg-background data-closed:opacity-0 shadow-lg pt-16 data-closed:-translate-y-1 data-enter:duration-200 data-leave:duration-150 data-enter:ease-out data-leave:ease-in"
+        className="top-0 -z-10 absolute inset-x-0 bg-background data-closed:opacity-0 shadow-xl pt-16 border-b-4 border-b-primary data-closed:-translate-y-1 data-enter:duration-200 data-leave:duration-150 data-enter:ease-out data-leave:ease-in"
       >
-        <div className="gap-x-8 gap-y-10 grid grid-cols-1 lg:grid-cols-9 mx-auto px-6 lg:px-8 py-10 max-w-7xl">
+        <div className="gap-x-8 gap-y-10 grid grid-cols-1 lg:grid-cols-9 mx-auto pt-7 pb-10 w-11/12">
           <div className="gap-6 sm:gap-8 grid grid-cols-2 md:grid-cols-3 lg:col-span-5">
             <div>
               <h3 className="font-medium">About IAC</h3>
