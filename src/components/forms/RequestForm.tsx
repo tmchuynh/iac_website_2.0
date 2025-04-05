@@ -11,12 +11,12 @@ export function RequestForm() {
   const router = useRouter();
 
   return (
-    <section className="px-8 py-8 w-11/12 mx-auto">
-      <div className="container mx-auto">
-        <h1 className="my-4 text-balance uppercase font-[Luckiest] tracking-wider lg:text-4xl text-lg text-secondary font-extrabold text-center">
+    <section className="mx-auto px-8 py-8 w-11/12">
+      <div className="mx-auto container">
+        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Request Us @ Your School
         </h1>
-        <div className="text-sm leading-relaxed text-pretty mb-4">
+        <div className="mb-4 text-pretty text-sm leading-relaxed">
           <p>
             Thank you for reaching out to us! We truly value your message and
             appreciate the time you’ve taken to connect. Your inquiries help us
@@ -43,11 +43,11 @@ export function RequestForm() {
             </Button>
           </p>
         </div>
-        <div className="flex gap-4 flex-col">
+        <div className="flex flex-col gap-4">
           <form action="#" className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="gap-4 grid grid-cols-2">
               <div>
-                <Label className="mb-2 text-left font-medium">Your Name</Label>
+                <Label className="mb-2 font-medium text-left">Your Name</Label>
                 <Input
                   placeholder="John Smith"
                   name="name"
@@ -55,7 +55,7 @@ export function RequestForm() {
                 />
               </div>
               <div>
-                <Label className="mb-2 text-left font-medium">
+                <Label className="mb-2 font-medium text-left">
                   Grade Level(s)
                 </Label>
                 <Input
@@ -65,9 +65,9 @@ export function RequestForm() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="gap-4 grid grid-cols-3">
               <div>
-                <Label className="mb-2 text-left font-medium">School</Label>
+                <Label className="mb-2 font-medium text-left">School</Label>
                 <Input
                   placeholder="Cerro Villa Middle School"
                   name="school"
@@ -75,7 +75,7 @@ export function RequestForm() {
                 />
               </div>
               <div>
-                <Label className="mb-2 text-left font-medium">
+                <Label className="mb-2 font-medium text-left">
                   Principal's Name
                 </Label>
                 <Input
@@ -85,7 +85,7 @@ export function RequestForm() {
                 />
               </div>
               <div>
-                <Label className="mb-2 text-left font-medium">
+                <Label className="mb-2 font-medium text-left">
                   School's Contact Info
                 </Label>
                 <Input
@@ -96,7 +96,7 @@ export function RequestForm() {
               </div>
             </div>
             <div>
-              <Label className="mb-2 text-left font-medium">
+              <Label className="mb-2 font-medium text-left">
                 More information
               </Label>
               <Textarea
