@@ -9,8 +9,10 @@ import {
   BreadcrumbSeparator,
 } from "../ui/breadcrumb";
 import { TbSlashes } from "react-icons/tb";
+import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
 
 const StaticBreadcrumb: React.FC = () => {
+  const isSmallScreen = useSmallScreen();
   const pathname = usePathname();
   const router = useRouter();
 
@@ -29,50 +31,87 @@ const StaticBreadcrumb: React.FC = () => {
   const breadcrumbItems = useMemo(() => {
     if (pathname === "/") return null;
 
-    const items = [];
+    const items: React.JSX.Element[] = [];
 
     // Home link
     items.push(
-      <BreadcrumbItem key="home">
+      <BreadcrumbItem key="home" className="mx-1">
         <BreadcrumbLink
           href="/"
-          className="px-2 py-1 rounded-md text-primary underline-offset-4 hover:underline"
+          className="px-1 py-1 rounded-md text-primary underline-offset-4 hover:underline"
         >
           Home
         </BreadcrumbLink>
       </BreadcrumbItem>
     );
 
-    // Handle dynamic paths
-    pathSegments.forEach((_, index) => {
-      const href = `/${pathSegments.slice(0, index + 1).join("/")}`;
-      const capitalizedSegment = capitalizedSegments[index];
+    if (isSmallScreen) {
+      // Show "..." for middle pages on small screens
+      if (pathSegments.length > 1) {
+        items.push(
+          <BreadcrumbSeparator key="sep-dots" className="mr-0 ml-0">
+            <TbSlashes />
+          </BreadcrumbSeparator>
+        );
+        items.push(
+          <BreadcrumbItem key="dots" className="-mx-1">
+            <span className="rounded-md">...</span>
+          </BreadcrumbItem>
+        );
+      }
+
+      // Add the current page
+      const currentHref = `/${pathSegments.join("/")}`;
+      const currentSegment = capitalizedSegments[pathSegments.length - 1];
 
       items.push(
-        <BreadcrumbSeparator key={`sep-${href}`} className="mr-0 ml-4">
+        <BreadcrumbSeparator key={`sep-${currentHref}`} className="mr-0 ml-1">
           <TbSlashes />
         </BreadcrumbSeparator>
       );
 
       items.push(
-        <BreadcrumbItem key={href}>
+        <BreadcrumbItem key={currentHref} className="mx-1">
           <BreadcrumbLink
-            href={href}
+            href={currentHref}
             className="py-1 rounded-md text-primary underline-offset-4 hover:underline"
           >
-            {capitalizedSegment}
+            {currentSegment}
           </BreadcrumbLink>
         </BreadcrumbItem>
       );
-    });
+    } else {
+      // Handle dynamic paths for larger screens
+      pathSegments.forEach((_, index) => {
+        const href = `/${pathSegments.slice(0, index + 1).join("/")}`;
+        const capitalizedSegment = capitalizedSegments[index];
+
+        items.push(
+          <BreadcrumbSeparator key={`sep-${href}`} className="mr-0 ml-4">
+            <TbSlashes />
+          </BreadcrumbSeparator>
+        );
+
+        items.push(
+          <BreadcrumbItem key={href}>
+            <BreadcrumbLink
+              href={href}
+              className="py-1 rounded-md text-primary underline-offset-4 hover:underline"
+            >
+              {capitalizedSegment}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        );
+      });
+    }
 
     return items;
-  }, [pathname, capitalizedSegments, pathSegments, router]);
+  }, [pathname, capitalizedSegments, pathSegments, router, isSmallScreen]);
 
   if (!breadcrumbItems) return null;
 
   return (
-    <div className="-mx-4 md:-mx-1 lg:mx-1 2xl:mx-18 py-5">
+    <div className="mx-auto px-1 md:px-6 lg:px-5 pt-3 md:pt-5 w-full">
       <nav
         aria-label="Breadcrumb"
         className="flex flex-row items-center gap-2 w-full text-sm"
