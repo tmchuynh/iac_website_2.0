@@ -1,3 +1,5 @@
+"use client";
+
 import { NotFoundContextType } from "@/lib/types";
 import { createContext, JSX, ReactNode, useContext, useState } from "react";
 
