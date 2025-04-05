@@ -27,6 +27,7 @@ export type Work = {
   title: string;
   author: string;
   date: string;
+  mainImage: string;
   description: string;
   preview?: string;
   writing?: string;
