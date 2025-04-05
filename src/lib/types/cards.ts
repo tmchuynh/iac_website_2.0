@@ -18,7 +18,7 @@ export type StudentProject = {
   title: string;
   author: string;
   date: string;
-  images: string[];
   description: string;
-  preview: string;
+  preview?: string;
+  images?: string[];
 };
