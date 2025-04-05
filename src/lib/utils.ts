@@ -50,3 +50,42 @@ export const scrollToSection = (
     });
   }
 };
+
+/**
+ * Toggles an accordion section and smoothly scrolls to it if opened.
+ *
+ * @param id - The unique identifier of the accordion section
+ * @param activeSection - The currently active section's ID, or null if none is active
+ * @param setActiveSection - Function to update the active section state
+ * @param sectionRef - Reference to the DOM element of the accordion section
+ *
+ * @remarks
+ * When opening a section (activeSection !== id), the function will:
+ * 1. Update the active section state
+ * 2. Scroll to the newly opened section with a smooth animation
+ * 3. Apply an offset of 100px from the top of the viewport
+ *
+ * The scroll behavior has a 100ms delay to ensure DOM updates are complete.
+ */
+export const toggleAccordionSection = (
+  id: string,
+  activeSection: string | null,
+  setActiveSection: (id: string | null) => void,
+  sectionRef: HTMLElement | null
+) => {
+  setActiveSection(activeSection === id ? null : id);
+
+  if (activeSection !== id && sectionRef) {
+    const offset = 100; // Adjust offset if needed
+
+    // Delay scrolling slightly to ensure the DOM has updated
+    setTimeout(() => {
+      const sectionPosition =
+        sectionRef.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: sectionPosition - offset,
+        behavior: "smooth",
+      });
+    }, 100); // Delay in milliseconds – adjust if necessary
+  }
+};
