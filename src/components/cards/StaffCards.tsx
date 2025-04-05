@@ -1,14 +1,25 @@
 import { Person } from "@/lib/types/cards";
+import { formatURL } from "@/lib/utils/format";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export const StaffCards = (person: Person) => {
+  const router = useRouter();
+  const handleClick = () => {
+    if (person.description) {
+      router.push(`/about_us/our_staff/${formatURL(person.name)}`);
+    }
+  };
   return (
-    <div>
-      <img
+    <div onClick={handleClick}>
+      <Image
         alt=""
         src={person.image}
-        className="aspect-3/2 w-full rounded-2xl object-cover"
+        width={400}
+        height={300}
+        className="rounded-2xl w-full aspect-3/2 object-cover"
       />
-      <h3 className="mt-6 text-lg font-semibold tracking-tight">
+      <h3 className="mt-6 font-semibold text-lg tracking-tight">
         {person.name}
       </h3>
       <p className="text-md">{person.role}</p>
