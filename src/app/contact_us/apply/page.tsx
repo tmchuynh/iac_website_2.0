@@ -2,11 +2,11 @@ import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 export default function Apply() {
   return (
-    <div className="relative isolate bg-white">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:px-8 lg:py-48">
-          <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
+    <div className="relative bg-white isolate">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-7xl">
+        <div className="relative lg:static px-6 lg:px-8 lg:py-48 pt-24 sm:pt-32 pb-20">
+          <div className="mx-auto lg:mx-0 max-w-xl lg:max-w-lg">
+            <div className="left-0 -z-10 absolute inset-y-0 bg-gray-100 ring-1 ring-gray-900/10 w-full lg:w-1/2 overflow-hidden">
               <svg
                 aria-hidden="true"
                 className="absolute inset-0 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -35,52 +35,53 @@ export default function Apply() {
                 />
               </svg>
             </div>
-            <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+            <h2 className="font-semibold text-4xl text-gray-900 text-pretty sm:text-5xl tracking-tight">
               Get in touch
             </h2>
-            <p className="mt-6 text-lg/8 text-gray-600">
+            <p className="mt-6 text-gray-600 text-lg/8">
               Proin volutpat consequat porttitor cras nullam gravida at. Orci
               molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
               Arcu sed malesuada et magna.
             </p>
-            <div className="lg:mt-6 lg:w-80 lg:flex-none">
+            <div className="lg:flex-none lg:mt-6 lg:w-80">
               <img
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"
                 className="h-12 w-auto"
               />
               <figure className="mt-10">
-                <blockquote className="text-lg/8 font-semibold text-gray-900">
+                <blockquote className="font-semibold text-gray-900 text-lg/8">
                   <p>
                     “Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Nemo expedita voluptas culpa sapiente alias molestiae.
                     Numquam corrupti in laborum sed rerum et corporis.”
                   </p>
                 </blockquote>
-                <figcaption className="mt-10 flex gap-x-6">
+                <figcaption className="flex gap-x-6 mt-10">
                   <img
                     alt=""
                     src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
                     className="size-12 flex-none rounded-full bg-gray-50"
                   />
+
                   <div>
-                    <div className="text-base font-semibold text-gray-900">
+                    <div className="font-semibold text-base text-gray-900">
                       Brenna Goyette
                     </div>
-                    <div className="text-sm/6 text-gray-600">
+                    <div className="text-gray-600 text-sm/6">
                       CEO of Workcation
                     </div>
                   </div>
                 </figcaption>
               </figure>
             </div>
-            <dl className="mt-10 space-y-4 text-base/7 text-gray-600">
+            <dl className="space-y-4 mt-10 text-base/7 text-gray-600">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
                   <FaBuilding
                     aria-hidden="true"
-                    className="h-7 w-6 text-gray-400"
+                    className="w-6 h-7 text-gray-400"
                   />
                 </dt>
                 <dd>
@@ -94,7 +95,7 @@ export default function Apply() {
                   <span className="sr-only">Telephone</span>
                   <FaPhoneAlt
                     aria-hidden="true"
-                    className="h-7 w-6 text-gray-400"
+                    className="w-6 h-7 text-gray-400"
                   />
                 </dt>
                 <dd>
@@ -111,7 +112,7 @@ export default function Apply() {
                   <span className="sr-only">Email</span>
                   <FaEnvelope
                     aria-hidden="true"
-                    className="h-7 w-6 text-gray-400"
+                    className="w-6 h-7 text-gray-400"
                   />
                 </dt>
                 <dd>
@@ -129,14 +130,14 @@ export default function Apply() {
         <form
           action="#"
           method="POST"
-          className="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48"
+          className="px-6 lg:px-8 lg:py-48 pt-20 pb-24 sm:pb-32"
         >
-          <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div className="mx-auto lg:mr-0 max-w-xl lg:max-w-lg">
+            <div className="gap-x-8 gap-y-6 grid grid-cols-1 sm:grid-cols-2">
               <div>
                 <label
                   htmlFor="first-name"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block font-semibold text-gray-900 text-sm/6"
                 >
                   First name
                 </label>
@@ -146,14 +147,14 @@ export default function Apply() {
                     name="first-name"
                     type="text"
                     autoComplete="given-name"
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block bg-white px-3.5 py-2 rounded-md w-full text-base text-gray-900 placeholder:text-gray-400 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                   />
                 </div>
               </div>
               <div>
                 <label
                   htmlFor="last-name"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block font-semibold text-gray-900 text-sm/6"
                 >
                   Last name
                 </label>
@@ -163,14 +164,14 @@ export default function Apply() {
                     name="last-name"
                     type="text"
                     autoComplete="family-name"
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block bg-white px-3.5 py-2 rounded-md w-full text-base text-gray-900 placeholder:text-gray-400 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
                 <label
                   htmlFor="email"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block font-semibold text-gray-900 text-sm/6"
                 >
                   Email
                 </label>
@@ -180,14 +181,14 @@ export default function Apply() {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block bg-white px-3.5 py-2 rounded-md w-full text-base text-gray-900 placeholder:text-gray-400 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
                 <label
                   htmlFor="phone-number"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block font-semibold text-gray-900 text-sm/6"
                 >
                   Phone number
                 </label>
@@ -197,14 +198,14 @@ export default function Apply() {
                     name="phone-number"
                     type="tel"
                     autoComplete="tel"
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block bg-white px-3.5 py-2 rounded-md w-full text-base text-gray-900 placeholder:text-gray-400 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
                 <label
                   htmlFor="message"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block font-semibold text-gray-900 text-sm/6"
                 >
                   Message
                 </label>
@@ -213,16 +214,16 @@ export default function Apply() {
                     id="message"
                     name="message"
                     rows={4}
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block bg-white px-3.5 py-2 rounded-md w-full text-base text-gray-900 placeholder:text-gray-400 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                     defaultValue={""}
                   />
                 </div>
               </div>
             </div>
-            <div className="mt-8 flex justify-end">
+            <div className="flex justify-end mt-8">
               <button
                 type="submit"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="bg-indigo-600 hover:bg-indigo-500 shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-center text-sm text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Send message
               </button>
