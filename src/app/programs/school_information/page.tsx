@@ -157,7 +157,7 @@ export default function SchoolInformationPage() {
             .
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-2 font-[CuteRabbit] text-lg lg:text-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-2 text-lg lg:text-2xl">
             <div className="flex flex-col items-center gap-3 text-center tracking-widest">
               <div className="mx-auto p-2 rounded-md w-fit">
                 <FaCalendarAlt className="w-8 h-8" />

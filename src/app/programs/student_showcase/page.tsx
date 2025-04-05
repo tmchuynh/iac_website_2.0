@@ -1,6 +1,6 @@
 "use client";
 
-import { RequestForm } from "@/components/forms/RequestForm";
+import { RequestFormParentStudent } from "@/components/forms/RequestFormParentStudent";
 import StudentsWorkSection from "@/components/StudentsWorkSection";
 
 export default function StudentShowcasePage() {
@@ -35,7 +35,7 @@ export default function StudentShowcasePage() {
       </section>
 
       <section className="mb-12">
-        <RequestForm />
+        <RequestFormParentStudent />
       </section>
     </main>
   );
