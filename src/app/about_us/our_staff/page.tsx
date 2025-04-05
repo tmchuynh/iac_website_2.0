@@ -35,6 +35,7 @@ export default function OurStaffPage() {
                   key={index}
                   {...staff}
                   description={staff.bio || ""}
+                  icons={staff.icons || []}
                 />
               ))}
             </ul>
