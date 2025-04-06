@@ -1,7 +1,6 @@
 "use client";
 import RegisterForm from "@/components/forms/RegisterForm";
 import LoadingIndicator from "@/components/loading/Loading";
-import HeroSection from "@/components/page_headers/hero";
 import { credit_card_procedure } from "@/lib/constants/list";
 import { FC, useState } from "react";
 
@@ -14,7 +13,6 @@ const Register: FC = () => {
 
   return (
     <>
-      <HeroSection imageSrc="/images/Class_Photos/Performing_Arts/pa-8.jpg" />
       <main className="mx-auto px-4 py-8 w-11/12">
         <section className="mb-5">
           <div className="text-center">
