@@ -2,27 +2,51 @@
 import { useRouter } from "next/navigation";
 
 import Image from "next/image";
-import { Button } from "../ui/button";
 import DynamicButton from "../buttons/button-dynamic";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 export default function ContentAndScreenshot() {
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
           <div className="md:max-w-lg">
-            <Image
-              alt=""
-              src="/images/purple_logo.png"
-              width={3600}
-              height={1200}
-            />
+            {theme === "dark" ? (
+              <Image
+                alt="IAC Logo"
+                src="/images/white_logo.png"
+                className="w-auto h-40 xl:h-52 object-contain"
+                priority={true}
+                width={3600}
+                height={1200}
+              />
+            ) : (
+              <Image
+                alt="IAC Logo"
+                src="/images/purple_logo.png"
+                className="w-auto h-40 xl:h-52 object-contain"
+                priority={true}
+                width={3600}
+                height={1200}
+              />
+            )}
           </div>
-          <p className="font-semibold text-secondary uppercase">
+          <p className="font-semibold text-tertiary uppercase">
             Bringing Enrichment to Your School
           </p>
-          <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h1 className="my-4 font-extrabold text-balance text-lg text-primary lg:text-4xl uppercase tracking-wider">
             Superior classes, exceptional instructors, outstanding outcomes.
           </h1>
           <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mt-10 max-w-xl lg:max-w-none">
