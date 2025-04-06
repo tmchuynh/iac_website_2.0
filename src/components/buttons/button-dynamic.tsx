@@ -51,7 +51,7 @@ export default function DynamicButton({
       variant={variant}
       onClick={onClick}
       className={cn(
-        "mt-2 group w-1/2 gap-0 flex",
+        "mt-2 group w-1/2 gap-0 flex mx-auto",
         {
           "inline w-fit p-0 m-0": variant === "link",
         },
