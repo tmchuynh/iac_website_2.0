@@ -60,7 +60,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
               {/* Content */}
               <div className="pb-6">
                 <div className="flex items-center gap-4">
-                  <h2 className="flex justify-between font-bold text-2xl tracking-widest">
+                  <h2 className="flex justify-between text-3xl tracking-widest">
                     <div className="text-secondary">{program.title}</div>
                   </h2>
 
@@ -68,7 +68,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     {program.icons.map((Icon, iconIndex) => (
                       <span
                         key={`icon-${program.title}-${iconIndex}`}
-                        className="inline-block mr-2 w-4 h-4"
+                        className="inline-block mr-2 -mb-1 w-4 h-4"
                       >
                         <Icon />
                       </span>
@@ -79,9 +79,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Overview */}
                 {program.overview && (
                   <>
-                    <h3 className="mt-4 font-semibold text-lg tracking-widest">
-                      Overview
-                    </h3>
+                    <h3 className="mt-4 text-lg tracking-widest">Overview</h3>
                     <p className="mb-4">{program.overview}</p>
                   </>
                 )}
@@ -89,7 +87,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Keypoints */}
                 {program.keypoints.length > 0 && (
                   <>
-                    <h3 className="my-4 font-semibold text-lg tracking-widest">
+                    <h3 className="my-4 text-lg tracking-widest">
                       Key Components
                     </h3>
                     <ul className="space-y-2">
@@ -105,7 +103,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Outcomes */}
                 {program.outcome && (
                   <>
-                    <h3 className="mt-4 font-semibold text-lg tracking-widest">
+                    <h3 className="mt-4 text-lg tracking-widest">
                       Learning Outcomes
                     </h3>
                     <p className="mb-4">{program.outcome}</p>
@@ -115,7 +113,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Goals */}
                 {program.goal && (
                   <>
-                    <h3 className="mt-4 font-semibold text-lg tracking-widest">
+                    <h3 className="mt-4 text-lg tracking-widest">
                       Program Goals
                     </h3>
                     <p className="">{program.goal}</p>
@@ -126,7 +124,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {program.images.length > 0 ? (
                   <div className="py-2">
                     <div className="flex justify-between items-start pb-7">
-                      <h3 className="m-0 font-semibold text-lg tracking-widest">
+                      <h3 className="m-0 text-lg tracking-widest">
                         Class Images
                       </h3>
                       <Button
@@ -162,7 +160,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                             <Image
                               key={imageIndex}
                               src={image}
-                              className="rounded-2xl w-1/5 object-center object-cover aspect-video"
+                              className="rounded-2xl w-1/6 object-center object-cover aspect-square"
                               alt={`${program.title} Image ${imageIndex + 1}`}
                               width={800}
                               height={1200}
