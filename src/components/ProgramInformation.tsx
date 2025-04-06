@@ -11,19 +11,25 @@ export default function ProgramDetails({ title }: { title?: string }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const { defaultTab } = useTabs();
   const [programTitle, setProgramTitle] = useState<string | null>(null);
+  const [tabsValue, setTabsValue] = useState<string>();
 
   useEffect(() => {
     if (title) {
-      setProgramTitle(title); // Update programTitle when title changes
+      setProgramTitle(title);
     } else {
-      setProgramTitle(defaultTab); // Fallback to defaultTab
+      setProgramTitle(defaultTab);
     }
   }, [title, defaultTab]);
+
+  useEffect(() => {
+    setTabsValue(programTitle || defaultTab || undefined);
+  }, [programTitle, defaultTab]);
 
   return (
     <>
       <Tabs
-        value={programTitle || defaultTab} // Ensure the active tab is set correctly
+        value={tabsValue}
+        onValueChange={(value) => setProgramTitle(value)}
         className="w-full"
         id="programTabs"
       >
