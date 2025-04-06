@@ -17,6 +17,7 @@ export const capitalize = (str: string): string => {
   return str
     .replace(/-/g, " ")
     .replace(/_/g, " ")
+    .replaceAll("%20", " ")
     .replace(/\b\w/g, (char) => char.toUpperCase())
     .trim();
 };
