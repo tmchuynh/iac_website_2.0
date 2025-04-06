@@ -1,48 +1,17 @@
 "use client";
 import { useRouter } from "next/navigation";
-
-import Image from "next/image";
 import DynamicButton from "../buttons/button-dynamic";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import FadedImage from "../FadedImage";
+import ResponsiveLogo from "../ResponsiveLogo";
 
 export default function ContentAndScreenshot() {
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
-          <div className="md:max-w-lg">
-            {theme === "dark" ? (
-              <Image
-                alt="IAC Logo"
-                src="/images/white_logo.png"
-                className="w-auto h-40 xl:h-52 object-contain"
-                priority={true}
-                width={3600}
-                height={1200}
-              />
-            ) : (
-              <Image
-                alt="IAC Logo"
-                src="/images/purple_logo.png"
-                className="w-auto h-40 xl:h-52 object-contain"
-                priority={true}
-                width={3600}
-                height={1200}
-              />
-            )}
-          </div>
+          <ResponsiveLogo />
           <p className="font-semibold text-tertiary uppercase">
             Bringing Enrichment to Your School
           </p>
@@ -52,30 +21,76 @@ export default function ContentAndScreenshot() {
           <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mt-10 max-w-xl lg:max-w-none">
             <div>
               <p>
-                Our dynamic after-school program offers an exciting range of
-                activities, including soccer, volleyball, basketball, performing
-                arts, creative writing, chess, and coding. With experienced
-                instructors and top-quality resources, we provide a fun and
-                enriching environment where your child can explore and develop
-                new passions. Our innovative approach covers a broad spectrum of
-                skills in sports, arts, and technology. Your child will enjoy
-                engaging in creative projects, teamwork challenges, and much
-                more, all within a safe, supportive setting tailored for their
-                growth and success.
+                Our dynamic after-school program is designed to inspire, engage,
+                and empower students through a diverse range of activities that
+                promote personal growth and well-rounded development. With
+                offerings that include soccer, volleyball, basketball,
+                performing arts, creative writing, chess, and coding, there is
+                something for every interest and passion. We believe in
+                providing students with the freedom to explore, experiment, and
+                excel in areas they love—while also introducing them to new and
+                exciting opportunities they may not have encountered before.
+              </p>
+              <p>
+                Led by experienced instructors who are passionate about their
+                fields, our program blends fun with purpose. Each session is
+                thoughtfully structured to help students build confidence,
+                develop new skills, and foster creativity. Whether your child is
+                learning to collaborate on the court, compose a short story,
+                master a chess strategy, or write their first lines of code, our
+                team ensures that learning is always engaging, hands-on, and
+                meaningful.
+              </p>
+              <p>
+                We take pride in our innovative approach, which integrates the
+                best practices from both academic and enrichment models. Our
+                curriculum is carefully curated to encourage exploration in
+                sports, the arts, and technology, helping students grow
+                intellectually, socially, and emotionally. From team-based
+                challenges that build leadership and communication skills to
+                solo creative projects that nurture imagination and
+                self-expression, every activity is crafted to support holistic
+                development.
+              </p>
+              <p>
+                Most importantly, all of this takes place in a safe, inclusive,
+                and supportive environment where every child is valued and
+                encouraged to succeed. We understand the importance of creating
+                a space where students feel comfortable taking risks, making
+                mistakes, and discovering their strengths. Our after-school
+                program not only extends learning beyond the classroom but also
+                helps students build lasting friendships, strong character, and
+                a genuine love for learning.
               </p>
             </div>
             <div>
               <p>
-                Our programs have earned widespread popularity and strong
-                approval from both students and parents alike.
+                Our programs have earned widespread popularity and enthusiastic
+                approval from both students and parents alike. Families
+                consistently commend the enriching experiences, engaging
+                instruction, and positive impact our programs have on their
+                children’s academic, creative, and personal growth. The high
+                level of satisfaction is a reflection of our commitment to
+                creating meaningful, memorable, and student-centered learning
+                opportunities.
               </p>
               <p className="mt-8">
-                Our programs consistently uphold high standards of quality and
-                excellence across all activities.
+                At IAC, we pride ourselves on consistently maintaining high
+                standards of quality and excellence across all activities. Every
+                program is thoughtfully designed, led by passionate educators,
+                and guided by best practices in curriculum development and
+                instructional strategy. We continually assess and refine our
+                offerings to ensure they remain effective, relevant, and
+                inspiring for every learner.
               </p>
               <p className="mt-8">
-                IAC is committed to making our programs accessible and
-                affordable for all!
+                Equally important is our commitment to accessibility. IAC firmly
+                believes that every student deserves the opportunity to benefit
+                from exceptional educational experiences, regardless of their
+                financial circumstances. We are dedicated to making our programs
+                affordable and inclusive, offering flexible options and support
+                to ensure that all families can participate and thrive within
+                our community.
               </p>
             </div>
           </div>
@@ -86,20 +101,9 @@ export default function ContentAndScreenshot() {
           </div>
         </div>
       </div>
-      <div className="relative pt-16 lg:pt-20 overflow-hidden">
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <Image
-            alt=""
-            src="/images/Class_Photos/Soccer/53995092_144851.jpg"
-            className="shadow-2xl mb-[-12%] rounded-xl ring-1 ring-gray-900/10 aspect-video object-cover"
-            width={3600}
-            height={1200}
-          />
-          <div aria-hidden="true" className="relative">
-            <div className="bottom-0 absolute -inset-x-20 bg-linear-to-t from-white pt-[27%]" />
-          </div>
-        </div>
-      </div>
+      <FadedImage
+        imageSrc={"/images/Class_Photos/Soccer/53995092_144851.jpg"}
+      />
     </div>
   );
 }
