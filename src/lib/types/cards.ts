@@ -14,17 +14,6 @@ export type Program = {
   image: string;
 };
 
-export type StudentProject = {
-  title: string;
-  author: string;
-  school: string;
-  grade: string;
-  date: string;
-  description: string;
-  preview?: string;
-  images?: string[];
-};
-
 export type testimonialsInfo = {
   name: string;
   title: string;
