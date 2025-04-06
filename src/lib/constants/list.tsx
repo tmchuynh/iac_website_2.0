@@ -1,49 +1,81 @@
-import { FaBrain, FaChartPie, FaGraduationCap, FaMedal } from "react-icons/fa";
-
-export const features = [
-  {
-    icon: FaMedal,
-    bgClass: "bg-accent-1",
-    text: "Trusted by leading schools and parents",
-  },
-  {
-    icon: FaGraduationCap,
-    bgClass: "bg-accent-2",
-    text: "Experienced & Dedicated Professional Instructors",
-  },
-  {
-    icon: FaChartPie,
-    bgClass: "bg-accent-2",
-    text: "Well diversed classes in various disciplines",
-  },
-  {
-    icon: FaBrain,
-    bgClass: "bg-accent-2",
-    text: "Inspires growth and collaboration",
-  },
-];
-
 export const commitments = [
-  "Universal Access: We ensure that all students have equal access to every program and resource we offer.",
-  "Safe and Respectful Environments: We create spaces where students can collaborate, learn, and express themselves without fear of discrimination or judgment.",
-  "Continuous Improvement: We are dedicated to actively identifying and removing barriers to inclusion, ensuring that every student feels welcomed and valued.",
+  {
+    title: "Universal Access",
+    description:
+      "We are committed to providing all students with equal access to every program, resource, and opportunity we offer. Our goal is to ensure that no student is left behind, regardless of their background, abilities, or circumstances. By creating a fully inclusive environment, we strive to give every student the tools they need to succeed and fully participate in all aspects of their education.",
+  },
+  {
+    title: "Safe and Respectful Environments",
+    description:
+      "Our commitment to fostering safe and respectful learning environments is foundational to our approach. We create spaces where students can collaborate, engage in meaningful learning, and express themselves freely without the fear of discrimination, harassment, or judgment. By maintaining a culture of respect and inclusivity, we empower students to take risks, share ideas, and contribute to a positive and supportive community.",
+  },
+  {
+    title: "Continuous Improvement",
+    description:
+      "We are dedicated to a philosophy of continuous improvement, regularly assessing and refining our programs to ensure they meet the evolving needs of our students. We actively identify and work to eliminate any barriers to inclusion, ensuring that all students feel welcomed, supported, and valued. Our commitment to continuous growth drives us to stay current with educational research and best practices, allowing us to provide the most effective and enriching learning experiences.",
+  },
+  {
+    title: "Holistic Student Support",
+    description:
+      "We understand that student success is not solely academic, which is why we take a holistic approach to support each learner. Our commitment extends to providing emotional, social, and mental health support, ensuring students are equipped with the resources they need to thrive in all areas of their lives. By addressing the whole student, we foster resilience, self-confidence, and personal growth, empowering them to reach their full potential.",
+  },
+  {
+    title: "Equity and Fairness",
+    description:
+      "We are unwavering in our commitment to fairness and equity in all aspects of our educational programs. We recognize that each student brings unique strengths, challenges, and perspectives. As such, we strive to create an environment where all students have the necessary accommodations and resources to succeed. Our policies and practices are designed to ensure that all students have the support they need to excel, fostering an equitable learning experience for everyone.",
+  },
+  {
+    title: "Cultural Awareness and Inclusivity",
+    description:
+      "Promoting cultural awareness and inclusivity is at the core of our values. We celebrate the diversity of our student body and work to integrate diverse perspectives into every aspect of the learning experience. By encouraging respect for all cultures, beliefs, and backgrounds, we help students develop empathy, global awareness, and a deeper understanding of the world around them. Our commitment to inclusivity ensures that all students feel valued and respected for who they are.",
+  },
+  {
+    title: "Sustainable Practices",
+    description:
+      "We are dedicated to promoting sustainable practices that not only benefit the environment but also teach students the importance of responsibility and stewardship. From incorporating environmentally conscious practices into our curriculum to adopting green technologies and initiatives, we aim to instill in students a strong sense of environmental responsibility. Our commitment to sustainability encourages students to think critically about the future and the impact of their choices on the world.",
+  },
+  {
+    title: "Community Engagement and Collaboration",
+    description:
+      "Our commitment to community engagement is central to our mission. We actively seek to collaborate with local organizations, parents, and other stakeholders to enhance the learning experience and support the broader community. By fostering partnerships and encouraging open communication, we ensure that students are not only prepared for academic success but also equipped to contribute to the well-being of their communities. Through these collaborations, we promote a sense of social responsibility and civic engagement among students.",
+  },
 ];
 
 export const success_plan = [
   {
-    title: "Comprehensive Success:",
+    title: "Comprehensive Success",
     description:
-      "Our Comprehensive Success plan is designed as a long-term strategy, not a short-term fix. We offer a multi-year pathway that empowers students with skills for lifelong learning and growth, ensuring they thrive academically and personally, long after the program ends.",
+      "Our Comprehensive Success plan is a long-term, strategic approach to education that emphasizes sustainable growth and continuous development. Rather than offering short-term solutions, we focus on creating a multi-year pathway that equips students with essential skills for lifelong learning. By fostering academic and personal growth over an extended period, we ensure that students are not only prepared to succeed in the present but also in their future educational and career endeavors. Our goal is to nurture students who are capable of adapting to and thriving in an ever-changing world.",
   },
   {
-    title: "Advanced Resources:",
+    title: "Advanced Resources",
     description:
-      "We are committed to providing advanced resources that keep students at the forefront of STEM education. With the latest technology and materials, our resources are continuously updated to align with the evolving educational landscape, helping students stay ahead of the curve.",
+      "We are committed to providing students with access to advanced resources that keep them at the cutting edge of STEM education. Our curriculum is supported by the latest technology, tools, and materials, all of which are regularly updated to reflect the latest developments in the educational and technological landscapes. By continuously evolving our resources, we ensure that students gain hands-on experience with the most up-to-date innovations, preparing them to lead and excel in an increasingly technology-driven world.",
   },
   {
-    title: "Refined Curriculum:",
+    title: "Refined Curriculum",
     description:
-      "The core of our program is a refined curriculum that is continuously improved using data-driven insights and educational research. This ensures that our content remains relevant, fresh, and aligned with the latest standards, offering the most effective educational experience for your students.",
+      "At the heart of our program lies a refined curriculum that is built on a foundation of data-driven insights and rigorous educational research. We consistently assess and update our curriculum to ensure it aligns with the latest academic standards and best practices. This ongoing process of refinement ensures that our content remains relevant, engaging, and effective, providing students with the most up-to-date and comprehensive educational experience. Our approach to curriculum design focuses on fostering critical thinking, creativity, and problem-solving skills that students can apply in various real-world scenarios.",
+  },
+  {
+    title: "Holistic Development Approach",
+    description:
+      "Our success plan extends beyond academic achievement to include holistic development, addressing the intellectual, social, and emotional growth of each student. We recognize the importance of nurturing well-rounded individuals, and our programs are designed to promote resilience, leadership, and interpersonal skills. Through a balanced combination of academic rigor, collaborative learning, and personal growth opportunities, we aim to equip students with the tools they need to succeed both inside and outside the classroom.",
+  },
+  {
+    title: "Continuous Feedback and Improvement",
+    description:
+      "We believe in the power of continuous feedback to enhance the learning experience. Our program incorporates regular assessments, reflections, and evaluations, ensuring that both students and instructors can monitor progress and identify areas for improvement. This feedback loop not only supports the ongoing growth of each student but also informs the continuous improvement of our teaching practices, curriculum, and resources. By fostering a culture of constructive feedback, we empower students to take ownership of their learning journey and develop the skills necessary to become lifelong learners.",
+  },
+  {
+    title: "Collaborative Learning Environment",
+    description:
+      "Our success plan emphasizes the importance of a collaborative learning environment, where students work together to solve problems, exchange ideas, and learn from one another. We believe that collaboration fosters creativity, enhances communication skills, and promotes critical thinking. By encouraging teamwork in a structured yet flexible setting, we enable students to engage in meaningful discussions, gain diverse perspectives, and build relationships that enhance both their academic and personal development.",
+  },
+  {
+    title: "Preparation for Future Opportunities",
+    description:
+      "Our program is designed not only to prepare students for academic success but also for the opportunities and challenges they will face in their future careers. We integrate career readiness into our curriculum, providing students with the knowledge and skills needed to excel in a variety of professional fields. Through exposure to real-world scenarios, mentorship opportunities, and skill-building activities, we ensure that students are prepared to navigate the complexities of their future careers and make informed decisions about their professional paths.",
   },
 ];
 
@@ -67,43 +99,63 @@ export const arc_program = [
 
 export const class_breakdown = [
   {
-    title: "Attendance Verification:",
+    title: "Attendance Verification",
     description:
-      "Before delving into the day's lessons, instructors begin each class by verifying attendance. They cross-reference the list of enrolled students with records from the front office and parents to ensure that every student is accounted for. This initial step helps maintain a secure and structured learning environment.",
+      "At the start of each class, instructors begin by verifying student attendance. This involves cross-referencing the list of enrolled students with official records from the front office and parents, ensuring that every student is present and accounted for. This step is essential for maintaining a safe and organized learning environment, fostering accountability from the outset of each session.",
   },
   {
-    title: "Introduction of New Concepts:",
+    title: "Introduction of New Concepts",
     description:
-      "As the class progresses, students eagerly delve into the exploration of new concepts. Instructors introduce fresh subject matter, building upon the foundation laid in previous sessions. This phase serves to expand students' knowledge, stimulate their curiosity, and broaden their understanding of the topic at hand.",
+      "Following attendance, the class transitions into the introduction of new concepts. Instructors build upon the foundation established in previous lessons, introducing fresh material designed to expand students' knowledge and stimulate their intellectual curiosity. This phase is crucial for broadening students' understanding and providing them with the tools to deepen their academic insights.",
   },
   {
-    title: "Practical Application of Learned Concepts:",
+    title: "Practical Application of Learned Concepts",
     description:
-      "Students are given the opportunity to put into practice the concepts they have previously learned. This hands-on segment is crucial for reinforcing their understanding and skills. It allows students to engage with the material, collaborate with their peers, and apply their knowledge in a safe and supportive setting.",
+      "Students are then given the opportunity to apply the concepts they have learned through hands-on activities. This practical segment allows them to reinforce their understanding by engaging directly with the material. It also facilitates the development of critical thinking and problem-solving skills, as students apply their knowledge in real-world scenarios within a supportive environment.",
   },
   {
-    title: "Collaborative Learning:",
+    title: "Collaborative Learning",
     description:
-      "Our classes also emphasize the importance of teamwork and peer-to-peer interaction. Students are encouraged to engage in discussions, group activities, and collaborative projects. This fosters a sense of community within the class, promotes knowledge sharing, and enhances social and problem-solving skills.",
+      "Collaboration is a key component of our educational approach. Students are encouraged to participate in group discussions, collaborative projects, and peer-to-peer learning activities. These interactions not only promote teamwork and communication but also enhance social and cognitive skills, fostering a community-centered approach to learning.",
   },
   {
-    title: "Review and Assessment:",
+    title: "Review and Assessment",
     description:
-      "Periodically, students engage in review and assessment sessions, where they consolidate their learning by revisiting key concepts and topics. This process helps instructors gauge the progress of each student and identify areas that may require additional support.",
+      "Regular review and assessment sessions are integrated into the curriculum to help students consolidate their learning. These sessions offer an opportunity to revisit key concepts, assess retention, and identify areas that may require additional focus. Instructors utilize these assessments to monitor individual progress and tailor future instruction to meet the needs of each student.",
   },
   {
-    title: "Q&A and Discussion:",
+    title: "Q&A and Discussion",
     description:
-      "Open dialogue is highly encouraged, and students are invited to ask questions, seek clarification, and engage in meaningful discussions. This interactive approach ensures that every student has the opportunity to actively participate and gain a comprehensive understanding of the subject matter.",
+      "Open communication is encouraged throughout the course. During the Q&A and discussion sessions, students are invited to ask questions, seek clarification, and engage in in-depth conversations about the material. This interactive component promotes active participation, ensuring that students develop a comprehensive understanding of the content and feel confident in their academic pursuits.",
   },
 ];
 
 export const credit_card_procedure = [
-  "When signing your child up for their desired class, indicate if paying by check or credit card.",
-  "If paying by check mail check to the address provided on the flyer.",
-  "If paying by credit card you will receive an invoice from IAC to the email address used in the sign-up form.",
-  "If preferable, you can still call into the office to make a payment with credit card.",
-  "You will be able to pay through Square (via a link in the email invoice) with any major credit card of your choice. You will receive a receipt in your email upon payment.",
+  {
+    title: "Payment Method Selection",
+    description:
+      "When enrolling your child in a class, you will be asked to specify your preferred method of payment, whether by check or credit card. This helps ensure a smooth registration process and allows us to accommodate your payment preferences.",
+  },
+  {
+    title: "Check Payments",
+    description:
+      "For payments made by check, please mail the check to the address provided on the flyer accompanying the class registration details. Ensure that all necessary information is included with the check to avoid any delays in processing.",
+  },
+  {
+    title: "Credit Card Payment Invoice",
+    description:
+      "If you choose to pay by credit card, an invoice will be sent to the email address provided in the sign-up form. This invoice will include detailed payment instructions and a link to process your payment securely.",
+  },
+  {
+    title: "Credit Card Payment by Phone",
+    description:
+      "Alternatively, if you prefer to make your payment over the phone, you can contact our office directly. Our team will be happy to assist you with processing your credit card payment in a secure and efficient manner.",
+  },
+  {
+    title: "Online Credit Card Payment via Square",
+    description:
+      "For convenience, payments can be made online via Square using the link provided in the email invoice. This method supports all major credit cards, and once your payment is successfully processed, a receipt will be sent to your email for your records.",
+  },
 ];
 
 export const logos = [
