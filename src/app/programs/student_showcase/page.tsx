@@ -24,20 +24,53 @@ export default function StudentShowcasePage(): JSX.Element {
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Showcasing Children's Creativity
         </h1>
-        <p className="">
-          Celebrating imagination, innovation, and learning, this showcase
-          highlights the incredible talents and boundless creativity of
-          children. Each piece of work tells a unique story, reflecting their
-          curiosity, dedication, and passion for discovery. Through art,
-          writing, science projects, and more, we aim to nurture their growth
-          and inspire them to dream big, think boldly, and express themselves
-          freely. Join us in honoring their efforts and marveling at the amazing
-          potential of young minds.
+        <p>A Celebration of Imagination, Innovation, and Expression</p>
+        <p>
+          Welcome to our student creativity showcase—a space dedicated to
+          honoring the limitless imagination and extraordinary potential of
+          young minds. Here, we celebrate not just what students create, but why
+          they create, spotlighting the courage, curiosity, and critical
+          thinking that drive their ideas forward.
         </p>
         <p>
-          All pieces shown on the website are voluntary by the students. Some
-          students wanted to stay anonymous and their names aren't shown on our
-          website to respect their privacy.
+          Each piece you see—whether it’s a vibrant work of art, an original
+          story, a hand-built model, or a scientific exploration—represents a
+          child’s journey of learning and discovery. These creations are more
+          than just projects; they are personal expressions of thought, emotion,
+          culture, and vision. Through them, students demonstrate their ability
+          to explore the world around them, challenge assumptions, and bring new
+          ideas to life.
+        </p>
+        <p>
+          This showcase is a reflection of our core belief: that every child has
+          a voice worth hearing and a story worth sharing. By providing space
+          for creative freedom, we empower students to take risks, think
+          independently, and grow in confidence. We aim to inspire them not only
+          to learn but to love learning—and to understand that their ideas can
+          shape the future.
+        </p>
+        <p>
+          As you browse this collection, we invite you to appreciate each
+          submission for its originality, its message, and the heart behind it.
+          Every sketch, sentence, experiment, and presentation reveals something
+          powerful: the unfiltered brilliance of youth.
+        </p>
+        <h2 className="font-bold text-2xl">Respecting Student Privacy</h2>
+        <p>
+          Participation in this showcase is entirely voluntary. We deeply value
+          the trust placed in us by students and their families. In honoring
+          student choice, some works have been submitted anonymously. You may
+          notice that names are omitted in certain instances to protect those
+          who prefer to keep their identity private.
+        </p>
+        <p>
+          Thank you for joining us in recognizing and celebrating the future
+          creators, storytellers, thinkers, and innovators of tomorrow.
+        </p>
+        <p>Let their work remind us:</p>
+        <p>
+          ✨ When children are given the freedom to imagine, incredible things
+          happen. ✨
         </p>
       </section>
 
