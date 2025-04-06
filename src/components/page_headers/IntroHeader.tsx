@@ -56,21 +56,25 @@ export default function IntroHeader() {
             </div>
           </div>
 
-          {/* {theme === "dark" ? (
+          {theme === "dark" ? (
             <Image
               alt="IAC Logo"
-              src="/images/whiteLogo.png"
+              src="/images/white_logo.png"
               className="w-auto h-28 object-contain"
               priority={true}
+              width={1200}
+              height={800}
             />
           ) : (
             <Image
               alt="IAC Logo"
-              src="/images/tShirtLogo.png"
+              src="/images/purple_logo.png"
               className="w-auto h-40 xl:h-64 object-contain"
               priority={true}
+              width={1200}
+              height={800}
             />
-          )} */}
+          )}
         </div>
       </div>
     </>
