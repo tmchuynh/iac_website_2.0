@@ -1,6 +1,4 @@
 import ContentAndScreenshot from "@/components/page_headers/ContentAndScreenshot";
-import FeaturedColumns from "@/components/page_headers/FeaturedColumns";
-import PhotoAndList from "@/components/page_headers/PhotoAndList";
 import ProgramsSection from "@/components/ProgramsSection";
 import FeaturedTestimonial from "@/components/testimonial/Featured";
 
