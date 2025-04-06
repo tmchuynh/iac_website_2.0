@@ -56,7 +56,7 @@ export default function IntroHeader() {
             </div>
           </div>
 
-          {theme === "dark" ? (
+          {/* {theme === "dark" ? (
             <Image
               alt="IAC Logo"
               src="/images/whiteLogo.png"
@@ -70,7 +70,7 @@ export default function IntroHeader() {
               className="w-auto h-40 xl:h-64 object-contain"
               priority={true}
             />
-          )}
+          )} */}
         </div>
       </div>
     </>
