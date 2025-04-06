@@ -4,15 +4,34 @@ import LogoCloud from "@/components/LogoCloud";
 import { Button } from "@/components/ui/button";
 import { arc_program, success_plan } from "@/lib/constants/list";
 import { useRouter } from "next/navigation";
+import { JSX } from "react";
 import { FaCalendarAlt, FaCheckDouble, FaMoneyBillAlt } from "react-icons/fa";
 import { LuArrowBigRightDash } from "react-icons/lu";
 
-export default function SchoolInformationPage() {
+/**
+ * Renders the School Information page component.
+ *
+ * This page provides comprehensive information about school partnerships and programs:
+ * - Partner With Us section describing collaboration opportunities
+ * - Enrichment Made Easy section detailing the A.R.C. educational initiative
+ * - Get Involved Today section with next steps and contact information
+ *
+ * The component includes:
+ * - Navigation capabilities using Next.js router
+ * - Responsive layout with Tailwind CSS
+ * - Interactive buttons for contact and email
+ * - Icon-based feature highlights
+ * - Dynamic content rendering from success_plan and arc_program data
+ *
+ * @returns {JSX.Element} A main container with multiple informational sections about
+ * school partnerships and educational programs
+ */
+export default function SchoolInformationPage(): JSX.Element {
   const router = useRouter();
   return (
     <main className="mx-auto px-4 py-8 w-11/12">
       <section className="py-12">
-        <h1 className="font-extrabold text-4xl text-center text-secondary uppercase tracking-wider">
+        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Partner With Us
         </h1>
         <p>
