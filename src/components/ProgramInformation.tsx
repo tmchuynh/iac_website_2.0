@@ -95,8 +95,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     <ul className="space-y-2">
                       {program.keypoints.map((point, pointIndex) => (
                         <li key={pointIndex}>
-                          <strong>{point.split(":")[0]}:</strong>{" "}
-                          {point.split(":")[1]}
+                          <strong>{point.title}:</strong> {point.description}
                         </li>
                       ))}
                     </ul>
