@@ -16,16 +16,27 @@ import {
 import { FaPencil } from "react-icons/fa6";
 import {
   GiAmericanFootballHelmet,
+  GiBasketballBasket,
   GiBasketballJersey,
   GiMicrophone,
   GiWhistle,
 } from "react-icons/gi";
-import { IoMusicalNotes, IoMusicalNoteSharp } from "react-icons/io5";
+import {
+  IoAmericanFootball,
+  IoMusicalNotes,
+  IoMusicalNoteSharp,
+} from "react-icons/io5";
 import { MdOutlineBrush, MdOutlineFormatQuote, MdTimer } from "react-icons/md";
-import { PiDiscoBall, PiSoccerBallFill } from "react-icons/pi";
+import {
+  PiDiscoBall,
+  PiFootballHelmetFill,
+  PiSoccerBallFill,
+  PiVolleyballFill,
+} from "react-icons/pi";
 import { TfiWrite } from "react-icons/tfi";
 
 import { programInfo } from "../types/information";
+import { IoIosAmericanFootball } from "react-icons/io";
 
 export const programIcons = [
   {
@@ -46,7 +57,7 @@ export const programIcons = [
   },
   {
     program: "Volleyball",
-    icon: FaVolleyballBall,
+    icon: "/images/icons/volleyball-icon.svg",
   },
   {
     program: "Creative Writing",
@@ -138,7 +149,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Basketball",
-    icons: [FaBasketballBall, GiBasketballJersey],
+    icons: [
+      FaBasketballBall,
+      GiBasketballJersey,
+      "/images/icons/basketball-icon.png",
+    ],
     image: "/images/Class_Photos/Basketball/20250402_142999.JPG",
     description:
       "Step onto the court and experience the thrill of basketball! Our program offers the perfect blend of skill development and strategic thinking, all while fostering teamwork and having fun. Whether you're just getting started or refining your skills, basketball is an exciting way to learn, grow, and compete.",
@@ -191,7 +206,7 @@ export const programs: programInfo[] = [
   },
   {
     title: "Volleyball",
-    icons: [FaVolleyballBall, MdTimer],
+    icons: [PiVolleyballFill, MdTimer],
     image: "/images/Class_Photos/Volleyball/30115092_141152.JPG",
     description:
       "Spike, serve, and set your way to volleyball mastery! Our program combines precision, strategy, and sportsmanship for an electrifying experience where students develop both technical skills and a deep passion for the game. From beginners to advanced players, every athlete will improve their game and become part of a collaborative, dynamic team.",
@@ -241,7 +256,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Flag Football",
-    icons: [FaFootballBall, GiAmericanFootballHelmet],
+    icons: [
+      IoAmericanFootball,
+      PiFootballHelmetFill,
+      "/images/icons/flagfootball.svg",
+    ],
     image: "/images/Class_Photos/Flag_Football/20250402_141937.jpg",
     description:
       "Get ready for an action-packed experience with flag football, where athleticism, strategy, and teamwork come together to create an unforgettable experience on the field. From mastering key skills to executing exciting plays, this program offers everything you need to thrive in the game.",
@@ -576,27 +595,4 @@ export const programs: programInfo[] = [
       "/images/Class_Photos/Dance/52005092_269955.jpg",
     ],
   },
-  // {
-  //   title: "Coding",
-  //   icons: [FaLaptopCode, FaCode],
-  //   image: "/images/codingclass.jpg",
-  //   description:
-  //     "Code your way to creativity and innovation with hands-on projects and interactive, game-based learning that makes programming fun and inspiring.",
-  //   overview:
-  //     "Our coding classes provide an exciting gateway to the world of web development, merging creativity and technology through engaging, game-based learning. Designed to captivate and inspire, our curriculum focuses on web development skills while keeping students enthusiastic and curious about programming",
-  //   keypoints: [
-  //     "Coding Fundamentals: Students will begin with foundational concepts in coding, using block coding to understand basic programming principles, syntax, and logic. This approach builds a strong base in algorithmic thinking",
-  //     "Transition to Script Coding: As students gain confidence with block coding, we will introduce script coding. This progression allows them to apply their skills to more complex programming languages and real-world web development tasks",
-  //     "Web Development Basics: Students will explore the core elements of web development, including HTML, CSS, and JavaScript. They'll learn to create and style web pages, and understand how these technologies work together to build interactive websites",
-  //     "Game-Based Projects: To maintain high levels of engagement, students will work on game-based projects. These projects will involve creating interactive web games and simulations, applying coding skills to develop engaging and functional applications",
-  //     "Problem-Solving and Algorithmic Thinking: Students will tackle coding challenges that enhance their problem-solving abilities and algorithmic thinking. They will learn to plan, debug, and optimize their code for efficiency and effectiveness",
-  //     "Collaborative Coding: We emphasize teamwork by encouraging students to collaborate on projects. They will provide and receive feedback, fostering a supportive community and learning from their peers",
-  //     "Real-World Applications: Students will have opportunities to apply their skills to real-world scenarios through project-based learning. These projects will demonstrate the practical applications of their coding knowledge and enhance their understanding of web development",
-  //     "Creativity and Innovation: Our program nurtures creativity by allowing students to design and develop their own web-based games and interactive applications. This approach encourages innovative thinking and personal expression in their projects",
-  //   ],
-  //   outcome:
-  //     "Students will gain a robust understanding of web development fundamentals and practical coding skills through engaging, game-based projects. They will develop problem-solving abilities, algorithmic thinking, and collaborative skills, preparing them for further studies and future careers in technology.",
-  //   goal: "Our goal is to foster a lifelong passion for coding and web development. We aim to instill problem-solving skills, logical thinking, and creative innovation that extend beyond programming. By integrating game-based learning, we make coding enjoyable and accessible, preparing students for success in the tech industry and beyond. We envision a future where students are not only skilled coders but also enthusiastic creators, continually exploring and innovating in the world of technology.",
-  //   images: [],
-  // },
 ];
