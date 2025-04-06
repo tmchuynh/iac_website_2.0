@@ -8,35 +8,6 @@ export default function Apply() {
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-7xl">
         <div className="relative lg:static px-6 lg:px-8 lg:py-48 pt-24 sm:pt-32 pb-20">
           <div className="mx-auto lg:mx-0 max-w-xl lg:max-w-lg">
-            <div className="left-0 -z-10 absolute inset-y-0 ring-1 w-full lg:w-1/2 overflow-hidden">
-              <svg
-                aria-hidden="true"
-                className="absolute inset-0 size-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-              >
-                <defs>
-                  <pattern
-                    x="100%"
-                    y={-1}
-                    id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-                    width={200}
-                    height={200}
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <path d="M130 200V.5M.5 .5H200" fill="none" />
-                  </pattern>
-                </defs>
-                <rect fill="white" width="100%" height="100%" strokeWidth={0} />
-                <svg x="100%" y={-1} className="overflow-visible">
-                  <path d="M-470.5 0h201v201h-201Z" strokeWidth={0} />
-                </svg>
-                <rect
-                  fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
-                  width="100%"
-                  height="100%"
-                  strokeWidth={0}
-                />
-              </svg>
-            </div>
             <h2 className="font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
               Get in touch
             </h2>
@@ -50,6 +21,8 @@ export default function Apply() {
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"
                 className="w-auto h-12"
+                width={600}
+                height={600}
               />
 
               <figure className="mt-10">
@@ -65,6 +38,8 @@ export default function Apply() {
                     alt=""
                     src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
                     className="flex-none rounded-full size-12"
+                    width={96}
+                    height={96}
                   />
 
                   <div>

@@ -4,35 +4,6 @@ import Image from "next/image";
 export default function ContactUs() {
   return (
     <div className="relative px-6 lg:px-8 py-24 sm:py-32 isolate">
-      <svg
-        aria-hidden="true"
-        className="-z-10 absolute inset-0 size-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-      >
-        <defs>
-          <pattern
-            x="50%"
-            y={-64}
-            id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-            width={200}
-            height={200}
-            patternUnits="userSpaceOnUse"
-          >
-            <path d="M100 200V.5M.5 .5H200" fill="none" />
-          </pattern>
-        </defs>
-        <svg x="50%" y={-64} className="overflow-visible">
-          <path
-            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 h201v201h-201Z M299.5 h201v201h-201Z"
-            strokeWidth={0}
-          />
-        </svg>
-        <rect
-          fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
-          width="100%"
-          height="100%"
-          strokeWidth={0}
-        />
-      </svg>
       <div className="mx-auto max-w-xl lg:max-w-4xl">
         <h2 className="font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
           Let’s talk about your project
@@ -143,6 +114,8 @@ export default function ContactUs() {
               alt=""
               src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"
               className="w-auto h-12"
+              width={600}
+              height={800}
             />
             <figure className="mt-10">
               <blockquote className="font-semibold text-lg/8">
@@ -157,6 +130,8 @@ export default function ContactUs() {
                   alt=""
                   src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
                   className="flex-none rounded-full size-12"
+                  width={96}
+                  height={96}
                 />
                 <div>
                   <div className="font-semibold text-base">Brenna Goyette</div>
