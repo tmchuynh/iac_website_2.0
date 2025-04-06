@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import RequestFormSchool from "@/components/forms/RequestFormSchool";
 import { Button } from "@/components/ui/button";
@@ -13,6 +15,8 @@ export default function RequestUs() {
           alt=""
           src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
           className="lg:absolute w-full h-64 sm:h-80 lg:h-full object-cover"
+          width={600}
+          height={800}
         />
       </div>
       <div className="lg:grid lg:grid-cols-2 lg:mx-auto pt-16 sm:pt-24 lg:pt-32 pb-24 sm:pb-32 lg:max-w-7xl">
