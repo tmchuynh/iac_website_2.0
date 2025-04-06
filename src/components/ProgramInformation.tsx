@@ -162,8 +162,10 @@ export default function ProgramDetails({ title }: { title?: string }) {
                             <Image
                               key={imageIndex}
                               src={image}
-                              className="w-1/5 object-cover object-center aspect-video"
+                              className="rounded-2xl w-1/5 object-center object-cover aspect-video"
                               alt={`${program.title} Image ${imageIndex + 1}`}
+                              width={800}
+                              height={1200}
                             />
                           ))}
                         </div>
