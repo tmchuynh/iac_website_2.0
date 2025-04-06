@@ -42,6 +42,8 @@ export default function ImageTitles() {
                   alt=""
                   src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?&auto=format&fit=crop&crop=center&w=560&h=560&q=90"
                   className="block size-full object-cover"
+                  width={150}
+                  height={300}
                 />
               </div>
               <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl overflow-hidden aspect-square outline-1 -outline-offset-1 outline-black/10">
@@ -49,6 +51,8 @@ export default function ImageTitles() {
                   alt=""
                   src="https://images.unsplash.com/photo-1557804506-669a67965ba0?&auto=format&fit=crop&crop=left&w=560&h=560&q=90"
                   className="block size-full object-cover"
+                  width={150}
+                  height={300}
                 />
               </div>
               <div className="shadow-xl rounded-xl overflow-hidden aspect-square outline-1 -outline-offset-1 outline-black/10">
@@ -56,6 +60,8 @@ export default function ImageTitles() {
                   alt=""
                   src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?&auto=format&fit=crop&crop=left&w=560&h=560&q=90"
                   className="block size-full object-cover"
+                  width={150}
+                  height={300}
                 />
               </div>
               <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl overflow-hidden aspect-square outline-1 -outline-offset-1 outline-black/10">
@@ -63,6 +69,8 @@ export default function ImageTitles() {
                   alt=""
                   src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?&auto=format&fit=crop&crop=center&w=560&h=560&q=90"
                   className="block size-full object-cover"
+                  width={150}
+                  height={300}
                 />
               </div>
             </div>
