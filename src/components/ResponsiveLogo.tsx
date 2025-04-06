@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function ResponsiveLogo() {
+export default function ResponsiveLogo({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -17,7 +17,7 @@ export default function ResponsiveLogo() {
   }
 
   return (
-    <div className="md:max-w-lg">
+    <div className={`md:max-w-lg ${className}`}>
       {theme === "dark" ? (
         <Image
           alt="IAC Logo"
