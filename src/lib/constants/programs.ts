@@ -2,41 +2,15 @@ import {
   FaBasketballBall,
   FaBook,
   FaChessBishop,
-  FaChessKing,
-  FaChessKnight,
-  FaChessQueen,
-  FaChessRook,
   FaFootballBall,
   FaMicrophone,
-  FaPencilAlt,
   FaTheaterMasks,
-  FaUsers,
-  FaVolleyballBall,
 } from "react-icons/fa";
-import { FaPencil } from "react-icons/fa6";
-import {
-  GiAmericanFootballHelmet,
-  GiBasketballBasket,
-  GiBasketballJersey,
-  GiMicrophone,
-  GiWhistle,
-} from "react-icons/gi";
-import {
-  IoAmericanFootball,
-  IoMusicalNotes,
-  IoMusicalNoteSharp,
-} from "react-icons/io5";
-import { MdOutlineBrush, MdOutlineFormatQuote, MdTimer } from "react-icons/md";
-import {
-  PiDiscoBall,
-  PiFootballHelmetFill,
-  PiSoccerBallFill,
-  PiVolleyballFill,
-} from "react-icons/pi";
-import { TfiWrite } from "react-icons/tfi";
+import { IoMusicalNotes } from "react-icons/io5";
+import { MdOutlineFormatQuote } from "react-icons/md";
+import { PiSoccerBallFill } from "react-icons/pi";
 
 import { programInfo } from "../types/information";
-import { IoIosAmericanFootball } from "react-icons/io";
 
 export const programIcons = [
   {
@@ -84,16 +58,18 @@ export const programIcons = [
 export const programs: programInfo[] = [
   {
     title: "Chess",
+    titleIcon: "/images/icons/chess/knight.png",
     icons: [
-      FaChessBishop,
-      FaChessKing,
-      FaChessKnight,
-      FaChessQueen,
-      FaChessRook,
+      "/images/icons/chess/bishop.png",
+      "/images/icons/chess/king.png",
+      "/images/icons/chess/knight.png",
+      "/images/icons/chess/queen.png",
+      "/images/icons/chess/pawn.png",
+      "/images/icons/chess/rook.png",
     ],
     image: "/images/Class_Photos/Chess/20990092_141152.jpg",
     description:
-      "Step into the exciting and intellectually stimulating world of chess! Whether you are a beginner or an experienced player, our chess program is designed to ignite your passion for the game, sharpen your strategic thinking, and help you develop critical skills that extend beyond the board. Chess is a dynamic blend of logic, creativity, and foresight, and in our program, you’ll not only master the game but also sharpen your mind for academic and real-life challenges.",
+      "Explore the strategic and rewarding world of chess, where every move sharpens the mind. Whether you're just starting out or looking to enhance your skills, our program offers a supportive space to build confidence, think critically, and master the game. Chess teaches focus, foresight, and problem-solving—skills that extend far beyond the board and into everyday life.",
     overview:
       "Our chess program offers an exceptional opportunity for students to embark on a journey of intellectual development. Chess is not merely a game; it is a powerful tool for cultivating problem-solving abilities, logical reasoning, and critical thinking. By diving deep into the complexities of chess, students will develop strategies that can be applied to both the game and life. From understanding the core principles of the game to mastering intricate endgame tactics, our curriculum is structured to promote a progressive learning experience. Chess teaches valuable skills such as patience, focus, and long-term planning, which students will carry with them beyond the chessboard into their everyday lives.",
     keypoints: [
@@ -149,14 +125,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Basketball",
-    icons: [
-      FaBasketballBall,
-      GiBasketballJersey,
-      "/images/icons/basketball-icon.png",
-    ],
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
     image: "/images/Class_Photos/Basketball/20250402_142999.JPG",
     description:
-      "Step onto the court and experience the thrill of basketball! Our program offers the perfect blend of skill development and strategic thinking, all while fostering teamwork and having fun. Whether you're just getting started or refining your skills, basketball is an exciting way to learn, grow, and compete.",
+      "Jump into the game of basketball, where quick thinking, teamwork, and skill come together in every play. Our program focuses on building core techniques like dribbling, passing, and shooting, while also developing game awareness and strategic play. Whether you're just starting out or looking to advance your skills, basketball offers a fun and challenging way to grow as an athlete and team player.",
     overview:
       "Our basketball program is more than just a place to develop technical skills—it’s a dynamic environment where students build confidence, teamwork, leadership, and a deep love for the sport. We focus on fundamental basketball skills, but we also emphasize the importance of collaboration, sportsmanship, and the joy of playing as part of a team. The program is designed to be inclusive and engaging for all skill levels, encouraging students to push themselves and support one another in a positive, motivating environment. Through basketball, we aim to instill lifelong values that transcend the game, empowering students to excel both on and off the court.",
     keypoints: [
@@ -206,10 +179,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Volleyball",
-    icons: [PiVolleyballFill, MdTimer],
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
     image: "/images/Class_Photos/Volleyball/30115092_141152.JPG",
     description:
-      "Spike, serve, and set your way to volleyball mastery! Our program combines precision, strategy, and sportsmanship for an electrifying experience where students develop both technical skills and a deep passion for the game. From beginners to advanced players, every athlete will improve their game and become part of a collaborative, dynamic team.",
+      "Get in the game with volleyball—a fast-paced sport that builds agility, focus, and teamwork. In this class, students will develop core skills like serving, setting, and spiking while learning how to read the game and support their teammates. Open to all skill levels, the program encourages growth, sportsmanship, and a lasting passion for the sport.",
     overview:
       "Our volleyball program is designed to provide students with the fundamental skills required to excel in the sport. We focus on key aspects such as teamwork, strategic play, and athleticism, while also fostering a love for the game. Students will learn how to work together to execute successful plays, develop their personal skills, and engage in competitive play in a positive, supportive environment. This program aims to not only make students proficient in volleyball but to also instill in them a deep passion for the sport that will last a lifetime.",
     keypoints: [
@@ -256,14 +230,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Flag Football",
-    icons: [
-      IoAmericanFootball,
-      PiFootballHelmetFill,
-      "/images/icons/flagfootball.svg",
-    ],
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: ["/images/icons/flagfootball.svg"],
     image: "/images/Class_Photos/Flag_Football/20250402_141937.jpg",
     description:
-      "Get ready for an action-packed experience with flag football, where athleticism, strategy, and teamwork come together to create an unforgettable experience on the field. From mastering key skills to executing exciting plays, this program offers everything you need to thrive in the game.",
+      "Experience the thrill of flag football, where speed, strategy, and teamwork unite for high-energy fun on the field. This program equips students with essential skills, from precision passing to smart play execution, all in a supportive and dynamic environment. Whether you're a beginner or looking to sharpen your game, you'll develop confidence, coordination, and a true love for the sport.",
     overview:
       "Our flag football classes provide an exciting, hands-on opportunity for students to develop their athletic skills while fostering a deep passion for the sport. Flag football combines the strategic elements of traditional football with a dynamic, fast-paced environment that emphasizes teamwork, agility, and sportsmanship. Whether students are new to the sport or looking to refine their skills, our program offers a fun, inclusive, and supportive atmosphere where players can grow and succeed together.",
     keypoints: [
@@ -304,10 +275,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Soccer",
-    icons: [PiSoccerBallFill, GiWhistle],
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
     image: "/images/Class_Photos/Soccer/53995092_144851.jpg",
     description:
-      "Step onto the field and elevate your soccer skills! Our program is designed to sharpen your techniques while fostering a deep understanding of teamwork, strategy, and the true spirit of the game. Whether you're a seasoned player or new to soccer, our classes offer the perfect environment to grow, compete, and thrive.",
+      "Hit the field and take your soccer game to the next level! Our program focuses on developing technical skills, strategic thinking, and strong teamwork. Whether you're just starting out or an experienced player, our classes provide a supportive and competitive space to learn, improve, and excel.",
     overview:
       "Our soccer classes go beyond simply developing technical skills; they provide an enriching experience that encourages students to embrace the beautiful game. We are committed to instilling a lifelong passion for soccer while emphasizing teamwork, strategic play, and personal growth. Our program is designed to help students not only become better players but also better teammates and leaders on and off the field. With a focus on both individual and team development, our goal is to ignite enthusiasm for the game and cultivate a culture of respect, discipline, and excellence.",
     keypoints: [
@@ -355,7 +327,8 @@ export const programs: programInfo[] = [
   },
   {
     title: "Creative Writing",
-    icons: [FaPencil, TfiWrite, MdOutlineFormatQuote],
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
     image: "/images/Class_Photos/Creative_Writing/20250402_142224.jpg",
     description:
       "Unleash your imagination and bring your ideas to life! Dive into the world of creative writing, where you’ll learn how to transform your thoughts into compelling stories, express your unique voice, and captivate your audience with every word. Whether you dream of writing novels, short stories, or poetry, our classes are your gateway to discovering the writer within.",
@@ -401,57 +374,14 @@ export const programs: programInfo[] = [
       "/images/Class_Photos/Creative_Writing/20250402_142223.jpg",
     ],
   },
-  {
-    title: "Public Speaking",
-    icons: [FaMicrophone, FaUsers, GiMicrophone],
-    image: "/images/Class_Photos/Creative_Writing/20250402_142256.jpg",
-    description:
-      "Master the art of public speaking and transform your ability to communicate! In our classes, you'll develop the skills to engage, persuade, and inspire any audience with confidence, poise, and authenticity. Whether you're speaking in front of a classroom, delivering a presentation, or engaging in a conversation, this program is designed to help you communicate effectively in all settings.",
-    overview:
-      "Our Public Speaking Classes empower students to develop the skills and confidence necessary for effective communication. This program goes beyond just giving speeches—it helps students discover the power of their voice and how to use it to connect with others, influence opinions, and share ideas. Through engaging lessons, dynamic exercises, and hands-on practice, we equip students with practical techniques to speak clearly, persuasively, and confidently. Whether speaking in a small meeting or in front of a large audience, students will learn how to engage their audience, reduce anxiety, and leave a lasting impact.",
-    keypoints: [
-      {
-        title: "Mastering the Foundations of Public Speaking",
-        description:
-          "This introductory module equips students with the essential principles of effective public speaking. Focus areas include clarity of speech, audience engagement, and message purpose. Students will learn how to overcome stage fright, project confidence, and deliver messages with conviction. Instruction covers how to craft introductions that grab attention, bodies that convey information clearly, and conclusions that leave a lasting impression—all while aligning speech content with audience needs and expectations.",
-      },
-      {
-        title: "Vocal Dynamics and Expressive Tone",
-        description:
-          "A speaker’s voice is a key instrument in delivering impactful communication. In this segment, students will explore techniques such as tone modulation, pitch control, strategic pauses, volume variation, and pacing. These vocal tools enhance expressiveness, help emphasize key ideas, and maintain audience attention. Through practice, students will learn to adapt their voice to suit different messages, emotional tones, and speaking environments, becoming more persuasive and engaging speakers.",
-      },
-      {
-        title: "Organizing Speeches for Clarity and Impact",
-        description:
-          "A clear and logical structure is crucial for message delivery. Students will learn how to outline and construct well-organized speeches that guide the audience through a compelling narrative. Training includes building strong thesis statements, crafting transitions, supporting arguments with evidence, and closing with purpose. This structured approach ensures coherence, supports retention, and strengthens the speaker's authority and persuasiveness.",
-      },
-      {
-        title: "Harnessing Nonverbal Communication",
-        description:
-          "Nonverbal cues play a powerful role in reinforcing verbal messages. This module trains students to become conscious of their body language, posture, hand gestures, facial expressions, and eye contact. Students will learn how to use physical presence to project confidence, build rapport, and maintain audience engagement. Emphasis is placed on alignment between verbal and nonverbal messages to ensure authenticity and clarity in communication.",
-      },
-      {
-        title: "Thinking on Your Feet: Impromptu Speaking",
-        description:
-          "Not all speaking opportunities allow for preparation. This segment challenges students to deliver spontaneous speeches and responses to unexpected prompts. Through timed exercises and simulated real-world scenarios, students will build mental agility, quick thinking, and the ability to organize ideas under pressure. This training promotes poise, adaptability, and confidence—key skills for interviews, meetings, and public forums.",
-      },
-      {
-        title: "The Art of Persuasion and Storytelling",
-        description:
-          "Persuasive speaking is elevated by the power of storytelling. Students will learn how to craft narratives that connect emotionally, simplify complex ideas, and motivate listeners to action. Focus areas include character development, narrative arc, rhetorical devices, and emotional resonance. By integrating stories into their speeches, students transform factual presentations into engaging experiences that inspire, inform, and influence audiences.",
-      },
-    ],
-    outcome:
-      "By the end of the program, students will have developed the confidence and skills to deliver clear, persuasive, and engaging speeches in a variety of settings. They will be equipped with techniques to manage public speaking anxiety, structure their speeches effectively, and use their voice and body language to enhance their message. Students will also have the ability to think on their feet and adapt their message in real-time, ensuring that they can communicate with confidence in any situation. Through this journey, students will not only become better speakers but also more confident communicators in every aspect of their lives.",
-    goal: "Our goal is to empower students to harness the full potential of their voice. Beyond mastering the technical skills of public speaking, we aim to instill a deep appreciation for the power of words and the ability to inspire, persuade, and connect with others. We want students to leave the program with a strong sense of confidence in their communication abilities, equipped with the tools to speak with clarity, authenticity, and impact in any setting—whether in the classroom, at work, or in their personal lives. We aspire to help students discover their unique voice, empowering them to use it to share their ideas and stories with the world.",
-    images: ["/images/Class_Photos/Creative_Writing/20250402_142256.jpg"],
-  },
+
   {
     title: "Comic Book",
-    icons: [FaPencilAlt, FaBook, MdOutlineBrush],
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
     image: "/images/Class_Photos/Comic_Book/2604809_690151.jpg",
     description:
-      "Step into the world of imagination and creativity, where art and storytelling merge to create unforgettable comic books. In this class, you will learn how to develop dynamic characters, compelling plots, and vivid illustrations to bring your stories to life in the exciting medium of comics.",
+      "Dive into a creative world where art and storytelling collide to bring comic books to life. In this class, you'll explore how to craft compelling characters, build engaging storylines, and illustrate vibrant scenes—transforming your ideas into visually captivating comics.",
     overview:
       "Our Comic Book class offers students the chance to explore the rich world of storytelling and illustration. This program is designed to spark creativity and artistic expression while diving into the cultural impact of comic books. Whether you’re a long-time fan of graphic novels or just starting your comic book journey, this class is a place for everyone to explore, create, and share. Students will not only hone their artistic and storytelling skills but will also develop an appreciation for the history and power of comics as a form of communication and art.",
     keypoints: [
@@ -493,10 +423,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Performing Arts",
-    icons: [FaTheaterMasks],
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
     image: "/images/Class_Photos/Performing_Arts/22195092_265855.jpg",
     description:
-      "Step into the world of performance, where creativity, skill, and imagination come together to create unforgettable experiences. In our Performing Arts classes, students will develop their acting skills, refine their stage presence, and master the art of connecting with an audience, all while building confidence and exploring the transformative power of storytelling.",
+      "Enter the world of performing arts, where imagination, talent, and storytelling come to life. Our classes help students strengthen their acting abilities, enhance their stage presence, and connect with audiences, all while building confidence and embracing the expressive power of performance.",
     overview:
       "Our Performing Arts Classes provide students with an exceptional opportunity to explore the world of theater, acting, and performance. This program is designed to help students hone essential acting techniques, such as stage presence, vocal articulation, and emotional expression. By focusing on creativity, teamwork, and personal growth, we aim to cultivate a deep passion for the performing arts that lasts a lifetime. Students will engage in a range of activities, from acting fundamentals to improvisation, and will gain hands-on experience in collaborative performances, all while building self-confidence and learning the value of artistic expression.",
     keypoints: [
@@ -533,7 +464,7 @@ export const programs: programInfo[] = [
     ],
     outcome:
       "Students will emerge from this program as confident, skilled performers with a well-rounded understanding of the performing arts. They will have developed a solid foundation in acting techniques, script analysis, and character creation, as well as the ability to perform collaboratively in group productions. By participating in creative exercises, scene work, and collaborative performances, students will build self-confidence, creativity, and stage presence. Additionally, students will gain a deep appreciation for the transformative power of theater and its role in storytelling, personal expression, and cultural impact.",
-    goal: "Our goal is to nurture a passion for the performing arts by providing students with the tools and opportunities to develop their skills in acting, storytelling, and performance. Beyond technical abilities, we aim to foster creativity, confidence, and a love for artistic expression. We want students to leave the program with a greater sense of self, a deeper understanding of theater, and the skills necessary to succeed both on and off the stage. Our program is dedicated to shaping the next generation of performers, storytellers, and artists who will continue to inspire and captivate audiences with their creativity and passion.",
+    goal: "Our goal is to nurture a passion for the performing arts by equipping students with the skills and opportunities to grow in acting, storytelling, and stage performance. Beyond technique, we aim to foster creativity, confidence, and a deep love for artistic expression. Students will leave with a stronger sense of self, a deeper appreciation for theater, and the tools to succeed both on and off the stage. Our program is dedicated to shaping the next generation of performers and storytellers who will inspire and captivate through their creativity and passion.",
     images: [
       "/images/Class_Photos/Performing_Arts/52195562_265855.jpg",
       "/images/Class_Photos/Performing_Arts/22195092_265855.jpg",
@@ -547,10 +478,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Dance",
-    icons: [IoMusicalNotes, PiDiscoBall, IoMusicalNoteSharp],
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
     image: "/images/Class_Photos/Dance/52005092_269955.jpg",
     description:
-      "Step into the world of rhythm, expression, and movement! Our dance classes offer an exciting journey where technique meets creativity, allowing students to explore various dance styles, build confidence, and express themselves in dynamic and inspiring ways. Whether you're looking to refine your skills or discover new forms of dance, our classes are designed to help you grow both as a dancer and an individual.",
+      "Discover the power of rhythm, expression, and movement. Our dance classes blend technique with creativity, helping students explore diverse styles, build confidence, and grow as both dancers and individuals.",
     overview:
       "Our dance program is designed for dancers of all levels, whether you are just starting or looking to refine your technique. We focus on building confidence, improving coordination, and fostering a love for dance through diverse styles like ballet, jazz, contemporary, and more. Students will develop physical fitness, creativity, and teamwork, while also gaining the skills needed to perform confidently on stage. Our program aims to inspire a deep passion for dance, allowing students to grow in both their artistic and personal lives.",
     keypoints: [
@@ -594,5 +526,97 @@ export const programs: programInfo[] = [
       "/images/Class_Photos/Dance/52155092_265855.jpg",
       "/images/Class_Photos/Dance/52005092_269955.jpg",
     ],
+  },
+  {
+    title: "Public Speaking",
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
+    image: "/images/Class_Photos/Creative_Writing/20250402_142256.jpg",
+    description:
+      "Master the art of public speaking and transform your ability to communicate! In our classes, you'll develop the skills to engage, persuade, and inspire any audience with confidence, poise, and authenticity. Whether you're speaking in front of a classroom, delivering a presentation, or engaging in a conversation, this program is designed to help you communicate effectively in all settings.",
+    overview:
+      "Our Public Speaking Classes empower students to develop the skills and confidence necessary for effective communication. This program goes beyond just giving speeches—it helps students discover the power of their voice and how to use it to connect with others, influence opinions, and share ideas. Through engaging lessons, dynamic exercises, and hands-on practice, we equip students with practical techniques to speak clearly, persuasively, and confidently. Whether speaking in a small meeting or in front of a large audience, students will learn how to engage their audience, reduce anxiety, and leave a lasting impact.",
+    keypoints: [
+      {
+        title: "Mastering the Foundations of Public Speaking",
+        description:
+          "This introductory module equips students with the essential principles of effective public speaking. Focus areas include clarity of speech, audience engagement, and message purpose. Students will learn how to overcome stage fright, project confidence, and deliver messages with conviction. Instruction covers how to craft introductions that grab attention, bodies that convey information clearly, and conclusions that leave a lasting impression—all while aligning speech content with audience needs and expectations.",
+      },
+      {
+        title: "Vocal Dynamics and Expressive Tone",
+        description:
+          "A speaker’s voice is a key instrument in delivering impactful communication. In this segment, students will explore techniques such as tone modulation, pitch control, strategic pauses, volume variation, and pacing. These vocal tools enhance expressiveness, help emphasize key ideas, and maintain audience attention. Through practice, students will learn to adapt their voice to suit different messages, emotional tones, and speaking environments, becoming more persuasive and engaging speakers.",
+      },
+      {
+        title: "Organizing Speeches for Clarity and Impact",
+        description:
+          "A clear and logical structure is crucial for message delivery. Students will learn how to outline and construct well-organized speeches that guide the audience through a compelling narrative. Training includes building strong thesis statements, crafting transitions, supporting arguments with evidence, and closing with purpose. This structured approach ensures coherence, supports retention, and strengthens the speaker's authority and persuasiveness.",
+      },
+      {
+        title: "Harnessing Nonverbal Communication",
+        description:
+          "Nonverbal cues play a powerful role in reinforcing verbal messages. This module trains students to become conscious of their body language, posture, hand gestures, facial expressions, and eye contact. Students will learn how to use physical presence to project confidence, build rapport, and maintain audience engagement. Emphasis is placed on alignment between verbal and nonverbal messages to ensure authenticity and clarity in communication.",
+      },
+      {
+        title: "Thinking on Your Feet: Impromptu Speaking",
+        description:
+          "Not all speaking opportunities allow for preparation. This segment challenges students to deliver spontaneous speeches and responses to unexpected prompts. Through timed exercises and simulated real-world scenarios, students will build mental agility, quick thinking, and the ability to organize ideas under pressure. This training promotes poise, adaptability, and confidence—key skills for interviews, meetings, and public forums.",
+      },
+      {
+        title: "The Art of Persuasion and Storytelling",
+        description:
+          "Persuasive speaking is elevated by the power of storytelling. Students will learn how to craft narratives that connect emotionally, simplify complex ideas, and motivate listeners to action. Focus areas include character development, narrative arc, rhetorical devices, and emotional resonance. By integrating stories into their speeches, students transform factual presentations into engaging experiences that inspire, inform, and influence audiences.",
+      },
+    ],
+    outcome:
+      "By the end of the program, students will have developed the confidence and skills to deliver clear, persuasive, and engaging speeches in a variety of settings. They will be equipped with techniques to manage public speaking anxiety, structure their speeches effectively, and use their voice and body language to enhance their message. Students will also have the ability to think on their feet and adapt their message in real-time, ensuring that they can communicate with confidence in any situation. Through this journey, students will not only become better speakers but also more confident communicators in every aspect of their lives.",
+    goal: "Our goal is to empower students to harness the full potential of their voice. Beyond mastering the technical skills of public speaking, we aim to instill a deep appreciation for the power of words and the ability to inspire, persuade, and connect with others. We want students to leave the program with a strong sense of confidence in their communication abilities, equipped with the tools to speak with clarity, authenticity, and impact in any setting—whether in the classroom, at work, or in their personal lives. We aspire to help students discover their unique voice, empowering them to use it to share their ideas and stories with the world.",
+    images: ["/images/Class_Photos/Creative_Writing/20250402_142256.jpg"],
+  },
+  {
+    title: "Arts & Crafts",
+    titleIcon: "/images/icons/chess/knight.png",
+    icons: [],
+    image: "/images/Class_Photos/Arts_And_Crafts/arts_intro.jpg",
+    description:
+      "Immerse yourself in a vibrant world of color, creativity, and imagination. Our Arts & Crafts classes offer a dynamic space for hands-on exploration and self-expression. Using a variety of materials and techniques, students bring their ideas to life—building confidence, strengthening fine motor skills, and discovering their unique artistic voices.",
+    overview:
+      "Our Arts & Crafts program is designed for creators of all ages and skill levels. Whether students are new to art or experienced young artists, they will find opportunities to explore, create, and express themselves. The curriculum focuses on both process and technique—ranging from painting and drawing to sculpting, collage, and mixed media projects. Students will build creative confidence, refine fine motor skills, and develop an appreciation for visual arts while learning to think critically and work both independently and collaboratively.",
+    keypoints: [
+      {
+        title: "Exploring a Variety of Artistic Techniques",
+        description:
+          "Students will be introduced to a wide range of art forms and mediums such as watercolor painting, acrylics, charcoal drawing, clay modeling, printmaking, paper crafts, and more. Each project is designed to highlight different artistic skills and techniques, allowing students to explore their interests and develop a well-rounded foundation in the visual arts.",
+      },
+      {
+        title: "Fostering Creative Confidence and Self-Expression",
+        description:
+          "Arts & Crafts provides a safe, encouraging space for students to express themselves freely. Through guided and open-ended projects, students are encouraged to experiment with ideas, make artistic choices, and take creative risks. This exploration promotes confidence, emotional expression, and a deeper understanding of their own artistic identity.",
+      },
+      {
+        title: "Developing Fine Motor Skills and Artistic Discipline",
+        description:
+          "Creating art strengthens hand-eye coordination, spatial awareness, and fine motor control. Students will practice careful cutting, drawing, shaping, and assembling as they complete detailed and purposeful projects. These activities also promote patience, focus, and attention to detail—skills that benefit both artistic and academic pursuits.",
+      },
+      {
+        title: "Understanding Artistic Concepts and Visual Literacy",
+        description:
+          "Beyond technique, students will learn core concepts in design and visual storytelling, including color theory, composition, contrast, texture, and form. These foundational principles help students understand how to effectively communicate ideas through visual media and deepen their appreciation for art across cultures and time periods.",
+      },
+      {
+        title: "Collaboration and Group Art Projects",
+        description:
+          "Art can be a powerful tool for teamwork and connection. Students will participate in group projects that encourage collaboration, communication, and shared creative vision. Whether working on a classroom mural, collaborative sculpture, or community-inspired installation, students learn to appreciate the value of teamwork and diverse perspectives.",
+      },
+      {
+        title: "Showcasing Creativity Through Exhibitions",
+        description:
+          "Throughout the program, students will have opportunities to display their work in classroom galleries, community exhibits, or seasonal art showcases. These events allow students to celebrate their achievements, reflect on their creative growth, and gain confidence presenting their work to an audience.",
+      },
+    ],
+    outcome:
+      "Students will leave the program with a strong foundation in visual art techniques, enhanced fine motor skills, and a deeper sense of creative confidence. They will have explored various mediums and methods, developed an understanding of artistic principles, and produced a diverse portfolio of original work. Most importantly, they will carry with them a love for creating and the ability to express themselves with imagination and clarity.",
+    goal: "Our goal is to inspire a lifelong appreciation for the visual arts while nurturing the creative spirit in every student. Through guided exploration and open-ended expression, we aim to empower students to think independently, embrace their originality, and find joy in the process of making art. We strive to create a space where creativity thrives and every student is encouraged to explore, experiment, and shine.",
+    images: [],
   },
 ];
