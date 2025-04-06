@@ -58,7 +58,7 @@ export const programIcons = [
 export const programs: programInfo[] = [
   {
     title: "Chess",
-    titleIcon: "/images/icons/chess/knight.png",
+    titleIcon: "/images/icons/chess/queen.png",
     icons: [
       "/images/icons/chess/bishop.png",
       "/images/icons/chess/king.png",
@@ -125,8 +125,12 @@ export const programs: programInfo[] = [
   },
   {
     title: "Basketball",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/basketball/basketball.png",
+    icons: [
+      "/images/icons/basketball/basketball_jersey.png",
+      "/images/icons/basketball/basketball.png",
+      "/images/icons/basketball/basketball_net.png",
+    ],
     image: "/images/Class_Photos/Basketball/20250402_142999.JPG",
     description:
       "Jump into the game of basketball, where quick thinking, teamwork, and skill come together in every play. Our program focuses on building core techniques like dribbling, passing, and shooting, while also developing game awareness and strategic play. Whether you're just starting out or looking to advance your skills, basketball offers a fun and challenging way to grow as an athlete and team player.",
@@ -179,8 +183,14 @@ export const programs: programInfo[] = [
   },
   {
     title: "Volleyball",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/volleyball/volleyball.png",
+
+    icons: [
+      "/images/icons/volleyball/volleyball_badge.png",
+      "/images/icons/volleyball/volleyball_net.png",
+      "/images/icons/volleyball/volleyball_trophy.png",
+      "/images/icons/volleyball/volleyball.png",
+    ],
     image: "/images/Class_Photos/Volleyball/30115092_141152.JPG",
     description:
       "Get in the game with volleyball—a fast-paced sport that builds agility, focus, and teamwork. In this class, students will develop core skills like serving, setting, and spiking while learning how to read the game and support their teammates. Open to all skill levels, the program encourages growth, sportsmanship, and a lasting passion for the sport.",
@@ -230,8 +240,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Flag Football",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: ["/images/icons/flagfootball.svg"],
+    titleIcon: "/images/icons/flag_football/rugby-ball.png",
+    icons: [
+      "/images/icons/flag_football/athlete.png",
+      "/images/icons/flag_football/rugby-ball.png",
+    ],
     image: "/images/Class_Photos/Flag_Football/20250402_141937.jpg",
     description:
       "Experience the thrill of flag football, where speed, strategy, and teamwork unite for high-energy fun on the field. This program equips students with essential skills, from precision passing to smart play execution, all in a supportive and dynamic environment. Whether you're a beginner or looking to sharpen your game, you'll develop confidence, coordination, and a true love for the sport.",
@@ -275,8 +288,13 @@ export const programs: programInfo[] = [
   },
   {
     title: "Soccer",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/soccer/soccer.png",
+    icons: [
+      "/images/icons/soccer/goal_net.png",
+      "/images/icons/soccer/goal.png",
+      "/images/icons/soccer/soccer.png",
+      "/images/icons/soccer/training.png",
+    ],
     image: "/images/Class_Photos/Soccer/53995092_144851.jpg",
     description:
       "Hit the field and take your soccer game to the next level! Our program focuses on developing technical skills, strategic thinking, and strong teamwork. Whether you're just starting out or an experienced player, our classes provide a supportive and competitive space to learn, improve, and excel.",
@@ -327,8 +345,13 @@ export const programs: programInfo[] = [
   },
   {
     title: "Creative Writing",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/creative_writing/idea.png",
+    icons: [
+      "/images/icons/creative_writing/idea.png",
+      "/images/icons/creative_writing/pencil.png",
+      "/images/icons/creative_writing/typewriter.png",
+      "/images/icons/creative_writing/writing.png",
+    ],
     image: "/images/Class_Photos/Creative_Writing/20250402_142224.jpg",
     description:
       "Unleash your imagination and bring your ideas to life! Dive into the world of creative writing, where you’ll learn how to transform your thoughts into compelling stories, express your unique voice, and captivate your audience with every word. Whether you dream of writing novels, short stories, or poetry, our classes are your gateway to discovering the writer within.",
@@ -377,8 +400,12 @@ export const programs: programInfo[] = [
 
   {
     title: "Comic Book",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/comic_book/versus.png",
+    icons: [
+      "/images/icons/comic_book/comic_open.png",
+      "/images/icons/comic_book/comic_page.png",
+      "/images/icons/comic_book/versus.png",
+    ],
     image: "/images/Class_Photos/Comic_Book/2604809_690151.jpg",
     description:
       "Dive into a creative world where art and storytelling collide to bring comic books to life. In this class, you'll explore how to craft compelling characters, build engaging storylines, and illustrate vibrant scenes—transforming your ideas into visually captivating comics.",
