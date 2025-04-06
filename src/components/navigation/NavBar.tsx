@@ -62,8 +62,8 @@ export function NavBar() {
       {isSmallScreen ? (
         <DockNavigation />
       ) : (
-        <>
-          <div className="bg-primary py-5 text-primary-foreground">
+        <div className="bg-primary py-5">
+          <div className="flex mx-auto w-11/12 text-primary-foreground">
             <div className="flex justify-between items-center mx-auto w-11/12">
               International Activities Club
             </div>
@@ -150,7 +150,7 @@ export function NavBar() {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
-        </>
+        </div>
       )}
     </>
   );
