@@ -1,8 +1,11 @@
 "use client";
 
+import FeaturedColumns from "@/components/page_headers/FeaturedColumns";
+
 export default function OurCommitmentPage() {
   return (
     <main className="relative mx-auto px-4 py-8 w-11/12">
+      <FeaturedColumns />
       <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
         Shaping the Future Through Innovation, Excellence, and Equity - Our
         Commitment
