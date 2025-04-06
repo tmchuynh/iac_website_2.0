@@ -1,9 +1,7 @@
 "use client";
-
-import * as React from "react";
 import Link from "next/link";
+import * as React from "react";
 
-import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,46 +11,15 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  about,
+  contact,
+  featuredLinks,
+  programs,
+} from "@/lib/constants/navigation";
+import { cn } from "@/lib/utils";
 import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
 import DockNavigation from "./DockNavigation";
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
 
 export function NavBar() {
   const isSmallScreen = useSmallScreen();
@@ -71,68 +38,61 @@ export function NavBar() {
             <NavigationMenu className="flex justify-center mx-auto w-full">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>About IAC</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
-                      <li className="row-span-3 m-0 text-background">
-                        <NavigationMenuLink asChild>
-                          <Link
-                            className="flex flex-col justify-end bg-gradient-to-b from-muted/50 to-muted focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
+                      {featuredLinks.map((link, index) => (
+                        <li className="col-span-1 row-span-3 m-0" key={index}>
+                          <NavigationMenuLink
+                            className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
                             href="/"
+                            style={{
+                              backgroundImage: `url(${link.imageUrl})`,
+                            }}
                           >
-                            <div className="mt-4 mb-2 font-medium text-lg">
-                              shadcn/ui
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/50 rounded-md"></div>
+                            <div className="relative mt-4 mb-2 font-medium text-foreground text-lg">
+                              {link.title}
                             </div>
-                            <p className="text-sm leading-tight">
-                              Beautifully designed components built with Radix
-                              UI and Tailwind CSS.
+                            <p className="relative text-foreground text-sm leading-tight">
+                              {link.description}
                             </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li className="row-span-3 m-0 text-background">
-                        <NavigationMenuLink asChild>
-                          <Link
-                            className="flex flex-col justify-end bg-gradient-to-b from-muted/50 to-muted focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
-                            href="/"
-                          >
-                            <div className="mt-4 mb-2 font-medium text-lg">
-                              shadcn/ui
-                            </div>
-                            <p className="text-sm leading-tight">
-                              Beautifully designed components built with Radix
-                              UI and Tailwind CSS.
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <ListItem href="/docs" title="Introduction">
-                        Re-usable components built using Radix UI and Tailwind
-                        CSS.
-                      </ListItem>
-                      <ListItem href="/docs/installation" title="Installation">
-                        How to install dependencies and structure your app.
-                      </ListItem>
-                      <ListItem
-                        href="/docs/primitives/typography"
-                        title="Typography"
-                      >
-                        Styles for headings, paragraphs, lists...etc
-                      </ListItem>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                      {about.map((link, index) => (
+                        <ListItem
+                          href={link.href}
+                          title={`${link.name}`}
+                          key={index}
+                        >
+                          {link.description}
+                        </ListItem>
+                      ))}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>Our Programs</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
-                      {components.map((component) => (
+                      {programs.map((program, index) => (
                         <ListItem
-                          key={component.title}
-                          title={component.title}
-                          href={component.href}
+                          key={index}
+                          title={program.name}
+                          href={program.href}
                         >
-                          {component.description}
+                          {program.description}
+                        </ListItem>
+                      ))}
+                      {contact.map((link, index) => (
+                        <ListItem
+                          href={link.href}
+                          title={`${link.name}`}
+                          key={index}
+                        >
+                          {link.description}
                         </ListItem>
                       ))}
                     </ul>
