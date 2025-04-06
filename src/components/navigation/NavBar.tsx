@@ -19,6 +19,7 @@ import {
 import { cn } from "@/lib/utils";
 import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
 import DockNavigation from "./DockNavigation";
+import { ThemeToggle } from "../buttons/ThemeToggle";
 
 export function NavBar() {
   const isSmallScreen = useSmallScreen();
@@ -30,11 +31,11 @@ export function NavBar() {
       ) : (
         <div className="bg-primary py-5">
           <div className="flex mx-auto w-11/12 text-primary-foreground">
-            <div className="flex justify-between items-center mx-auto w-11/12">
+            <div className="flex justify-between items-center mx-auto w-11/12 text-white">
               International Activities Club
             </div>
 
-            <NavigationMenu className="flex justify-center mx-auto w-full">
+            <NavigationMenu className="flex justify-center mx-auto w-full text-white">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <Link href="/" legacyBehavior passHref>
@@ -103,6 +104,7 @@ export function NavBar() {
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
+                <ThemeToggle />
               </NavigationMenuList>
             </NavigationMenu>
           </div>
