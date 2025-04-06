@@ -24,7 +24,9 @@ export default function StudentShowcasePage(): JSX.Element {
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Showcasing Children's Creativity
         </h1>
-        <p>A Celebration of Imagination, Innovation, and Expression</p>
+        <h2 className="font-bold text-2xl">
+          A Celebration of Imagination, Innovation, and Expression
+        </h2>
         <p>
           Welcome to our student creativity showcase—a space dedicated to
           honoring the limitless imagination and extraordinary potential of
