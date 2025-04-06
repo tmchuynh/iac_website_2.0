@@ -1,35 +1,26 @@
 "use client";
-
-import { Switch } from "@/components/ui/switch";
 import { useTheme } from "next-themes";
 import { JSX, useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
+import { Toggle } from "../ui/toggle";
 
 /**
- * A React functional component that provides a toggle switch for switching between light and dark themes.
+ * A component that provides a theme toggle button to switch between light and dark modes.
  *
- * This component uses the `useTheme` hook to access and modify the current theme, and ensures that it only
- * renders after the component has been mounted to avoid hydration mismatches in server-side rendering.
- *
- * @returns {JSX.Element | null} A JSX element containing the theme toggle UI, or `null` if the component is not yet mounted.
- *
- * @remarks
- * - The component displays a sun icon (`FiSun`) for the light theme and a moon icon (`FiMoon`) for the dark theme.
- * - The `Switch` component is used to toggle between themes, and its state is determined by the current theme.
- * - The `useEffect` hook ensures that the component only renders after mounting.
- *
+ * @component
  * @example
  * ```tsx
- * import { ThemeToggle } from './ThemeToggle';
- *
- * const App = () => {
- *   return (
- *     <div>
- *       <ThemeToggle />
- *     </div>
- *   );
- * };
+ * <ThemeToggle />
  * ```
+ *
+ * @returns {JSX.Element | null} A toggle button component that switches between light/dark themes,
+ * or null if the component hasn't mounted yet.
+ *
+ * @remarks
+ * This component uses the useTheme hook to manage theme state.
+ * It handles system theme preferences and persists user theme choices.
+ * The component renders a toggle button with sun/moon icons depending on the current theme.
+ * Component mounts with a null render to prevent hydration issues.
  */
 export const ThemeToggle = (): JSX.Element | null => {
   const { theme, setTheme, systemTheme } = useTheme();
@@ -37,12 +28,10 @@ export const ThemeToggle = (): JSX.Element | null => {
 
   useEffect(() => {
     setMounted(true);
-    // Initialize theme if not set
     if (!theme || theme === "system") {
       setTheme(systemTheme || "light");
     }
   }, [systemTheme, theme, setTheme]);
-
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -55,17 +44,17 @@ export const ThemeToggle = (): JSX.Element | null => {
 
   return (
     <div className="flex items-center space-x-2">
-      <FiSun
-        className={`text-xl ${
-          currentTheme === "dark" ? "text-gray-400" : "text-primary"
-        }`}
-      />
-      <Switch checked={currentTheme === "dark"} onCheckedChange={toggleTheme} />
-      <FiMoon
-        className={`text-xl ${
-          currentTheme === "light" ? "text-gray-400" : "text-blue-500"
-        }`}
-      />
+      <Toggle
+        aria-label="Toggle theme"
+        onClick={toggleTheme}
+        className="flex justify-center items-center"
+      >
+        {currentTheme === "dark" ? (
+          <FiMoon className="w-4 h-4" />
+        ) : (
+          <FiSun className="w-4 h-4" />
+        )}
+      </Toggle>
     </div>
   );
 };
