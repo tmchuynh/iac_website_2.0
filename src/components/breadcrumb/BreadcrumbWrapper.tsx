@@ -111,7 +111,7 @@ const StaticBreadcrumb: React.FC = () => {
   if (!breadcrumbItems) return null;
 
   return (
-    <div className="mx-auto px-1 md:px-6 lg:px-5 pt-3 md:pt-5 w-full">
+    <div className="mx-auto pt-3 md:pt-5 lg:pt-9 w-11/12">
       <nav
         aria-label="Breadcrumb"
         className="flex flex-row items-center gap-2 w-full text-sm"
