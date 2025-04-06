@@ -1,17 +1,29 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { JSX } from "react";
 import { LuArrowBigRightDash } from "react-icons/lu";
 import { DynamicButtonProps } from "@/lib/types/types";
 import { Button } from "../ui/button";
 
-const DynamicButton: React.FC<DynamicButtonProps> = ({
+/**
+ * A dynamic button component that can display text and an icon with hover effects
+ * @component
+ * @param {Object} props - The component props
+ * @param {'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'} [props.variant='default'] - The button variant style
+ * @param {string} props.text - The text to display in the button
+ * @param {IconType} [props.icon=LuArrowBigRightDash] - The icon component to render
+ * @param {(event: React.MouseEvent<HTMLButtonElement>) => void} [props.onClick] - Click event handler
+ * @param {string} [props.className] - Additional CSS classes for the button
+ * @param {string} [props.iconClassName] - Additional CSS classes for the icon wrapper
+ * @returns {JSX.Element} A Button component with text and optional icon
+ */
+export default function DynamicButton({
   variant = "default",
   text,
   icon: Icon = LuArrowBigRightDash,
   onClick,
   className,
   iconClassName,
-}) => {
+}: DynamicButtonProps): JSX.Element {
   return (
     <Button
       variant={variant}
@@ -31,6 +43,4 @@ const DynamicButton: React.FC<DynamicButtonProps> = ({
       )}
     </Button>
   );
-};
-
-export default DynamicButton;
+}
