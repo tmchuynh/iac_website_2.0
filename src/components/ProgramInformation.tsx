@@ -1,19 +1,32 @@
 import { useTabs } from "@/app/context/TabsContext";
 import { programs } from "@/lib/constants/programs";
 import { TabsContent } from "@radix-ui/react-tabs";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { LuArrowBigLeftDash, LuArrowBigRightDash } from "react-icons/lu";
 import { Button } from "./ui/button";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 
-export const ProgramDetails: React.FC = () => {
+export default function ProgramDetails({ title }: { title?: string }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const { defaultTab } = useTabs();
+  const [programTitle, setProgramTitle] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (title) {
+      setProgramTitle(title); // Update programTitle when title changes
+    } else {
+      setProgramTitle(defaultTab); // Fallback to defaultTab
+    }
+  }, [title, defaultTab]);
 
   return (
     <>
-      <Tabs defaultValue={defaultTab} className="w-full" id="programTabs">
+      <Tabs
+        value={programTitle || defaultTab} // Ensure the active tab is set correctly
+        className="w-full"
+        id="programTabs"
+      >
         <TabsList className="flex-wrap justify-start gap-3 mb-10 py-3 h-full">
           {programs.map((program) => (
             <TabsTrigger
@@ -162,6 +175,4 @@ export const ProgramDetails: React.FC = () => {
       </Tabs>
     </>
   );
-};
-
-export default ProgramDetails;
+}
