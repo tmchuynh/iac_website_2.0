@@ -1,26 +1,17 @@
 "use client";
-
 import DynamicButton from "@/components/buttons/button-dynamic";
 import LogoCloud from "@/components/LogoCloud";
 import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { arc_program, success_plan } from "@/lib/constants/list";
-import { programIcons, programs } from "@/lib/constants/programs";
+import { programs } from "@/lib/constants/programs";
 import { useRouter } from "next/navigation";
-import React from "react";
 import { JSX } from "react";
 import {
   FaBook,
   FaBrain,
   FaCalendarAlt,
-  FaChalkboard,
   FaChalkboardTeacher,
   FaCheckDouble,
-  FaFootballBall,
   FaMoneyBillAlt,
 } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
