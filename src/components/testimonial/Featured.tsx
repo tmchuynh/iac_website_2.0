@@ -10,6 +10,8 @@ export default function FeaturedTestimonial() {
                 alt=""
                 src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
                 className="absolute inset-0 bg-gray-800 shadow-2xl rounded-2xl size-full object-cover"
+                width={2102}
+                height={1401}
               />
             </div>
           </div>
