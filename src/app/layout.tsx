@@ -11,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
+      <body className="relative flex flex-col min-h-screen">
         <Providers>
           <main className="flex-grow">
             <NavBar />

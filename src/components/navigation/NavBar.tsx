@@ -13,6 +13,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
+import DockNavigation from "./DockNavigation";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -53,88 +55,104 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function NavBar() {
-  return (
-    <div className="relative bg-primary py-5 text-primary-foreground">
-      <div className="flex justify-between items-center mx-auto w-11/12">
-        International Activities Club
-      </div>
+  const isSmallScreen = useSmallScreen();
 
-      <NavigationMenu className="flex justify-center mx-auto w-full">
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
-                <li className="row-span-3 m-0 text-background">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex flex-col justify-end bg-gradient-to-b from-muted/50 to-muted focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
-                      href="/"
+  return (
+    <>
+      {isSmallScreen ? (
+        <DockNavigation />
+      ) : (
+        <>
+          <div className="bg-primary py-5 text-primary-foreground">
+            <div className="flex justify-between items-center mx-auto w-11/12">
+              International Activities Club
+            </div>
+
+            <NavigationMenu className="flex justify-center mx-auto w-full">
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
+                      <li className="row-span-3 m-0 text-background">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            className="flex flex-col justify-end bg-gradient-to-b from-muted/50 to-muted focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
+                            href="/"
+                          >
+                            <div className="mt-4 mb-2 font-medium text-lg">
+                              shadcn/ui
+                            </div>
+                            <p className="text-sm leading-tight">
+                              Beautifully designed components built with Radix
+                              UI and Tailwind CSS.
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li className="row-span-3 m-0 text-background">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            className="flex flex-col justify-end bg-gradient-to-b from-muted/50 to-muted focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
+                            href="/"
+                          >
+                            <div className="mt-4 mb-2 font-medium text-lg">
+                              shadcn/ui
+                            </div>
+                            <p className="text-sm leading-tight">
+                              Beautifully designed components built with Radix
+                              UI and Tailwind CSS.
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <ListItem href="/docs" title="Introduction">
+                        Re-usable components built using Radix UI and Tailwind
+                        CSS.
+                      </ListItem>
+                      <ListItem href="/docs/installation" title="Installation">
+                        How to install dependencies and structure your app.
+                      </ListItem>
+                      <ListItem
+                        href="/docs/primitives/typography"
+                        title="Typography"
+                      >
+                        Styles for headings, paragraphs, lists...etc
+                      </ListItem>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
+                      {components.map((component) => (
+                        <ListItem
+                          key={component.title}
+                          title={component.title}
+                          href={component.href}
+                        >
+                          {component.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/docs" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
                     >
-                      <div className="mt-4 mb-2 font-medium text-lg">
-                        shadcn/ui
-                      </div>
-                      <p className="text-sm leading-tight">
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li className="row-span-3 m-0 text-background">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex flex-col justify-end bg-gradient-to-b from-muted/50 to-muted focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
-                      href="/"
-                    >
-                      <div className="mt-4 mb-2 font-medium text-lg">
-                        shadcn/ui
-                      </div>
-                      <p className="text-sm leading-tight">
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
-                </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Documentation
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+                      Documentation
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+        </>
+      )}
+    </>
   );
 }
 

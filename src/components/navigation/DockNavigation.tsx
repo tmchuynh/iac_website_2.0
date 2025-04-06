@@ -13,7 +13,7 @@ import {
   RiBookmarkFill,
 } from "react-icons/ri";
 
-const BottomNav = () => {
+export default function DockNavigation() {
   const pathname = usePathname();
 
   const navigation = [
@@ -72,6 +72,4 @@ const BottomNav = () => {
       </div>
     </nav>
   );
-};
-
-export default BottomNav;
+}
