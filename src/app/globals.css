@@ -152,7 +152,7 @@
     @apply bg-background text-foreground;
   }
   strong {
-    @apply font-extrabold;
+    @apply underline underline-offset-2;
   }
   p {
     @apply py-2;
