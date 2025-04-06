@@ -39,28 +39,13 @@ export default function ProgramDetails({ title }: { title?: string }) {
               key={program.title}
               className="group data-[state=active]:font-bold data-[state=active]:text-primary data-[state=active]:uppercase"
             >
-              {program.icons.map((Icon, iconIndex) =>
-                iconIndex === 0 ? (
-                  <span
-                    key={`icon-${program.title}-${iconIndex}`}
-                    className="inline-block mr-1 -mb-1 w-5 h-5"
-                  >
-                    {typeof Icon === "string" ? (
-                      <Image
-                        src={Icon}
-                        alt=""
-                        width={20}
-                        height={20}
-                        className="group-hover:text-secondary"
-                      />
-                    ) : typeof Icon === "function" ? (
-                      <Icon className="group-hover:text-secondary" />
-                    ) : React.isValidElement(Icon) ? (
-                      Icon
-                    ) : null}
-                  </span>
-                ) : null
-              )}
+              <Image
+                src={program.titleIcon}
+                alt=""
+                width={25}
+                height={25}
+                className="mr-1 mb-2"
+              />
               {program.title}
             </TabsTrigger>
           ))}
@@ -76,20 +61,24 @@ export default function ProgramDetails({ title }: { title?: string }) {
                   </h2>
 
                   <p>
-                    {program.icons.map((Icon, iconIndex) => (
-                      <span
-                        key={`icon-${program.title}-${iconIndex}`}
-                        className="inline-block mr-2 -mb-1 w-4 h-4"
-                      >
-                        {typeof Icon === "string" ? (
-                          <Image src={Icon} alt="" width={16} height={16} />
-                        ) : typeof Icon === "function" ? (
-                          <Icon />
-                        ) : React.isValidElement(Icon) ? (
-                          Icon
-                        ) : null}
-                      </span>
-                    ))}
+                    {program.icons.map((Icon, iconIndex) => {
+                      console.log(`Icon: ${Icon}, Type: ${typeof Icon}`);
+
+                      return (
+                        <span
+                          key={`icon-${program.title}-${iconIndex}`}
+                          className="inline-block mr-2 -mb-2 w-10 h-10"
+                        >
+                          {typeof Icon === "string" ? (
+                            <Image src={Icon} alt="" width={30} height={30} />
+                          ) : typeof Icon === "function" ? (
+                            <Icon />
+                          ) : React.isValidElement(Icon) ? (
+                            Icon
+                          ) : null}
+                        </span>
+                      );
+                    })}
                   </p>
                 </div>
 
