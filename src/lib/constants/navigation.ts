@@ -45,15 +45,15 @@ export const programs = [
       "Find out about the schools we partner with to deliver our programs.",
     icon: FaSchool,
   },
+  {
+    name: "Frequently Asked Questions",
+    href: "/programs/frequently_asked_questions",
+    description: "Find answers to common questions about our programs.",
+    icon: FaChalkboardTeacher,
+  },
 ];
 
 export const contact = [
-  {
-    name: "Contact Us",
-    href: "/contact_us",
-    description: "Get in touch with us for any questions or information.",
-    icon: MdMarkEmailRead,
-  },
   {
     name: "Request IAC at Your School",
     href: "/contact_us/request_us",
@@ -71,6 +71,12 @@ export const contact = [
     href: "/contact_us/apply",
     description: "Join our team and make an impact on students' lives.",
     icon: FaChalkboardTeacher,
+  },
+  {
+    name: "Contact Us",
+    href: "/contact_us",
+    description: "Get in touch with us for any questions or information.",
+    icon: MdMarkEmailRead,
   },
 ];
 
