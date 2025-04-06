@@ -53,7 +53,7 @@ const DoughnutChartLabel = () => {
     updateColors();
   }, [theme, mounted]);
 
-  const totalValue = dataSource.reduce((acc, item) => acc + item.value, 0);
+  // const totalValue = dataSource.reduce((acc, item) => acc + item.value, 0);
 
   const chartData = {
     labels: dataSource.map((item) => item.name),
@@ -71,39 +71,18 @@ const DoughnutChartLabel = () => {
     plugins: {
       legend: {
         display: true,
-        position: "bottom",
+        position: "right",
         align: "start",
         labels: {
           color: getCSSVariable("--foreground"),
-          boxWidth: 15,
-          boxHeight: 10,
-          usePointStyle: true,
-          pointStyle: "circle",
-          padding: 20,
+          boxWidth: 20,
+          boxHeight: 20,
+          usePointStyle: false,
+          padding: 10,
         },
       },
       tooltip: {
-        callbacks: {
-          label: function (context) {
-            const label = context.label || "";
-            const value = context.raw as number;
-            const percentage = ((value / totalValue) * 100).toFixed(2) + "%";
-            return `${label}: ${percentage}`;
-          },
-        },
-      },
-      datalabels: {
-        color: "#fff",
-        font: {
-          size: 14,
-          weight: "bold",
-        },
-        formatter: (value: number) => {
-          const percentage = ((value / totalValue) * 100).toFixed(2);
-          return `${percentage}%`;
-        },
-        anchor: "center",
-        align: "center",
+        enabled: false,
       },
     },
   };
@@ -111,7 +90,7 @@ const DoughnutChartLabel = () => {
   if (!mounted) return null;
 
   return (
-    <div className="mx-auto my-5 w-[500px] h-[500px]">
+    <div className="mx-auto my-5 w-11/12 md:w-1/2 lg:w-1/3">
       <Doughnut data={chartData} options={options} />
     </div>
   );
