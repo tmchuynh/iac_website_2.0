@@ -39,7 +39,9 @@ export default function StaffPage() {
 
   return (
     <div className="flex flex-col justify-center items-center p-4 min-h-screen">
-      <h1 className="font-bold text-3xl">{staffMember.name}</h1>
+      <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        {staffMember.name}
+      </h1>
       <p className="mt-4 text-lg">{staffMember.bio}</p>
       {/* Add more fields as needed */}
     </div>

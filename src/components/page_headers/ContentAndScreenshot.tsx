@@ -22,7 +22,7 @@ export default function ContentAndScreenshot() {
           <p className="font-semibold text-secondary uppercase">
             Bringing Enrichment to Your School
           </p>
-          <h1 className="mt-2 font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
+          <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             Superior classes, exceptional instructors, outstanding outcomes.
           </h1>
           <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mt-10 max-w-xl lg:max-w-none">

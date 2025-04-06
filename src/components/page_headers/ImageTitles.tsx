@@ -5,7 +5,7 @@ export default function ImageTitles() {
       <div className="mx-auto px-6 lg:px-8 max-w-2xl lg:max-w-7xl">
         <div className="max-w-4xl">
           <p className="font-semibold text-base/7">About us</p>
-          <h1 className="mt-2 font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
+          <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             On a mission to empower remote teams
           </h1>
           <p className="mt-6 text-balance text-xl/8">

@@ -19,7 +19,7 @@ export default function Testimonial() {
       <div className="mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="mx-auto lg:mx-0 max-w-2xl">
           <p className="font-semibold text-base/7">Deploy faster</p>
-          <h1 className="mt-2 font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
+          <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             A better workflow
           </h1>
           <p className="mt-6 text-xl/8">
