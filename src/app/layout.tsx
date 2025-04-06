@@ -1,8 +1,8 @@
 import StaticBreadcrumb from "@/components/breadcrumb/BreadcrumbWrapper";
 import BackToTop from "@/components/buttons/BackToTop";
-import NavBar from "@/components/navigation/NavBar";
 import "./globals.css";
 import { Providers } from "./providers";
+import { NavBar } from "@/components/navigation/NavBar";
 
 export default function RootLayout({
   children,
