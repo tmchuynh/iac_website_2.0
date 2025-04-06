@@ -7,13 +7,24 @@ import { TabsProvider } from "./context/TabsContext";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 /**
- * A component that provides various context providers to its children.
- * Sets up theme, 404 handling, and tab management contexts.
+ * A component that wraps the application with various context providers.
  *
- * @component
+ * This provider component sets up:
+ * - Theme management through ThemeProvider
+ * - NotFound state management
+ * - Tab state management
+ * - Tooltip functionality
+ *
  * @param {Object} props - The component props
- * @param {ReactNode} props.children - Child elements to be wrapped by the providers
- * @returns {JSX.Element} A provider-wrapped tree of components
+ * @param {ReactNode} props.children - The child elements to be wrapped by the providers
+ * @returns {JSX.Element} The wrapped children with all providers
+ *
+ * @example
+ * ```tsx
+ * <Providers>
+ *   <App />
+ * </Providers>
+ * ```
  */
 export function Providers({ children }: { children: ReactNode }): JSX.Element {
   return (
