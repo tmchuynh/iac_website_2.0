@@ -54,34 +54,34 @@ export default function AboutUsPage() {
             <div className="lg:row-span-8 mx-auto lg:mt-8 lg:-mr-10 2xl:-mr-auto xl:-mr-15 pt-16 w-full">
               <div className="flex flex-col justify-center gap-24">
                 <div className="flex flex-col flex-wrap justify-center items-start content-center gap-15 lg:gap-3 xl:gap-8 md:grid md:grid-cols-3 lg:grid-cols-2 mx-auto w-full xl:h-full">
-                  <div className="shadow-xl rounded-xl w-[10em] 2xl:w-[25em] xl:w-[15em] h-[15em] 2xl:h-[30em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
+                  <div className="shadow-xl rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
-                      src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?&auto=format&fit=crop&crop=center&w=560&h=560&q=90"
+                      src="/images/Staff_Photos/Justin/image_combined.png"
                       className="block size-full object-cover"
                       width={150}
                       height={150}
                     />
                   </div>
-                  <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[25em] xl:w-[15em] h-[15em] 2xl:h-[30em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
-                      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?&auto=format&fit=crop&crop=left&w=560&h=560&q=90"
+                      src="/images/Staff_Photos/Justin_P.jpg"
                       className="block size-full object-cover"
                       width={150}
                       height={150}
                     />
                   </div>
-                  <div className="shadow-xl rounded-xl w-[10em] 2xl:w-[25em] xl:w-[15em] h-[15em] 2xl:h-[30em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="shadow-xl rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
-                      src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?&auto=format&fit=crop&crop=left&w=560&h=560&q=90"
+                      src="/images/Staff_Photos/Justin/Justin_award.jpg"
                       className="block size-full object-cover"
                       width={150}
                       height={150}
                     />
                   </div>
-                  <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[25em] xl:w-[15em] h-[15em] 2xl:h-[30em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin/frame_combined.png"
@@ -91,37 +91,37 @@ export default function AboutUsPage() {
                     />
                   </div>
 
-                  <div className="lg:inline-block shadow-xl rounded-xl w-[10em] 2xl:w-[25em] xl:w-[15em] h-[15em] 2xl:h-[30em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
+                  <div className="lg:inline-block shadow-xl rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
-                      src="/images/Staff_Photos/Justin/frame_combined.png"
+                      src="/images/Staff_Photos/Justin/image11.jpg"
                       className="block size-full object-cover"
                       width={150}
                       height={150}
                     />
                   </div>
-                  <div className="lg:inline-block hidden shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[25em] xl:w-[15em] h-[15em] 2xl:h-[30em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="lg:inline-block hidden shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
-                      src="/images/Staff_Photos/Justin/frame_combined.png"
+                      src="/images/Staff_Photos/Justin/image20.jpg"
                       className="block size-full object-cover"
                       width={150}
                       height={150}
                     />
                   </div>
-                  <div className="lg:inline-block shadow-xl rounded-xl w-[10em] 2xl:w-[25em] xl:w-[15em] h-[15em] 2xl:h-[30em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
+                  <div className="lg:inline-block shadow-xl rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
-                      src="/images/Staff_Photos/Justin/frame_combined.png"
+                      src="/images/Staff_Photos/Justin/image15.jpg"
                       className="block size-full object-cover"
                       width={150}
                       height={150}
                     />
                   </div>
-                  <div className="lg:inline-block hidden shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[25em] xl:w-[15em] h-[15em] 2xl:h-[30em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="lg:inline-block hidden shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
-                      src="/images/Staff_Photos/Justin/frame_combined.png"
+                      src="/images/Staff_Photos/Justin/image00.jpg"
                       className="block size-full object-cover"
                       width={150}
                       height={150}
