@@ -174,8 +174,8 @@ export default function AboutUsPage() {
               <dl className="gap-x-8 gap-y-4 grid grid-cols-1 sm:grid-cols-2 mt-6">
                 <div className="flex flex-col gap-y-2 pb-4 border-b border-dotted">
                   <dt className="text-sm/6">Students Impacted</dt>
-                  <dd className="order-first font-semibold text-6xl tracking-tight">
-                    $<span>150</span>M
+                  <dd className="order-first font-semibold text-5xl tracking-tight">
+                    ~<span>9.5</span>K
                   </dd>
                 </div>
                 <div className="flex flex-col gap-y-2 pb-4 border-b border-dotted">
@@ -185,20 +185,20 @@ export default function AboutUsPage() {
                       **(Past Employees Included)
                     </p>
                   </dt>
-                  <dd className="order-first font-semibold text-6xl tracking-tight">
-                    <span>30</span>K
+                  <dd className="order-first font-semibold text-5xl tracking-tight">
+                    <span>50</span>
                   </dd>
                 </div>
                 <div className="flex flex-col gap-y-2 max-sm:pb-4 max-sm:border-gray-200 max-sm:border-b max-sm:border-dotted">
-                  <dt className="text-sm/6">Deals Closed</dt>
-                  <dd className="order-first font-semibold text-6xl tracking-tight">
-                    <span>1.5</span>M
+                  <dt className="text-sm/6">Successful Classes</dt>
+                  <dd className="order-first font-semibold text-5xl tracking-tight">
+                    ~<span>3.9</span>K
                   </dd>
                 </div>
                 <div className="flex flex-col gap-y-2">
-                  <dt className="text-sm/6">Leads Generated</dt>
-                  <dd className="order-first font-semibold text-6xl tracking-tight">
-                    <span>200</span>M
+                  <dt className="text-sm/6">Happy Parents</dt>
+                  <dd className="order-first font-semibold text-5xl tracking-tight">
+                    ~<span>20.23</span>K
                   </dd>
                 </div>
               </dl>
