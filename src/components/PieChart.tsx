@@ -13,11 +13,11 @@ import { useTheme } from "next-themes";
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const dataSource = [
-  { id: 2, name: "Introduction of New Concepts", value: 4.5 },
-  { id: 3, name: "Collaborative Learning", value: 7 },
-  { id: 6, name: "Q&A and Discussion", value: 2.5 },
-  { id: 1, name: "Attendance Verification", value: 1 },
-  { id: 5, name: "Review and Assessment", value: 3.5 },
+  { id: 3, name: "Collaborative Learning", value: 6 },
+  { id: 6, name: "Q&A and Discussion", value: 1 },
+  { id: 5, name: "Review and Assessment", value: 2 },
+  { id: 1, name: "Attendance Verification", value: 2 },
+  { id: 2, name: "Introduction of New Concepts", value: 7 },
 ];
 
 const getCSSVariable = (variable: string): string => {
