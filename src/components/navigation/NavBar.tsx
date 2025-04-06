@@ -37,7 +37,7 @@ export function NavBar() {
 
             <NavigationMenu className="flex justify-center mx-auto w-full text-white">
               <NavigationMenuList>
-                <NavigationMenuItem>
+                <NavigationMenuItem className="p-4">
                   <Link href="/" legacyBehavior passHref>
                     <NavigationMenuLink>Home</NavigationMenuLink>
                   </Link>
