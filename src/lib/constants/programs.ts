@@ -36,7 +36,7 @@ export const programs: programInfo[] = [
       FaChessQueen,
       FaChessRook,
     ],
-    image: "/images/Class_Photos/Chess/chess-44.jpg",
+    image: "/images/Class_Photos/Chess/20990092_141152.jpg",
     description:
       "Dive into the world of chess and unleash your potential for strategic mastery, honing your critical thinking and tactical brilliance every step of the way.",
     overview:
@@ -73,7 +73,7 @@ export const programs: programInfo[] = [
   {
     title: "Basketball",
     icons: [FaBasketballBall, GiBasketballJersey],
-    image: "/images/Class_Photos/Basketball/bb-18.jpg",
+    image: "/images/Class_Photos/Basketball/20250402_142999.JPG",
     description:
       "Master the court with our basketball classes, where skill and strategy come together in an electrifying blend of teamwork and excitement.",
     overview:
@@ -108,7 +108,7 @@ export const programs: programInfo[] = [
   {
     title: "Volleyball",
     icons: [FaVolleyballBall, MdTimer],
-    image: "/images/Class_Photos/Volleyball/vb-6.JPG",
+    image: "/images/Class_Photos/Volleyball/30115092_141152.JPG",
     description:
       "Set, spike, and serve your way to volleyball mastery, where precision, strategy, and sportsmanship come together for an unbeatable experience.",
     overview:
@@ -157,7 +157,7 @@ export const programs: programInfo[] = [
   {
     title: "Soccer",
     icons: [PiSoccerBallFill, GiWhistle],
-    image: "/images/Class_Photos/Soccer/soccer-9.jpg",
+    image: "/images/Class_Photos/Soccer/53995092_144851.jpg",
     description:
       "Step onto the field and elevate your game, sharpening your skills while embracing the spirit of teamwork and strategic play.",
     overview:
@@ -214,7 +214,7 @@ export const programs: programInfo[] = [
   {
     title: "Public Speaking",
     icons: [FaMicrophone, FaUsers, GiMicrophone],
-    image: "/images/public_speaking.jpg",
+    image: "/images/Class_Photos/Creative_Writing/20250402_142256.jpg",
     description:
       "Master the art of effective communication and captivate your audience with confidence and poise in our public speaking classes",
     overview:
@@ -235,7 +235,7 @@ export const programs: programInfo[] = [
   {
     title: "Comic Book",
     icons: [FaPencilAlt, FaBook, MdOutlineBrush],
-    image: "/images/Class_Photos/Comic_Book/comic-5.jpg",
+    image: "/images/Class_Photos/Comic_Book/2604809_690151.jpg",
     description:
       "Dive into the world of storytelling and art by creating your own comic book, blending imagination with illustration",
     overview:
@@ -256,7 +256,7 @@ export const programs: programInfo[] = [
   {
     title: "Performing Arts",
     icons: [FaTheaterMasks],
-    image: "/images/Class_Photos/Performing_Arts/pa-5.jpg",
+    image: "/images/Class_Photos/Performing_Arts/22195092_265855.jpg",
     description:
       "Learn to play theater and masks with our theater and masks classes, where skill and creativity come together in an exciting blend of artistic expression and creative problem-solving.",
     overview:
@@ -287,7 +287,7 @@ export const programs: programInfo[] = [
   {
     title: "Dance",
     icons: [IoMusicalNotes, PiDiscoBall, IoMusicalNoteSharp],
-    image: "/images/Class_Photos/Dance/dance-3.JPG",
+    image: "/images/Class_Photos/Dance/52005092_269955.jpg",
     description:
       "Explore the joy of movement and rhythm in our dance classes, where technique, creativity, and expression come together to create a dynamic and inspiring experience.",
     overview:
