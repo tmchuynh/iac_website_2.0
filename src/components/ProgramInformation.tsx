@@ -16,14 +16,18 @@ export const ProgramDetails: React.FC = () => {
       <Tabs defaultValue={defaultTab} className="w-full" id="programTabs">
         <TabsList className="flex-wrap justify-start gap-3 mb-10 py-3 h-full">
           {programs.map((program) => (
-            <TabsTrigger value={program.title} key={program.title}>
+            <TabsTrigger
+              value={program.title}
+              key={program.title}
+              className="group data-[state=active]:font-bold data-[state=active]:text-primary data-[state=active]:uppercase"
+            >
               {program.icons.map((Icon, iconIndex) =>
                 iconIndex === 0 ? (
                   <span
                     key={`icon-${program.title}-${iconIndex}`}
-                    className="inline-block mr-2 w-4 h-4"
+                    className="inline-block mr-1 -mb-1 w-5 h-5"
                   >
-                    <Icon />
+                    <Icon className="group-hover:text-secondary" />
                   </span>
                 ) : null
               )}
@@ -36,17 +40,22 @@ export const ProgramDetails: React.FC = () => {
             <div className="" id={`${programIndex}`}>
               {/* Content */}
               <div className="pb-6">
-                <h2 className="flex justify-between mb-4 font-bold text-2xl tracking-widest">
-                  <div className="text-secondary">{program.title}</div>
-                  {program.icons.map((Icon, iconIndex) => (
-                    <span
-                      key={`icon-${program.title}-${iconIndex}`}
-                      className="inline-block mr-2 w-4 h-4"
-                    >
-                      <Icon />
-                    </span>
-                  ))}
-                </h2>
+                <div className="flex items-center gap-4">
+                  <h2 className="flex justify-between font-bold text-2xl tracking-widest">
+                    <div className="text-secondary">{program.title}</div>
+                  </h2>
+
+                  <p>
+                    {program.icons.map((Icon, iconIndex) => (
+                      <span
+                        key={`icon-${program.title}-${iconIndex}`}
+                        className="inline-block mr-2 w-4 h-4"
+                      >
+                        <Icon />
+                      </span>
+                    ))}
+                  </p>
+                </div>
 
                 {/* Overview */}
                 {program.overview && (
@@ -61,10 +70,10 @@ export const ProgramDetails: React.FC = () => {
                 {/* Keypoints */}
                 {program.keypoints.length > 0 && (
                   <>
-                    <h3 className="mt-4 font-semibold text-lg tracking-widest">
+                    <h3 className="my-4 font-semibold text-lg tracking-widest">
                       Key Components
                     </h3>
-                    <ul className="space-y-2 pl-6 list-disc">
+                    <ul className="space-y-2">
                       {program.keypoints.map((point, pointIndex) => (
                         <li key={pointIndex}>
                           <strong>{point.split(":")[0]}:</strong>{" "}
@@ -144,10 +153,7 @@ export const ProgramDetails: React.FC = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="py-6 text-center uppercase">
-                    {" "}
-                    Class Photos To Come
-                  </div>
+                  <div className="py-6 uppercase">Class Photos To Come</div>
                 )}
               </div>
             </div>
