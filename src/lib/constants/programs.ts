@@ -24,7 +24,51 @@ import { IoMusicalNotes, IoMusicalNoteSharp } from "react-icons/io5";
 import { MdOutlineBrush, MdOutlineFormatQuote, MdTimer } from "react-icons/md";
 import { PiDiscoBall, PiSoccerBallFill } from "react-icons/pi";
 import { TfiWrite } from "react-icons/tfi";
+
 import { programInfo } from "../types/information";
+
+export const programIcons = [
+  {
+    program: "Chess",
+    icon: FaChessBishop,
+  },
+  {
+    program: "Basketball",
+    icon: FaBasketballBall,
+  },
+  {
+    program: "Flag Football",
+    icon: FaFootballBall,
+  },
+  {
+    program: "Soccer",
+    icon: PiSoccerBallFill,
+  },
+  {
+    program: "Volleyball",
+    icon: FaVolleyballBall,
+  },
+  {
+    program: "Creative Writing",
+    icon: MdOutlineFormatQuote,
+  },
+  {
+    program: "Comic Book",
+    icon: FaBook,
+  },
+  {
+    program: "Performing Arts",
+    icon: FaTheaterMasks,
+  },
+  {
+    program: "Dance",
+    icon: IoMusicalNotes,
+  },
+  {
+    program: "Public Speaking",
+    icon: FaMicrophone,
+  },
+];
 
 export const programs: programInfo[] = [
   {
