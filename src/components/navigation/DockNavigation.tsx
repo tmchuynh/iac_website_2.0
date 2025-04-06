@@ -1,17 +1,7 @@
 "use client";
-
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-import {
-  RiHome5Line,
-  RiHome5Fill,
-  RiSearchLine,
-  RiSearchFill,
-  RiUser3Line,
-  RiUser3Fill,
-  RiBookmarkLine,
-  RiBookmarkFill,
-} from "react-icons/ri";
+import { usePathname } from "next/navigation";
+import { FaHome, FaPhoneAlt, FaSchool, FaUsers } from "react-icons/fa";
 
 export default function DockNavigation() {
   const pathname = usePathname();
@@ -20,26 +10,26 @@ export default function DockNavigation() {
     {
       name: "Home",
       href: "/",
-      activeIcon: RiHome5Fill,
-      inactiveIcon: RiHome5Line,
+      activeIcon: FaHome,
+      inactiveIcon: FaHome,
     },
     {
-      name: "Search",
+      name: "Programs",
       href: "/search",
-      activeIcon: RiSearchFill,
-      inactiveIcon: RiSearchLine,
+      activeIcon: FaSchool,
+      inactiveIcon: FaSchool,
     },
     {
-      name: "Bookmarks",
+      name: "Staff",
       href: "/bookmarks",
-      activeIcon: RiBookmarkFill,
-      inactiveIcon: RiBookmarkLine,
+      activeIcon: FaUsers,
+      inactiveIcon: FaUsers,
     },
     {
-      name: "Profile",
+      name: "Contact",
       href: "/profile",
-      activeIcon: RiUser3Fill,
-      inactiveIcon: RiUser3Line,
+      activeIcon: FaPhoneAlt,
+      inactiveIcon: FaPhoneAlt,
     },
   ];
 
@@ -54,9 +44,7 @@ export default function DockNavigation() {
                 key={item.name}
                 href={item.href}
                 className={`group flex flex-col items-center gap-1 p-3 text-sm transition-transform hover:-translate-y-1 ${
-                  isActive
-                    ? "text-primary"
-                    : "text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-gray-200"
+                  isActive ? "text-primary" : "text-muted"
                 }`}
               >
                 {isActive ? (
