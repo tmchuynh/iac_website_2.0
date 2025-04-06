@@ -1,3 +1,5 @@
+import { IconType } from "react-icons/lib";
+
 export type DynamicButtonProps = {
   variant?:
     | "default"
@@ -14,7 +16,7 @@ export type DynamicButtonProps = {
     | "ghost"
     | "link";
   text: string;
-  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon?: IconType;
   onClick?: () => void;
   className?: string;
   iconClassName?: string;
