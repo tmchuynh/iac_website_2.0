@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import LoadingIndicator from "@/components/loading/Loading";
 import CannotFind from "@/components/loading/CannotFind";
 import Image from "next/image";
+import { Separator } from "@/components/ui/separator";
 
 export default function StudentIndividualShowcasePage() {
   const searchParams = useSearchParams();
@@ -55,21 +56,65 @@ export default function StudentIndividualShowcasePage() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center p-4 min-h-screen">
+    <div className="flex flex-col justify-center items-center mx-auto py-19 w-11/12">
       <h1 className="font-bold text-3xl">{showcaseItem.title}</h1>
       <p className="mt-4 text-lg">{showcaseItem.description}</p>
-      <Image
-        src={showcaseItem.mainImage}
-        alt={showcaseItem.title}
-        className="mt-4 max-w-full h-auto"
-        width={1000}
-        height={800}
-        priority
-      />
-      <div className="mt-4">
+      <div className="flex flex-col justify-center items-center mt-4">
         <h2 className="font-bold text-xl">Author: {showcaseItem.author}</h2>
-        <p>Date: {showcaseItem.date}</p>
-        <p className="mt-4">{showcaseItem.writing}</p>
+        <div className="flex gap-3 pt-3">
+          <p>
+            <strong>Date:</strong> {showcaseItem.date}
+          </p>
+          {showcaseItem.school && (
+            <div className="flex items-center">
+              <Separator orientation="vertical" className="mx-4" />
+              <p className="ml-2">
+                <strong>School:</strong> {showcaseItem.school}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+      {!showcaseItem.images && (
+        <Image
+          src={showcaseItem.mainImage}
+          alt={showcaseItem.title}
+          className="mt-4 max-w-full h-auto"
+          width={1000}
+          height={800}
+          priority
+        />
+      )}
+      <div>
+        {showcaseItem.writing && (
+          <p
+            className="mt-4 indent-8"
+            dangerouslySetInnerHTML={{
+              __html: showcaseItem.writing
+                .split("\n")
+                .map((line: any, index: number) =>
+                  index === 0
+                    ? line
+                    : `<span style="display: inline-flex; text-indent: 2em;">${line}</span>`
+                )
+                .join("<br/>"),
+            }}
+          />
+        )}
+        {showcaseItem.images && (
+          <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-4">
+            {showcaseItem.images.map((image: string, index: number) => (
+              <Image
+                key={index}
+                src={image}
+                alt={`${showcaseItem.title} image ${index + 1}`}
+                className="border border-input rounded-lg"
+                width={300}
+                height={200}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
