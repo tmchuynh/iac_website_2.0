@@ -1,12 +1,11 @@
 import { useTabs } from "@/app/context/TabsContext";
-import { programs } from "@/lib/constants/programs";
 import { TabsContent } from "@radix-ui/react-tabs";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 import { LuArrowBigLeftDash, LuArrowBigRightDash } from "react-icons/lu";
 import { Button } from "./ui/button";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
-
+import { programs } from "@/lib/constants/programs";
 export default function ProgramDetails({ title }: { title?: string }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const { defaultTab } = useTabs();
@@ -46,7 +45,19 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     key={`icon-${program.title}-${iconIndex}`}
                     className="inline-block mr-1 -mb-1 w-5 h-5"
                   >
-                    <Icon className="group-hover:text-secondary" />
+                    {typeof Icon === "string" ? (
+                      <Image
+                        src={Icon}
+                        alt=""
+                        width={20}
+                        height={20}
+                        className="group-hover:text-secondary"
+                      />
+                    ) : typeof Icon === "function" ? (
+                      <Icon className="group-hover:text-secondary" />
+                    ) : React.isValidElement(Icon) ? (
+                      Icon
+                    ) : null}
                   </span>
                 ) : null
               )}
@@ -70,7 +81,13 @@ export default function ProgramDetails({ title }: { title?: string }) {
                         key={`icon-${program.title}-${iconIndex}`}
                         className="inline-block mr-2 -mb-1 w-4 h-4"
                       >
-                        <Icon />
+                        {typeof Icon === "string" ? (
+                          <Image src={Icon} alt="" width={16} height={16} />
+                        ) : typeof Icon === "function" ? (
+                          <Icon />
+                        ) : React.isValidElement(Icon) ? (
+                          Icon
+                        ) : null}
                       </span>
                     ))}
                   </p>
