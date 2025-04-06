@@ -16,7 +16,7 @@ const DynamicButton: React.FC<DynamicButtonProps> = ({
     <Button
       variant={variant}
       onClick={onClick}
-      className={cn("mt-2 group min-w-1/2 gap-0", className)}
+      className={cn("mt-2 group w-1/2 gap-0", className)}
     >
       <p className="pl-5">{text}</p>
       {Icon && (
