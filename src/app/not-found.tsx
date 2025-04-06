@@ -78,30 +78,33 @@ const NotFound = (): JSX.Element => {
         </div>
         <div className="flex flex-col justify-center items-center gap-x-6 mt-10">
           <DynamicButton
-            text="Go back home"
             onClick={() => {
               router.push(`/`);
             }}
-          />
+          >
+            Go Back To The Home Page
+          </DynamicButton>
           {redirect && (
             <DynamicButton
               variant="outline"
               icon={IoMdClose}
-              text="Cancel Redirection"
               onClick={() => {
                 setRedirect(false);
                 setCountdown(0);
               }}
               iconClassName="group-hover:rotate-90"
-            />
+            >
+              Cancel Redirection
+            </DynamicButton>
           )}
           <DynamicButton
             variant="outline"
-            text="Contact support"
             onClick={() => router.push(`mailto:tina@iacafterschools.com`)}
             icon={FaPhoneAlt}
             iconClassName="group-hover:-rotate-90"
-          />
+          >
+            Contact Support
+          </DynamicButton>
         </div>
       </div>
     </main>

@@ -48,10 +48,11 @@ export const ProgramCards = ({
             <p>{program.description}</p>
           </div>
           <DynamicButton
-            text="More Information"
             onClick={() => handleClick(program.title)}
             className="mt-2 w-full text-wrap"
-          />
+          >
+            More Information
+          </DynamicButton>
         </div>
       </div>
     </Link>

@@ -80,11 +80,9 @@ export default function ContentAndScreenshot() {
             </div>
           </div>
           <div className="flex mt-10">
-            <DynamicButton
-              text="Get Started Today"
-              className="w-1/4"
-              onClick={() => router.push("/")}
-            />
+            <DynamicButton className="w-1/4" onClick={() => router.push("/")}>
+              Get Started Today
+            </DynamicButton>
           </div>
         </div>
       </div>
