@@ -6,6 +6,7 @@ import { useTabs } from "@/app/context/TabsContext";
 import { Program } from "@/lib/types/cards";
 import Image from "next/image";
 import Link from "next/link";
+import DynamicButton from "../buttons/button-dynamic";
 
 export const ProgramCards = ({
   program,
@@ -21,13 +22,10 @@ export const ProgramCards = ({
   }
 
   return (
-    <Link href={`/programs?title=${program.title}`}>
+    <Link href={`/programs?title=${program.title}`} className="group">
       <div
         key={program.title}
-        className={cn(
-          index % 5 === 0 ? "md:ring-2 md:ring-secondary" : "ring-1 ring-muted",
-          "rounded-3xl flex flex-col justify-between gap-3"
-        )}
+        className="flex flex-col justify-between gap-3 shadow-md border rounded-3xl h-full"
       >
         <Image
           src={program.image}
@@ -42,26 +40,18 @@ export const ProgramCards = ({
               id={program.title}
               className={cn(
                 index % 3 === 0 ? "md:text-secondary" : "md:text-foreground",
-                "text-lg/8 font-semibold"
+                "text-xl font-semibold"
               )}
             >
               {program.title}
             </h3>
             <p>{program.description}</p>
           </div>
-          <Button
-            variant={index % 2 === 0 ? "outline" : "default"}
-            onClick={(e) => {
-              e.preventDefault(); // Prevent default Link navigation
-              handleClick(program.title);
-            }}
-            className="group mt-2 w-full text-wrap"
-          >
-            More Information
-            <span className="inline-block transition-transform group-hover:translate-x-4 duration-300 ease-in-out">
-              <LuArrowBigRightDash />
-            </span>
-          </Button>
+          <DynamicButton
+            text="More Information"
+            onClick={() => handleClick(program.title)}
+            className="mt-2 w-full text-wrap"
+          />
         </div>
       </div>
     </Link>
