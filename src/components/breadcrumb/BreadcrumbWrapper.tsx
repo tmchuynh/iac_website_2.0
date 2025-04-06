@@ -2,7 +2,7 @@
 
 import { capitalize } from "@/lib/utils/format";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useMemo } from "react";
+import React, { JSX, useMemo } from "react";
 import {
   BreadcrumbItem,
   BreadcrumbLink,
@@ -11,12 +11,30 @@ import {
 import { TbSlashes } from "react-icons/tb";
 import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
 
-const StaticBreadcrumb: React.FC = () => {
+/**
+ * A static breadcrumb navigation component that displays the current path hierarchy.
+ *
+ * The component adapts its display based on screen size:
+ * - On small screens, it shows only the home and current page with "..." for intermediate paths
+ * - On larger screens, it shows the complete path hierarchy
+ *
+ * Features:
+ * - Responsive design with different layouts for small and large screens
+ * - Automatic path segment capitalization
+ * - Navigation links for each breadcrumb segment
+ * - Slash separators between segments
+ *
+ * @returns {JSX.Element | null} The rendered breadcrumb navigation component, or null if on homepage
+ *
+ * @example
+ * // Will render a breadcrumb like: Home / Page / Subpage
+ * <StaticBreadcrumb />
+ */
+const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
   const isSmallScreen = useSmallScreen();
   const pathname = usePathname();
   const router = useRouter();
 
-  // Compute the path segments and their capitalized versions
   const pathSegments = useMemo(
     () => pathname.split("/").filter(Boolean),
     [pathname]
@@ -27,18 +45,16 @@ const StaticBreadcrumb: React.FC = () => {
     [pathSegments]
   );
 
-  // Compute breadcrumb items without side effects
   const breadcrumbItems = useMemo(() => {
     if (pathname === "/") return null;
 
     const items: React.JSX.Element[] = [];
 
-    // Home link
     items.push(
       <BreadcrumbItem key="home" className="mx-1">
         <BreadcrumbLink
           href="/"
-          className="px-1 py-1 rounded-md text-primary underline-offset-4 hover:underline"
+          className="px-1 py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
         >
           Home
         </BreadcrumbLink>
@@ -46,7 +62,6 @@ const StaticBreadcrumb: React.FC = () => {
     );
 
     if (isSmallScreen) {
-      // Show "..." for middle pages on small screens
       if (pathSegments.length > 1) {
         items.push(
           <BreadcrumbSeparator key="sep-dots" className="mr-0 ml-0">
@@ -60,7 +75,6 @@ const StaticBreadcrumb: React.FC = () => {
         );
       }
 
-      // Add the current page
       const currentHref = `/${pathSegments.join("/")}`;
       const currentSegment = capitalizedSegments[pathSegments.length - 1];
 
@@ -74,14 +88,13 @@ const StaticBreadcrumb: React.FC = () => {
         <BreadcrumbItem key={currentHref} className="mx-1">
           <BreadcrumbLink
             href={currentHref}
-            className="py-1 rounded-md text-primary underline-offset-4 hover:underline"
+            className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
           >
             {currentSegment}
           </BreadcrumbLink>
         </BreadcrumbItem>
       );
     } else {
-      // Handle dynamic paths for larger screens
       pathSegments.forEach((_, index) => {
         const href = `/${pathSegments.slice(0, index + 1).join("/")}`;
         const capitalizedSegment = capitalizedSegments[index];
@@ -96,7 +109,7 @@ const StaticBreadcrumb: React.FC = () => {
           <BreadcrumbItem key={href}>
             <BreadcrumbLink
               href={href}
-              className="py-1 rounded-md text-primary underline-offset-4 hover:underline"
+              className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
             >
               {capitalizedSegment}
             </BreadcrumbLink>
@@ -116,7 +129,7 @@ const StaticBreadcrumb: React.FC = () => {
         aria-label="Breadcrumb"
         className="flex flex-row items-center gap-2 w-full text-sm"
       >
-        <ul className="flex flex-row items-center gap-2 px-4">
+        <ul className="flex flex-row items-center gap-2 px-4 text-secondary">
           {breadcrumbItems}
         </ul>
       </nav>
