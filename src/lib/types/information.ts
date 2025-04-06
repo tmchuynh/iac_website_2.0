@@ -12,7 +12,10 @@ export type programInfo = {
     | IconType[];
   description: string;
   overview: string;
-  keypoints: string[];
+  keypoints: {
+    title: string;
+    description: string;
+  }[];
   outcome: string;
   goal: string;
   images: string[];
