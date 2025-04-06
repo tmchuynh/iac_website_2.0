@@ -1,19 +1,64 @@
 "use client";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
-import LoadingIndicator from "@/components/loading/Loading";
 import CannotFind from "@/components/loading/CannotFind";
-import Image from "next/image";
+import LoadingIndicator from "@/components/loading/Loading";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
+import { useParams, useSearchParams } from "next/navigation";
+import { JSX, useEffect, useState } from "react";
 
-export default function StudentIndividualShowcasePage() {
+/**
+ * Renders an individual student showcase page displaying detailed information about a student's work.
+ *
+ * @component
+ * @description
+ * This component displays a showcase item's details including:
+ * - Title
+ * - Description
+ * - Author information
+ * - Date
+ * - School (if available)
+ * - Main image or multiple images
+ * - Writing content (if available)
+ *
+ * The component handles:
+ * - Loading states with a LoadingIndicator
+ * - Error states with a CannotFind component
+ * - Dynamic routing parameters (school, grade, name)
+ * - Query parameters (author, subject, title, date)
+ * - Responsive image grid layout
+ * - Formatted text display with indentation
+ *
+ * @returns {JSX.Element} A formatted display of the student's showcase item
+ * @throws {Error} When failing to fetch the showcase data
+ *
+ * @example
+ * // URL: /programs/student_showcase/highschool/12/john-doe?author=John&subject=Art
+ * <StudentIndividualShowcasePage />
+ */
+export default function StudentIndividualShowcasePage(): JSX.Element {
   const searchParams = useSearchParams();
   const { school, grade, name } = useParams();
   const [loading, setLoading] = useState<boolean>(true);
   const [showcaseItem, setShowcaseItem] = useState<any>(null);
 
   useEffect(() => {
+    /**
+     * Fetches a specific showcase item based on URL parameters and query parameters.
+     * @async
+     * @function fetchShowcaseItem
+     * @throws {Error} When the fetch request fails
+     *
+     * @description
+     * Makes an API call to retrieve a showcase item using:
+     * - URL parameters: school, grade, name
+     * - Query parameters: author, subject, title, date
+     *
+     * The function updates the showcase item state upon successful fetch
+     * and handles loading state management.
+     *
+     * @example
+     * await fetchShowcaseItem();
+     */
     const fetchShowcaseItem = async () => {
       try {
         const author = searchParams.get("author");
@@ -27,7 +72,6 @@ export default function StudentIndividualShowcasePage() {
         if (title) queryParams.append("title", title);
         if (date) queryParams.append("date", date);
 
-        // Ensure the query parameters are prefixed with "?"
         const response = await fetch(
           `/api/programs/student_showcase/${school}/${grade}/${name}?${queryParams.toString()}`
         );
@@ -57,7 +101,9 @@ export default function StudentIndividualShowcasePage() {
 
   return (
     <div className="flex flex-col justify-center items-center mx-auto py-19 w-11/12">
-      <h1 className="font-bold text-3xl">{showcaseItem.title}</h1>
+      <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        {showcaseItem.title}
+      </h1>
       <p className="mt-4 text-lg">{showcaseItem.description}</p>
       <div className="flex flex-col justify-center items-center mt-4">
         <h2 className="font-bold text-xl">Author: {showcaseItem.author}</h2>
