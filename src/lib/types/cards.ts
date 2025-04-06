@@ -17,6 +17,8 @@ export type Program = {
 export type StudentProject = {
   title: string;
   author: string;
+  school: string;
+  grade: string;
   date: string;
   description: string;
   preview?: string;
