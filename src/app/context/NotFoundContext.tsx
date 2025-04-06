@@ -53,7 +53,7 @@ export const NotFoundProvider = ({
  * @throws {Error} If the hook is used outside of a NotFoundProvider.
  * @returns {NotFoundContextType} The current context value.
  */
-export const useNotFound = () => {
+export const useNotFound = (): NotFoundContextType => {
   const context = useContext(NotFoundContext);
   if (!context) {
     throw new Error("useNotFound must be used within a NotFoundProvider");
