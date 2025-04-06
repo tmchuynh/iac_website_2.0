@@ -69,15 +69,15 @@ export default function ImageTitles() {
           </div>
           <div className="lg:col-span-1 max-lg:mt-16">
             <p className="font-semibold text-base/7">The numbers</p>
-            <hr className="mt-6 border-gray-200 border-t" />
+            <hr className="mt-6 border-t" />
             <dl className="gap-x-8 gap-y-4 grid grid-cols-1 sm:grid-cols-2 mt-6">
-              <div className="flex flex-col gap-y-2 pb-4 border-gray-200 border-b border-dotted">
+              <div className="flex flex-col gap-y-2 pb-4 border-b border-dotted">
                 <dt className="text-sm/6">Raised</dt>
                 <dd className="order-first font-semibold text-6xl tracking-tight">
                   $<span>150</span>M
                 </dd>
               </div>
-              <div className="flex flex-col gap-y-2 pb-4 border-gray-200 border-b border-dotted">
+              <div className="flex flex-col gap-y-2 pb-4 border-b border-dotted">
                 <dt className="text-sm/6">Companies</dt>
                 <dd className="order-first font-semibold text-6xl tracking-tight">
                   <span>30</span>K
