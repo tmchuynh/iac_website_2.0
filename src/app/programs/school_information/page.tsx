@@ -3,10 +3,27 @@
 import DynamicButton from "@/components/buttons/button-dynamic";
 import LogoCloud from "@/components/LogoCloud";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { arc_program, success_plan } from "@/lib/constants/list";
+import { programIcons, programs } from "@/lib/constants/programs";
 import { useRouter } from "next/navigation";
+import React from "react";
 import { JSX } from "react";
-import { FaCalendarAlt, FaCheckDouble, FaMoneyBillAlt } from "react-icons/fa";
+import {
+  FaBook,
+  FaBrain,
+  FaCalendarAlt,
+  FaChalkboard,
+  FaChalkboardTeacher,
+  FaCheckDouble,
+  FaFootballBall,
+  FaMoneyBillAlt,
+} from "react-icons/fa";
+import { FaComputer } from "react-icons/fa6";
 import { LuArrowBigRightDash } from "react-icons/lu";
 
 /**
@@ -31,7 +48,7 @@ export default function SchoolInformationPage(): JSX.Element {
   const router = useRouter();
   return (
     <main className="mx-auto px-4 py-8 w-11/12">
-      <section className="py-12">
+      <section className="pt-12">
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Our Partners in Innovation
         </h1>
@@ -58,7 +75,73 @@ export default function SchoolInformationPage(): JSX.Element {
           strategic collaborations, we’re creating spaces where imagination has
           no boundaries and students are free to pursue bold ideas with purpose.
         </p>
+      </section>
 
+      <section className="gap-4 grid grid-cols-1 lg:grid-cols-2 py-6">
+        <div className="flex flex-col gap-3">
+          <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+            After-School Programs
+          </h1>
+          <p>
+            Our institution offers high-quality extracurricular activities,
+            extending beyond traditional classes. Our experienced team visits
+            your school weekly, dedicating 60-90 minutes to hands-on experiences
+            that nurture each student's growth, self-expression, and unique
+            talents. We aim to provide well-rounded and enriching experiences,
+            helping students unlock their full potential.
+          </p>
+          <div className="gap-3 lg:gap-6 grid grid-cols-2 lg:grid-cols-4">
+            <div className="flex flex-col items-center gap-2 text-center">
+              <FaBook className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10" />
+              <p>No additional resources needed</p>
+            </div>
+            <div className="flex flex-col items-center gap-2 text-center">
+              <FaChalkboardTeacher className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10" />{" "}
+              <p>No extra staff needed</p>
+            </div>
+            <div className="flex flex-col items-center gap-2 text-center">
+              <FaComputer className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10" />{" "}
+              <p>No IT support needed</p>
+            </div>
+            <div className="flex flex-col items-center gap-2 text-center">
+              <FaBrain className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10" />{" "}
+              <p>No headaches and no stress</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+            Proactive and Passionate
+          </h1>
+          <p>
+            We understand the challenges schools face in offering diverse
+            after-school programs due to financial constraints, specialized
+            resources, and logistical issues. At IAC, we take pride in
+            addressing these challenges with our mobile and well-equipped
+            instructors. Our instructors are experts in their fields and come
+            fully prepared with all necessary resources. This ensures a seamless
+            and comprehensive learning experience, whether it's chess,
+            performing arts, creative writing, basketball, soccer, or
+            volleyball, alleviating the burden on schools.
+          </p>
+          <div className="flex flex-wrap justify-around gap-5 mx-auto w-8/12">
+            {programs.map((program, index) =>
+              program.icons.map((Icon, iconIndex) =>
+                iconIndex === 0 ? (
+                  <div
+                    key={index}
+                    className="bg-accent p-3 rounded-2xl text-background"
+                  >
+                    <Icon className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10" />
+                  </div>
+                ) : null
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-6">
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Join Our Growing Network
         </h1>
@@ -85,7 +168,7 @@ export default function SchoolInformationPage(): JSX.Element {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="py-3">
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Enrichment Made Easy
         </h1>
