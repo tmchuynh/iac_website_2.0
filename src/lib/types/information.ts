@@ -1,15 +1,12 @@
 import { LucideProps } from "lucide-react";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
+import { ForwardRefExoticComponent, JSX, RefAttributes, SVGProps } from "react";
 import { IconType } from "react-icons/lib";
+import { programIcons } from "../constants/programs"; // Import the programIcons array
 
 export type programInfo = {
   title: string;
   image: string;
-  icons:
-    | ForwardRefExoticComponent<
-        Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-      >[]
-    | IconType[];
+  icons: (typeof programIcons)[number]["icon"][]; // Use the type of icons from programIcons
   description: string;
   overview: string;
   keypoints: {
