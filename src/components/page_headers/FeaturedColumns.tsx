@@ -1,4 +1,8 @@
 import { InboxIcon, TrashIcon, UsersIcon } from "@heroicons/react/24/outline";
+import DynamicButton from "../buttons/button-dynamic";
+import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
 
 const features = [
   {
@@ -25,46 +29,48 @@ const features = [
 ];
 
 export default function FeaturedColumns() {
+  const router = useRouter();
+  const { theme } = useTheme();
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-        <div className="mx-auto lg:mx-0 max-w-2xl">
-          <h2 className="font-semibold text-4xl text-gray-900 text-pretty sm:text-5xl tracking-tight">
-            Stay on top of customer support
-          </h2>
-          <p className="mt-6 text-gray-600 text-lg/8">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 sm:mt-20 lg:mt-24 max-w-2xl lg:max-w-none">
-          <dl className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-none">
-            {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col">
-                <dt className="font-semibold text-base/7 text-gray-900">
-                  <div className="flex justify-center items-center bg-indigo-600 mb-6 rounded-lg size-10">
-                    <feature.icon
-                      aria-hidden="true"
-                      className="text-white size-6"
-                    />
-                  </div>
-                  {feature.name}
-                </dt>
-                <dd className="flex flex-col flex-auto mt-1 text-base/7 text-gray-600">
-                  <p className="flex-auto">{feature.description}</p>
-                  <p className="mt-6">
-                    <a
-                      href={feature.href}
-                      className="font-semibold text-indigo-600 text-sm/6"
-                    >
-                      Learn more <span aria-hidden="true">→</span>
-                    </a>
-                  </p>
-                </dd>
+    <div className="py-24 sm:py-32">
+      <div className="mx-auto lg:mx-0 max-w-2xl">
+        <h2 className="font-semibold text-5xl text-pretty tracking-tight">
+          The Quality of Our Classes is Unmatched
+        </h2>
+        <p className="mt-6 text-lg/8">
+          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
+          voluptatum cupiditate veritatis in accusamus quisquam.
+        </p>
+      </div>
+      <div className="mx-auto mt-16 sm:mt-20 lg:mt-24 max-w-2xl lg:max-w-none">
+        <dl className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-none">
+          {features.map((feature) => (
+            <div key={feature.name} className="flex flex-col">
+              <div
+                className={cn(
+                  "flex justify-center items-center border rounded-2xl w-12 h-12",
+                  {
+                    "bg-secondary": theme === "light",
+                    "bg-primary": theme === "dark",
+                  }
+                )}
+              >
+                <feature.icon
+                  className={cn("w-6 h-6", {
+                    "text-background": theme === "light",
+                    "text-foreground": theme === "dark",
+                  })}
+                  aria-hidden="true"
+                />
               </div>
-            ))}
-          </dl>
-        </div>
+              <p>{feature.name}</p>
+              <p>{feature.description}</p>
+              <DynamicButton onClick={() => router.push(feature.href)}>
+                Learn more
+              </DynamicButton>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );
