@@ -146,7 +146,7 @@ export default function RequestFormSchool() {
           </div>
         </div>
       </div>
-      <div className="flex justify-end mt-10 pt-8 border-t">
+      <div className="flex justify-end mt-10 pt-8">
         <Button type="submit">Send message</Button>
       </div>
     </form>
