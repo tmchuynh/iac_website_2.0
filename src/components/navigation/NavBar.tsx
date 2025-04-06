@@ -9,7 +9,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
   about,
@@ -38,6 +37,12 @@ export function NavBar() {
             <NavigationMenu className="flex justify-center mx-auto w-full">
               <NavigationMenuList>
                 <NavigationMenuItem>
+                  <Link href="/" legacyBehavior passHref>
+                    <NavigationMenuLink>Home</NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                   <NavigationMenuTrigger>About IAC</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
@@ -45,7 +50,7 @@ export function NavBar() {
                         <li className="col-span-1 row-span-3 m-0" key={index}>
                           <NavigationMenuLink
                             className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
-                            href="/"
+                            href={`${link.href}`}
                             style={{
                               backgroundImage: `url(${link.imageUrl})`,
                             }}
@@ -97,15 +102,6 @@ export function NavBar() {
                       ))}
                     </ul>
                   </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/docs" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Documentation
-                    </NavigationMenuLink>
-                  </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
