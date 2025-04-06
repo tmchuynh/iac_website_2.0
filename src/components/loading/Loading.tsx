@@ -22,7 +22,7 @@ import SyncLoader from "./SyncLoader";
  */
 const LoadingIndicator: React.FC = (): JSX.Element => {
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6 h-lvh flex justify-center items-center">
+    <main className="flex justify-center items-center mx-auto py-6 w-10/12 md:w-11/12 h-lvh">
       <SyncLoader
         size={50}
         aria-label="Loading Spinner"
