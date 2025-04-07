@@ -113,7 +113,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
       </h1>
       <p className="mt-4 text-lg">{showcaseItem.description}</p>
       <div className="flex flex-col justify-center items-center mt-4">
-        <h2 className="font-bold text-xl">Author: {showcaseItem.author}</h2>
+        <h3 className="font-bold text-xl">Author: {showcaseItem.author}</h3>
         <div className="flex gap-3 pt-3">
           <p>
             <strong>Date:</strong> {showcaseItem.date}

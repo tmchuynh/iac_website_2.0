@@ -6,6 +6,7 @@ import ProgramDetails from "@/components/ProgramInformation";
 import { useEffect } from "react";
 import DoughnutChartLabel from "@/components/PieChart";
 import { class_breakdown } from "@/lib/constants/list";
+import PhotoAndList from "@/components/page_headers/PhotoAndList";
 
 /**
  * Renders the Programs page component.
@@ -32,7 +33,7 @@ export default function ProgramsPage(): JSX.Element {
   return (
     <div className="flex flex-col justify-center items-center mx-auto px-4 py-10 lg:py-20 w-11/12">
       <section>
-        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Class Breakdown
         </h1>
         <p>
@@ -65,11 +66,13 @@ export default function ProgramsPage(): JSX.Element {
         </ul>
       </section>
       <section>
-        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Our Program Details
         </h1>
         <ProgramDetails title={title} />
       </section>
+
+      <PhotoAndList />
     </div>
   );
 }

@@ -22,35 +22,42 @@ export default function StudentShowcasePage(): JSX.Element {
   return (
     <main className="mx-auto px-4 py-10 lg:py-20 w-11/12">
       <section className="mb-12">
-        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Showcasing Children's Creativity
         </h1>
-        <h2 className="pt-5 font-bold text-2xl">
+        <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
           A Celebration of Imagination, Innovation, and Expression
         </h2>
         <p>
-          Welcome to our student creativity showcase—a space dedicated to
-          honoring the limitless imagination and extraordinary potential of
-          young minds. Here, we celebrate not just what students create, but why
-          they create, spotlighting the courage, curiosity, and critical
-          thinking that drive their ideas forward.
+          Welcome to our Student Creativity Showcase—a space where the
+          brilliance of young minds comes to life. This showcase honors not just
+          what students create, but the thought, imagination, and heart behind
+          each piece. Here, we shine a light on the curiosity, courage, and
+          critical thinking that inspire children to turn their ideas into
+          powerful works of art, writing, performance, and innovation.
         </p>
         <p>
-          Each piece you see—whether it’s a vibrant work of art, an original
-          story, a hand-built model, or a scientific exploration—represents a
-          child’s journey of learning and discovery. These creations are more
-          than just projects; they are personal expressions of thought, emotion,
-          culture, and vision. Through them, students demonstrate their ability
-          to explore the world around them, challenge assumptions, and bring new
-          ideas to life.
+          Each submission—whether it's an original story, a digital comic, a
+          compelling speech, a performance, or a collaborative classroom
+          project—reflects a child’s unique perspective and creative journey.
+          These works are more than assignments; they are personal expressions
+          of thought, identity, and vision. Through this showcase, students are
+          empowered to think independently, explore without limits, and
+          communicate their ideas with confidence.
         </p>
+        <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
+          WHY WE SHOWCASE
+        </h2>
         <p>
-          This showcase is a reflection of our core belief: that every child has
-          a voice worth hearing and a story worth sharing. By providing space
-          for creative freedom, we empower students to take risks, think
-          independently, and grow in confidence. We aim to inspire them not only
-          to learn but to love learning—and to understand that their ideas can
-          shape the future.
+          This showcase reflects our belief that every child has a voice worth
+          hearing and a story worth sharing. We encourage risk-taking, celebrate
+          originality, and nurture creative freedom. Through this process,
+          students grow in self-confidence, learn to value their work, and gain
+          a deeper appreciation for the power of their ideas. We invite you to
+          explore each submission with an open mind and heart—recognizing not
+          just the final product, but the journey of learning, reflection, and
+          growth behind it. Every sentence, sketch, build, or performance is a
+          testament to the vibrant inner worlds of our young creators.
         </p>
         <p>
           As you browse this collection, we invite you to appreciate each
@@ -58,29 +65,36 @@ export default function StudentShowcasePage(): JSX.Element {
           Every sketch, sentence, experiment, and presentation reveals something
           powerful: the unfiltered brilliance of youth.
         </p>
-        <h2 className="pt-8 font-bold text-2xl">Respecting Student Privacy</h2>
+        <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
+          Respecting Student Privacy
+        </h2>
         <p>
-          Participation in this showcase is entirely voluntary. We deeply value
-          the trust placed in us by students and their families. In honoring
-          student choice, some works have been submitted anonymously. You may
-          notice that names are omitted in certain instances to protect those
-          who prefer to keep their identity private.
+          Participation in the Student Showcase is voluntary. To honor student
+          choice and family privacy, some entries may appear anonymously or with
+          limited identifying details. We deeply appreciate the trust placed in
+          us and take great care to ensure that all work is celebrated with
+          integrity and respect.
         </p>
-        <p>
-          Thank you for joining us in recognizing and celebrating the future
-          creators, storytellers, thinkers, and innovators of tomorrow.
-        </p>
-        <p>Let their work remind us:</p>
+
+        <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
+          CELEBRATING STUDENT VOICE
+        </h2>
         <p>
           ✨ When children are given the freedom to imagine, incredible things
           happen. ✨
         </p>
+        <p>
+          Thank you for joining us in uplifting the voices of tomorrow's
+          creators, leaders, and changemakers. Your support encourages students
+          to continue exploring, experimenting, and expressing themselves
+          through the power of creative learning.
+        </p>
       </section>
 
       <section className="mb-12">
-        <h2 className="mb-2 font-semibold text-2xl tracking-widest">
+        <h3 className="mb-2 font-semibold text-2xl tracking-widest">
           QuickLinks
-        </h2>
+        </h3>
         <StudentsWorkSection />
       </section>
 
