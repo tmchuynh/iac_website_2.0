@@ -54,7 +54,9 @@ export default function OurStaffPage() {
           return category.category === "Founder" ||
             category.category === "Senior Instructors" ? (
             <section key={index} className="mb-12">
-              <h2 className="mb-6 font-bold text-2xl">{category.category}</h2>
+              <h1 className="my-4 pb-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+                {category.category}
+              </h1>
 
               <ul
                 role="list"
@@ -72,7 +74,9 @@ export default function OurStaffPage() {
             </section>
           ) : (
             <section key={index} className="mb-12">
-              <h2 className="mb-6 font-bold text-2xl">{category.category}</h2>
+              <h1 className="my-4 pb-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+                {category.category}
+              </h1>
 
               <ul
                 role="list"

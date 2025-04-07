@@ -9,7 +9,7 @@ export default function AboutUsPage() {
             <p className="font-semibold text-base/7">
               International Activities Club
             </p>
-            <h1 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
               A Vision Born from the Heart
             </h1>
             <p className="mt-6 text-balance text-xl/8">

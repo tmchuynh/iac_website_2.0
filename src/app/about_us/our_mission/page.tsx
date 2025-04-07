@@ -1,17 +1,254 @@
 "use client";
 
-import Testimonial from "@/components/page_headers/Testimonial";
+const stats = [
+  { label: "Transactions every 24 hours", value: "44 million" },
+  { label: "Assets under holding", value: "$119 trillion" },
+  { label: "New users annually", value: "46,000" },
+];
+
+const values = [
+  {
+    name: "Be world-class",
+    description:
+      "Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.",
+  },
+  {
+    name: "Share everything you know",
+    description:
+      "Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.",
+  },
+  {
+    name: "Always learning",
+    description:
+      "Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.",
+  },
+  {
+    name: "Be supportive",
+    description:
+      "Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.",
+  },
+  {
+    name: "Take responsibility",
+    description:
+      "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
+  },
+  {
+    name: "Enjoy downtime",
+    description:
+      "Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.",
+  },
+];
 
 export default function OurMissionPage() {
   return (
     <main className="relative mx-auto px-4 py-10 lg:py-30 w-11/12">
-      <Testimonial />
+      <div className="relative -z-10 bg-linear-to-b from-indigo-100/20 pt-14 overflow-hidden isolate">
+        <div
+          aria-hidden="true"
+          className="right-1/2 -z-10 absolute inset-y-0 bg-white shadow-indigo-600/10 shadow-xl -mr-96 sm:-mr-80 lg:-mr-96 ring-1 ring-indigo-50 w-[200%] origin-top-right skew-x-[-30deg]"
+        />
+        <div className="mx-auto px-6 lg:px-8 py-32 sm:py-40 max-w-7xl">
+          <div className="lg:gap-x-16 lg:gap-y-8 xl:gap-x-8 lg:grid lg:grid-cols-2 xl:grid-cols-1 xl:grid-rows-1 mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
+            {/* <h1 class="lg:col-span-2 max-w-2xl font-semibold text-5xl text-balance text-gray-900 sm:text-7xl tracking-tight xl:col-auto">We’re changing the way people connect</h1> */}
+            <h1 className="lg:col-span-2 max-w-2xl font-semibold text-5xl text-balance text-gray-900 sm:text-7xl tracking-tight xl:col-auto">
+              We’re a passionate group of people building the future of
+              ecommerce
+            </h1>
+            <div className="xl:col-end-1 xl:row-start-1 mt-6 lg:mt-0 max-w-xl">
+              <p className="font-medium text-gray-500 text-lg text-pretty sm:text-xl/8">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt
+                sunt. Qui irure qui lorem cupidatat commodo.
+              </p>
+            </div>
+            <img
+              alt=""
+              src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80"
+              className="xl:row-span-2 xl:row-end-2 mt-10 sm:mt-16 lg:mt-0 xl:mt-36 rounded-2xl w-full max-w-lg lg:max-w-none aspect-6/5 object-cover"
+            />
+          </div>
+        </div>
+        <div className="bottom-0 -z-10 absolute inset-x-0 bg-linear-to-t from-white h-24 sm:h-32" />
+      </div>
+
+      <div className="mt-32 sm:mt-40 overflow-hidden">
+        <div className="lg:flex mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="lg:flex-none gap-x-12 gap-y-16 lg:gap-y-8 grid grid-cols-1 mx-auto lg:mx-0 lg:min-w-full max-w-2xl lg:max-w-none">
+            <div className="lg:col-end-1 lg:pb-8 lg:w-full lg:max-w-lg">
+              <h2 className="font-semibold text-4xl text-gray-900 sm:text-5xl tracking-tight">
+                Our people
+              </h2>
+              <p className="mt-6 text-gray-600 text-xl/8">
+                Quasi est quaerat. Sit molestiae et. Provident ad dolorem
+                occaecati eos iste. Soluta rerum quidem minus ut molestiae velit
+                error quod. Excepturi quidem expedita molestias quas.
+              </p>
+              <p className="mt-6 text-base/7 text-gray-600">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                fugiat. Quasi aperiam sit non sit neque reprehenderit.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-end items-start gap-6 sm:gap-8 lg:contents">
+              <div className="flex-auto lg:flex-none lg:ml-auto w-0 lg:w-auto lg:self-end">
+                <img
+                  alt=""
+                  src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                  className="bg-gray-50 rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
+                />
+              </div>
+              <div className="lg:flex lg:justify-end lg:items-start lg:gap-x-8 lg:col-span-2 lg:col-end-2 lg:ml-auto lg:w-[37rem] contents">
+                <div className="flex flex-none justify-end order-first w-64 lg:w-auto self-end">
+                  <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    className="flex-none bg-gray-50 rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
+                  />
+                </div>
+                <div className="flex flex-auto lg:flex-none justify-end w-96 lg:w-auto">
+                  <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                    className="flex-none bg-gray-50 rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
+                  />
+                </div>
+                <div className="sm:block sm:flex-auto lg:flex-none hidden sm:w-0 lg:w-auto">
+                  <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    className="bg-gray-50 rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-32 sm:mt-40 px-6 lg:px-8 max-w-7xl">
+        <div className="mx-auto lg:mx-0 max-w-2xl">
+          <h2 className="font-semibold text-4xl text-gray-900 text-pretty sm:text-5xl tracking-tight">
+            We approach work as a place to make the world better
+          </h2>
+          <p className="mt-6 text-base/7 text-gray-600">
+            Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est
+            euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit
+            eu in id. Integer vel nibh.
+          </p>
+        </div>
+        <div className="flex lg:flex-row flex-col lg:items-end gap-8 mx-auto lg:mx-0 mt-16 lg:mt-20 max-w-2xl lg:max-w-none">
+          <div className="flex sm:flex-row-reverse lg:flex-col flex-col-reverse lg:flex-none justify-between sm:items-end lg:items-start gap-x-16 gap-y-8 bg-gray-50 p-8 rounded-2xl sm:w-3/4 lg:w-72 sm:max-w-md lg:max-w-none">
+            <p className="flex-none font-bold text-3xl text-gray-900 tracking-tight">
+              250k
+            </p>
+            <div className="lg:flex-none sm:w-80 lg:w-auto sm:shrink">
+              <p className="font-semibold text-gray-900 text-lg tracking-tight">
+                Users on the platform
+              </p>
+              <p className="mt-2 text-base/7 text-gray-600">
+                Vel labore deleniti veniam consequuntur sunt nobis.
+              </p>
+            </div>
+          </div>
+          <div className="flex sm:flex-row-reverse lg:flex-col flex-col-reverse lg:flex-auto justify-between sm:items-end lg:items-start gap-x-16 gap-y-8 lg:gap-y-44 bg-gray-900 p-8 rounded-2xl lg:w-full lg:max-w-sm">
+            <p className="flex-none font-bold text-3xl text-white tracking-tight">
+              $8.9 billion
+            </p>
+            <div className="lg:flex-none sm:w-80 lg:w-auto sm:shrink">
+              <p className="font-semibold text-lg text-white tracking-tight">
+                We’re proud that our customers have made over $8 billion in
+                total revenue.
+              </p>
+              <p className="mt-2 text-base/7 text-gray-400">
+                Eu duis porta aliquam ornare. Elementum eget magna egestas.
+              </p>
+            </div>
+          </div>
+          <div className="flex sm:flex-row-reverse lg:flex-col flex-col-reverse lg:flex-auto justify-between sm:items-end lg:items-start gap-x-16 gap-y-8 lg:gap-y-28 bg-indigo-600 p-8 rounded-2xl sm:w-11/12 lg:w-full sm:max-w-xl lg:max-w-none">
+            <p className="flex-none font-bold text-3xl text-white tracking-tight">
+              401,093
+            </p>
+            <div className="lg:flex-none sm:w-80 lg:w-auto sm:shrink">
+              <p className="font-semibold text-lg text-white tracking-tight">
+                Transactions this year
+              </p>
+              <p className="mt-2 text-base/7 text-indigo-200">
+                Eu duis porta aliquam ornare. Elementum eget magna egestas. Eu
+                duis porta aliquam ornare.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-32 sm:mt-40 px-6 lg:px-8 max-w-7xl">
+        <div className="mx-auto lg:mx-0 max-w-2xl">
+          <h2 className="font-semibold text-4xl text-gray-900 text-pretty sm:text-5xl tracking-tight">
+            Our values
+          </h2>
+          <p className="mt-6 text-gray-600 text-lg/8">
+            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
+            voluptatum cupiditate veritatis in accusamus quisquam.
+          </p>
+        </div>
+        <dl className="gap-x-8 gap-y-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto lg:mx-0 mt-16 max-w-2xl lg:max-w-none text-base/7">
+          {values.map((value) => (
+            <div key={value.name}>
+              <dt className="font-semibold text-gray-900">{value.name}</dt>
+              <dd className="mt-1 text-gray-600">{value.description}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <section className="mx-auto -mt-12 sm:mt-0 xl:-mt-8 px-6 lg:px-8 max-w-7xl">
+        <div className="mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
+          <h2 className="font-semibold text-4xl text-gray-900 text-pretty sm:text-5xl tracking-tight">
+            Our mission
+          </h2>
+          <div className="flex lg:flex-row flex-col gap-x-8 gap-y-20 mt-6">
+            <div className="lg:flex-auto lg:w-full lg:max-w-2xl">
+              <p className="text-gray-600 text-xl/8">
+                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
+                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
+                id at vitae feugiat egestas ac. Diam nulla orci at in viverra
+                scelerisque eget. Eleifend egestas fringilla sapien.
+              </p>
+              <p className="mt-10 max-w-xl text-base/7 text-gray-700">
+                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
+                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
+                Id dolor praesent donec est. Odio penatibus risus viverra tellus
+                varius sit neque erat velit. Faucibus commodo massa rhoncus,
+                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
+                sed amet vitae sed turpis id.
+              </p>
+            </div>
+            <div className="lg:flex lg:flex-auto lg:justify-center">
+              <dl className="space-y-8 w-64 xl:w-80">
+                {stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex flex-col-reverse gap-y-4"
+                  >
+                    <dt className="text-base/7 text-gray-600">{stat.label}</dt>
+                    <dd className="font-semibold text-5xl text-gray-900 tracking-tight">
+                      {stat.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section>
-        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        <h1 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           What Powers Us Through - Our Mission
         </h1>
         <section className="py-4">
-          <h2 className="font-bold text-2xl">
+          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Empowering Students through Immersion, Effectiveness, and
             Inclusivity
           </h2>
@@ -35,7 +272,7 @@ export default function OurMissionPage() {
         </section>
 
         <section className="py-4">
-          <h2 className="font-bold text-2xl">
+          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Immersion: Active, Engaged Learning
           </h2>
           <p>
@@ -78,8 +315,16 @@ export default function OurMissionPage() {
           </p>
         </section>
 
+        <div className="xl:mx-auto xl:px-8 py-3 md:py-6 lg:py-9 2xl:py-20 xl:py-12 lg:max-w-7xl">
+          <img
+            alt=""
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+            className="shadow-xl xl:rounded-3xl w-full aspect-5/2 object-cover"
+          />
+        </div>
+
         <section className="py-4">
-          <h2 className="font-bold text-2xl">
+          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Effectiveness: Results-Driven Education
           </h2>
 
@@ -132,7 +377,7 @@ export default function OurMissionPage() {
         </section>
 
         <section className="py-4">
-          <h2 className="font-bold text-2xl">
+          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Inclusivity: Supporting Every Learner
           </h2>
 
@@ -181,7 +426,7 @@ export default function OurMissionPage() {
         </section>
 
         <section className="py-4">
-          <h2 className="font-bold text-2xl">
+          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             A Mission to Transform Education and Lives
           </h2>
 
