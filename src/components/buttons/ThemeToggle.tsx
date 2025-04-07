@@ -32,6 +32,7 @@ export const ThemeToggle = (): JSX.Element | null => {
       setTheme(systemTheme || "light");
     }
   }, [systemTheme, theme, setTheme]);
+
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -47,7 +48,7 @@ export const ThemeToggle = (): JSX.Element | null => {
       <Toggle
         aria-label="Toggle theme"
         onClick={toggleTheme}
-        className="flex justify-center items-center"
+        className="flex justify-center items-center hover:bg-accent hover:text-accent-foreground"
       >
         {currentTheme === "dark" ? (
           <FiMoon className="w-4 h-4" />
