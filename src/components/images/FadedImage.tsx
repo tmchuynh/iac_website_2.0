@@ -12,7 +12,7 @@ export default function FadedImage({ imageSrc }: { imageSrc: string }) {
           height={1200}
         />
         <div aria-hidden="true" className="relative">
-          <div className="bottom-0 absolute -inset-x-20 bg-linear-to-t from-white pt-[27%]" />
+          <div className="bottom-0 absolute -inset-x-20 bg-linear-to-t from-background pt-[27%]" />
         </div>
       </div>
     </div>
