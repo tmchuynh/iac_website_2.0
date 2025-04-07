@@ -36,7 +36,11 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
   const router = useRouter();
 
   const pathSegments = useMemo(
-    () => pathname.split("/").filter(Boolean),
+    () =>
+      pathname
+        .split("/")
+        .filter(Boolean)
+        .map((segment) => decodeURIComponent(segment)), // Decode special characters
     [pathname]
   );
 
@@ -71,6 +75,28 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
         items.push(
           <BreadcrumbItem key="dots" className="-mx-1">
             <span className="rounded-md">...</span>
+          </BreadcrumbItem>
+        );
+      }
+
+      if (pathSegments.length > 0) {
+        const firstHref = `/${pathSegments[0]}`;
+        const firstSegment = capitalizedSegments[0];
+
+        items.push(
+          <BreadcrumbSeparator key={`sep-${firstHref}`} className="mr-0 ml-1">
+            <TbSlashes />
+          </BreadcrumbSeparator>
+        );
+
+        items.push(
+          <BreadcrumbItem key={firstHref} className="mx-1">
+            <BreadcrumbLink
+              href={firstHref}
+              className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
+            >
+              {firstSegment}
+            </BreadcrumbLink>
           </BreadcrumbItem>
         );
       }
