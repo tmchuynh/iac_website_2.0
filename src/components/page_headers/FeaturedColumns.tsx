@@ -1,38 +1,11 @@
 "use client";
 
-import { InboxIcon, TrashIcon, UsersIcon } from "@heroicons/react/24/outline";
 import DynamicButton from "../buttons/button-dynamic";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
-
-const features = [
-  {
-    name: "Led by Experts Who Care",
-    description:
-      "Each class is taught by skilled, passionate instructors with deep expertise in their fields—whether it’s chess, creative writing, dance, or coding. More than educators, they are mentors who inspire students through engaging lessons, thoughtful feedback, and genuine connection.",
-    href: "/about_us/our_staff",
-    button: "Meet the Instructors",
-    icon: InboxIcon,
-  },
-  {
-    name: "Skill-Rich, Purpose-Driven Learning",
-    description:
-      "Our programs are designed to equip students with practical, transferable skills. From teamwork and strategy in sports to storytelling and creative expression in the arts, every session strengthens confidence, communication, and critical thinking.",
-    href: "/about_us/our_commitment",
-    button: "Learn About the Curriculum",
-    icon: UsersIcon,
-  },
-  {
-    name: "Environments That Empower",
-    description:
-      "We create safe, inclusive spaces where students feel encouraged to explore new ideas, take creative risks, and grow. Our classes are tailored to meet a wide range of interests and learning styles, helping every student unlock their full potential in a fun and supportive setting.",
-    href: "/programs",
-    button: "Explore Our Programs",
-    icon: TrashIcon,
-  },
-];
+import { features } from "@/lib/constants/list";
 
 export default function FeaturedColumns() {
   const router = useRouter();
