@@ -29,13 +29,10 @@ const getCSSVariable = (variable: string): string => {
 };
 
 const DoughnutChartLabel = () => {
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [backgroundColors, setBackgroundColors] = useState<string[]>([]);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [backgroundColors, setBackgroundColors] = useState<string[]>([]);
 
   useEffect(() => {
     if (!mounted) return;
@@ -53,6 +50,13 @@ const DoughnutChartLabel = () => {
     updateColors();
   }, [theme, mounted]);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   // const totalValue = dataSource.reduce((acc, item) => acc + item.value, 0);
 
   const chartData = {

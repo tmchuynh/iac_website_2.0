@@ -1,8 +1,11 @@
+"use client";
+
 import { InboxIcon, TrashIcon, UsersIcon } from "@heroicons/react/24/outline";
 import DynamicButton from "../buttons/button-dynamic";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
 const features = [
   {
@@ -30,7 +33,17 @@ const features = [
 
 export default function FeaturedColumns() {
   const router = useRouter();
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto lg:mx-0 max-w-2xl">
