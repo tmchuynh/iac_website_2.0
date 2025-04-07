@@ -7,7 +7,7 @@ export default function AboutUsPage() {
         <div className="mx-auto">
           <div className="max-w-4xl">
             <p className="font-semibold text-base/7">
-              International Activities Club
+              Where Passion Meets Purpose
             </p>
             <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
               A Vision Born from the Heart
@@ -23,9 +23,6 @@ export default function AboutUsPage() {
           </div>
           <section className="lg:gap-x-8 lg:gap-y-16 grid grid-cols-1 lg:grid-cols-2 mt-20">
             <div className="lg:pr-8">
-              <h2 className="font-bold text-2xl">
-                Where Passion Meets Purpose
-              </h2>
               <p className="mt-6 text-base/7">
                 The journey of the International Activities Club (IAC) is deeply
                 rooted in Justin's unwavering passion and heartfelt commitment
