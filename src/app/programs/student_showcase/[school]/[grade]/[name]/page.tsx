@@ -95,7 +95,19 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center mx-auto py-19 w-11/12">
+    <div className="flex flex-col justify-center items-center mx-auto py-5 md:py-8 w-11/12">
+      {!showcaseItem.images && (
+        <div className="py-3 md:py-8 lg:py-16">
+          <Image
+            src={showcaseItem.mainImage}
+            alt={showcaseItem.title}
+            className="shadow-xl mt-4 rounded-4xl max-w-full h-auto"
+            width={1000}
+            height={800}
+            priority
+          />
+        </div>
+      )}
       <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
         {showcaseItem.title}
       </h1>
@@ -116,17 +128,8 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
           )}
         </div>
       </div>
-      {!showcaseItem.images && (
-        <Image
-          src={showcaseItem.mainImage}
-          alt={showcaseItem.title}
-          className="mt-4 max-w-full h-auto"
-          width={1000}
-          height={800}
-          priority
-        />
-      )}
-      <div>
+
+      <div className="pb-8 md:pb-10 lg:pb-14 2xl:pb-32 xl:pb-20">
         {showcaseItem.writing && (
           <p
             className="mt-4 indent-8"
