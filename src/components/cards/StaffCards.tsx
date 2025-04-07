@@ -33,7 +33,7 @@ export const StaffCards = (person: Person) => {
             <h3 className="mt-6 font-semibold text-lg tracking-tight">
               {person.name}
             </h3>
-            <p className="text-md">{person.role}</p>
+            <p className="text-md tracking-tighter">{person.role}</p>
           </div>
           {person.icons && (
             <div className="flex gap-4">
@@ -51,7 +51,7 @@ export const StaffCards = (person: Person) => {
 
         {person.description && (
           <>
-            <p className="text-sm">{person.description}</p>
+            <p className="pt-4 text-sm">{person.description}</p>
             <DynamicButton className="w-full">Learn More</DynamicButton>
           </>
         )}
