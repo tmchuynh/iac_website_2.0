@@ -145,9 +145,9 @@
     @apply underline underline-offset-2;
   }
   p {
-    @apply py-2;
+    @apply py-2 text-base/8;
   }
   li {
-    @apply ml-8;
+    @apply ml-8 text-base/8;
   }
 }
