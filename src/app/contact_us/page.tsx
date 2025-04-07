@@ -6,10 +6,17 @@ export default function ContactUs() {
     <main className="relative mx-auto px-4 py-8 w-11/12">
       <section className="mx-auto w-11/12">
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
-          Let’s talk about your project
+          Contact Us
         </h1>
         <p className="mt-2 text-lg/8">
-          We help companies and individuals build out their brand guidelines.
+          Whether you’re a parent, educator, school administrator, or community
+          partner, we welcome your questions, ideas, and feedback. Have a
+          question about one of our programs? Interested in bringing our
+          enrichment experiences to your school or organization? Looking to
+          explore collaboration or partnership opportunities? Or maybe you just
+          want to connect and learn more—we’re here for it all. Our team is
+          ready to assist and guide you every step of the way. Don’t hesitate to
+          reach out—we look forward to starting the conversation with you!
         </p>
         <div className="flex lg:flex-row flex-col gap-16 sm:gap-y-20 mt-16">
           <form action="#" method="POST" className="lg:flex-auto">
