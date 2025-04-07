@@ -18,7 +18,7 @@ export type testimonialsInfo = {
   name: string;
   title: string;
   school: string;
-  image?: string;
+  image: string;
   class: string;
   text: string;
 };
