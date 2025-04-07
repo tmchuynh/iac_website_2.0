@@ -13,6 +13,7 @@ export const testimonials: testimonialsInfo[] = [
     name: "Anonymous",
     title: "Parent",
     school: "Anonymous",
+    image: "/images/School_Icons/hicks.png",
     class: "Chess",
     text: "...I am so grateful for your understanding and accommodation throughout this process. Your willingness to go above and beyond to resolve this issue speaks volumes about your exceptional customer service. Thank you",
   },

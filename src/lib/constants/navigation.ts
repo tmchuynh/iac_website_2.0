@@ -51,6 +51,12 @@ export const programs = [
     description: "Find answers to common questions about our programs.",
     icon: FaChalkboardTeacher,
   },
+  {
+    name: "Testimonials",
+    href: "/programs/testimonials",
+    description: "Read testimonials from our students and partners.",
+    icon: FaChalkboardTeacher,
+  },
 ];
 
 export const contact = [
