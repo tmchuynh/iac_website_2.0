@@ -36,9 +36,9 @@ export default function PhotoAndList() {
       <div className="mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="flex lg:flex-row flex-col justify-between items-end gap-16 mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
           <div className="lg:flex-auto w-full lg:max-w-lg">
-            <h2 className="font-semibold text-3xl text-gray-900 text-pretty sm:text-4xl tracking-tight">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
               We’re always looking for awesome people to join us
-            </h2>
+            </h1>
             <p className="mt-6 text-gray-600 text-xl/8">
               Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est
               euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus

@@ -5,15 +5,16 @@ export default function Testimonial() {
   return (
     <div className="relative overflow-hidden isolate">
       <div className="mx-auto lg:mx-0 max-w-2xl">
-        <p className="font-semibold text-base/7">Deploy faster</p>
-        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
-          A better workflow
+        <p className="font-semibold text-base/7">The IAC Advantage</p>
+        <h1 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          Empowering Student Creativity
         </h1>
         <p className="mt-6 text-xl/8">
-          Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
-          arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
-          feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
-          Eleifend egestas fringilla sapien.
+          At IAC, we believe creativity is the key to unlocking confidence,
+          imagination, and innovation. Our programs are designed to support the
+          whole child—giving them tools to think independently, create boldly,
+          and share their voice with the world. From storytelling and design to
+          performance and collaboration, every experience is built with purpose.
         </p>
       </div>
       <div className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-12 mx-auto lg:mx-0 mt-16 lg:mt-10 max-w-2xl lg:max-w-none">
@@ -39,6 +40,7 @@ export default function Testimonial() {
               strokeWidth={0}
             />
           </svg>
+
           <figure className="pl-8 border-l">
             <blockquote className="font-semibold text-xl/8 tracking-tight">
               <p>
@@ -63,42 +65,34 @@ export default function Testimonial() {
             </figcaption>
           </figure>
           <h2 className="mt-16 font-bold text-2xl tracking-tight">
-            No server? No problem.
+            No Barriers, Just Opportunity
           </h2>
           <p className="mt-6">
-            Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat
-            in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum
-            mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed
-            tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi.
-            Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis
-            diam.
+            Our team brings everything needed—curriculum, instructors, and
+            materials—right to your school site. With no need for additional
+            staff or resources, schools can focus on student engagement while we
+            handle the logistics. It’s enrichment made simple, effective, and
+            impactful.
           </p>
         </div>
-        <div className="lg:col-span-7 max-w-xl text-base/7">
-          <p>
-            Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-            enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-            praesent donec est. Odio penatibus risus viverra tellus varius sit
-            neque erat velit. Faucibus commodo massa rhoncus, volutpat.
-            Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
-            sed turpis id.
-          </p>
-          <ul role="list" className="space-y-8 mt-8 max-w-xl">
+        <div className="lg:col-span-7 max-w-2xl text-base/7">
+          <ul role="list" className="space-y-8">
             <li className="flex gap-x-3">
               <FaCloud aria-hidden="true" className="flex-none mt-1 size-5" />
               <span>
-                <strong className="font-semibold">Push to deploy.</strong> Lorem
-                ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                impedit perferendis suscipit eaque, iste dolor cupiditate
-                blanditiis ratione.
+                <strong className="font-semibold">Creative Confidence</strong>{" "}
+                Students are encouraged to express their ideas freely, take
+                creative risks, and develop a strong sense of self.
               </span>
             </li>
             <li className="flex gap-x-3">
               <FaLock aria-hidden="true" className="flex-none mt-1 size-5" />
               <span>
-                <strong className="font-semibold">SSL certificates.</strong>{" "}
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo.
+                <strong className="font-semibold">
+                  Multi-Disciplinary Learning
+                </strong>{" "}
+                From public speaking and performing arts to chess and comic book
+                design, our offerings span a wide range of interests and skills.
               </span>
             </li>
             <li className="flex gap-x-3">
@@ -107,19 +101,27 @@ export default function Testimonial() {
                 className="flex-none mt-1 size-5"
               />
               <span>
-                <strong className="font-semibold">Database backups.</strong> Ac
-                tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
-                magna sit morbi lobortis.
+                <strong className="font-semibold">
+                  Collaboration & Community
+                </strong>{" "}
+                We cultivate a positive, inclusive environment where students
+                build teamwork, empathy, and communication through shared
+                projects.
               </span>
             </li>
           </ul>
-          <p className="mt-8">
-            Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-            odio id et. Id blandit molestie auctor fermentum dignissim. Lacus
-            diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-            hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem
-            vel integer orci.
-          </p>
+          <div className="py-6">
+            <h2 className="font-bold text-2xl tracking-tight">
+              Nurturing the Whole Child
+            </h2>
+            <p className="mt-6">
+              We focus on more than just academics. Through hands-on exploration
+              and expressive outlets, our programs help students build
+              resilience, emotional intelligence, and leadership skills. It’s
+              about developing well-rounded individuals who are confident in who
+              they are and what they can achieve.
+            </p>
+          </div>
         </div>
       </div>
     </div>

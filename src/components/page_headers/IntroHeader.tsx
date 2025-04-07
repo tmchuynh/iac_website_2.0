@@ -32,9 +32,9 @@ export default function IntroHeader() {
               </div>
             </div>
 
-            <h2 className="max-w-2xl font-semibold text-4xl text-balance sm:text-5xl tracking-wider">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
               Superior classes, exceptional instructors, outstanding outcomes.
-            </h2>
+            </h1>
             <p>
               We take pride in offering programs that excel in quality and
               performance at every level. Our offerings have garnered
