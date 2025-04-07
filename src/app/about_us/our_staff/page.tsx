@@ -1,26 +1,34 @@
 "use client";
 
 import { StaffCards } from "@/components/cards/StaffCards";
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import { staffCategories } from "@/lib/constants/staff";
 
 export default function OurStaffPage() {
   return (
-    <main className="relative mx-auto px-4 py-8 w-11/12">
+    <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-20 2xl:py-40 xl:py-32 w-11/12">
+      <code className="font-semibold text-base/7">Dedicated to Excellence</code>
       <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         Our Staff
       </h1>
-      <p>
-        At the heart of our program is a dedicated and passionate team—the
-        driving force behind every success story. Their unwavering commitment
-        and collective expertise create the foundation for a nurturing and
-        inspiring environment where students are empowered to thrive, grow, and
-        achieve their full potential. Our team is composed of a diverse group of
-        professionals, including educators, support staff, and administrators,
-        each bringing a unique blend of skills, backgrounds, and experiences.
-        Together, they work in harmony to deliver high-quality programming,
-        foster meaningful connections, and ensure every student receives the
-        support and encouragement they need to flourish.
-      </p>
+      <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
+        <div>
+          <p>
+            At the heart of our program is a dedicated and passionate team—the
+            driving force behind every success story. Their unwavering
+            commitment and collective expertise create the foundation for a
+            nurturing and inspiring environment where students are empowered to
+            thrive, grow, and achieve their full potential. Our team is composed
+            of a diverse group of professionals, including educators, support
+            staff, and administrators, each bringing a unique blend of skills,
+            backgrounds, and experiences. Together, they work in harmony to
+            deliver high-quality programming, foster meaningful connections, and
+            ensure every student receives the support and encouragement they
+            need to flourish.
+          </p>
+        </div>
+        <ResponsiveLogo />
+      </div>
 
       <p>
         From direct instruction to behind-the-scenes coordination, our staff

@@ -1,6 +1,7 @@
 "use client";
 import { useTabs } from "@/app/context/TabsContext";
 import DoughnutChartLabel from "@/components/images/PieChart";
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import PhotoAndList from "@/components/page_headers/PhotoAndList";
 import ProgramDetails from "@/components/programs/ProgramInformation";
 import { class_breakdown } from "@/lib/constants/list";
@@ -42,11 +43,16 @@ export default function ProgramsPage(): JSX.Element {
         />
       </div>
       <section>
+        <code className="font-semibold text-base/7">
+          Looking for a program that’s right for you?
+        </code>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Our Program Details
         </h1>
         <ProgramDetails title={title} />
       </section>
+
+      <ResponsiveLogo />
 
       <section>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">

@@ -36,7 +36,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
             <TabsTrigger
               value={program.title}
               key={program.title}
-              className="group flex items-center gap-3 data-[state=active]:font-bold data-[state=active]:text-primary md:text-md lg:text-lg data-[state=active]:uppercase"
+              className="group flex items-center gap-3 data-[state=active]:font-bold data-[state=active]:text-primary md:text-md lg:text-lg dark:text-accent data-[state=active]:uppercas"
             >
               <div className="flex justify-center items-center w-5 md:w-8 lg:w-9 2xl:w-10 h-5 md:h-8 lg:h-9 2xl:h-10">
                 <Image

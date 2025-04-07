@@ -22,6 +22,9 @@ export default function RequestUs() {
       <div className="lg:grid lg:grid-cols-2 mx-auto pt-16 sm:pt-24 lg:pt-32 pb-24 sm:pb-32 w-11/12">
         <div className="px-6 lg:px-8">
           <div className="mx-auto lg:mx-0 max-w-3xl lg:max-w-7xl text-pretty">
+            <code className="font-semibold text-base/7">
+              Your students deserve the best.
+            </code>
             <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
               Bring Our Programs to Your Campus
             </h1>

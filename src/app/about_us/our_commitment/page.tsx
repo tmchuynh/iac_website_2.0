@@ -1,5 +1,4 @@
 "use client";
-
 import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import FeaturedColumns from "@/components/page_headers/FeaturedColumns";
 import Image from "next/image";
@@ -10,6 +9,7 @@ export default function OurCommitmentPage() {
       <FeaturedColumns />
       <section className="gap-5 grid grid-cols-1 lg:grid-cols-5">
         <div className="col-span-3">
+          <ResponsiveLogo />
           <p>
             At IAC, our commitment transcends traditional education—we dedicate
             ourselves to creating meaningful, lasting impacts on every student's
@@ -66,10 +66,6 @@ export default function OurCommitmentPage() {
               empathetic individuals ready to make positive contributions within
               their communities and beyond.
             </p>
-          </section>
-
-          <section className="flex justify-center items-center w-full h-1/5">
-            <ResponsiveLogo className="2xl:flex hidden" />
           </section>
         </div>
         <Image

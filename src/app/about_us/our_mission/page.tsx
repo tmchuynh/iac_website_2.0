@@ -7,6 +7,7 @@ export default function OurMissionPage() {
   return (
     <main className="relative mx-auto px-4 py-10 lg:py-30 w-11/12">
       <OffsetImage />
+
       <section>
         <section className="py-4">
           <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">

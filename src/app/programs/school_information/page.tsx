@@ -2,6 +2,7 @@
 import DynamicButton from "@/components/buttons/button-dynamic";
 import FadedImage from "@/components/images/FadedImage";
 import LogoCloud from "@/components/images/LogoCloud";
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import { Button } from "@/components/ui/button";
 import { programs } from "@/lib/constants/programs";
 import { cn } from "@/lib/utils";
@@ -36,6 +37,9 @@ export default function SchoolInformationPage() {
   return (
     <main className="mx-auto px-4 py-8 w-11/12">
       <section className="pt-12">
+        <code className="font-semibold text-base/7">
+          The Schools We Work With
+        </code>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Our Partners in Innovation
         </h1>
@@ -130,6 +134,7 @@ export default function SchoolInformationPage() {
           </p>
         </div>
         <div className="flex flex-col gap-3 text-pretty">
+          <ResponsiveLogo />
           <h2 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             Proactive and Passionate
           </h2>

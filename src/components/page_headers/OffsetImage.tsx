@@ -3,10 +3,6 @@ import Image from "next/image";
 export default function OffsetImage() {
   return (
     <div className="relative -z-10 bg-linear-to-b pt-14 overflow-hidden isolate">
-      <div
-        aria-hidden="true"
-        className="right-1/2 -z-10 absolute inset-y-0 shadow-indigo-600/10 shadow-xl -mr-96 sm:-mr-80 lg:-mr-96 ring-1 ring-indigo-50 w-[200%] origin-top-right skew-x-[-30deg]"
-      />
       <div className="gap-4 lg:gap-8 grid grid-cols-1 md:grid-cols-2">
         <div>
           <code className="font-semibold text-base/7">
@@ -44,8 +40,6 @@ export default function OffsetImage() {
           />
         </div>
       </div>
-
-      <div className="bottom-0 -z-10 absolute inset-x-0 bg-linear-to-t from-white h-24 sm:h-32" />
     </div>
   );
 }

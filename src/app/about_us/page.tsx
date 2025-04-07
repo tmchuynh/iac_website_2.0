@@ -12,6 +12,7 @@ export default function AboutUsPage() {
             <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
               A Vision Born from the Heart
             </h1>
+            <ResponsiveLogo />
             <p className="mt-6 text-balance text-xl/8">
               Justin's belief in education as a powerful catalyst for change was
               further honored with the prestigious Millennium Leadership Award
@@ -21,6 +22,7 @@ export default function AboutUsPage() {
               young learners.
             </p>
           </div>
+
           <section className="lg:gap-x-8 lg:gap-y-16 grid grid-cols-1 lg:grid-cols-2 mt-20">
             <div className="lg:pr-8">
               <p className="mt-6 text-base/7">

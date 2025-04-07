@@ -8,6 +8,7 @@ export default function Apply() {
       <FadedImage imageSrc="/images/Class_Photos/Chess/30990092_141156.jpg" />
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-7xl">
         <div className="relative lg:static px-6 lg:px-8 pb-20">
+          <code className="font-semibold text-base/7">Join Our Team</code>
           <div className="mx-auto lg:mx-0">
             <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
               Be Part of the Journey

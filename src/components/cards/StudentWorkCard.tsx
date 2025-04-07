@@ -35,7 +35,7 @@ export default function StudentWorkCard({
               height={600}
             />
           </div>
-          <div className="p-6">
+          <div className="-mt-2 p-6 border rounded-b-2xl">
             <h3 className="mb-2 font-bold text-xl">{work.title}</h3>
             <p className="mb-4 text-sm">{work.grade}</p>
             <div className="flex justify-between items-center">

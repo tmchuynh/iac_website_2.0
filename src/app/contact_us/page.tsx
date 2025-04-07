@@ -1,10 +1,14 @@
 import DynamicButton from "@/components/buttons/button-dynamic";
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <main className="relative mx-auto px-4 py-8 w-11/12">
+    <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-24 2xl:py-40 xl:py-32 w-11/12">
       <section className="mx-auto w-11/12">
+        <code className="font-semibold text-base/7">
+          We Would Love to Hear From You!
+        </code>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Contact Us
         </h1>
@@ -18,6 +22,8 @@ export default function ContactUs() {
           ready to assist and guide you every step of the way. Don’t hesitate to
           reach out—we look forward to starting the conversation with you!
         </p>
+        <ResponsiveLogo />
+
         <div className="flex lg:flex-row flex-col gap-16 sm:gap-y-20 mt-16">
           <form action="#" method="POST" className="lg:flex-auto">
             <div className="gap-x-8 gap-y-6 grid grid-cols-1 sm:grid-cols-2">

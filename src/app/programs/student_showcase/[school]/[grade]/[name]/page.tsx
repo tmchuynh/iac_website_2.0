@@ -108,6 +108,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
           />
         </div>
       )}
+      <code className="font-semibold text-base/7">{showcaseItem.subject}</code>
       <h2 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
         {showcaseItem.title}
       </h2>

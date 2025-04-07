@@ -1,6 +1,6 @@
 import { showcase } from "@/lib/constants/student_work";
-import StudentWorkCard from "./cards/StudentWorkCard";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import StudentWorkCard from "../cards/StudentWorkCard";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 export default function StudentsWorkSection() {
   return (

@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function TestimonialsPage() {
   return (
-    <main className="relative mx-auto px-4 py-8 w-11/12">
+    <main className="relative mx-auto px-4 py-12 lg:py-48 w-11/12 md:-24">
       <code className="font-semibold text-base/7">Hear From Our Community</code>
-      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+      <h1 className="my-4 pb-4 max-w-7xl lg:max-w-4xl font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         Thousands of amazing individuals have trusted us—and here’s what they
         have to say.
       </h1>

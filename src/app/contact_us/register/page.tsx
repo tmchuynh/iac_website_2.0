@@ -13,7 +13,10 @@ const Register: FC = () => {
   }
 
   return (
-    <main className="relative mx-auto px-4 py-8 w-11/12">
+    <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-24 2xl:py-40 xl:py-32 w-11/12">
+      <code className="font-semibold text-base/7">
+        Come Join Us for an Unforgettable Experience!
+      </code>
       <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         Register Today
       </h1>

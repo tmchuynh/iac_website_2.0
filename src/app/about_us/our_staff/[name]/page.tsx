@@ -35,9 +35,9 @@ export default function StaffPage() {
 
   return (
     <main className="relative mx-auto px-4 py-10 lg:py-30 w-11/12">
-      <p className="font-semibold text-accent text-xs">
+      <code className="font-semibold text-base/7">
         {staffMember.moreInfo.bio}
-      </p>
+      </code>
       <section className="gap-1 grid grid-cols-1 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <Image
