@@ -12,21 +12,24 @@ const features = [
     name: "Led by Experts Who Care",
     description:
       "Each class is taught by skilled, passionate instructors with deep expertise in their fields—whether it’s chess, creative writing, dance, or coding. More than educators, they are mentors who inspire students through engaging lessons, thoughtful feedback, and genuine connection.",
-    href: "#",
+    href: "/about_us/our_staff",
+    button: "Meet the Instructors",
     icon: InboxIcon,
   },
   {
     name: "Skill-Rich, Purpose-Driven Learning",
     description:
       "Our programs are designed to equip students with practical, transferable skills. From teamwork and strategy in sports to storytelling and creative expression in the arts, every session strengthens confidence, communication, and critical thinking.",
-    href: "#",
+    href: "/about_us/our_commitment",
+    button: "Learn About the Curriculum",
     icon: UsersIcon,
   },
   {
     name: "Environments That Empower",
     description:
       "We create safe, inclusive spaces where students feel encouraged to explore new ideas, take creative risks, and grow. Our classes are tailored to meet a wide range of interests and learning styles, helping every student unlock their full potential in a fun and supportive setting.",
-    href: "#",
+    href: "/programs",
+    button: "Explore Our Programs",
     icon: TrashIcon,
   },
 ];
@@ -47,6 +50,10 @@ export default function FeaturedColumns() {
   return (
     <div className="py-16 md:py-24 lg:py-32">
       <div className="mx-auto lg:mx-0">
+        <p className="font-semibold text-base/7">
+          Shaping the Future Through Innovation, Excellence, and Equity - Our
+          Commitment
+        </p>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           The Quality of Our Classes is Unmatched
         </h1>
@@ -84,8 +91,11 @@ export default function FeaturedColumns() {
                 <p>{feature.name}</p>
                 <p>{feature.description}</p>
               </div>
-              <DynamicButton onClick={() => router.push(feature.href)}>
-                Learn more
+              <DynamicButton
+                onClick={() => router.push(feature.href)}
+                className="w-full"
+              >
+                {feature.button}
               </DynamicButton>
             </div>
           ))}
