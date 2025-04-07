@@ -10,31 +10,38 @@ export default function OurStaffPage() {
         Our Staff
       </h1>
       <p>
-        Meet our dedicated and passionate team, the driving force behind the
-        success of our program. Their expertise and commitment create an
-        environment where students can thrive and reach their full potential.
-        From educators to administrators, each member brings unique skills and
-        experiences to ensure a seamless and impactful experience for our
-        students.
+        At the heart of our program is a dedicated and passionate team—the
+        driving force behind every success story. Their unwavering commitment
+        and collective expertise create the foundation for a nurturing and
+        inspiring environment where students are empowered to thrive, grow, and
+        achieve their full potential. Our team is composed of a diverse group of
+        professionals, including educators, support staff, and administrators,
+        each bringing a unique blend of skills, backgrounds, and experiences.
+        Together, they work in harmony to deliver high-quality programming,
+        foster meaningful connections, and ensure every student receives the
+        support and encouragement they need to flourish.
+      </p>
+
+      <p>
+        From direct instruction to behind-the-scenes coordination, our staff
+        plays a vital role in shaping an enriching experience for every learner.
+        They go above and beyond—designing dynamic lessons, offering guidance,
+        and cultivating a positive atmosphere that promotes creativity,
+        confidence, and community. We take immense pride in our team’s
+        dedication. Their compassion, innovation, and professionalism are what
+        truly set our program apart. Each staff member contributes not only
+        their expertise but also their heart, making a lasting difference in the
+        lives of the students we serve.
       </p>
       <p>
-        Our staff works tirelessly to positively influence students’ lives
-        through direct teaching, providing support services, and managing the
-        program. Their shared goal is to provide the best possible experience
-        for every student, making a meaningful and lasting impact.
-      </p>
-      <p>
-        We take immense pride in our staff and their exceptional contributions.
-        Their dedication and passion set us apart and are key to the success of
-        our program. We are excited to share their stories and show you the
-        important roles they play in creating a supportive and enriching
-        environment for our students.
-      </p>
-      <p>
-        If you have any questions or would like to learn more about our staff,
-        we are happy to provide more information. Thank you for taking the time
-        to learn about our incredible team! We’re confident you’ll be as
-        impressed by their work as we are.
+        We invite you to learn more about the incredible individuals who make
+        this program possible. Their stories reflect a shared mission: to create
+        opportunities, inspire curiosity, and champion the success of every
+        student. If you have questions or would like to connect with a member of
+        our staff, we are more than happy to provide additional information.
+        Thank you for taking the time to get to know our team. We are confident
+        that their commitment and care will leave a lasting impression—just as
+        it has on all those they serve.
       </p>
 
       <section className="py-8">
