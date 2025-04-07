@@ -35,15 +35,47 @@ export default function StaffPage() {
 
   return (
     <main className="relative mx-auto px-4 py-10 lg:py-30 w-11/12">
-      <div className="gap-1 grid grid-cols-1 lg:grid-cols-5">
-        <Image
-          src={staffMember.image}
-          alt={staffMember.name}
-          className="lg:col-span-2 shadow-lg rounded-lg object-cover"
-          width={500}
-          height={500}
-        />
-        <section className="lg:col-span-3">
+      <p className="font-semibold text-accent text-xs">{staffMember.bio}</p>
+      <section className="gap-1 grid grid-cols-1 lg:grid-cols-5">
+        <div className="lg:col-span-2">
+          <Image
+            src={staffMember.image}
+            alt={staffMember.name}
+            className="shadow-lg rounded-lg object-cover"
+            width={500}
+            height={500}
+          />
+          {(staffMember.moreInfo.email || staffMember.moreInfo.phone) && (
+            <div className="px-2 py-8">
+              <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+                Contact Me:
+              </h2>
+              {staffMember.moreInfo.email && (
+                <p className="mt-4 text-base/7">
+                  Email:{" "}
+                  <a
+                    href={`mailto:${staffMember.moreInfo.email}`}
+                    className="text-primary underline"
+                  >
+                    {staffMember.moreInfo.email}
+                  </a>
+                </p>
+              )}
+              {staffMember.moreInfo.phone && (
+                <p className="text-base/7">
+                  Phone:{" "}
+                  <a
+                    href={`tel:${staffMember.moreInfo.phone}`}
+                    className="text-primary underline"
+                  >
+                    {staffMember.moreInfo.phone}
+                  </a>
+                </p>
+              )}
+            </div>
+          )}
+        </div>
+        <div className="lg:col-span-3">
           <p className="font-semibold text-base/7">{staffMember.role}</p>
           <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
             {staffMember.name}
@@ -62,8 +94,21 @@ export default function StaffPage() {
                 : "",
             }}
           />
-        </section>
-      </div>
+        </div>
+      </section>
+      <section className="flex flex-wrap justify-center items-center gap-10 mt-10">
+        {staffMember?.moreInfo?.images?.map((image: string, index: number) => (
+          <div key={index} className="mt-8">
+            <Image
+              src={image}
+              alt={`Additional image ${index + 1}`}
+              className="shadow-lg rounded-lg object-cover aspect-square"
+              width={400}
+              height={400}
+            />
+          </div>
+        ))}
+      </section>
     </main>
   );
 }
