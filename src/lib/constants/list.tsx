@@ -226,3 +226,105 @@ export const features = [
     icon: FaRegLightbulb,
   },
 ];
+
+export const jobOpenings = [
+  {
+    role: "Chess Instructor",
+    description:
+      "Teach students the fundamentals and advanced strategies of chess in a structured, engaging, and supportive environment. Ideal candidates are patient, analytical, and passionate about helping students build critical thinking, focus, and confidence through the game.",
+    preferredSkills: [
+      "Strong knowledge of chess theory and tactics",
+      "Experience teaching or coaching chess to youth",
+      "Ability to analyze and explain game positions",
+      "Familiarity with chess notation and tournament play",
+    ],
+  },
+  {
+    role: "Basketball Coach",
+    description:
+      "Lead dynamic basketball sessions focused on skill development, teamwork, and sportsmanship. Candidates should promote a positive team culture while helping students grow athletically and personally through structured training and games.",
+    preferredSkills: [
+      "Experience coaching basketball at the youth level",
+      "Knowledge of fundamental skills and team strategies",
+      "Strong leadership and communication abilities",
+      "CPR/First Aid certification (preferred)",
+    ],
+  },
+  {
+    role: "Volleyball Coach",
+    description:
+      "Coach students in volleyball fundamentals, team strategy, and athletic conditioning in a fun and inclusive environment. Focus on player development, net play, and fostering a lifelong love for the sport.",
+    preferredSkills: [
+      "Understanding of volleyball techniques and rules",
+      "Experience working with children or teens",
+      "Ability to structure and lead engaging drills and games",
+      "Excellent teamwork and motivational skills",
+    ],
+  },
+  {
+    role: "Flag Football Coach",
+    description:
+      "Guide students through the fundamentals of flag football while teaching strategic thinking, teamwork, and sportsmanship. Instructors must create a safe, active, and supportive environment for all skill levels.",
+    preferredSkills: [
+      "Background in coaching or playing football/flag football",
+      "Knowledge of flag football rules and safety protocols",
+      "Strong organizational and team-building skills",
+      "Ability to manage group activities and encourage participation",
+    ],
+  },
+  {
+    role: "Soccer Coach",
+    description:
+      "Instruct students in soccer techniques, positional play, and tactical awareness. Help players develop confidence and a deeper appreciation for the sport while promoting respect and discipline.",
+    preferredSkills: [
+      "Coaching experience with youth soccer teams",
+      "Understanding of formations, drills, and match play",
+      "Strong communication and leadership qualities",
+      "Patience and ability to work with varying skill levels",
+    ],
+  },
+  {
+    role: "Creative Writing Instructor",
+    description:
+      "Inspire students to express themselves through fiction, poetry, and creative nonfiction. Guide students through the writing process and help them build confidence, grammar skills, and storytelling techniques.",
+    preferredSkills: [
+      "Background in writing, literature, or English education",
+      "Experience teaching or mentoring young writers",
+      "Strong grasp of grammar and narrative structure",
+      "Creativity and ability to inspire young minds",
+    ],
+  },
+  {
+    role: "Comic Book Instructor",
+    description:
+      "Lead students in creating their own comic books by combining visual storytelling with creative writing. Help students explore character design, layout, and narrative structure.",
+    preferredSkills: [
+      "Experience with illustration or visual storytelling",
+      "Knowledge of comic book formats and scripting",
+      "Ability to teach both writing and art elements",
+      "Collaborative mindset for project-based learning",
+    ],
+  },
+  {
+    role: "Performing Arts Instructor",
+    description:
+      "Teach students acting techniques, script analysis, and improvisation skills. Create a supportive environment that builds self-expression, confidence, and ensemble collaboration.",
+    preferredSkills: [
+      "Background in theater, drama, or performing arts education",
+      "Experience leading youth productions or classes",
+      "Excellent public speaking and expressive skills",
+      "Ability to direct scenes and support character development",
+    ],
+  },
+  {
+    role: "Public Speaking Instructor",
+    description:
+      "Help students build confidence and clarity in their speaking abilities through structured practice and feedback. Focus on speech writing, vocal delivery, and body language.",
+    preferredSkills: [
+      "Experience in communications, public speaking, or teaching",
+      "Strong understanding of rhetoric and presentation skills",
+      "Ability to guide students through impromptu and prepared speeches",
+      "Enthusiastic and supportive teaching approach",
+    ],
+  },
+];
