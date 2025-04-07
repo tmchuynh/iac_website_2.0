@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutUsPage() {
   return (
     <main className="relative mx-auto px-4 py-8 w-11/12">
-      <div className="py-16 md:py-25 overflow-hidden">
+      <div className="py-16 md:py-25">
         <div className="mx-auto">
           <div className="max-w-4xl">
             <p className="font-semibold text-base/7">
@@ -213,7 +213,7 @@ export default function AboutUsPage() {
                 and strive to offer enriching, personalized learning experiences
                 tailored to individual strengths, interests, and backgrounds.
               </p>
-              <p className="lg:block 2xl:block hidden xl:hidden text-base/7">
+              <p className="lg:block xl:block hidden text-base/7">
                 Today, the A.R.C. initiative thrives across numerous schools and
                 communities, championing educational equity and creating
                 opportunities for meaningful enrichment. Through close
@@ -278,8 +278,8 @@ export default function AboutUsPage() {
               </p>
             </div>
           </section>
-          <div className="lg:-mt-80">
-            <p className="xl:block hidden text-base/7">
+          <div className="lg:-mt-80 2xl:-mt-64">
+            <p className="2xl:block hidden text-base/7">
               Today, the A.R.C. initiative thrives across numerous schools and
               communities, championing educational equity and creating
               opportunities for meaningful enrichment. Through close
@@ -291,7 +291,7 @@ export default function AboutUsPage() {
               leadership training, and critical thinking exercises, encouraging
               students to grow resilient, creative, and collaborative.
             </p>
-            <p className="xl:block hidden text-base/7">
+            <p className="2xl:block hidden text-base/7">
               Justin’s compassionate leadership extends beyond curriculum
               creation. His sincere care for students' and educators' well-being
               cultivates an environment where everyone feels valued, supported,
