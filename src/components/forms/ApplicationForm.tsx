@@ -1,3 +1,6 @@
+import DynamicButton from "../buttons/button-dynamic";
+import { Button } from "../ui/button";
+
 export default function ApplicationForm() {
   return (
     <form
@@ -88,12 +91,7 @@ export default function ApplicationForm() {
           </div>
         </div>
         <div className="flex justify-end mt-8">
-          <button
-            type="submit"
-            className="shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-center text-sm"
-          >
-            Send message
-          </button>
+          <DynamicButton>Send message</DynamicButton>
         </div>
       </div>
     </form>
