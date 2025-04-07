@@ -19,32 +19,18 @@ import { LuArrowBigRightDash } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 
-/**
- * Renders the School Information page component.
- *
- * This page provides comprehensive information about school partnerships and programs:
- * - Partner With Us section describing collaboration opportunities
- * - Enrichment Made Easy section detailing the A.R.C. educational initiative
- * - Get Involved Today section with next steps and contact information
- *
- * The component includes:
- * - Navigation capabilities using Next.js router
- * - Responsive layout with Tailwind CSS
- * - Interactive buttons for contact and email
- * - Icon-based feature highlights
- * - Dynamic content rendering from success_plan and arc_program data
- *
- * @returns {JSX.Element} A main container with multiple informational sections about
- * school partnerships and educational programs
- */
-export default function SchoolInformationPage(): JSX.Element {
+export default function SchoolInformationPage() {
   const router = useRouter();
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
-    if (!mounted) return;
-  }, [theme, mounted]);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <main className="mx-auto px-4 py-8 w-11/12">
@@ -125,23 +111,19 @@ export default function SchoolInformationPage(): JSX.Element {
           </p>
           <div className="gap-3 lg:gap-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 mx-auto 2xl:w-10/12">
             <div className="flex flex-col items-center gap-2 text-center">
-              <FaBook className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10" />
+              <FaBook className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
               <p>No additional resources needed</p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <FaChalkboardTeacher className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10" />
+              <FaChalkboardTeacher className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
               <p>No extra staff needed</p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <FaComputer
-                className={cn(
-                  "w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary"
-                )}
-              />
+              <FaComputer className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
               <p>No IT support needed</p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <FaBrain className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10" />
+              <FaBrain className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
               <p>No headaches and no stress</p>
             </div>
           </div>
