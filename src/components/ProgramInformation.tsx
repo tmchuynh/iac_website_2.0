@@ -56,9 +56,9 @@ export default function ProgramDetails({ title }: { title?: string }) {
               {/* Content */}
               <div className="pb-6">
                 <div className="flex items-center gap-4">
-                  <h2 className="flex justify-between text-3xl tracking-widest">
-                    <div className="text-secondary">{program.title}</div>
-                  </h2>
+                  <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+                    {program.title}
+                  </h1>
 
                   <p>
                     {program.icons.map((Icon, iconIndex) => {
