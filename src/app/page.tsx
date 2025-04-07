@@ -9,7 +9,7 @@ export default function Home() {
       <FeaturedTestimonial />
 
       <section className="mb-12">
-        <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Our Programs
         </h1>
         <ProgramsSection />
