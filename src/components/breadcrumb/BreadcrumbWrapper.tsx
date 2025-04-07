@@ -54,17 +54,6 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
 
     const items: React.JSX.Element[] = [];
 
-    items.push(
-      <BreadcrumbItem key="home" className="mx-1">
-        <BreadcrumbLink
-          href="/"
-          className="px-1 py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
-        >
-          Home
-        </BreadcrumbLink>
-      </BreadcrumbItem>
-    );
-
     if (isSmallScreen) {
       if (pathSegments.length > 1) {
         items.push(
@@ -121,6 +110,17 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
         </BreadcrumbItem>
       );
     } else {
+      items.push(
+        <BreadcrumbItem key="home" className="mx-1">
+          <BreadcrumbLink
+            href="/"
+            className="px-1 py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
+          >
+            Home
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      );
+
       pathSegments.forEach((_, index) => {
         const href = `/${pathSegments.slice(0, index + 1).join("/")}`;
         const capitalizedSegment = capitalizedSegments[index];
