@@ -8,6 +8,8 @@ import DoughnutChartLabel from "@/components/PieChart";
 import { class_breakdown } from "@/lib/constants/list";
 import PhotoAndList from "@/components/page_headers/PhotoAndList";
 
+import Image from "next/image";
+
 /**
  * Renders the Programs page component.
  * This component displays program details based on either the URL search parameter 'title'
@@ -32,6 +34,22 @@ export default function ProgramsPage(): JSX.Element {
 
   return (
     <div className="flex flex-col justify-center items-center mx-auto px-4 py-10 lg:py-20 w-11/12">
+      <div className="xl:mx-auto xl:px-8 py-3 md:py-6 lg:py-9 2xl:py-20 xl:py-12 lg:max-w-7xl">
+        <Image
+          alt=""
+          src="/images/Class_Photos/Soccer/53995092_146958.jpg"
+          className="shadow-xl xl:rounded-3xl w-full aspect-5/2 object-cover"
+          width={2832}
+          height={1130}
+        />
+      </div>
+      <section>
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+          Our Program Details
+        </h1>
+        <ProgramDetails title={title} />
+      </section>
+
       <section>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Class Breakdown
@@ -64,12 +82,6 @@ export default function ProgramsPage(): JSX.Element {
             </li>
           ))}
         </ul>
-      </section>
-      <section>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
-          Our Program Details
-        </h1>
-        <ProgramDetails title={title} />
       </section>
 
       <PhotoAndList />
