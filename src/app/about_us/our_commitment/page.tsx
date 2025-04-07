@@ -8,11 +8,6 @@ export default function OurCommitmentPage() {
   return (
     <main className="relative mx-auto px-4 py-8 w-11/12">
       <FeaturedColumns />
-      <h1 className="my-4 pb-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
-        Shaping the Future Through Innovation, Excellence, and Equity - Our
-        Commitment
-      </h1>
-
       <section className="gap-5 grid grid-cols-1 lg:grid-cols-5">
         <div className="col-span-3">
           <p>
