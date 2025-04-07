@@ -73,9 +73,9 @@ export default function OurCommitmentPage() {
           </section>
         </div>
         <Image
-          src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+          src={"/images/Class_Photos/Soccer/54495092_144851.jpg"}
           alt="Commitment"
-          className="col-span-2"
+          className="col-span-2 rounded-2xl object-cover"
           width={900}
           height={300}
         />
@@ -115,30 +115,30 @@ export default function OurCommitmentPage() {
 
       <section className="lg:flex 2xl:flex flex-wrap justify-between gap-4 hidden xl:hidden py-4">
         <Image
-          src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+          src={"/images/Class_Photos/Basketball/20156202_141156.JPG"}
           alt="Commitment"
-          className="w-1/5 aspect-square object-cover"
+          className="rounded-2xl w-1/5 aspect-square object-cover"
           width={1000}
           height={500}
         />
         <Image
-          src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+          src={"/images/Class_Photos/Performing_Arts/52195692_265855.jpg"}
           alt="Commitment"
-          className="w-1/5 aspect-square object-cover"
+          className="rounded-2xl w-1/5 aspect-square object-cover"
           width={1000}
           height={500}
         />
         <Image
-          src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+          src={"/images/Class_Photos/Soccer/2451305_2652099.jpg"}
           alt="Commitment"
-          className="w-1/5 aspect-square object-cover"
+          className="rounded-2xl w-1/5 aspect-square object-cover"
           width={1000}
           height={500}
         />
         <Image
-          src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+          src={"/images/Class_Photos/Soccer/54495092_144800.jpg"}
           alt="Commitment"
-          className="w-1/5 aspect-square object-cover"
+          className="rounded-2xl w-1/5 aspect-square object-cover"
           width={1000}
           height={500}
         />
@@ -147,14 +147,16 @@ export default function OurCommitmentPage() {
       <section className="gap-5 grid grid-cols-1 lg:grid-cols-9">
         <div className="flex xl:flex flex-col gap-4 lg:hidden 2xl:hidden col-span-2">
           <Image
-            src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+            src={"/images/Class_Photos/Basketball/20156202_141156.JPG"}
             alt="Commitment"
+            className="rounded-2xl object-cover object-center aspect-ratio-2/3"
             width={1000}
             height={500}
           />
           <Image
-            src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+            src={"/images/Class_Photos/Soccer/2451305_2652099.jpg"}
             alt="Commitment"
+            className="rounded-2xl object-cover object-center aspect-ratio-2/3"
             width={1000}
             height={500}
           />
@@ -218,14 +220,16 @@ export default function OurCommitmentPage() {
         </div>
         <div className="flex xl:flex flex-col gap-4 lg:hidden 2xl:hidden col-span-2">
           <Image
-            src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+            src={"/images/Class_Photos/Volleyball/30115092_141152.JPG"}
             alt="Commitment"
+            className="rounded-2xl object-cover object-center aspect-ratio-2/3"
             width={1000}
             height={500}
           />
           <Image
-            src={"/images/Class_Photos/Chess/20990092_141152.jpg"}
+            src={"/images/Class_Photos/Chess/20996992_141152.jpg"}
             alt="Commitment"
+            className="rounded-2xl object-cover object-center aspect-ratio-2/3"
             width={1000}
             height={500}
           />
