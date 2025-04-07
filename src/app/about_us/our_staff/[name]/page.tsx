@@ -35,7 +35,9 @@ export default function StaffPage() {
 
   return (
     <main className="relative mx-auto px-4 py-10 lg:py-30 w-11/12">
-      <p className="font-semibold text-accent text-xs">{staffMember.bio}</p>
+      <p className="font-semibold text-accent text-xs">
+        {staffMember.moreInfo.bio}
+      </p>
       <section className="gap-1 grid grid-cols-1 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <Image
@@ -85,12 +87,12 @@ export default function StaffPage() {
             dangerouslySetInnerHTML={{
               __html: staffMember?.moreInfo?.text
                 ? staffMember.moreInfo.text
-                    .split("<br/>")
+                    .split("<br />")
                     .map(
                       (line: any) =>
                         `<span style="display: flex; text-indent: 2em; margin: 2px 0px;">${line}</span>`
                     )
-                    .join("<br/>")
+                    .join("<br />")
                 : "",
             }}
           />
