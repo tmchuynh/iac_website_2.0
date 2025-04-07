@@ -27,20 +27,20 @@ export const StaffCards = (person: Person) => {
           className="rounded-2xl w-full aspect-2/3 object-cover"
         />
       </div>
-      <div className="flex flex-col justify-between h-full">
-        <section className="flex flex-col justify-between h-1/2">
+      <div className="flex flex-col justify-between p-6 h-full">
+        <section className="flex flex-col justify-between gap-4 h-full">
           <div>
-            <h3 className="mt-6 font-semibold text-lg tracking-tight">
+            <h3 className="font-semibold text-xl group-hover:text-gray-900 tracking-tight">
               {person.name}
             </h3>
-            <p className="text-md tracking-tighter">{person.role}</p>
+            <p className="text-sm">{person.role}</p>
           </div>
           {person.icons && (
-            <div className="flex gap-4">
+            <div className="flex gap-3 h-full">
               {person.icons.map((Icon, index) => (
                 <Tooltip key={index}>
                   <TooltipTrigger>
-                    <Icon className="w-5 h-5" />
+                    <Icon className="w-6 h-6 text-primary transition-colors" />
                   </TooltipTrigger>
                   <TooltipContent>{formatIconName(Icon.name)}</TooltipContent>
                 </Tooltip>
