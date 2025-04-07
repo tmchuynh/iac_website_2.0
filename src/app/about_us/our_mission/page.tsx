@@ -55,8 +55,10 @@ export default function OurMissionPage() {
         <div className="xl:mx-auto xl:px-8 py-3 md:py-6 lg:py-9 2xl:py-20 xl:py-12 lg:max-w-7xl">
           <Image
             alt=""
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+            src="/images/Class_Photos/Soccer/53995092_146958.jpg"
             className="shadow-xl xl:rounded-3xl w-full aspect-5/2 object-cover"
+            width={2832}
+            height={1130}
           />
         </div>
 

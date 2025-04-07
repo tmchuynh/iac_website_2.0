@@ -37,7 +37,7 @@ export default function OffsetImage() {
         <div className="mx-auto md:pt-64 lg:pt-48 2xl:pt-24 pb-5 md:pb-24 2xl:pb-2 2xl:w-5/6">
           <Image
             alt=""
-            src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
+            src="/images/Class_Photos/Performing_Arts/22195092_265855.jpg"
             className="rounded-xl object-cover object-center"
             width={1200}
             height={800}
