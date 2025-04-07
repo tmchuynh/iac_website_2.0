@@ -50,6 +50,7 @@ export type staffInfo = {
         >[]
       | IconType[];
     moreInfo?: {
+      bio?: string;
       text: string;
       images: string[];
       email?: string;
