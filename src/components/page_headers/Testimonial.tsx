@@ -1,4 +1,3 @@
-import { FaCloud, FaDatabase, FaLock } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Testimonial() {
@@ -44,23 +43,26 @@ export default function Testimonial() {
           <figure className="pl-8 border-l">
             <blockquote className="font-semibold text-xl/8 tracking-tight">
               <p>
-                “Vel ultricies morbi odio facilisi ultrices accumsan donec lacus
-                purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus
-                aenean ut elit massa. In amet aliquet eget cras. Sem volutpat
-                enim tristique.”
+                "Due to one of my children's severe food allergies, we have been
+                denied by multiple camps and classes who did not want the risk
+                of having them as a student. However, Justin was very responsive
+                and collaborated with me on ways to adapt the class to be a safe
+                space. Both of my kids love learning about chess and practicing
+                among their peers. I'm excited they are able to learn a game
+                that teaches critical thinking and persistence.",
               </p>
             </blockquote>
-            <figcaption className="flex gap-x-4 mt-8">
+            <figcaption className="flex items-center gap-x-4 mt-8">
               <Image
                 alt="Author avatar"
-                src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                className="flex-none mt-1 rounded-full size-10"
-                width={40}
-                height={40}
+                src="/images/School_Icons/peterscanyon.png"
+                className="flex-none mt-1 rounded-full w-20 h-20"
+                width={200}
+                height={200}
               />
               <div className="text-sm/6">
-                <div className="font-semibold">Brenna Goyette</div>
-                <div className="">@brenna</div>
+                <div className="font-semibold">Chess Parent</div>
+                <div>Peters Canyon Elementary School</div>
               </div>
             </figcaption>
           </figure>
@@ -78,7 +80,13 @@ export default function Testimonial() {
         <div className="lg:col-span-7 max-w-2xl text-base/7">
           <ul role="list" className="space-y-8">
             <li className="flex gap-x-3">
-              <FaCloud aria-hidden="true" className="flex-none mt-1 size-5" />
+              <Image
+                src="/images/icons/extra/design-thinking.png"
+                alt="IAC Logo"
+                className="flex-none mt-1 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10"
+                width={100}
+                height={100}
+              />
               <span>
                 <strong className="font-semibold">Creative Confidence</strong>{" "}
                 Students are encouraged to express their ideas freely, take
@@ -86,7 +94,13 @@ export default function Testimonial() {
               </span>
             </li>
             <li className="flex gap-x-3">
-              <FaLock aria-hidden="true" className="flex-none mt-1 size-5" />
+              <Image
+                src="/images/icons/extra/learning-journey.png"
+                alt="IAC Logo"
+                className="flex-none mt-1 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10"
+                width={100}
+                height={100}
+              />
               <span>
                 <strong className="font-semibold">
                   Multi-Disciplinary Learning
@@ -96,9 +110,12 @@ export default function Testimonial() {
               </span>
             </li>
             <li className="flex gap-x-3">
-              <FaDatabase
-                aria-hidden="true"
-                className="flex-none mt-1 size-5"
+              <Image
+                src="/images/icons/extra/collaboration.png"
+                alt="IAC Logo"
+                className="flex-none mt-1 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10"
+                width={100}
+                height={100}
               />
               <span>
                 <strong className="font-semibold">

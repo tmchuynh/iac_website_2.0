@@ -44,8 +44,8 @@ export default function PhotoAndList() {
               <div>
                 <ul className="flex flex-col gap-y-4 py-3">
                   {opening.preferredSkills.map((skill, index) => (
-                    <li key={index} className="flex items-center gap-x-2">
-                      <FaCheckDouble />
+                    <li key={index} className="flex gap-x-2 ml-3">
+                      <FaCheckDouble className="mt-3 mr-2" />
                       {skill}
                     </li>
                   ))}
