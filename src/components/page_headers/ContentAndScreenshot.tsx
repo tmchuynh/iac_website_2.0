@@ -8,17 +8,17 @@ export default function ContentAndScreenshot() {
   const router = useRouter();
 
   return (
-    <div className="py-24 sm:py-32">
-      <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-        <div className="mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
+    <div className="py-24 md:py-32">
+      <div className="mx-auto px-6 lg:px-8">
+        <div className="mx-auto lg:mx-0 lg:max-w-none">
           <ResponsiveLogo />
-          <p className="font-semibold text-tertiary uppercase">
+          <p className="mt-5 font-semibold text-tertiary uppercase">
             Bringing Enrichment to Your School
           </p>
-          <h1 className="my-4 font-extrabold text-balance text-lg text-primary lg:text-4xl uppercase tracking-wider">
+          <h1 className="max-w-3xl font-extrabold text-balance text-lg text-primary lg:text-4xl uppercase tracking-wider">
             Superior classes, exceptional instructors, outstanding outcomes.
           </h1>
-          <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mt-10 max-w-xl lg:max-w-none">
+          <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mt-5 max-w-xl lg:max-w-none">
             <div>
               <p>
                 Our dynamic after-school program is designed to inspire, engage,
@@ -92,18 +92,16 @@ export default function ContentAndScreenshot() {
                 to ensure that all families can participate and thrive within
                 our community.
               </p>
+              <DynamicButton
+                className="mx-0 w-2/3"
+                onClick={() => router.push("/")}
+              >
+                Get Started Today
+              </DynamicButton>
             </div>
-          </div>
-          <div className="flex mt-10">
-            <DynamicButton className="w-1/4" onClick={() => router.push("/")}>
-              Get Started Today
-            </DynamicButton>
           </div>
         </div>
       </div>
-      <FadedImage
-        imageSrc={"/images/Class_Photos/Soccer/53995092_144851.jpg"}
-      />
     </div>
   );
 }

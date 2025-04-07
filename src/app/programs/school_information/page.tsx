@@ -1,11 +1,14 @@
 "use client";
 import DynamicButton from "@/components/buttons/button-dynamic";
+import FadedImage from "@/components/FadedImage";
 import LogoCloud from "@/components/LogoCloud";
 import { Button } from "@/components/ui/button";
 import { programs } from "@/lib/constants/programs";
-import { useRouter } from "next/navigation";
-import React, { JSX, useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import {
   FaBook,
   FaBrain,
@@ -16,9 +19,6 @@ import {
 } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import { LuArrowBigRightDash } from "react-icons/lu";
-import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
-import FadedImage from "@/components/FadedImage";
 
 export default function SchoolInformationPage() {
   const router = useRouter();
@@ -72,9 +72,9 @@ export default function SchoolInformationPage() {
 
       <section className="gap-6 grid grid-cols-1 lg:grid-cols-2 py-6 lg:py-12">
         <div className="flex flex-col gap-3 text-pretty">
-          <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h2 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             After-School Programs
-          </h1>
+          </h2>
           <p>
             Our institution proudly offers high-quality after-school programs
             designed to enrich the student experience beyond the traditional
@@ -130,9 +130,9 @@ export default function SchoolInformationPage() {
           </p>
         </div>
         <div className="flex flex-col gap-3 text-pretty">
-          <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h2 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             Proactive and Passionate
-          </h1>
+          </h2>
           <p>
             At IAC, we recognize the real-world challenges schools face in
             providing diverse, high-quality after-school programs—often due to
@@ -261,9 +261,9 @@ export default function SchoolInformationPage() {
           students with essential tools for both academic success and future
           career readiness.
         </p>
-        <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
           Ready to Bring A.R.C. to Your School?
-        </h2>
+        </h3>
         <p>
           We would be honored to collaborate with your school and support your
           after-school programming goals. Whether you're gathering information
