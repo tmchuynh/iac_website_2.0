@@ -127,9 +127,10 @@ export const programs: programInfo[] = [
     title: "Basketball",
     titleIcon: "/images/icons/basketball/basketball.png",
     icons: [
-      "/images/icons/basketball/basketball_jersey.png",
-      "/images/icons/basketball/basketball.png",
       "/images/icons/basketball/basketball_net.png",
+      "/images/icons/basketball/basketball-player.png",
+      "/images/icons/basketball/basketball_jersey.png",
+      "/images/icons/basketball/trophy.png",
     ],
     image: "/images/Class_Photos/Basketball/20250402_142999.JPG",
     description:
@@ -184,12 +185,12 @@ export const programs: programInfo[] = [
   {
     title: "Volleyball",
     titleIcon: "/images/icons/volleyball/volleyball.png",
-
     icons: [
       "/images/icons/volleyball/volleyball_badge.png",
+      "/images/icons/volleyball/block.png",
       "/images/icons/volleyball/volleyball_net.png",
       "/images/icons/volleyball/volleyball_trophy.png",
-      "/images/icons/volleyball/volleyball.png",
+      "/images/icons/volleyball/volleyball-pt.png",
     ],
     image: "/images/Class_Photos/Volleyball/30115092_141152.JPG",
     description:
@@ -243,7 +244,11 @@ export const programs: programInfo[] = [
     titleIcon: "/images/icons/flag_football/rugby-ball.png",
     icons: [
       "/images/icons/flag_football/athlete.png",
-      "/images/icons/flag_football/rugby-ball.png",
+      "/images/icons/flag_football/jersey.png",
+      "/images/icons/flag_football/goal.png",
+      "/images/icons/flag_football/american-football.png",
+      "/images/icons/flag_football/trophy.png",
+      "/images/icons/flag_football/american-football-trophy.png",
     ],
     image: "/images/Class_Photos/Flag_Football/20250402_141937.jpg",
     description:
@@ -290,10 +295,10 @@ export const programs: programInfo[] = [
     title: "Soccer",
     titleIcon: "/images/icons/soccer/soccer.png",
     icons: [
-      "/images/icons/soccer/goal_net.png",
+      "/images/icons/soccer/jersey.png",
       "/images/icons/soccer/goal.png",
-      "/images/icons/soccer/soccer.png",
       "/images/icons/soccer/training.png",
+      "/images/icons/soccer/goal_net.png",
     ],
     image: "/images/Class_Photos/Soccer/53995092_144851.jpg",
     description:
@@ -347,7 +352,6 @@ export const programs: programInfo[] = [
     title: "Creative Writing",
     titleIcon: "/images/icons/creative_writing/idea.png",
     icons: [
-      "/images/icons/creative_writing/idea.png",
       "/images/icons/creative_writing/pencil.png",
       "/images/icons/creative_writing/typewriter.png",
       "/images/icons/creative_writing/writing.png",
@@ -397,14 +401,16 @@ export const programs: programInfo[] = [
       "/images/Class_Photos/Creative_Writing/20250402_142223.jpg",
     ],
   },
-
   {
     title: "Comic Book",
-    titleIcon: "/images/icons/comic_book/versus.png",
+    titleIcon: "/images/icons/comic_book/yes.png",
     icons: [
-      "/images/icons/comic_book/comic_open.png",
-      "/images/icons/comic_book/comic_page.png",
-      "/images/icons/comic_book/versus.png",
+      "/images/icons/comic_book/pow.png",
+      "/images/icons/comic_book/ready.png",
+      "/images/icons/comic_book/smash.png",
+      "/images/icons/comic_book/win.png",
+      "/images/icons/comic_book/woah.png",
+      "/images/icons/comic_book/wow.png",
     ],
     image: "/images/Class_Photos/Comic_Book/2604809_690151.jpg",
     description:
@@ -450,8 +456,13 @@ export const programs: programInfo[] = [
   },
   {
     title: "Performing Arts",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/performing_arts/spotlight.png",
+    icons: [
+      "/images/icons/performing_arts/art-show.png",
+      "/images/icons/performing_arts/performance.png",
+      "/images/icons/performing_arts/performing.png",
+      "/images/icons/performing_arts/theater.png",
+    ],
     image: "/images/Class_Photos/Performing_Arts/22195092_265855.jpg",
     description:
       "Enter the world of performing arts, where imagination, talent, and storytelling come to life. Our classes help students strengthen their acting abilities, enhance their stage presence, and connect with audiences, all while building confidence and embracing the expressive power of performance.",
@@ -505,8 +516,14 @@ export const programs: programInfo[] = [
   },
   {
     title: "Dance",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/dance/rock-and-roll.png",
+    icons: [
+      "/images/icons/dance/dancer.png",
+      "/images/icons/dance/dance-floor.png",
+      "/images/icons/dance/dancing.png",
+      "/images/icons/dance/disco-ball.png",
+      "/images/icons/dance/tap-dance.png",
+    ],
     image: "/images/Class_Photos/Dance/52005092_269955.jpg",
     description:
       "Discover the power of rhythm, expression, and movement. Our dance classes blend technique with creativity, helping students explore diverse styles, build confidence, and grow as both dancers and individuals.",
@@ -556,8 +573,11 @@ export const programs: programInfo[] = [
   },
   {
     title: "Public Speaking",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/public_speaking/microphone.png",
+    icons: [
+      "/images/icons/public_speaking/motivator_boy.png",
+      "/images/icons/public_speaking/motivator_girl.png",
+    ],
     image: "/images/Class_Photos/Creative_Writing/20250402_142256.jpg",
     description:
       "Master the art of public speaking and transform your ability to communicate! In our classes, you'll develop the skills to engage, persuade, and inspire any audience with confidence, poise, and authenticity. Whether you're speaking in front of a classroom, delivering a presentation, or engaging in a conversation, this program is designed to help you communicate effectively in all settings.",
@@ -602,8 +622,14 @@ export const programs: programInfo[] = [
   },
   {
     title: "Arts & Crafts",
-    titleIcon: "/images/icons/chess/knight.png",
-    icons: [],
+    titleIcon: "/images/icons/arts_and_craft/bunny_writing.png",
+    icons: [
+      "/images/icons/arts_and_craft/brush.png",
+      "/images/icons/arts_and_craft/butterfly.png",
+      "/images/icons/arts_and_craft/drawing.png",
+      "/images/icons/arts_and_craft/scrapbooking.png",
+      "/images/icons/arts_and_craft/watercolor.png",
+    ],
     image: "/images/Class_Photos/Arts_And_Crafts/arts_intro.jpg",
     description:
       "Immerse yourself in a vibrant world of color, creativity, and imagination. Our Arts & Crafts classes offer a dynamic space for hands-on exploration and self-expression. Using a variety of materials and techniques, students bring their ideas to life—building confidence, strengthening fine motor skills, and discovering their unique artistic voices.",
