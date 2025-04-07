@@ -10,6 +10,8 @@ import {
 } from "../ui/breadcrumb";
 import { TbSlashes } from "react-icons/tb";
 import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
+import useMediumScreen from "@/lib/utils/screens/useMediumScreen";
+import ResponsiveLogo from "../ResponsiveLogo";
 
 /**
  * A static breadcrumb navigation component that displays the current path hierarchy.
@@ -32,6 +34,7 @@ import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
  */
 const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
   const isSmallScreen = useSmallScreen();
+  const isMediumScreen = useMediumScreen();
   const pathname = usePathname();
   const router = useRouter();
 
@@ -55,18 +58,11 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
     const items: React.JSX.Element[] = [];
 
     if (isSmallScreen) {
-      if (pathSegments.length > 1) {
-        items.push(
-          <BreadcrumbSeparator key="sep-dots" className="mr-0 ml-0">
-            <TbSlashes />
-          </BreadcrumbSeparator>
-        );
-        items.push(
-          <BreadcrumbItem key="dots" className="-mx-1">
-            <span className="rounded-md">...</span>
-          </BreadcrumbItem>
-        );
-      }
+      items.push(
+        <BreadcrumbItem key="dots" className="-mx-1">
+          <span className="rounded-md">...</span>
+        </BreadcrumbItem>
+      );
 
       if (pathSegments.length > 0) {
         const firstHref = `/${pathSegments[0]}`;
@@ -109,6 +105,111 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
           </BreadcrumbLink>
         </BreadcrumbItem>
       );
+    } else if (isMediumScreen && !isSmallScreen) {
+      items.push(
+        <BreadcrumbItem key="home" className="mx-1">
+          <BreadcrumbLink
+            href="/"
+            className="px-1 py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
+          >
+            Home
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      );
+
+      if (pathSegments.length > 0) {
+        items.push(
+          <BreadcrumbSeparator key="sep-dots" className="mr-0 ml-0">
+            <TbSlashes />
+          </BreadcrumbSeparator>
+        );
+
+        items.push(
+          <BreadcrumbItem key="dots" className="-mx-1">
+            <span className="rounded-md">...</span>
+          </BreadcrumbItem>
+        );
+      }
+
+      if (pathSegments.length > 1) {
+        items.push(
+          <BreadcrumbSeparator key="sep-dots-second" className="mr-0 ml-0">
+            <TbSlashes />
+          </BreadcrumbSeparator>
+        );
+
+        items.push(
+          <BreadcrumbItem key="dots-second" className="-mx-1">
+            <span className="rounded-md">...</span>
+          </BreadcrumbItem>
+        );
+
+        // const firstHref = `/${pathSegments[0]}`;
+        // const firstSegment = capitalizedSegments[0];
+
+        // items.push(
+        //   <BreadcrumbSeparator key={`sep-${firstHref}`} className="mr-0 ml-1">
+        //     <TbSlashes />
+        //   </BreadcrumbSeparator>
+        // );
+
+        // items.push(
+        //   <BreadcrumbItem key={firstHref} className="mx-1">
+        //     <BreadcrumbLink
+        //       href={firstHref}
+        //       className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
+        //     >
+        //       {firstSegment}
+        //     </BreadcrumbLink>
+        //   </BreadcrumbItem>
+        // );
+      }
+
+      if (pathSegments.length > 2) {
+        const secondHref = `/${pathSegments.slice(0, 2).join("/")}`;
+        const secondSegment = capitalizedSegments[1];
+
+        items.push(
+          <BreadcrumbSeparator key={`sep-${secondHref}`} className="mr-0 ml-1">
+            <TbSlashes />
+          </BreadcrumbSeparator>
+        );
+
+        items.push(
+          <BreadcrumbItem key={secondHref} className="mx-1">
+            <BreadcrumbLink
+              href={secondHref}
+              className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
+            >
+              {secondSegment}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        );
+      }
+
+      if (pathSegments.length > 4) {
+        pathSegments.slice(3).forEach((_, index) => {
+          const href = `/${pathSegments.slice(0, 3 + index + 1).join("/")}`;
+          const segment = capitalizedSegments[3 + index];
+
+          items.push(
+            <BreadcrumbSeparator key={`sep-${href}`} className="mr-0 ml-1">
+              <TbSlashes />
+            </BreadcrumbSeparator>
+          );
+
+          items.push(
+            <BreadcrumbItem key={href} className="mx-1">
+              <BreadcrumbLink
+                href={href}
+                className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
+              >
+                {segment}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          );
+        });
+      }
     } else {
       items.push(
         <BreadcrumbItem key="home" className="mx-1">
@@ -151,6 +252,7 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
 
   return (
     <div className="mx-auto pt-3 md:pt-5 lg:pt-9 w-11/12">
+      <ResponsiveLogo className="md:hidden" />
       <nav
         aria-label="Breadcrumb"
         className="flex flex-row items-center gap-2 w-full text-sm"
