@@ -8,9 +8,9 @@ export default function Apply() {
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-7xl">
         <div className="relative lg:static px-6 lg:px-8 lg:py-48 pt-24 sm:pt-32 pb-20">
           <div className="mx-auto lg:mx-0 max-w-xl lg:max-w-lg">
-            <h2 className="font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
               Get in touch
-            </h2>
+            </h1>
             <p className="mt-6 text-lg/8">
               Proin volutpat consequat porttitor cras nullam gravida at. Orci
               molestie a eu arcu. Sed ut tincidunt integer elementum id sem.

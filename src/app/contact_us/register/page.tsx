@@ -12,32 +12,24 @@ const Register: FC = () => {
   }
 
   return (
-    <>
-      <main className="mx-auto px-4 py-8 w-11/12">
-        <section className="mb-5">
-          <div className="text-center">
-            <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
-              Register Today
-            </h1>
-          </div>
+    <main className="relative mx-auto px-4 py-8 w-11/12">
+      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        Register Today
+      </h1>
 
-          <div className="mx-auto mb-12 w-11/12">
-            <h2 className="mb-2 font-semibold text-2xl text-destructive underline tracking-widest">
-              New Credit Card Processing Procedure
-            </h2>
-            <ol className="list-decimal">
-              {credit_card_procedure.map((item, index) => (
-                <li key={index}>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
+      <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+        New Credit Card Processing Procedure
+      </h2>
+      <ol className="flex flex-col gap-2 my-3 list-decimal">
+        {credit_card_procedure.map((item, index) => (
+          <li key={index}>
+            <strong>{item.title}:</strong> {item.description}
+          </li>
+        ))}
+      </ol>
 
-          <RegisterForm />
-        </section>
-      </main>
-    </>
+      <RegisterForm />
+    </main>
   );
 };
 

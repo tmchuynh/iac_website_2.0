@@ -22,9 +22,9 @@ export default function RequestUs() {
       <div className="lg:grid lg:grid-cols-2 lg:mx-auto pt-16 sm:pt-24 lg:pt-32 pb-24 sm:pb-32 lg:max-w-7xl">
         <div className="px-6 lg:px-8">
           <div className="mx-auto lg:mx-0 max-w-3xl lg:max-w-7xl text-pretty">
-            <h2 className="font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
               Let's work together
-            </h2>
+            </h1>
             <p className="mt-2 text-md">
               Thank you for reaching out to us! We truly value your message and
               appreciate the time you’ve taken to connect. Your inquiries help

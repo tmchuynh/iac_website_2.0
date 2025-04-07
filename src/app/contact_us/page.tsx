@@ -1,14 +1,13 @@
 import DynamicButton from "@/components/buttons/button-dynamic";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function ContactUs() {
   return (
     <div className="relative px-6 py-10 lg:py-20 isolate">
       <div className="mx-auto max-w-xl lg:max-w-4xl">
-        <h2 className="font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Let’s talk about your project
-        </h2>
+        </h1>
         <p className="mt-2 text-lg/8">
           We help companies and individuals build out their brand guidelines.
         </p>
