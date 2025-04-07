@@ -1,5 +1,6 @@
 "use client";
 import LoadingIndicator from "@/components/loading/Loading";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -33,12 +34,36 @@ export default function StaffPage() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center p-4 min-h-screen">
-      <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
-        {staffMember.name}
-      </h1>
-      <p className="mt-4 text-lg">{staffMember.bio}</p>
-      {/* Add more fields as needed */}
-    </div>
+    <main className="relative mx-auto px-4 py-10 lg:py-30 w-11/12">
+      <div className="gap-1 grid grid-cols-1 lg:grid-cols-5">
+        <Image
+          src={staffMember.image}
+          alt={staffMember.name}
+          className="lg:col-span-2 shadow-lg rounded-lg object-cover"
+          width={500}
+          height={500}
+        />
+        <section className="lg:col-span-3">
+          <p className="font-semibold text-base/7">{staffMember.role}</p>
+          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+            {staffMember.name}
+          </h1>
+          <p
+            className="mt-4 indent-8"
+            dangerouslySetInnerHTML={{
+              __html: staffMember?.moreInfo?.text
+                ? staffMember.moreInfo.text
+                    .split("<br/>")
+                    .map(
+                      (line: any) =>
+                        `<span style="display: flex; text-indent: 2em; margin: 2px 0px;">${line}</span>`
+                    )
+                    .join("<br/>")
+                : "",
+            }}
+          />
+        </section>
+      </div>
+    </main>
   );
 }
