@@ -1,5 +1,4 @@
 "use client";
-import CannotFind from "@/components/loading/CannotFind";
 import LoadingIndicator from "@/components/loading/Loading";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -93,10 +92,6 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
 
   if (loading) {
     return <LoadingIndicator />;
-  }
-
-  if (!showcaseItem) {
-    return <CannotFind />;
   }
 
   return (

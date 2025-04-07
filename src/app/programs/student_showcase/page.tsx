@@ -1,6 +1,8 @@
 "use client";
 
 import { RequestFormParentStudent } from "@/components/forms/RequestFormParentStudent";
+import PhotoAndList from "@/components/page_headers/PhotoAndList";
+import Testimonial from "@/components/page_headers/Testimonial";
 import StudentsWorkSection from "@/components/StudentsWorkSection";
 import { JSX } from "react";
 
@@ -19,7 +21,7 @@ import { JSX } from "react";
  */
 export default function StudentShowcasePage(): JSX.Element {
   return (
-    <main className="mx-auto px-4 py-8 w-11/12">
+    <main className="mx-auto px-4 py-10 lg:py-20 w-11/12">
       <section className="mb-12">
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Showcasing Children's Creativity
@@ -81,6 +83,10 @@ export default function StudentShowcasePage(): JSX.Element {
           QuickLinks
         </h2>
         <StudentsWorkSection />
+      </section>
+
+      <section className="mb-12">
+        <Testimonial />
       </section>
 
       <section className="mb-12">
