@@ -136,10 +136,9 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
             dangerouslySetInnerHTML={{
               __html: showcaseItem.writing
                 .split("\n")
-                .map((line: any, index: number) =>
-                  index === 0
-                    ? line
-                    : `<span style="display: inline-flex; text-indent: 2em;">${line}</span>`
+                .map(
+                  (line: any) =>
+                    `<span style="display: flex; text-indent: 2em; margin: 2px 0px;">${line}</span>`
                 )
                 .join("<br/>"),
             }}
