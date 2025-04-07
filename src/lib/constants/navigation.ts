@@ -79,6 +79,12 @@ export const contact = [
     icon: FaChalkboardTeacher,
   },
   {
+    name: "Provide Us Feedback",
+    href: "/contact_us/provide_feedback",
+    description: "Share your thoughts and suggestions with us.",
+    icon: FaChalkboardTeacher,
+  },
+  {
     name: "Contact Us",
     href: "/contact_us",
     description: "Get in touch with us for any questions or information.",
