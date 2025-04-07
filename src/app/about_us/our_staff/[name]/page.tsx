@@ -1,5 +1,4 @@
 "use client";
-import CannotFind from "@/components/loading/CannotFind";
 import LoadingIndicator from "@/components/loading/Loading";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -31,10 +30,6 @@ export default function StaffPage() {
 
   if (loading) {
     return <LoadingIndicator />;
-  }
-
-  if (!staffMember) {
-    return <CannotFind />;
   }
 
   return (
