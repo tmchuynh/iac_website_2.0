@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { FaCheckDouble } from "react-icons/fa6";
-import { Card } from "../ui/card";
 import { jobOpenings } from "@/lib/constants/list";
-import DynamicButton from "../buttons/button-dynamic";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { FaCheckDouble } from "react-icons/fa6";
+import DynamicButton from "../buttons/button-dynamic";
+import { Card } from "../ui/card";
 
 export default function PhotoAndList() {
   const router = useRouter();
@@ -12,14 +12,19 @@ export default function PhotoAndList() {
     <>
       <section className="gap-3 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-9 py-5">
         <div className="md:col-span-2 xl:col-span-3">
-          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+          <h2 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             We’re always looking for awesome people to join us
-          </h1>
+          </h2>
           <p className="mt-6 text-xl/8">
-            Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est
-            euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit
-            eu in id.
+            We’re continually seeking passionate, driven individuals to grow
+            with us and be part of something exciting.
           </p>
+          <DynamicButton
+            onClick={() => router.push("/contact_us/apply")}
+            className="m-0 mt-10 w-3/4"
+          >
+            Contact Us to Apply
+          </DynamicButton>
         </div>
         <Image
           alt=""
@@ -53,11 +58,6 @@ export default function PhotoAndList() {
               </div>
             </Card>
           ))}
-        </div>
-        <div className="flex mt-8 pt-8 border-gray-100 border-t">
-          <DynamicButton onClick={() => router.push("/contact_us")}>
-            View all openings <span aria-hidden="true">&rarr;</span>
-          </DynamicButton>
         </div>
       </section>
     </>
