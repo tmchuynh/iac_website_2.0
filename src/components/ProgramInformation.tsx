@@ -1,11 +1,10 @@
 import { useTabs } from "@/app/context/TabsContext";
+import { programs } from "@/lib/constants/programs";
 import { TabsContent } from "@radix-ui/react-tabs";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { LuArrowBigLeftDash, LuArrowBigRightDash } from "react-icons/lu";
-import { Button } from "./ui/button";
+import DynamicButton from "./buttons/button-dynamic";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
-import { programs } from "@/lib/constants/programs";
 export default function ProgramDetails({ title }: { title?: string }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const { defaultTab } = useTabs();
@@ -37,15 +36,17 @@ export default function ProgramDetails({ title }: { title?: string }) {
             <TabsTrigger
               value={program.title}
               key={program.title}
-              className="group data-[state=active]:font-bold data-[state=active]:text-primary data-[state=active]:uppercase"
+              className="group flex items-center gap-3 data-[state=active]:font-bold data-[state=active]:text-primary md:text-md lg:text-lg data-[state=active]:uppercase"
             >
-              <Image
-                src={program.titleIcon}
-                alt=""
-                width={25}
-                height={25}
-                className="mr-1 mb-2"
-              />
+              <div className="flex justify-center items-center w-5 md:w-8 lg:w-9 2xl:w-10 h-5 md:h-8 lg:h-9 2xl:h-10">
+                <Image
+                  src={program.titleIcon}
+                  alt=""
+                  width={35}
+                  height={35}
+                  className="mb-2"
+                />
+              </div>
               {program.title}
             </TabsTrigger>
           ))}
@@ -55,73 +56,54 @@ export default function ProgramDetails({ title }: { title?: string }) {
             <div className="" id={`${programIndex}`}>
               {/* Content */}
               <div className="pb-6">
-                <div className="flex items-center gap-4">
-                  <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
-                    {program.title}
-                  </h1>
+                <h1 className="font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+                  {program.title}
+                </h1>
 
-                  <p>
+                <div className="flex flex-col">
+                  {/* Overview */}
+                  {program.overview && (
+                    <>
+                      <h2 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                        Overview
+                      </h2>
+                      <p className="mb-4">{program.overview}</p>
+                    </>
+                  )}
+
+                  <div>
                     {program.icons.map((Icon, iconIndex) => {
-                      console.log(`Icon: ${Icon}, Type: ${typeof Icon}`);
-
                       return (
-                        <span
+                        <div
                           key={`icon-${program.title}-${iconIndex}`}
-                          className="inline-block mr-2 -mb-2 w-10 h-10"
+                          className="inline-block mr-2 -mb-2"
                         >
                           {typeof Icon === "string" ? (
-                            <Image src={Icon} alt="" width={30} height={30} />
+                            <div className="flex justify-center items-center w-5 md:w-8 lg:w-9 2xl:w-10 h-5 md:h-8 lg:h-9 2xl:h-10">
+                              <Image
+                                src={Icon}
+                                alt={`${program.title}_${iconIndex}_${Icon}`}
+                                width={40}
+                                height={40}
+                              />
+                            </div>
                           ) : typeof Icon === "function" ? (
                             <Icon />
                           ) : React.isValidElement(Icon) ? (
                             Icon
                           ) : null}
-                        </span>
+                        </div>
                       );
                     })}
-                  </p>
+                  </div>
                 </div>
-
-                {/* Overview */}
-                {program.overview && (
-                  <>
-                    <h3 className="mt-4 text-lg tracking-widest">Overview</h3>
-                    <p className="mb-4">{program.overview}</p>
-                  </>
-                )}
-
-                {/* Keypoints */}
-                {program.keypoints.length > 0 && (
-                  <>
-                    <h3 className="my-4 text-lg tracking-widest">
-                      Key Components
-                    </h3>
-                    <ul className="space-y-2">
-                      {program.keypoints.map((point, pointIndex) => (
-                        <li key={pointIndex}>
-                          <strong>{point.title}:</strong> {point.description}
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-
-                {/* Outcomes */}
-                {program.outcome && (
-                  <>
-                    <h3 className="mt-4 text-lg tracking-widest">
-                      Learning Outcomes
-                    </h3>
-                    <p className="mb-4">{program.outcome}</p>
-                  </>
-                )}
 
                 {/* Goals */}
                 {program.goal && (
                   <>
-                    <h3 className="mt-4 text-lg tracking-widest">
+                    <h2 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
                       Program Goals
-                    </h3>
+                    </h2>
                     <p className="">{program.goal}</p>
                   </>
                 )}
@@ -129,35 +111,19 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Images */}
                 {program.images.length > 0 ? (
                   <div className="py-2">
-                    <div className="flex justify-between items-start pb-7">
-                      <h3 className="m-0 text-lg tracking-widest">
-                        Class Images
-                      </h3>
-                      <Button
+                    <div className="flex flex-col items-start pb-7">
+                      <DynamicButton
                         onClick={() =>
                           setActiveIndex(
                             activeIndex === programIndex ? null : programIndex
                           )
                         }
-                        className="group mt-2"
+                        className="mx-0"
                       >
                         {activeIndex === programIndex
                           ? "Hide Images"
-                          : "View Images"}
-                        <span
-                          className={`inline-block transition-transform duration-300 ease-in-out ${
-                            activeIndex === programIndex
-                              ? "rotate-180 group-hover:translate-x-2"
-                              : "group-hover:translate-x-2"
-                          }`}
-                        >
-                          {activeIndex === programIndex ? (
-                            <LuArrowBigLeftDash />
-                          ) : (
-                            <LuArrowBigRightDash />
-                          )}
-                        </span>
-                      </Button>
+                          : "View Class Images"}
+                      </DynamicButton>
                     </div>
                     <div>
                       {activeIndex === programIndex && (
@@ -177,7 +143,35 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     </div>
                   </div>
                 ) : (
-                  <div className="py-6 uppercase">Class Photos To Come</div>
+                  <h2 className="pt-6 font-bold text-lg text-tertiary/50 md:text-xl lg:text-2xl">
+                    Class Photos To Come
+                  </h2>
+                )}
+
+                {/* Outcomes */}
+                {program.outcome && (
+                  <>
+                    <h2 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                      Learning Outcomes
+                    </h2>
+                    <p className="mb-4">{program.outcome}</p>
+                  </>
+                )}
+
+                {/* Keypoints */}
+                {program.keypoints.length > 0 && (
+                  <>
+                    <h2 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                      Key Components
+                    </h2>
+                    <ul className="space-y-2 py-3 list-disc">
+                      {program.keypoints.map((point, pointIndex) => (
+                        <li key={pointIndex}>
+                          <strong>{point.title}:</strong> {point.description}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
                 )}
               </div>
             </div>
