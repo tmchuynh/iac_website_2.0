@@ -1,5 +1,6 @@
 "use client";
 import DynamicButton from "@/components/buttons/button-dynamic";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { JSX, useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -62,11 +63,8 @@ const NotFound = (): JSX.Element => {
   }, [router, redirect]);
 
   return (
-    <main className="place-items-center grid px-6 lg:px-8 py-24 sm:py-32 min-h-screen">
+    <main className="place-items-center grid px-6 lg:px-8 py-2 md:py-12 min-h-screen">
       <div className="text-center">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
-          404 Page not found
-        </h1>
         <div className="mt-6 font-medium text-lg text-pretty sm:text-xl/8">
           Sorry, we couldn’t find the page you’re looking for.
           {redirect && (
@@ -107,6 +105,13 @@ const NotFound = (): JSX.Element => {
           </DynamicButton>
         </div>
       </div>
+      <Image
+        alt="Not Found"
+        src="/images/Extras/404/404 Error with a cute animal-bro.png"
+        className="mb-4 w-1/4 md:w-1/3 2xl:w-4/6 xl:w-2/5"
+        width={1000}
+        height={2000}
+      />
     </main>
   );
 };
