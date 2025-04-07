@@ -52,7 +52,7 @@ export const StaffCards = (person: Person) => {
         {person.description && (
           <>
             <p className="text-sm">{person.description}</p>
-            <DynamicButton text="Learn More" />
+            <DynamicButton className="w-full">Learn More</DynamicButton>
           </>
         )}
       </div>
