@@ -30,7 +30,7 @@ export default function ProgramsPage(): JSX.Element {
   }, [title]);
 
   return (
-    <div className="flex flex-col justify-center items-center mx-auto px-4 py-20 w-11/12">
+    <div className="flex flex-col justify-center items-center mx-auto px-4 py-10 lg:py-20 w-11/12">
       <section>
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Class Breakdown
