@@ -2,8 +2,12 @@ import Image from "next/image";
 import { FaCheckDouble } from "react-icons/fa6";
 import { Card } from "../ui/card";
 import { jobOpenings } from "@/lib/constants/list";
+import DynamicButton from "../buttons/button-dynamic";
+import { useRouter } from "next/navigation";
 
 export default function PhotoAndList() {
+  const router = useRouter();
+
   return (
     <>
       <section className="gap-3 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-9 py-5">
@@ -51,12 +55,9 @@ export default function PhotoAndList() {
           ))}
         </div>
         <div className="flex mt-8 pt-8 border-gray-100 border-t">
-          <a
-            href="#"
-            className="font-semibold text-indigo-600 text-sm/6 hover:text-indigo-500"
-          >
+          <DynamicButton onClick={() => router.push("/contact_us")}>
             View all openings <span aria-hidden="true">&rarr;</span>
-          </a>
+          </DynamicButton>
         </div>
       </section>
     </>
