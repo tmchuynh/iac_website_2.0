@@ -1,7 +1,6 @@
 "use client";
 
 import { RequestFormParentStudent } from "@/components/forms/RequestFormParentStudent";
-import PhotoAndList from "@/components/page_headers/PhotoAndList";
 import Testimonial from "@/components/page_headers/Testimonial";
 import StudentsWorkSection from "@/components/StudentsWorkSection";
 import { JSX } from "react";
@@ -26,7 +25,7 @@ export default function StudentShowcasePage(): JSX.Element {
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Showcasing Children's Creativity
         </h1>
-        <h2 className="font-bold text-2xl">
+        <h2 className="pt-5 font-bold text-2xl">
           A Celebration of Imagination, Innovation, and Expression
         </h2>
         <p>
@@ -59,7 +58,7 @@ export default function StudentShowcasePage(): JSX.Element {
           Every sketch, sentence, experiment, and presentation reveals something
           powerful: the unfiltered brilliance of youth.
         </p>
-        <h2 className="font-bold text-2xl">Respecting Student Privacy</h2>
+        <h2 className="pt-8 font-bold text-2xl">Respecting Student Privacy</h2>
         <p>
           Participation in this showcase is entirely voluntary. We deeply value
           the trust placed in us by students and their families. In honoring
