@@ -18,6 +18,7 @@ import { FaComputer } from "react-icons/fa6";
 import { LuArrowBigRightDash } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import FadedImage from "@/components/FadedImage";
 
 export default function SchoolInformationPage() {
   const router = useRouter();
@@ -69,8 +70,8 @@ export default function SchoolInformationPage() {
         </p>
       </section>
 
-      <section className="gap-4 grid grid-cols-1 lg:grid-cols-2 py-6 lg:py-12">
-        <div className="flex flex-col gap-3">
+      <section className="gap-6 grid grid-cols-1 lg:grid-cols-2 py-6 lg:py-12">
+        <div className="flex flex-col gap-3 text-pretty">
           <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             After-School Programs
           </h1>
@@ -84,6 +85,24 @@ export default function SchoolInformationPage() {
             hands-on instruction that supports student development in a fun,
             structured, and meaningful way.
           </p>
+          <div className="gap-3 lg:gap-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 mx-auto 2xl:w-10/12">
+            <div className="flex flex-col items-center gap-2 text-center">
+              <FaBook className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
+              <p>No additional resources needed</p>
+            </div>
+            <div className="flex flex-col items-center gap-2 text-center">
+              <FaChalkboardTeacher className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
+              <p>No extra staff needed</p>
+            </div>
+            <div className="flex flex-col items-center gap-2 text-center">
+              <FaComputer className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
+              <p>No IT support needed</p>
+            </div>
+            <div className="flex flex-col items-center gap-2 text-center">
+              <FaBrain className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
+              <p>No headaches and no stress</p>
+            </div>
+          </div>
           <p>
             Each session is led by a passionate, experienced educator who brings
             both subject-matter expertise and a deep commitment to student
@@ -109,26 +128,8 @@ export default function SchoolInformationPage() {
             expression—all in a safe, supportive space where students can grow
             and thrive.
           </p>
-          <div className="gap-3 lg:gap-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 mx-auto 2xl:w-10/12">
-            <div className="flex flex-col items-center gap-2 text-center">
-              <FaBook className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
-              <p>No additional resources needed</p>
-            </div>
-            <div className="flex flex-col items-center gap-2 text-center">
-              <FaChalkboardTeacher className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
-              <p>No extra staff needed</p>
-            </div>
-            <div className="flex flex-col items-center gap-2 text-center">
-              <FaComputer className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
-              <p>No IT support needed</p>
-            </div>
-            <div className="flex flex-col items-center gap-2 text-center">
-              <FaBrain className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
-              <p>No headaches and no stress</p>
-            </div>
-          </div>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 text-pretty">
           <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             Proactive and Passionate
           </h1>
@@ -153,6 +154,22 @@ export default function SchoolInformationPage() {
             array of extracurricular activities without the usual stress or
             logistical hurdles.
           </p>
+          <div className="flex flex-wrap justify-around gap-5 mx-auto md:w-2/3 lg:w-11/12 2xl:w-full">
+            {programs.map((program, index) => (
+              <div
+                key={index}
+                className="flex justify-center items-center bg-accent p-3 rounded-2xl lg:w-15 xl:w-20 lg:h-15 xl:h-20 text-background"
+              >
+                <Image
+                  src={program.titleIcon}
+                  alt=""
+                  className="xl:w-10 xl:h-10"
+                  width={30}
+                  height={30}
+                />
+              </div>
+            ))}
+          </div>
           <p>
             Our programs are designed to do more than teach content—they are
             built to develop well-rounded individuals. Through collaborative
@@ -170,24 +187,10 @@ export default function SchoolInformationPage() {
             ease—while students gain the confidence and capabilities they need
             to succeed in school, in life, and beyond.
           </p>
-          <div className="flex flex-wrap justify-around gap-5 mx-auto md:w-2/3 lg:w-11/12 2xl:w-full">
-            {programs.map((program, index) => (
-              <div
-                key={index}
-                className="flex justify-center items-center bg-accent p-3 rounded-2xl lg:w-15 xl:w-20 lg:h-15 xl:h-20 text-background"
-              >
-                <Image
-                  src={program.titleIcon}
-                  alt=""
-                  className="xl:w-10 xl:h-10"
-                  width={30}
-                  height={30}
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
+
+      <FadedImage imageSrc="/images/Class_Photos/Soccer/53995092_141122.jpg" />
 
       <section className="py-6">
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
@@ -213,6 +216,12 @@ export default function SchoolInformationPage() {
           short story, or illustrating a comic book, each experience is designed
           to engage both the mind and the heart.
         </p>
+        <DynamicButton
+          onClick={() => router.push("/contact_us")}
+          className="mx-0 mb-3"
+        >
+          Get In Touch
+        </DynamicButton>
         <p>
           Through our partnerships, we’ve had the privilege of working alongside
           forward-thinking institutions that share our vision of accessible,
@@ -229,11 +238,6 @@ export default function SchoolInformationPage() {
         </p>
         <div className="mt-8">
           <LogoCloud />
-        </div>
-        <div className="mt-6">
-          <DynamicButton onClick={() => router.push("/contact_us")}>
-            Get In Touch
-          </DynamicButton>
         </div>
       </section>
 
