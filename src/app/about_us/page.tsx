@@ -6,9 +6,9 @@ export default function AboutUsPage() {
       <div className="py-16 md:py-25">
         <div className="mx-auto">
           <div className="max-w-4xl">
-            <p className="font-semibold text-base/7">
+            <code className="font-semibold text-base/7">
               Where Passion Meets Purpose
-            </p>
+            </code>
             <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
               A Vision Born from the Heart
             </h1>
@@ -166,7 +166,7 @@ export default function AboutUsPage() {
               </p>
             </div>
             <div className="lg:col-span-1 max-lg:mt-16">
-              <p className="font-semibold text-base/7">The numbers</p>
+              <code className="font-semibold text-base/7">The numbers</code>
               <hr className="mt-6 border-t" />
               <dl className="gap-x-8 gap-y-4 grid grid-cols-1 sm:grid-cols-2 mt-6">
                 <div className="flex flex-col gap-y-2 pb-4 border-b border-dotted">

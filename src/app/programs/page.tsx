@@ -62,6 +62,7 @@ export default function ProgramsPage(): JSX.Element {
           targeting specific skills and knowledge areas at the right time,
           enhancing the overall learning process.
         </p>
+        <DoughnutChartLabel />
         <p>
           By dividing the class into well-defined parts, we ensure that students
           receive clear, focused instruction while also allowing for flexibility
@@ -72,8 +73,7 @@ export default function ProgramsPage(): JSX.Element {
           encouraging collaborative activities, every segment serves a unique
           purpose to create a comprehensive and enriching educational journey.
         </p>
-        <DoughnutChartLabel />
-        <ul className="flex flex-col gap-y-3 py-9 list-disc">
+        <ul className="flex flex-col gap-y-3 py-4 list-disc">
           {class_breakdown.map((list, index) => (
             <li key={index}>
               <strong>{list.title}</strong> {list.description}

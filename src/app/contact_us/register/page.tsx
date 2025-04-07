@@ -1,4 +1,5 @@
 "use client";
+import FadedImage from "@/components/FadedImage";
 import RegisterForm from "@/components/forms/RegisterForm";
 import LoadingIndicator from "@/components/loading/Loading";
 import { credit_card_procedure } from "@/lib/constants/list";
@@ -17,9 +18,11 @@ const Register: FC = () => {
         Register Today
       </h1>
 
-      <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+      <FadedImage imageSrc="/images/Class_Photos/Basketball/20156202_141123.JPG" />
+
+      <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
         New Credit Card Processing Procedure
-      </h2>
+      </h3>
       <ol className="flex flex-col gap-2 my-3 list-decimal">
         {credit_card_procedure.map((item, index) => (
           <li key={index}>

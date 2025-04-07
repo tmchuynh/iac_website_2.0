@@ -1,12 +1,11 @@
 import DynamicButton from "../buttons/button-dynamic";
-import { Button } from "../ui/button";
 
 export default function ApplicationForm() {
   return (
     <form
       action="#"
       method="POST"
-      className="px-6 lg:px-8 lg:py-48 pt-20 pb-24 sm:pb-32"
+      className="px-6 lg:px-8 py-24 pb-24 sm:pb-32"
     >
       <div className="mx-auto lg:mr-0 max-w-xl lg:max-w-lg">
         <div className="gap-x-8 gap-y-6 grid grid-cols-1 sm:grid-cols-2">

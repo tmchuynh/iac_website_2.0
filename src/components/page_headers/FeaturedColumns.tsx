@@ -1,11 +1,11 @@
 "use client";
 
-import DynamicButton from "../buttons/button-dynamic";
-import { useRouter } from "next/navigation";
-import { useTheme } from "next-themes";
-import { cn } from "@/lib/utils";
-import { useState, useEffect } from "react";
 import { features } from "@/lib/constants/list";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import DynamicButton from "../buttons/button-dynamic";
 
 export default function FeaturedColumns() {
   const router = useRouter();
@@ -23,10 +23,10 @@ export default function FeaturedColumns() {
   return (
     <div className="py-16 md:py-24 lg:py-32">
       <div className="mx-auto lg:mx-0">
-        <p className="font-semibold text-base/7">
+        <code className="font-semibold text-base/7">
           Shaping the Future Through Innovation, Excellence, and Equity - Our
           Commitment
-        </p>
+        </code>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           The Quality of Our Classes is Unmatched
         </h1>

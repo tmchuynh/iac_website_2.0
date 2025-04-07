@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <div className="relative px-6 py-10 lg:py-20 isolate">
-      <div className="mx-auto max-w-xl lg:max-w-4xl">
+    <main className="relative mx-auto px-4 py-8 w-11/12">
+      <section className="mx-auto w-11/12">
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Let’s talk about your project
         </h1>
@@ -110,38 +110,42 @@ export default function ContactUs() {
             </p>
           </form>
           <div className="lg:flex-none lg:mt-6 lg:w-80">
-            <Image
-              alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"
-              className="w-auto h-12"
-              width={600}
-              height={800}
-            />
             <figure className="mt-10">
               <blockquote className="font-semibold text-lg/8">
                 <p>
-                  “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis.”
+                  "Watching my once-shy daughter perform confidently on stage
+                  was a dream come true. The theater staff at IAC excel at
+                  nurturing talent and fostering self-esteem. Her enthusiasm for
+                  school has grown significantly, and she comes home eager to
+                  share her experiences."
                 </p>
               </blockquote>
-              <figcaption className="flex gap-x-6 mt-10">
+              <figcaption className="flex items-center gap-x-4 mt-8">
                 <Image
-                  alt=""
-                  src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
-                  className="flex-none rounded-full size-12"
+                  alt="Arroyo Elementary School"
+                  src="/images/School_Icons/arroyo.png"
+                  className="flex-none rounded-full w-20 h-20 object-cover"
                   width={96}
                   height={96}
                 />
                 <div>
-                  <div className="font-semibold text-base">Brenna Goyette</div>
-                  <div className="text-sm/6">CEO of Workcation</div>
+                  <div className="font-semibold text-base">Theater Parent</div>
+                  <div className="text-sm/6">Arroyo Elementary School</div>
                 </div>
               </figcaption>
             </figure>
           </div>
         </div>
+      </section>
+      <div className="xl:mx-auto xl:px-8 py-10 lg:max-w-7xl">
+        <Image
+          alt=""
+          src="/images/Class_Photos/Soccer/53995092_141122.jpg"
+          className="shadow-md xl:rounded-3xl w-full aspect-5/2 object-cover"
+          width={2832}
+          height={1130}
+        />
       </div>
-    </div>
+    </main>
   );
 }

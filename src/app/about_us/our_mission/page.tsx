@@ -9,9 +9,9 @@ export default function OurMissionPage() {
       <OffsetImage />
       <section>
         <section className="py-4">
-          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+          <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Immersion: Active, Engaged Learning
-          </h2>
+          </h3>
           <p>
             At the heart of our educational philosophy lies a fundamental
             belief: true learning occurs when students are active
@@ -55,17 +55,17 @@ export default function OurMissionPage() {
         <div className="xl:mx-auto xl:px-8 py-3 md:py-6 lg:py-9 2xl:py-20 xl:py-12 lg:max-w-7xl">
           <Image
             alt=""
-            src="/images/Class_Photos/Soccer/53995092_146958.jpg"
-            className="shadow-xl xl:rounded-3xl w-full aspect-5/2 object-cover"
+            src="/images/Class_Photos/Flag_Football/20250402_141854.jpg"
+            className="object-top shadow-xl xl:rounded-3xl w-full aspect-5/2 object-cover"
             width={2832}
             height={1130}
           />
         </div>
 
         <section className="py-4">
-          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+          <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Effectiveness: Results-Driven Education
-          </h2>
+          </h3>
 
           <p>
             Every element of the A.R.C. curriculum is purposefully and
@@ -116,9 +116,9 @@ export default function OurMissionPage() {
         </section>
 
         <section className="py-4">
-          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+          <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Inclusivity: Supporting Every Learner
-          </h2>
+          </h3>
 
           <p>
             Inclusivity is not simply an aspiration at IAC—it is a foundational
@@ -165,9 +165,9 @@ export default function OurMissionPage() {
         </section>
 
         <section className="py-4">
-          <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+          <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             A Mission to Transform Education and Lives
-          </h2>
+          </h3>
 
           <p>
             Through the powerful integration of our three foundational

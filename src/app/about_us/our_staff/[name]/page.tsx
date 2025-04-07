@@ -49,9 +49,9 @@ export default function StaffPage() {
           />
           {(staffMember.moreInfo.email || staffMember.moreInfo.phone) && (
             <div className="px-2 py-8">
-              <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+              <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
                 Contact Me:
-              </h2>
+              </h3>
               {staffMember.moreInfo.email && (
                 <p className="mt-4 text-base/7">
                   Email:{" "}
@@ -78,7 +78,7 @@ export default function StaffPage() {
           )}
         </div>
         <div className="lg:col-span-3">
-          <p className="font-semibold text-base/7">{staffMember.role}</p>
+          <code className="font-semibold text-base/7">{staffMember.role}</code>
           <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
             {staffMember.name}
           </h1>

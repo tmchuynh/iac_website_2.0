@@ -22,10 +22,9 @@ export default function StudentShowcasePage(): JSX.Element {
   return (
     <main className="mx-auto px-4 py-10 lg:py-20 w-11/12">
       <section className="mb-12">
-        <p className="font-semibold text-base/7">
-          {" "}
+        <code className="font-semibold text-base/7">
           A Celebration of Imagination, Innovation, and Expression
-        </p>
+        </code>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Showcasing Children's Creativity
         </h1>

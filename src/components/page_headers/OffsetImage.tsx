@@ -9,10 +9,10 @@ export default function OffsetImage() {
       />
       <div className="gap-4 lg:gap-8 grid grid-cols-1 md:grid-cols-2">
         <div>
-          <p className="font-semibold text-base/7">
+          <code className="font-semibold text-base/7">
             Empowering Students through Immersion, Effectiveness, and
             Inclusivity
-          </p>
+          </code>
           <h1 className="my-4 font-extrabold text-balance text-lg text-primary lg:text-4xl uppercase tracking-wider">
             Our Mission
           </h1>

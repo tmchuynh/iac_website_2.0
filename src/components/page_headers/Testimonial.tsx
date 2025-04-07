@@ -4,7 +4,7 @@ export default function Testimonial() {
   return (
     <div className="relative overflow-hidden isolate">
       <div className="mx-auto lg:mx-0 max-w-2xl">
-        <p className="font-semibold text-base/7">The IAC Advantage</p>
+        <code className="font-semibold text-base/7">The IAC Advantage</code>
         <h1 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Empowering Student Creativity
         </h1>
@@ -41,7 +41,7 @@ export default function Testimonial() {
           </svg>
 
           <figure className="pl-8 border-l">
-            <blockquote className="font-semibold text-xl/8 tracking-tight">
+            <blockquote className="font-semibold text-xl/8">
               <p>
                 "Due to one of my children's severe food allergies, we have been
                 denied by multiple camps and classes who did not want the risk
@@ -54,9 +54,9 @@ export default function Testimonial() {
             </blockquote>
             <figcaption className="flex items-center gap-x-4 mt-8">
               <Image
-                alt="Author avatar"
+                alt="Peters Canyon Elementary School"
                 src="/images/School_Icons/peterscanyon.png"
-                className="flex-none mt-1 rounded-full w-20 h-20"
+                className="flex-none rounded-full w-20 h-20 object-cover"
                 width={200}
                 height={200}
               />

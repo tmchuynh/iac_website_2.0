@@ -64,9 +64,9 @@ export default function ProgramDetails({ title }: { title?: string }) {
                   {/* Overview */}
                   {program.overview && (
                     <>
-                      <h2 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                      <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
                         Overview
-                      </h2>
+                      </h4>
                       <p className="mb-4">{program.overview}</p>
                     </>
                   )}
@@ -101,9 +101,9 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Goals */}
                 {program.goal && (
                   <>
-                    <h2 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                    <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
                       Program Goals
-                    </h2>
+                    </h4>
                     <p className="">{program.goal}</p>
                   </>
                 )}
@@ -151,9 +151,9 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Outcomes */}
                 {program.outcome && (
                   <>
-                    <h2 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                    <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
                       Learning Outcomes
-                    </h2>
+                    </h4>
                     <p className="mb-4">{program.outcome}</p>
                   </>
                 )}
@@ -161,9 +161,9 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Keypoints */}
                 {program.keypoints.length > 0 && (
                   <>
-                    <h2 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                    <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
                       Key Components
-                    </h2>
+                    </h4>
                     <ul className="space-y-2 py-3 list-disc">
                       {program.keypoints.map((point, pointIndex) => (
                         <li key={pointIndex}>

@@ -47,13 +47,13 @@ export default function RequestFormSchool() {
           </div>
         </div>
         <div className="sm:col-span-2">
-          <div className="flex justify-between">
+          <div className="flex md:flex-row flex-col items-end gap-4">
             <label htmlFor="phone" className="block font-semibold">
               Phone
             </label>
-            <p id="phone-description" className="">
-              Optional
-            </p>
+            <code id="phone-description" className="text-accent text-xs">
+              **Optional
+            </code>
           </div>
           <div className="mt-2.5">
             <input
@@ -126,13 +126,13 @@ export default function RequestFormSchool() {
         </div>
 
         <div className="sm:col-span-2">
-          <div className="flex justify-between">
+          <div className="flex md:flex-row flex-col items-end gap-4">
             <label htmlFor="message" className="block font-semibold">
               What programs are you interested in?
             </label>
-            <p id="message-description" className="">
-              Max 500 characters
-            </p>
+            <code id="message-description" className="text-accent text-xs">
+              **Max 500 characters
+            </code>
           </div>
           <div className="mt-2.5">
             <textarea

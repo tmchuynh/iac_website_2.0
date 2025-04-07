@@ -20,9 +20,9 @@ export default function OurCommitmentPage() {
           </p>
 
           <section className="py-4">
-            <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Refined and Relevant Curriculum
-            </h2>
+            </h3>
             <p>
               Our curriculum is thoughtfully designed based on cutting-edge
               educational research, continuous evaluation, and robust
@@ -37,9 +37,9 @@ export default function OurCommitmentPage() {
           </section>
 
           <section className="py-4">
-            <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Access to Advanced Resources and Technology
-            </h2>
+            </h3>
             <p>
               At IAC, we are passionately committed to providing students with
               state-of-the-art resources and the latest technological tools.
@@ -53,9 +53,9 @@ export default function OurCommitmentPage() {
           </section>
 
           <section className="py-4">
-            <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Holistic Development for Lifelong Success
-            </h2>
+            </h3>
             <p>
               True education goes beyond academics—it nurtures every aspect of a
               student's development. Our programs integrate rigorous academic
@@ -82,9 +82,9 @@ export default function OurCommitmentPage() {
       </section>
 
       <section className="py-4">
-        <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
           Strategic Multi-Year Success Plans
-        </h2>
+        </h3>
         <p>
           Rather than temporary solutions, we invest in long-term, sustainable
           growth strategies. Our Comprehensive Success Plan lays out a clear,
@@ -98,9 +98,9 @@ export default function OurCommitmentPage() {
       </section>
 
       <section className="py-4">
-        <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
           Continuous Feedback and Improvement
-        </h2>
+        </h3>
         <p>
           Feedback and continuous improvement lie at the heart of everything we
           do. Regular assessments, structured reflections from students and
@@ -163,9 +163,9 @@ export default function OurCommitmentPage() {
         </div>
         <div className="col-span-5 lg:col-span-9 2xl:col-span-9 xl:col-span-5">
           <section className="py-4">
-            <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Collaborative and Engaging Learning Environments
-            </h2>
+            </h3>
             <p>
               We deeply believe in the transformative power of collaborative
               learning. Our classrooms and activities are carefully structured
@@ -180,9 +180,9 @@ export default function OurCommitmentPage() {
           </section>
 
           <section className="py-4">
-            <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Preparation for Future Opportunities
-            </h2>
+            </h3>
             <p>
               Career readiness and real-world preparation are integral
               components of our curriculum from day one. Students are exposed to
@@ -196,9 +196,9 @@ export default function OurCommitmentPage() {
           </section>
 
           <section className="py-4">
-            <h2 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Commitment to Equity and Inclusion
-            </h2>
+            </h3>
             <p>
               At the core of our mission is the unwavering commitment to equity
               and inclusion. We ensure every student, regardless of background,
