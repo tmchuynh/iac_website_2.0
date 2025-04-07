@@ -1,14 +1,12 @@
 "use client";
 import { useTabs } from "@/app/context/TabsContext";
-import { useSearchParams } from "next/navigation";
-import { JSX } from "react";
-import ProgramDetails from "@/components/ProgramInformation";
-import { useEffect } from "react";
-import DoughnutChartLabel from "@/components/PieChart";
-import { class_breakdown } from "@/lib/constants/list";
 import PhotoAndList from "@/components/page_headers/PhotoAndList";
-
+import DoughnutChartLabel from "@/components/PieChart";
+import ProgramDetails from "@/components/ProgramInformation";
+import { class_breakdown } from "@/lib/constants/list";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+import { JSX, useEffect } from "react";
 
 /**
  * Renders the Programs page component.
@@ -75,7 +73,7 @@ export default function ProgramsPage(): JSX.Element {
           purpose to create a comprehensive and enriching educational journey.
         </p>
         <DoughnutChartLabel />
-        <ul className="flex flex-col gap-y-3 py-9">
+        <ul className="flex flex-col gap-y-3 py-9 list-disc">
           {class_breakdown.map((list, index) => (
             <li key={index}>
               <strong>{list.title}</strong> {list.description}

@@ -22,12 +22,14 @@ export default function StudentShowcasePage(): JSX.Element {
   return (
     <main className="mx-auto px-4 py-10 lg:py-20 w-11/12">
       <section className="mb-12">
+        <p className="font-semibold text-base/7">
+          {" "}
+          A Celebration of Imagination, Innovation, and Expression
+        </p>
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
           Showcasing Children's Creativity
         </h1>
-        <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
-          A Celebration of Imagination, Innovation, and Expression
-        </h2>
+
         <p>
           Welcome to our Student Creativity Showcase—a space where the
           brilliance of young minds comes to life. This showcase honors not just
@@ -69,11 +71,18 @@ export default function StudentShowcasePage(): JSX.Element {
           Respecting Student Privacy
         </h2>
         <p>
-          Participation in the Student Showcase is voluntary. To honor student
-          choice and family privacy, some entries may appear anonymously or with
-          limited identifying details. We deeply appreciate the trust placed in
-          us and take great care to ensure that all work is celebrated with
-          integrity and respect.
+          Participation in the Student Showcase is entirely voluntary. We
+          recognize and respect the diverse comfort levels and preferences of
+          our students and their families when it comes to sharing personal work
+          in a public setting. In order to honor student choice and protect
+          family privacy, some entries may be presented anonymously or include
+          only limited identifying information, such as first names or general
+          grade levels. We deeply value the trust that families place in us by
+          allowing us to highlight student creativity, effort, and growth. Every
+          piece submitted—whether attributed or anonymous—is treated with equal
+          care, dignity, and appreciation. Our goal is to celebrate each
+          student’s unique voice and contribution while upholding the highest
+          standards of integrity, inclusion, and respect.
         </p>
 
         <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
@@ -84,10 +93,20 @@ export default function StudentShowcasePage(): JSX.Element {
           happen. ✨
         </p>
         <p>
-          Thank you for joining us in uplifting the voices of tomorrow's
-          creators, leaders, and changemakers. Your support encourages students
-          to continue exploring, experimenting, and expressing themselves
-          through the power of creative learning.
+          Thank you for being part of this meaningful celebration of student
+          voice. By joining us, you are helping to uplift and honor the
+          creativity, curiosity, and courage of tomorrow’s creators, leaders,
+          and changemakers. Your support sends a powerful message—that their
+          ideas matter, their expressions are valued, and their potential is
+          limitless. When students are encouraged to explore, experiment, and
+          express themselves through creative learning, they begin to see
+          themselves as empowered contributors to their communities and the
+          world.
+        </p>
+        <p>
+          Together, we are cultivating an environment where imagination thrives,
+          confidence grows, and every student’s voice has the opportunity to
+          shine.
         </p>
       </section>
 
