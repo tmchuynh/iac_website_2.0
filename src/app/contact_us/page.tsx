@@ -1,9 +1,10 @@
+import DynamicButton from "@/components/buttons/button-dynamic";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <div className="relative px-6 lg:px-8 py-24 sm:py-32 isolate">
+    <div className="relative px-6 py-10 lg:py-20 isolate">
       <div className="mx-auto max-w-xl lg:max-w-4xl">
         <h2 className="font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
           Let’s talk about your project
@@ -99,7 +100,7 @@ export default function ContactUs() {
               </div>
             </div>
             <div className="mt-10">
-              <Button type="submit">Let’s talk</Button>
+              <DynamicButton>Let’s talk</DynamicButton>
             </div>
             <p className="mt-4 text-sm/6">
               By submitting this form, I agree to the{" "}

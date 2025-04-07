@@ -9,9 +9,9 @@ export default function Example() {
   return (
     <div>
       <div className="mx-auto px-6 lg:px-8 py-16 sm:py-24 max-w-7xl">
-        <h2 className="font-semibold text-4xl sm:text-5xl tracking-tight">
-          Frequently asked questions
-        </h2>
+        <h1 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          Frequently Asked Questions
+        </h1>
         <p className="mt-6 max-w-2xl">
           Have a different question and can’t find the answer you’re looking
           for? Reach out to our support team by{" "}

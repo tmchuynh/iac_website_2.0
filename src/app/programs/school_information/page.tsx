@@ -69,7 +69,7 @@ export default function SchoolInformationPage() {
         </p>
       </section>
 
-      <section className="gap-4 grid grid-cols-1 lg:grid-cols-2 py-6">
+      <section className="gap-4 grid grid-cols-1 lg:grid-cols-2 py-6 lg:py-12">
         <div className="flex flex-col gap-3">
           <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             After-School Programs
@@ -237,7 +237,7 @@ export default function SchoolInformationPage() {
         </div>
       </section>
 
-      <section className="pb-12">
+      <section className="py-5 lg:py-12">
         <h1 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
           Get Involved Today
         </h1>
