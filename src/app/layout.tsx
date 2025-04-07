@@ -13,7 +13,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="relative flex flex-col min-h-screen">
         <Providers>
-          <main className="flex-grow">
+          <main className="flex-grow pb-24 md:pb-0">
             <NavBar />
             <StaticBreadcrumb />
             {children}
