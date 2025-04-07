@@ -69,13 +69,16 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
         const firstSegment = capitalizedSegments[0];
 
         items.push(
-          <BreadcrumbSeparator key={`sep-${firstHref}`} className="mr-0 ml-1">
+          <BreadcrumbSeparator
+            key={`sep-${firstHref}-${firstSegment}`}
+            className="mr-0 ml-1"
+          >
             <TbSlashes />
           </BreadcrumbSeparator>
         );
 
         items.push(
-          <BreadcrumbItem key={firstHref} className="mx-1">
+          <BreadcrumbItem key={`${firstHref}-${firstSegment}`} className="mx-1">
             <BreadcrumbLink
               href={firstHref}
               className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
@@ -90,13 +93,19 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
       const currentSegment = capitalizedSegments[pathSegments.length - 1];
 
       items.push(
-        <BreadcrumbSeparator key={`sep-${currentHref}`} className="mr-0 ml-1">
+        <BreadcrumbSeparator
+          key={`sep-${currentHref}-${currentSegment}`}
+          className="mr-0 ml-1"
+        >
           <TbSlashes />
         </BreadcrumbSeparator>
       );
 
       items.push(
-        <BreadcrumbItem key={currentHref} className="mx-1">
+        <BreadcrumbItem
+          key={`${currentHref}-${currentSegment}`}
+          className="mx-1"
+        >
           <BreadcrumbLink
             href={currentHref}
             className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
@@ -143,26 +152,6 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
             <span className="rounded-md">...</span>
           </BreadcrumbItem>
         );
-
-        // const firstHref = `/${pathSegments[0]}`;
-        // const firstSegment = capitalizedSegments[0];
-
-        // items.push(
-        //   <BreadcrumbSeparator key={`sep-${firstHref}`} className="mr-0 ml-1">
-        //     <TbSlashes />
-        //   </BreadcrumbSeparator>
-        // );
-
-        // items.push(
-        //   <BreadcrumbItem key={firstHref} className="mx-1">
-        //     <BreadcrumbLink
-        //       href={firstHref}
-        //       className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
-        //     >
-        //       {firstSegment}
-        //     </BreadcrumbLink>
-        //   </BreadcrumbItem>
-        // );
       }
 
       if (pathSegments.length > 2) {
@@ -170,13 +159,19 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
         const secondSegment = capitalizedSegments[1];
 
         items.push(
-          <BreadcrumbSeparator key={`sep-${secondHref}`} className="mr-0 ml-1">
+          <BreadcrumbSeparator
+            key={`sep-${secondHref}-${secondSegment}`}
+            className="mr-0 ml-1"
+          >
             <TbSlashes />
           </BreadcrumbSeparator>
         );
 
         items.push(
-          <BreadcrumbItem key={secondHref} className="mx-1">
+          <BreadcrumbItem
+            key={`${secondHref}-${secondSegment}`}
+            className="mx-1"
+          >
             <BreadcrumbLink
               href={secondHref}
               className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
@@ -199,7 +194,7 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
           );
 
           items.push(
-            <BreadcrumbItem key={href} className="mx-1">
+            <BreadcrumbItem key={`${href}-${segment}`} className="mx-1">
               <BreadcrumbLink
                 href={href}
                 className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
@@ -233,7 +228,10 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
         );
 
         items.push(
-          <BreadcrumbItem key={href}>
+          <BreadcrumbItem
+            key={`${href}-${capitalizedSegment}`}
+            className="mx-1"
+          >
             <BreadcrumbLink
               href={href}
               className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
