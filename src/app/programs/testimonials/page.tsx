@@ -1,39 +1,27 @@
+import Testimonial from "@/components/testimonial/TestimonialCard";
 import { testimonials } from "@/lib/constants/testimonials";
 import Image from "next/image";
 
 export default function TestimonialsPage() {
   return (
     <main className="relative mx-auto px-4 py-8 w-11/12">
-      <p className="font-semibold text-base/7">Testimonials</p>
+      <code className="font-semibold text-base/7">Hear From Our Community</code>
       <h1 className="pb-4 max-w-4xl font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
-        We have worked with thousands of amazing people
+        Thousands of amazing individuals have trusted us—and here’s what they
+        have to say.
       </h1>
+      <div className="xl:mx-auto xl:px-8 py-10 lg:max-w-7xl">
+        <Image
+          alt=""
+          src="/images/Class_Photos/Performing_Arts/15195092_265855.jpg"
+          className="object-top shadow-md xl:rounded-3xl w-full aspect-5/2 object-cover"
+          width={2832}
+          height={1130}
+        />
+      </div>
       <div className="gap-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((testimonial, index) => (
-          <figure
-            key={index}
-            className="relative flex flex-col justify-between shadow-lg p-6 rounded-2xl ring-1 ring-gray-900/5 overflow-clip"
-          >
-            <Image
-              alt=""
-              src="/images/icons/satisfaction.png"
-              className="top-[50%] left-[50%] -z-10 absolute opacity-5 w-1/2 h-1/2 -translate-x-1/2 -translate-y-1/2 object-contain"
-              width={500}
-              height={500}
-            />
-            <blockquote className="text-gray-900">
-              <p>{`“${testimonial.text}”`}</p>
-            </blockquote>
-            <figcaption className="flex justify-end items-center gap-x-4 mt-6">
-              <Image
-                alt=""
-                src={testimonial.image}
-                className="z-10 rounded-full"
-                width={100}
-                height={100}
-              />
-            </figcaption>
-          </figure>
+          <Testimonial key={index} testimonial={testimonial} index={index} />
         ))}
       </div>
     </main>
