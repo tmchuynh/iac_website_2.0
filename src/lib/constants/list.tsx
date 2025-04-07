@@ -1,3 +1,6 @@
+import { FaChalkboardTeacher, FaRegLightbulb } from "react-icons/fa";
+import { FaBookBookmark } from "react-icons/fa6";
+
 export const commitments = [
   {
     title: "Universal Access",
@@ -194,5 +197,32 @@ export const logos = [
   {
     alt: "Tustin Ranch",
     src: "/images/School_Icons/tustinranch.png",
+  },
+];
+
+export const features = [
+  {
+    name: "Led by Experts Who Care",
+    description:
+      "Each class is taught by skilled, passionate instructors with deep expertise in their fields—whether it’s chess, creative writing, dance, or coding. More than educators, they are mentors who inspire students through engaging lessons, thoughtful feedback, and genuine connection.",
+    href: "/about_us/our_staff",
+    button: "Meet the Instructors",
+    icon: FaChalkboardTeacher,
+  },
+  {
+    name: "Skill-Rich, Purpose-Driven Learning",
+    description:
+      "Our programs are designed to equip students with practical, transferable skills. From teamwork and strategy in sports to storytelling and creative expression in the arts, every session strengthens confidence, communication, and critical thinking.",
+    href: "/about_us/our_commitment",
+    button: "Learn About the Curriculum",
+    icon: FaBookBookmark,
+  },
+  {
+    name: "Environments That Empower",
+    description:
+      "We create safe, inclusive spaces where students feel encouraged to explore new ideas, take creative risks, and grow. Our classes are tailored to meet a wide range of interests and learning styles, helping every student unlock their full potential in a fun and supportive setting.",
+    href: "/programs",
+    button: "Explore Our Programs",
+    icon: FaRegLightbulb,
   },
 ];
