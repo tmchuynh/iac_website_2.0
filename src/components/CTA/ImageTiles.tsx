@@ -5,7 +5,7 @@ export default function ImageTiles() {
       <div className="lg:flex mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="lg:flex-none gap-x-12 gap-y-16 lg:gap-y-8 grid grid-cols-1 mx-auto lg:mx-0 lg:min-w-full max-w-2xl lg:max-w-none">
           <div className="lg:col-end-1 lg:pb-8 lg:w-full lg:max-w-lg">
-            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
               Our people
             </h1>
             <p className="mt-6 text-xl/8">

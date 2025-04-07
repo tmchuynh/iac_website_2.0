@@ -27,7 +27,7 @@ export default function FeaturedColumns() {
           Shaping the Future Through Innovation, Excellence, and Equity - Our
           Commitment
         </code>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           The Quality of Our Classes is Unmatched
         </h1>
         <p className="mt-6 max-w-4xl text-lg/8">

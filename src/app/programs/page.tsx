@@ -1,8 +1,8 @@
 "use client";
 import { useTabs } from "@/app/context/TabsContext";
+import DoughnutChartLabel from "@/components/images/PieChart";
 import PhotoAndList from "@/components/page_headers/PhotoAndList";
-import DoughnutChartLabel from "@/components/PieChart";
-import ProgramDetails from "@/components/ProgramInformation";
+import ProgramDetails from "@/components/programs/ProgramInformation";
 import { class_breakdown } from "@/lib/constants/list";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
@@ -42,14 +42,14 @@ export default function ProgramsPage(): JSX.Element {
         />
       </div>
       <section>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Our Program Details
         </h1>
         <ProgramDetails title={title} />
       </section>
 
       <section>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Class Breakdown
         </h1>
         <p>

@@ -5,7 +5,7 @@ export default function ContactUs() {
   return (
     <main className="relative mx-auto px-4 py-8 w-11/12">
       <section className="mx-auto w-11/12">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Let’s talk about your project
         </h1>
         <p className="mt-2 text-lg/8">

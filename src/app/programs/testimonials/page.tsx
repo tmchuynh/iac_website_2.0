@@ -6,7 +6,7 @@ export default function TestimonialsPage() {
   return (
     <main className="relative mx-auto px-4 py-8 w-11/12">
       <code className="font-semibold text-base/7">Hear From Our Community</code>
-      <h1 className="pb-4 max-w-4xl font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         Thousands of amazing individuals have trusted us—and here’s what they
         have to say.
       </h1>

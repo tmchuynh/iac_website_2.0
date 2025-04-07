@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useCallback, JSX } from "react";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
+import { JSX, useCallback, useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import { Button } from "../ui/button";
 
@@ -24,6 +26,11 @@ import { Button } from "../ui/button";
  */
 const BackToTop = (): JSX.Element => {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, [theme]);
 
   const toggleVisibility = useCallback(() => {
     if (window.scrollY > 300) {
@@ -51,11 +58,12 @@ const BackToTop = (): JSX.Element => {
       {isButtonVisible && (
         <Button
           onClick={scrollToTop}
-          className={`
-            fixed bottom-4 right-4
-            bg-accent-1 text-accent-foreground border-accent-1
-            rounded-full shadow-lg
-          `}
+          className={cn(
+            "fixed bottom-4 right-4 bg-primary hover:bg-accent transition duration-300 ease-in-out rounded-full shadow-lg",
+            {
+              "bg-secondary text-secondary-foreground": theme == "dark",
+            }
+          )}
           aria-label="Back to top"
         >
           <FaArrowUp />

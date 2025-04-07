@@ -1,4 +1,4 @@
-import ResponsiveLogo from "@/components/ResponsiveLogo";
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import Image from "next/image";
 export default function AboutUsPage() {
   return (
@@ -9,7 +9,7 @@ export default function AboutUsPage() {
             <code className="font-semibold text-base/7">
               Where Passion Meets Purpose
             </code>
-            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
               A Vision Born from the Heart
             </h1>
             <p className="mt-6 text-balance text-xl/8">

@@ -79,7 +79,7 @@ export default function StaffPage() {
         </div>
         <div className="lg:col-span-3">
           <code className="font-semibold text-base/7">{staffMember.role}</code>
-          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
             {staffMember.name}
           </h1>
           <p

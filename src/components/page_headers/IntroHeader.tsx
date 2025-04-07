@@ -1,9 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 
 export default function IntroHeader() {
@@ -32,7 +32,7 @@ export default function IntroHeader() {
               </div>
             </div>
 
-            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
               Superior classes, exceptional instructors, outstanding outcomes.
             </h1>
             <p>

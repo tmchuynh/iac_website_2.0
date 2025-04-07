@@ -1,6 +1,6 @@
 "use client";
 import DynamicButton from "@/components/buttons/button-dynamic";
-import ResponsiveLogo from "@/components/ResponsiveLogo";
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import { faqs } from "@/lib/constants/frequently_asked_questions";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -13,7 +13,7 @@ export default function Example() {
       <ResponsiveLogo />
 
       <section>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Frequently Asked Questions
         </h1>
         <p className="mt-6 max-w-2xl">

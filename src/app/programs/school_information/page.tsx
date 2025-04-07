@@ -1,7 +1,7 @@
 "use client";
 import DynamicButton from "@/components/buttons/button-dynamic";
-import FadedImage from "@/components/FadedImage";
-import LogoCloud from "@/components/LogoCloud";
+import FadedImage from "@/components/images/FadedImage";
+import LogoCloud from "@/components/images/LogoCloud";
 import { Button } from "@/components/ui/button";
 import { programs } from "@/lib/constants/programs";
 import { cn } from "@/lib/utils";
@@ -36,7 +36,7 @@ export default function SchoolInformationPage() {
   return (
     <main className="mx-auto px-4 py-8 w-11/12">
       <section className="pt-12">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Our Partners in Innovation
         </h1>
         <p>
@@ -193,7 +193,7 @@ export default function SchoolInformationPage() {
       <FadedImage imageSrc="/images/Class_Photos/Soccer/53995092_141122.jpg" />
 
       <section className="py-6">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Join Our Growing Network
         </h1>
         <p>
@@ -242,7 +242,7 @@ export default function SchoolInformationPage() {
       </section>
 
       <section className="py-5 lg:py-12">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Get Involved Today
         </h1>
         <p>

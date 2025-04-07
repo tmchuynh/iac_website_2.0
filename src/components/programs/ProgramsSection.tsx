@@ -1,7 +1,7 @@
 "use client";
 
 import { programs } from "@/lib/constants/programs";
-import { ProgramCards } from "./cards/ProgramCards";
+import { ProgramCards } from "../cards/ProgramCards";
 
 export default function ProgramsSection() {
   return (

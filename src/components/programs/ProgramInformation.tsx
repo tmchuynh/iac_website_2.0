@@ -3,8 +3,8 @@ import { programs } from "@/lib/constants/programs";
 import { TabsContent } from "@radix-ui/react-tabs";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import DynamicButton from "./buttons/button-dynamic";
-import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
+import DynamicButton from "../buttons/button-dynamic";
+import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 export default function ProgramDetails({ title }: { title?: string }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const { defaultTab } = useTabs();
@@ -56,7 +56,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
             <div className="" id={`${programIndex}`}>
               {/* Content */}
               <div className="pb-6">
-                <h1 className="font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+                <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
                   {program.title}
                 </h1>
 

@@ -6,7 +6,7 @@ import { staffCategories } from "@/lib/constants/staff";
 export default function OurStaffPage() {
   return (
     <main className="relative mx-auto px-4 py-8 w-11/12">
-      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         Our Staff
       </h1>
       <p>
@@ -61,7 +61,7 @@ export default function OurStaffPage() {
           return category.category === "Founder" ||
             category.category === "Senior Instructors" ? (
             <section key={index} className="mb-12">
-              <h1 className="my-4 pb-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+              <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
                 {category.category}
               </h1>
 
@@ -81,7 +81,7 @@ export default function OurStaffPage() {
             </section>
           ) : (
             <section key={index} className="mb-12">
-              <h1 className="my-4 pb-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+              <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
                 {category.category}
               </h1>
 

@@ -1,11 +1,9 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useRouter } from "next/navigation";
-import React from "react";
 import DynamicButton from "../buttons/button-dynamic";
 
 export function RequestFormParentStudent() {
@@ -14,7 +12,7 @@ export function RequestFormParentStudent() {
   return (
     <section>
       <div className="mx-auto">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Request Us @ Your School
         </h1>
         <div className="mb-4 text-pretty leading-relaxed">

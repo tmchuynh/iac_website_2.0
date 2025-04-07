@@ -1,5 +1,5 @@
-import FadedImage from "@/components/FadedImage";
 import ApplicationForm from "@/components/forms/ApplicationForm";
+import FadedImage from "@/components/images/FadedImage";
 import Image from "next/image";
 
 export default function Apply() {
@@ -9,7 +9,7 @@ export default function Apply() {
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-7xl">
         <div className="relative lg:static px-6 lg:px-8 pb-20">
           <div className="mx-auto lg:mx-0">
-            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
               Be Part of the Journey
             </h1>
             <p className="mt-6 text-lg/8">

@@ -1,6 +1,6 @@
 "use client";
-import FadedImage from "@/components/FadedImage";
 import RegisterForm from "@/components/forms/RegisterForm";
+import FadedImage from "@/components/images/FadedImage";
 import LoadingIndicator from "@/components/loading/Loading";
 import { credit_card_procedure } from "@/lib/constants/list";
 import { FC, useState } from "react";
@@ -14,7 +14,7 @@ const Register: FC = () => {
 
   return (
     <main className="relative mx-auto px-4 py-8 w-11/12">
-      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         Register Today
       </h1>
 

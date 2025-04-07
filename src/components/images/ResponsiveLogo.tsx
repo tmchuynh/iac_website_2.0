@@ -1,8 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function ResponsiveLogo({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();

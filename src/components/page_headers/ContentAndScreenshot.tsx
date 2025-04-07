@@ -1,8 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import DynamicButton from "../buttons/button-dynamic";
-import FadedImage from "../FadedImage";
-import ResponsiveLogo from "../ResponsiveLogo";
+import ResponsiveLogo from "../images/ResponsiveLogo";
 
 export default function ContentAndScreenshot() {
   const router = useRouter();
@@ -15,7 +14,7 @@ export default function ContentAndScreenshot() {
           <p className="mt-5 font-semibold text-tertiary uppercase">
             Bringing Enrichment to Your School
           </p>
-          <h1 className="max-w-3xl font-extrabold text-balance text-lg text-primary lg:text-4xl uppercase tracking-wider">
+          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
             Superior classes, exceptional instructors, outstanding outcomes.
           </h1>
           <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mt-5 max-w-xl lg:max-w-none">

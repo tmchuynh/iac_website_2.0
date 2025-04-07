@@ -1,7 +1,7 @@
 "use client";
 
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import FeaturedColumns from "@/components/page_headers/FeaturedColumns";
-import ResponsiveLogo from "@/components/ResponsiveLogo";
 import Image from "next/image";
 
 export default function OurCommitmentPage() {

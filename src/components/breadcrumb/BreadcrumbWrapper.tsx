@@ -1,17 +1,17 @@
 "use client";
 
 import { capitalize } from "@/lib/utils/format";
+import useMediumScreen from "@/lib/utils/screens/useMediumScreen";
+import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
 import { usePathname, useRouter } from "next/navigation";
 import React, { JSX, useMemo } from "react";
+import { TbSlashes } from "react-icons/tb";
+import ResponsiveLogo from "../images/ResponsiveLogo";
 import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
 } from "../ui/breadcrumb";
-import { TbSlashes } from "react-icons/tb";
-import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
-import useMediumScreen from "@/lib/utils/screens/useMediumScreen";
-import ResponsiveLogo from "../ResponsiveLogo";
 
 /**
  * A static breadcrumb navigation component that displays the current path hierarchy.

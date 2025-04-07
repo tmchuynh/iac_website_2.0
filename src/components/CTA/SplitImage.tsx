@@ -37,7 +37,7 @@ export default function SplitImage() {
       </div>
       <div className="relative mx-auto lg:px-8 py-24 sm:py-32 lg:py-40 max-w-7xl">
         <div className="md:ml-auto pr-6 lg:pr-0 pl-6 md:pl-16 lg:pl-24 xl:pl-32 md:w-2/3 lg:w-1/2">
-          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase tracking-wider">
+          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
             Award winning support
           </h1>
           <p className="mt-2 font-semibold text-4xl sm:text-5xl tracking-tight">

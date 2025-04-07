@@ -5,7 +5,7 @@ export default function Testimonial() {
     <div className="relative overflow-hidden isolate">
       <div className="mx-auto lg:mx-0 max-w-2xl">
         <code className="font-semibold text-base/7">The IAC Advantage</code>
-        <h1 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Empowering Student Creativity
         </h1>
         <p className="mt-6 text-xl/8">

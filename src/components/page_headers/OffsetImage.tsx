@@ -13,7 +13,7 @@ export default function OffsetImage() {
             Empowering Students through Immersion, Effectiveness, and
             Inclusivity
           </code>
-          <h1 className="my-4 font-extrabold text-balance text-lg text-primary lg:text-4xl uppercase tracking-wider">
+          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
             Our Mission
           </h1>
           <p>
