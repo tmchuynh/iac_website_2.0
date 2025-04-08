@@ -26,11 +26,11 @@ export default function StudentWorkCard({
       >
         <div className="absolute inset-0 bg-gradient-to-tl from-secondary via-primary to-tertiary opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500" />
         <div className="relative bg-background m-[4px] rounded-2xl overflow-hidden">
-          <div className="relative">
+          <div className="relative h-11/12 overflow-clip aspect-8/6">
             <Image
-              alt={`${work.title}_${work.author}_${work.school}`}
-              className="w-full transform transition-transform duration-700 object-cover ease-out md:group-hover:scale-105 lg:group-hover:scale-110"
-              src={`${work.mainImage}`}
+              alt={work.title}
+              className="w-full h-full transform transition-transform duration-700 object-cover ease-out md:group-hover:scale-105 lg:group-hover:scale-110"
+              src={work.mainImage}
               width={800}
               height={600}
             />
@@ -39,7 +39,7 @@ export default function StudentWorkCard({
             <h3 className="mb-2 font-bold text-xl">{work.title}</h3>
             <p className="mb-4 text-sm">{work.grade}</p>
             <div className="flex justify-between items-center">
-              <span className="bg-clip-text bg-gradient-to-r from-secondary via-primary/90 to-tertiary/75 font-bold text-2xl text-transparent">
+              <span className="bg-clip-text bg-gradient-to-r from-secondary dark:from-chart-1 via-primary/90 dark:via-secondary to-tertiary/75 dark:to-tertiary font-bold text-2xl text-transparent">
                 {work.school}
               </span>
               <Button className="group-hover:scale-105">
