@@ -10,7 +10,7 @@ export default function ApplyToJoinCTA() {
 
   return (
     <>
-      <section className="gap-3 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-9 py-5">
+      <section className="gap-3 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-9 py-5 md:py-10 lg:py-16 2xl:py-20">
         <div className="md:col-span-2 xl:col-span-3">
           <h2 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             We’re always looking for awesome people to join us
