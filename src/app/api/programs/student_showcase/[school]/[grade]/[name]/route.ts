@@ -1,5 +1,22 @@
 import { showcase } from "@/lib/constants/student_work";
 
+/**
+ * Fetches a specific student showcase item based on school, grade, and name parameters.
+ *
+ * @param _request - The incoming HTTP request (unused in this function)
+ * @param params - Route parameters object containing:
+ *   - school: The school name to filter by
+ *   - grade: The grade level to filter by
+ *   - name: The title of the showcase work to retrieve
+ *
+ * @returns A Response object with:
+ *   - Status 200 and JSON data if the showcase item is found
+ *   - Status 404 with error message if no matching item exists for the given parameters
+ *
+ * @example
+ * // Request to: /api/programs/student_showcase/lincoln-elementary/5/my-art-project
+ * // Returns JSON data for "my-art-project" from "lincoln-elementary" grade "5"
+ */
 export async function GET(
   _request: Request,
   { params }: { params: { school: string; grade: string; name: string } }
