@@ -169,15 +169,15 @@ export default function AboutUsPage() {
             </div>
             <div className="lg:col-span-1 max-lg:mt-16">
               <code className="font-semibold text-base/7">The numbers</code>
-              <hr className="mt-6 border-t" />
+              <hr className="mt-6 dark:border-chart-1 border-t" />
               <dl className="gap-x-8 gap-y-4 grid grid-cols-1 sm:grid-cols-2 mt-6">
-                <div className="flex flex-col gap-y-2 pb-4 border-b border-dotted">
+                <div className="flex flex-col gap-y-2 pb-4 dark:border-accent border-b border-dotted">
                   <dt className="text-sm/6">Students Impacted</dt>
                   <dd className="order-first font-semibold text-5xl tracking-tight">
                     ~<span>9.5</span>K
                   </dd>
                 </div>
-                <div className="flex flex-col gap-y-2 pb-4 border-b border-dotted">
+                <div className="flex flex-col gap-y-2 pb-4 dark:border-accent border-b border-dotted">
                   <dt className="text-sm/6">
                     Happy Employees{" "}
                     <p className="-mt-2 ml-5 text-[0.75em] text-tertiary">
@@ -188,7 +188,7 @@ export default function AboutUsPage() {
                     <span>50</span>
                   </dd>
                 </div>
-                <div className="flex flex-col gap-y-2 max-sm:pb-4 max-sm:border-gray-200 max-sm:border-b max-sm:border-dotted">
+                <div className="flex flex-col gap-y-2 max-sm:pb-4">
                   <dt className="text-sm/6">Successful Classes</dt>
                   <dd className="order-first font-semibold text-5xl tracking-tight">
                     ~<span>3.9</span>K
