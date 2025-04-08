@@ -1,3 +1,5 @@
+"use client";
+
 import DynamicButton from "@/components/buttons/button-dynamic";
 import React, { useState } from "react";
 
@@ -7,6 +9,7 @@ export default function FeedbackForm() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -15,10 +18,34 @@ export default function FeedbackForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Feedback submitted:", formData);
-    // Add logic to handle form submission (e.g., API call)
+    setStatus("Sending feedback...");
+
+    try {
+      const res = await fetch("/api/contact_us/provide_feedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setStatus("Feedback sent successfully!");
+        // Reset the form after a successful submission.
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus(
+          data.error || "Failed to send feedback, please try again later."
+        );
+      }
+    } catch (error) {
+      console.error("Error submitting feedback:", error);
+      setStatus("An error occurred, please try again later.");
+    }
   };
 
   return (
@@ -76,6 +103,7 @@ export default function FeedbackForm() {
       <div className="mt-10">
         <DynamicButton>Submit Feedback</DynamicButton>
       </div>
+      <p className="mt-4 text-sm">{status}</p>
       <p className="mt-4 text-sm">
         By submitting this form, I agree to the{" "}
         <a href="#" className="font-semibold">
