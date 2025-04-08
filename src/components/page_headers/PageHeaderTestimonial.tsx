@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Testimonial() {
+export default function PageHeaderTestimonial() {
   return (
     <div className="relative overflow-hidden isolate">
       <div className="mx-auto lg:mx-0 max-w-2xl">

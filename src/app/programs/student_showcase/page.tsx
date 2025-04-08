@@ -1,7 +1,6 @@
 "use client";
-
 import { RequestFormParentStudent } from "@/components/forms/RequestFormParentStudent";
-import Testimonial from "@/components/page_headers/Testimonial";
+import PageHeaderTestimonial from "@/components/page_headers/PageHeaderTestimonial";
 import StudentsWorkSection from "@/components/programs/StudentsWorkSection";
 import { JSX } from "react";
 
@@ -117,7 +116,7 @@ export default function StudentShowcasePage(): JSX.Element {
       </section>
 
       <section className="mb-12">
-        <Testimonial />
+        <PageHeaderTestimonial />
       </section>
 
       <section className="mb-12">
