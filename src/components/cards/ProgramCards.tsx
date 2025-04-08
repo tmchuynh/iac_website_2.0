@@ -1,11 +1,9 @@
-import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
-import { LuArrowBigRightDash } from "react-icons/lu";
-import { useRouter } from "next/navigation";
 import { useTabs } from "@/app/context/TabsContext";
 import { Program } from "@/lib/types/cards";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import DynamicButton from "../buttons/button-dynamic";
 
 export const ProgramCards = ({
@@ -25,7 +23,7 @@ export const ProgramCards = ({
     <Link href={`/programs?title=${program.title}`} className="group">
       <div
         key={program.title}
-        className="flex flex-col justify-between gap-3 shadow-md border rounded-3xl h-full"
+        className="flex flex-col justify-between gap-3 shadow-md border dark:border-accent rounded-3xl h-full"
       >
         <Image
           src={program.image}
