@@ -152,7 +152,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
                 key={index}
                 src={image}
                 alt={`${showcaseItem.title} image ${index + 1}`}
-                className="border border-input rounded-lg"
+                className="rounded-lg"
                 width={300}
                 height={200}
               />
