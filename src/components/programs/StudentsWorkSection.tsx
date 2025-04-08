@@ -2,6 +2,21 @@ import { showcase } from "@/lib/constants/student_work";
 import StudentWorkCard from "../cards/StudentWorkCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
+/**
+ * StudentsWorkSection component displays a tabbed interface for showcasing student works.
+ *
+ * The component renders a set of tabs, where each tab represents a subject category.
+ * When a tab is selected, it displays a grid of student work cards related to that subject.
+ *
+ * The component uses the `showcase` data structure which should be an array of objects with:
+ * - `subject`: string - The name of the subject category
+ * - `works`: array - Collection of work items to be displayed in the tab content
+ *
+ * It leverages the Tabs, TabsList, TabsTrigger, and TabsContent components for the tabbed interface,
+ * and uses StudentWorkCard to render individual student work items.
+ *
+ * @returns A tabbed component displaying categories of student works organized by subject
+ */
 export default function StudentsWorkSection() {
   return (
     <Tabs defaultValue="Creative Writing" className="w-full">
