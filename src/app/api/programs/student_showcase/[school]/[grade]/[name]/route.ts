@@ -1,52 +1,47 @@
 import { showcase } from "@/lib/constants/student_work";
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const author = searchParams.get("author");
-  const subject = searchParams.get("subject");
-  const title = searchParams.get("title");
-  const date = searchParams.get("date");
+export async function GET(
+  _request: Request,
+  { params }: { params: { school: string; grade: string; name: string } }
+) {
+  const { school, grade, name } = params;
 
-  let result = null;
+  // Find all works with the matching title (name)
+  const matchingWorks = showcase
+    .flatMap((item) => item.works)
+    .filter((work) => work.title === name);
 
-  // Search by author and subject
-  if (author && subject) {
-    result = showcase
-      .find((item) => item.subject === subject)
-      ?.works.find((work) => work.author === author);
-  }
-
-  // Search by title and author
-  if (title && author) {
-    result = showcase
-      .flatMap((item) => item.works)
-      .find((work) => work.title === title && work.author === author);
-  }
-
-  // Search by title and subject
-  if (title && subject) {
-    result = showcase
-      .find((item) => item.subject === subject)
-      ?.works.find((work) => work.title === title);
-  }
-
-  // Search by title and date
-  if (title && date) {
-    result = showcase
-      .flatMap((item) => item.works)
-      .find((work) => work.title === title && work.date === date);
-  }
-
-  // Search by author and date
-  if (author && date) {
-    result = showcase
-      .flatMap((item) => item.works)
-      .find((work) => work.author === author && work.date === date);
-  }
-
-  if (!result) {
+  // If no works match the title, return a 404 response
+  if (matchingWorks.length === 0) {
     return new Response("Showcase item not found", { status: 404 });
   }
+
+  // Filter works by school if there are multiple matches
+  const schoolFilteredWorks = matchingWorks.filter(
+    (work) => work.school === school
+  );
+
+  // If no works match the school, return a 404 response
+  if (schoolFilteredWorks.length === 0) {
+    return new Response("Showcase item not found for the specified school", {
+      status: 404,
+    });
+  }
+
+  // Filter works by grade if there are still multiple matches
+  const gradeFilteredWorks = schoolFilteredWorks.filter(
+    (work) => work.grade === grade
+  );
+
+  // If no works match the grade, return a 404 response
+  if (gradeFilteredWorks.length === 0) {
+    return new Response("Showcase item not found for the specified grade", {
+      status: 404,
+    });
+  }
+
+  // Return the first matching work (there should only be one at this point)
+  const result = gradeFilteredWorks[0];
 
   return new Response(JSON.stringify(result), {
     status: 200,
