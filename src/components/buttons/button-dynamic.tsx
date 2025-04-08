@@ -1,8 +1,8 @@
+import { DynamicButtonProps } from "@/lib/types/types";
 import { cn } from "@/lib/utils";
 import React, { JSX } from "react";
 import { LuArrowBigRightDash } from "react-icons/lu";
 import { MdArrowOutward } from "react-icons/md"; // Import the new icon
-import { DynamicButtonProps } from "@/lib/types/types";
 import { Button } from "../ui/button";
 
 /**
@@ -24,7 +24,7 @@ export default function DynamicButton({
   children,
   icon: Icon = variant === "link" ? MdArrowOutward : LuArrowBigRightDash,
   iconPosition = "right",
-  hoverEffect = "translate",
+  hoverEffect,
   onClick,
   className,
   iconClassName,
@@ -63,12 +63,12 @@ export default function DynamicButton({
       {Icon && (
         <span
           className={cn(
-            "inline-block px-5 transition-transform duration-300 ease-in-out",
+            "inline-block px-4 transition-transform duration-300 ease-in-out group-hover:translate-x-2",
             {
-              "group-hover:translate-x-2 group-hover:-translate-y-2 pl-1":
-                variant === "link",
+              "group-hover:translate-x-2 group-hover:-translate-y-2 pl-3 duration-500":
+                variant === "link" && hoverEffect === undefined,
             },
-            hoverEffectClasses[hoverEffect],
+            hoverEffect && hoverEffectClasses[hoverEffect],
             iconClassName
           )}
         >
