@@ -10,7 +10,7 @@ export default function Testimonial({
   return (
     <figure
       key={index}
-      className="relative flex flex-col justify-between shadow-lg p-6 rounded-2xl ring-1 overflow-clip"
+      className="relative flex flex-col justify-between shadow-lg p-6 border dark:border-accent rounded-2xl overflow-clip"
     >
       <Image
         alt="satisfaction.png"
