@@ -58,6 +58,7 @@ const BackToTop = (): JSX.Element => {
       {isButtonVisible && (
         <Button
           onClick={scrollToTop}
+          size={"icon"}
           className={cn(
             "fixed bottom-4 right-4 bg-primary hover:bg-accent transition duration-300 ease-in-out rounded-full shadow-lg",
             {

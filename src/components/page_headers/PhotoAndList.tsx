@@ -39,9 +39,9 @@ export default function PhotoAndList() {
           {jobOpenings.map((opening, index) => (
             <Card key={index} className="shadow-lg p-8">
               <div className="relative flex flex-wrap gap-x-3">
-                <p className="flex-none w-full font-semibold text-lg tracking-tight">
+                <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
                   {opening.role}
-                </p>
+                </h3>
                 <p className="flex-none mt-2 w-full text-base/7">
                   {opening.description}
                 </p>
