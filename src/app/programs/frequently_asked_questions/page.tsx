@@ -37,7 +37,13 @@ export default function Example() {
       <section className="">
         <div className="">
           {faqs.map((faq, index) => (
-            <div key={index} className={cn("py-5", index > 0 && "border-t")}>
+            <div
+              key={index}
+              className={cn(
+                "py-5",
+                index > 0 && "border-t dark:border-chart-1"
+              )}
+            >
               <h2 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
                 {faq.category}
               </h2>
