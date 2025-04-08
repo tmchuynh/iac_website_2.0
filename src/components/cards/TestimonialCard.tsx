@@ -1,6 +1,6 @@
 import { testimonialsInfo } from "@/lib/types/cards";
 import Image from "next/image";
-export default function Testimonial({
+export default function TestimonialCard({
   testimonial,
   index,
 }: {
