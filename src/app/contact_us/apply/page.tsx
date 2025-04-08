@@ -26,14 +26,12 @@ export default function Apply() {
             <div className="lg:flex-none lg:mt-6">
               <figure className="mt-10">
                 <blockquote className="font-semibold text-lg/8">
-                  <p>
-                    "I am at a loss for words; upon reading [Justin's] email, I
-                    couldn't help but feel an overwhelming sense of relief. The
-                    appreciation of the scholarship is truly a blessing to me,
-                    and the many years of [my son's] participation have made
-                    such an impact on his life! People like [Justin] really do
-                    make such an impact.”
-                  </p>
+                  "I am at a loss for words; upon reading [Justin's] email, I
+                  couldn't help but feel an overwhelming sense of relief. The
+                  appreciation of the scholarship is truly a blessing to me, and
+                  the many years of [my son's] participation have made such an
+                  impact on his life! People like [Justin] really do make such
+                  an impact.”
                 </blockquote>
                 <figcaption className="flex items-center gap-x-4 mt-8">
                   <Image
