@@ -18,19 +18,17 @@ export default function FeaturedTestimonial() {
           <div className="xl:flex-auto xl:px-16 xl:py-24 w-full">
             <figure className="relative pt-6 sm:pt-12 isolate">
               <blockquote className="font-semibold text-lg/8 md:text-xl/8 leading-8">
-                <p>
-                  "...my sons attend Hicks Canyon Elementary and have been in
-                  several after-school programs provided by IAC. They always
-                  have a great time, and [instructors] always go the extra mile
-                  to help my son, Taylor, so he can get the most out of the
-                  program. Also, when I was having a financially difficult time
-                  last year, [Justin] gave us a big discount, telling me that it
-                  was their passion to help out the community. I'm happy to say
-                  that I no longer need the financial assistance for the
-                  program, but it was so meaningful to feel that someone in the
-                  community cared about my kids' well-being and opportunities to
-                  experience wholesome activities."
-                </p>
+                "...my sons attend Hicks Canyon Elementary and have been in
+                several after-school programs provided by IAC. They always have
+                a great time, and [instructors] always go the extra mile to help
+                my son, Taylor, so he can get the most out of the program. Also,
+                when I was having a financially difficult time last year,
+                [Justin] gave us a big discount, telling me that it was their
+                passion to help out the community. I'm happy to say that I no
+                longer need the financial assistance for the program, but it was
+                so meaningful to feel that someone in the community cared about
+                my kids' well-being and opportunities to experience wholesome
+                activities."
               </blockquote>
               <figcaption className="flex items-center gap-x-4 mt-8">
                 <Image

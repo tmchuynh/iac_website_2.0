@@ -169,7 +169,7 @@ export const showcase: showcaseInfo[] = [
         writing: `Jack was just a regular boy who lived in a small town and went to a boring school. He had messy brown hair, glasses that always slid down his nose, and a backpack full of homework. But one morning, something weird happened. A talking owl knocked on his window with a letter in its beak!
       
       The letter had shiny gold writing and said: 
-      **“Dear Jack, you have been accepted to the School of Spells. Please pack your things and be ready by sunset.”**
+      <blockquote>“Dear Jack, you have been accepted to the School of Spells. Please pack your things and be ready by sunset.”</blockquote>
       
       Jack blinked. “A magic school? Me?”
       

@@ -20,7 +20,7 @@ export default function TestimonialCard({
         height={500}
       />
       <blockquote className="font-semibold text-lg/8">
-        <p>{`“${testimonial.text}”`}</p>
+        {`“${testimonial.text}”`}
       </blockquote>
       <figcaption className="flex justify-end items-center gap-x-4 mt-6">
         <Image

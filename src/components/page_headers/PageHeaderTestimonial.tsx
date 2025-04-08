@@ -42,15 +42,13 @@ export default function PageHeaderTestimonial() {
 
           <figure className="pl-8 dark:border-tertiary border-l">
             <blockquote className="font-semibold text-xl/8">
-              <p>
-                "Due to one of my children's severe food allergies, we have been
-                denied by multiple camps and classes who did not want the risk
-                of having them as a student. However, Justin was very responsive
-                and collaborated with me on ways to adapt the class to be a safe
-                space. Both of my kids love learning about chess and practicing
-                among their peers. I'm excited they are able to learn a game
-                that teaches critical thinking and persistence.",
-              </p>
+              "Due to one of my children's severe food allergies, we have been
+              denied by multiple camps and classes who did not want the risk of
+              having them as a student. However, Justin was very responsive and
+              collaborated with me on ways to adapt the class to be a safe
+              space. Both of my kids love learning about chess and practicing
+              among their peers. I'm excited they are able to learn a game that
+              teaches critical thinking and persistence.",
             </blockquote>
             <figcaption className="flex items-center gap-x-4 mt-8">
               <Image

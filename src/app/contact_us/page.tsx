@@ -12,7 +12,7 @@ export default function ContactUs() {
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Contact Us
         </h1>
-        <p className="mt-2 text-lg/8">
+        <p className="mt-2 pb-4 md:pb-7 lg:pb-9 xl:pb-12 text-lg/8">
           Whether you’re a parent, educator, school administrator, or community
           partner, we welcome your questions, ideas, and feedback. Have a
           question about one of our programs? Interested in bringing our
@@ -124,14 +124,12 @@ export default function ContactUs() {
           </form>
           <div className="lg:flex-none lg:mt-6 lg:w-80">
             <figure className="mt-10">
-              <blockquote className="font-semibold text-lg/8">
-                <p>
-                  "Watching my once-shy daughter perform confidently on stage
-                  was a dream come true. The theater staff at IAC excel at
-                  nurturing talent and fostering self-esteem. Her enthusiasm for
-                  school has grown significantly, and she comes home eager to
-                  share her experiences."
-                </p>
+              <blockquote className="text-sm md:text-lg leading-4 md:leading-7">
+                "Watching my once-shy daughter perform confidently on stage was
+                a dream come true. The theater staff at IAC excel at nurturing
+                talent and fostering self-esteem. Her enthusiasm for school has
+                grown significantly, and she comes home eager to share her
+                experiences."
               </blockquote>
               <figcaption className="flex items-center gap-x-4 mt-8">
                 <Image
