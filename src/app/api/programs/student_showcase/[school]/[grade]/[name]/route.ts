@@ -18,9 +18,12 @@ import { NextRequest, NextResponse } from "next/server";
  * // Request to: /api/programs/student_showcase/lincoln-elementary/5/my-art-project
  * // Returns JSON data for "my-art-project" from "lincoln-elementary" grade "5"
  */
-export async function GET(_request: NextRequest, _context: unknown) {
+export async function GET(
+  _request: NextRequest,
+  _context: unknown
+): Promise<NextResponse> {
   const { params } = _context as { params: Record<string, string> };
-  const { school, grade, name } = params;
+  const { school, grade, name } = await params;
 
   // Find all works with the matching title (name)
   const matchingWorks = showcase
