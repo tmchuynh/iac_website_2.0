@@ -6,35 +6,33 @@ export default function ImageTilesHeader() {
         <div className="lg:flex-none gap-x-12 gap-y-16 lg:gap-y-8 grid grid-cols-1 mx-auto lg:mx-0 lg:min-w-full max-w-2xl lg:max-w-none">
           <div className="lg:col-end-1 lg:pb-8 lg:w-full lg:max-w-lg">
             <code className="font-semibold text-base/7">
-              Looking for a program that’s right for you?
+              Discover the Perfect Fit for Your Journey
             </code>
             <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
-              Our Program Details
+              Learn About Our Different Programs
             </h1>
             <p className="mt-6 text-xl/8">
-              Quasi est quaerat. Sit molestiae et. Provident ad dolorem
-              occaecati eos iste. Soluta rerum quidem minus ut molestiae velit
-              error quod. Excepturi quidem expedita molestias quas.
+              Our detailed program descriptions are thoughtfully designed to
+              guide you through a diverse selection of enriching experiences,
+              each crafted to spark curiosity, foster growth, and meet you where
+              you are.
             </p>
             <p className="mt-6 text-base/7">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat. Quasi aperiam sit non sit neque reprehenderit.
+              With options tailored to a variety of interests, age groups, and
+              learning styles, you’ll have the tools to confidently explore
+              programs that align with your goals—whether you're trying
+              something brand new, building on a growing passion, or seeking to
+              develop specific skills. Each description provides clear insights
+              into what you can expect, the outcomes you’ll achieve, and how the
+              experience supports your personal development, making it easier
+              than ever to choose a path that inspires and empowers you.
             </p>
-            <div className="flex mt-10">
-              <a
-                href="#"
-                className="shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm"
-              >
-                Join our team <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
           </div>
           <div className="flex flex-wrap justify-end items-start gap-6 sm:gap-8 lg:contents">
             <div className="flex-auto lg:flex-none lg:ml-auto w-0 lg:w-auto lg:self-end">
               <Image
                 alt=""
-                src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                src="/images/Class_Photos/Chess/20996202_141199.jpg"
                 className="rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
                 width={1152}
                 height={842}
@@ -44,7 +42,7 @@ export default function ImageTilesHeader() {
               <div className="flex flex-none justify-end order-first w-64 lg:w-auto self-end">
                 <Image
                   alt=""
-                  src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                  src="/images/Class_Photos/Dance/52005092_269955.jpg"
                   className="flex-none rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
                   width={768}
                   height={604}
@@ -53,7 +51,7 @@ export default function ImageTilesHeader() {
               <div className="flex flex-auto lg:flex-none justify-end w-96 lg:w-auto">
                 <Image
                   alt=""
-                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                  src="/images/Class_Photos/Flag_Football/20250402_141937.jpg"
                   className="flex-none rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
                   width={1152}
                   height={842}
@@ -62,7 +60,7 @@ export default function ImageTilesHeader() {
               <div className="sm:block sm:flex-auto lg:flex-none hidden sm:w-0 lg:w-auto">
                 <Image
                   alt=""
-                  src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                  src="/images/Class_Photos/Soccer/53995092_144851.jpg"
                   className="rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
                   width={768}
                   height={604}
