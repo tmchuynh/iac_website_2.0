@@ -40,7 +40,7 @@ export default function Testimonial() {
             />
           </svg>
 
-          <figure className="pl-8 border-l">
+          <figure className="pl-8 dark:border-tertiary border-l">
             <blockquote className="font-semibold text-xl/8">
               <p>
                 "Due to one of my children's severe food allergies, we have been
