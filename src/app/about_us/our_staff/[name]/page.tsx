@@ -1,12 +1,15 @@
 "use client";
+import DynamicButton from "@/components/buttons/button-dynamic";
 import LoadingIndicator from "@/components/loading/Loading";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaMessage } from "react-icons/fa6";
 
 export default function StaffPage() {
   const { name } = useParams();
-
+  const router = useRouter();
   const [loading, setLoading] = useState<boolean>(true);
   const [staffMember, setStaffMember] = useState<any>(null); // Changed type to `any` for flexibility
 
@@ -55,23 +58,30 @@ export default function StaffPage() {
               {staffMember.moreInfo.email && (
                 <p className="mt-4 text-base/7">
                   Email:{" "}
-                  <a
-                    href={`mailto:${staffMember.moreInfo.email}`}
-                    className="text-primary underline"
+                  <DynamicButton
+                    variant="link"
+                    icon={FaMessage}
+                    onClick={() =>
+                      router.push(`mailto:${staffMember.moreInfo.email}`)
+                    }
                   >
                     {staffMember.moreInfo.email}
-                  </a>
+                  </DynamicButton>
                 </p>
               )}
               {staffMember.moreInfo.phone && (
                 <p className="text-base/7">
                   Phone:{" "}
-                  <a
-                    href={`tel:${staffMember.moreInfo.phone}`}
-                    className="text-primary underline"
+                  <DynamicButton
+                    icon={FaPhoneAlt}
+                    hoverEffect="translate"
+                    variant="link"
+                    onClick={() =>
+                      router.push(`tel:${staffMember.moreInfo.phone}`)
+                    }
                   >
                     {staffMember.moreInfo.phone}
-                  </a>
+                  </DynamicButton>
                 </p>
               )}
             </div>
@@ -92,7 +102,7 @@ export default function StaffPage() {
                       (line: any) =>
                         `<span style="display: flex; text-indent: 2em; margin: 2px 0px;">${line}</span>`
                     )
-                    .join("<br />")
+                    .join("<p> </p>")
                 : "",
             }}
           />

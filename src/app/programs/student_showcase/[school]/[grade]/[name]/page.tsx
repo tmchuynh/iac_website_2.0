@@ -74,6 +74,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
         const response = await fetch(
           `/api/programs/student_showcase/${school}/${grade}/${name}?${queryParams.toString()}`
         );
+
         if (!response.ok) {
           throw new Error("Failed to fetch showcase item");
         }
@@ -97,13 +98,13 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
   return (
     <div className="flex flex-col justify-center items-center mx-auto py-5 md:py-8 w-11/12">
       {!showcaseItem.images && (
-        <div className="py-3 md:py-8 lg:py-16">
+        <div className="py-3 md:py-8 lg:py-16 w-1/2 h-1/2">
           <Image
             src={showcaseItem.mainImage}
             alt={showcaseItem.title}
-            className="shadow-xl mt-4 rounded-4xl max-w-full h-auto"
-            width={1000}
-            height={800}
+            className="shadow-xl rounded-4xl aspect-5/4 object-cover object-center"
+            width={1200}
+            height={1000}
             priority
           />
         </div>
@@ -133,30 +134,35 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
       <div className="pb-8 md:pb-10 lg:pb-14 2xl:pb-32 xl:pb-20">
         {showcaseItem.writing && (
           <p
-            className="mt-4 indent-8"
+            className="py-0 text-base/relaxed indent-8"
             dangerouslySetInnerHTML={{
               __html: showcaseItem.writing
                 .split("\n")
                 .map(
                   (line: any) =>
-                    `<span style="display: flex; text-indent: 2em; margin: 2px 0px;">${line}</span>`
+                    `<span style="display: flex; text-indent: 2em; ">${line}</span>`
                 )
-                .join("<br/>"),
+                .join("<p> </p>"),
             }}
           />
         )}
         {showcaseItem.images && (
           <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-4">
-            {showcaseItem.images.map((image: string, index: number) => (
-              <Image
-                key={index}
-                src={image}
-                alt={`${showcaseItem.title} image ${index + 1}`}
-                className="rounded-lg"
-                width={300}
-                height={200}
-              />
-            ))}
+            {showcaseItem.images.map((image: string, index: number) => {
+              console.log(
+                `Image URL: ${image}, Index: ${index}, Title: ${showcaseItem.title}`
+              );
+              return (
+                <Image
+                  key={index}
+                  src={image}
+                  alt={`${showcaseItem.title} image ${index + 1}`}
+                  className="rounded-lg"
+                  width={300}
+                  height={200}
+                />
+              );
+            })}
           </div>
         )}
       </div>
