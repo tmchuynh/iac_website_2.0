@@ -7,7 +7,7 @@ export const showcase: showcaseInfo[] = [
       {
         title: "The Garden Door",
         author: "Annie",
-        grade: "5th Grade",
+        grade: "2nd Grade",
         school: "Anaheim Hills",
         date: "Session 2 2025",
         mainImage: "/images/Class_Work/Creative_Writing/fairy.jpg",
@@ -26,7 +26,7 @@ export const showcase: showcaseInfo[] = [
       {
         title: "The Lost Puppy",
         author: "Ryder",
-        grade: "5th Grade",
+        grade: "3rd Grade",
         date: "Session 2 2025",
         school: "Anaheim Hills",
         mainImage: "/images/Class_Work/Creative_Writing/pup.jpg",
@@ -51,7 +51,7 @@ export const showcase: showcaseInfo[] = [
       {
         title: "A Fearless Blanket",
         author: "Lewis",
-        grade: "5th Grade",
+        grade: "3rd Grade",
         date: "Session 2 2025",
         school: "North Tustin",
         mainImage: "/images/Class_Work/Creative_Writing/clouds.jpg",
@@ -76,7 +76,7 @@ export const showcase: showcaseInfo[] = [
       {
         title: "The Kite Who Dreamed To Fly",
         author: "Eliana",
-        grade: "5th Grade",
+        grade: "4th Grade",
         date: "Session 2 2025",
         school: "North Tustin",
         mainImage: "/images/Class_Work/Creative_Writing/kite.jpg",
@@ -140,7 +140,7 @@ export const showcase: showcaseInfo[] = [
       {
         title: "A Journey Through Time",
         author: "Anonymous",
-        grade: "5th Grade",
+        grade: "6th Grade",
         school: "Historic Anaheim",
         date: "Session 2 2024",
         mainImage: "/images/Class_Work/Creative_Writing/street.jpg",
