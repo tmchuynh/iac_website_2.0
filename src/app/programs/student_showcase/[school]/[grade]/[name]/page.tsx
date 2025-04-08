@@ -1,7 +1,7 @@
 "use client";
 import LoadingIndicator from "@/components/loading/Loading";
 import Image from "next/image";
-import { useParams, usePathname, useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { JSX, useEffect, useState } from "react";
 
 /**
@@ -35,7 +35,6 @@ import { JSX, useEffect, useState } from "react";
  */
 export default function StudentIndividualShowcasePage(): JSX.Element {
   const searchParams = useSearchParams();
-  const pathname = usePathname();
   const { school, grade, name } = useParams();
   const [loading, setLoading] = useState<boolean>(true);
   const [showcaseItem, setShowcaseItem] = useState<any>(null);
