@@ -6,8 +6,43 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Custom Fonts */
+  --font-AnnieUseYourTelescope: var(--font-AnnieUseYourTelescope);
+
+  --font-Caveat: var(--font-Caveat);
+  --font-Chewy: var(--font-Chewy);
+
+  --font-ComingSoon: var(--font-ComingSoon);
+
+  --font-CoveredByYourGrace: var(--font-CoveredByYourGrace);
+  --font-CuteRabbit: var(--font-CuteRabbit);
+
+  --font-GrechenFuemen: var(--font-GrechenFuemen);
+  --font-Instink: var(--font-Instink);
+
+  --font-JustMeAgainDownHere: var(--font-JustMeAgainDownHere);
+  --font-LuckiestGuy: var(--font-LuckiestGuy);
+  --font-Magic-Bubble: var(--font-Magic-Bubble);
+  --font-modernline: var(--font-modernline);
+  --font-NothingYouCouldDo: var(--font-NothingYouCouldDo);
+
+  --font-OvertheRainbow: var(--font-OvertheRainbow);
+  --font-PatrickHandSC: var(--font-PatrickHandSC);
+  --font-PermanentMarker: var(--font-PermanentMarker);
+  --font-ReenieBeanie: var(--font-ReenieBeanie);
+  --font-Roboto: var(--font-Roboto);
+
+  --font-RockSalt: var(--font-RockSalt);
+  --font-SingleDay: var(--font-SingleDay);
+
+  --font-SueEllenFrancisco: var(--font-SueEllenFrancisco);
+  --font-SwankyandMooMoo: var(--font-SwankyandMooMoo);
+  --font-WaitingfortheSunrise: var(--font-WaitingfortheSunrise);
+  --font-YanoneKaffeesatz: var(--font-YanoneKaffeesatz);
+
+  --font-YujiBoku: var(--font-YujiBoku);
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -119,6 +154,231 @@
   --sidebar-accent-foreground: oklch(0.18 0 0);
   --sidebar-border: oklch(0.4 0.2 278.63);
   --sidebar-ring: oklch(0.5 0.2 286.26);
+}
+
+/* AnnieUseYourTelescope */
+@font-face {
+  font-family: "AnnieUseYourTelescope";
+  src: url("/fonts/AnnieUseYourTelescope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* Caveat (Variable Font) */
+@font-face {
+  font-family: "Caveat";
+  src: url("/fonts/Caveat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 1 999;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* Chewy */
+@font-face {
+  font-family: "Chewy";
+  src: url("/fonts/Chewy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* ComingSoon */
+@font-face {
+  font-family: "ComingSoon";
+  src: url("/fonts/ComingSoon-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* CoveredByYourGrace */
+@font-face {
+  font-family: "CoveredByYourGrace";
+  src: url("/fonts/CoveredByYourGrace-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* Cute_Rabbit */
+@font-face {
+  font-family: "CuteRabbit";
+  src: url("/fonts/Cute_Rabbit.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* GrechenFuemen */
+@font-face {
+  font-family: "GrechenFuemen";
+  src: url("/fonts/GrechenFuemen-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* Instink */
+@font-face {
+  font-family: "Instink";
+  src: url("/fonts/Instink.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* JustMeAgainDownHere */
+@font-face {
+  font-family: "JustMeAgainDownHere";
+  src: url("/fonts/JustMeAgainDownHere-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* LuckiestGuy */
+@font-face {
+  font-family: "LuckiestGuy";
+  src: url("/fonts/LuckiestGuy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* Magic-Bubble */
+@font-face {
+  font-family: "Magic-Bubble";
+  src: url("/fonts/Magic-Bubble.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* modernline */
+@font-face {
+  font-family: "modernline";
+  src: url("/fonts/modernline.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* NothingYouCouldDo */
+@font-face {
+  font-family: "NothingYouCouldDo";
+  src: url("/fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* OvertheRainbow */
+@font-face {
+  font-family: "OvertheRainbow";
+  src: url("/fonts/OvertheRainbow-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* PatrickHandSC */
+@font-face {
+  font-family: "PatrickHandSC";
+  src: url("/fonts/PatrickHandSC-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* PermanentMarker */
+@font-face {
+  font-family: "PermanentMarker";
+  src: url("/fonts/PermanentMarker-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* ReenieBeanie */
+@font-face {
+  font-family: "ReenieBeanie";
+  src: url("/fonts/ReenieBeanie-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* Roboto (Variable Font with Width and Weight axes) */
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 1 999;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* RockSalt */
+@font-face {
+  font-family: "RockSalt";
+  src: url("/fonts/RockSalt-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* SingleDay */
+@font-face {
+  font-family: "SingleDay";
+  src: url("/fonts/SingleDay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* SueEllenFrancisco */
+@font-face {
+  font-family: "SueEllenFrancisco";
+  src: url("/fonts/SueEllenFrancisco-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* SwankyandMooMoo */
+@font-face {
+  font-family: "SwankyandMooMoo";
+  src: url("/fonts/SwankyandMooMoo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* WaitingfortheSunrise */
+@font-face {
+  font-family: "WaitingfortheSunrise";
+  src: url("/fonts/WaitingfortheSunrise-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* YanoneKaffeesatz (Variable Font) */
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  src: url("/fonts/YanoneKaffeesatz-VariableFont_wght.ttf") format("truetype");
+  font-weight: 1 999;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* YujiBoku */
+@font-face {
+  font-family: "YujiBoku";
+  src: url("/fonts/YujiBoku-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
 }
 
 .bg-dynamic {
