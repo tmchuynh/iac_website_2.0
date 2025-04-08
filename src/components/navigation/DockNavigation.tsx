@@ -15,26 +15,26 @@ export default function DockNavigation() {
     },
     {
       name: "Programs",
-      href: "/search",
+      href: "/programs",
       activeIcon: FaSchool,
       inactiveIcon: FaSchool,
     },
     {
       name: "Staff",
-      href: "/bookmarks",
+      href: "/about_us/our_staff",
       activeIcon: FaUsers,
       inactiveIcon: FaUsers,
     },
     {
       name: "Contact",
-      href: "/profile",
+      href: "/contact_us",
       activeIcon: FaPhoneAlt,
       inactiveIcon: FaPhoneAlt,
     },
   ];
 
   return (
-    <nav className="bottom-0 z-10 fixed sm:hidden bg-white dark:bg-gray-900 dark:border-gray-700 border-t w-full">
+    <nav className="bottom-0 z-10 fixed sm:hidden bg-background dark:border-chart-1 border-t w-full text-foreground">
       <div className="mx-auto px-6">
         <div className="flex justify-between items-center">
           {navigation.map((item) => {
@@ -44,7 +44,7 @@ export default function DockNavigation() {
                 key={item.name}
                 href={item.href}
                 className={`group flex flex-col items-center gap-1 p-3 text-sm transition-transform hover:-translate-y-1 ${
-                  isActive ? "text-primary" : "text-muted"
+                  isActive ? "text-primary dark:text-chart-2" : "text-accent"
                 }`}
               >
                 {isActive ? (
