@@ -10,6 +10,15 @@ import { class_breakdown } from "@/lib/constants/list";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
+/**
+ * Component that renders program details based on URL search parameters or default tab.
+ *
+ * This component extracts the "title" parameter from URL search parameters and uses it
+ * to display the appropriate program details. If no title is present in the URL,
+ * it falls back to the default tab provided by the useTabs hook.
+ *
+ * @returns A ProgramDetails component initialized with the title from search parameters or default tab
+ */
 function ProgramContent() {
   const searchParams = useSearchParams();
   const { defaultTab } = useTabs();
