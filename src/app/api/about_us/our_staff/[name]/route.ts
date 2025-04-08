@@ -1,32 +1,34 @@
 import { staffCategories } from "@/lib/constants/staff";
 import { unformatURL } from "@/lib/utils/format";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
-  _request: Request,
-  { params }: { params: { name: string } }
-) {
-  // Destructure the name from params and decode it
+  request: NextRequest,
+  _context: unknown // Do not annotate the parameter with the specific type inline
+): Promise<NextResponse> {
+  // Now cast the second argument to a type that suits your needs.
+  const { params } = _context as { params: Record<string, string> };
   const { name } = params;
   const decodedName = unformatURL(name);
 
   let person = null;
-
+  // Iterate over staffCategories to locate the matching staff member.
   for (const category of staffCategories) {
     person = category.members.find((member) => member.name === decodedName);
     if (person) {
+      // Include category information in the returned object.
       person = { ...person, category: category.category };
       break;
     }
   }
 
   if (!person) {
-    return new Response("Person not found", { status: 404 });
+    return NextResponse.json({ error: "Person not found" }, { status: 404 });
   }
 
-  return new Response(JSON.stringify(person), {
+  return NextResponse.json(person, {
     status: 200,
     headers: {
-      "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, OPTIONS",
     },

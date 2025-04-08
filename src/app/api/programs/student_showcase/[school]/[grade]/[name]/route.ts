@@ -1,9 +1,6 @@
 import { showcase } from "@/lib/constants/student_work";
 
-export async function GET(
-  request: Request,
-  { params }: { params: { school: string; grade: string; name: string } }
-) {
+export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const author = searchParams.get("author");
   const subject = searchParams.get("subject");
