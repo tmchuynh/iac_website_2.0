@@ -1,10 +1,9 @@
 import { useTabs } from "@/app/context/TabsContext";
 import { programs } from "@/lib/constants/programs";
-import { TabsContent } from "@radix-ui/react-tabs";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import DynamicButton from "../buttons/button-dynamic";
-import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 export default function ProgramDetails({ title }: { title?: string }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const { defaultTab } = useTabs();
@@ -27,7 +26,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
     <>
       <Tabs
         value={tabsValue}
-        onValueChange={(value) => setProgramTitle(value)}
+        onValueChange={(value: string) => setProgramTitle(value)}
         className="w-full"
         id="programTabs"
       >
