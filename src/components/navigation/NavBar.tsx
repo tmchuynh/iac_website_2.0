@@ -18,8 +18,8 @@ import {
 } from "@/lib/constants/navigation";
 import { cn } from "@/lib/utils";
 import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
-import DockNavigation from "./DockNavigation";
 import { ThemeToggle } from "../buttons/ThemeToggle";
+import DockNavigation from "./DockNavigation";
 
 export function NavBar() {
   const isSmallScreen = useSmallScreen();
@@ -104,8 +104,8 @@ export function NavBar() {
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-                <ThemeToggle />
               </NavigationMenuList>
+              <ThemeToggle />
             </NavigationMenu>
           </div>
         </div>
