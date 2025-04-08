@@ -1,8 +1,9 @@
 import StaticBreadcrumb from "@/components/breadcrumb/BreadcrumbWrapper";
 import BackToTop from "@/components/buttons/BackToTop";
+import { NavBar } from "@/components/navigation/NavBar";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 import { Providers } from "./providers";
-import { NavBar } from "@/components/navigation/NavBar";
 
 export default function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default function RootLayout({
             <NavBar />
             <StaticBreadcrumb />
             {children}
+            <ScrollToTop />
           </main>
           <BackToTop />
         </Providers>
