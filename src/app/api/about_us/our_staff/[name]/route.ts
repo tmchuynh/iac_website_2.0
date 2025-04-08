@@ -18,9 +18,8 @@ import { NextRequest, NextResponse } from "next/server";
  */
 export async function GET(
   _request: NextRequest,
-  _context: unknown // Do not annotate the parameter with the specific type inline
+  _context: unknown
 ): Promise<NextResponse> {
-  // Now cast the second argument to a type that suits your needs.
   const { params } = _context as { params: Record<string, string> };
   const { name } = params;
   const decodedName = unformatURL(name);

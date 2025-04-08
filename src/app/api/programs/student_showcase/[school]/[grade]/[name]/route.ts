@@ -1,4 +1,5 @@
 import { showcase } from "@/lib/constants/student_work";
+import { NextRequest, NextResponse } from "next/server";
 
 /**
  * Fetches a specific student showcase item based on school, grade, and name parameters.
@@ -17,10 +18,8 @@ import { showcase } from "@/lib/constants/student_work";
  * // Request to: /api/programs/student_showcase/lincoln-elementary/5/my-art-project
  * // Returns JSON data for "my-art-project" from "lincoln-elementary" grade "5"
  */
-export async function GET(
-  _request: Request,
-  { params }: { params: { school: string; grade: string; name: string } }
-) {
+export async function GET(_request: NextRequest, _context: unknown) {
+  const { params } = _context as { params: Record<string, string> };
   const { school, grade, name } = params;
 
   // Find all works with the matching title (name)
@@ -30,7 +29,7 @@ export async function GET(
 
   // If no works match the title, return a 404 response
   if (matchingWorks.length === 0) {
-    return new Response("Showcase item not found", { status: 404 });
+    return new NextResponse("Showcase item not found", { status: 404 });
   }
 
   // Filter works by school if there are multiple matches
@@ -40,9 +39,12 @@ export async function GET(
 
   // If no works match the school, return a 404 response
   if (schoolFilteredWorks.length === 0) {
-    return new Response("Showcase item not found for the specified school", {
-      status: 404,
-    });
+    return new NextResponse(
+      "Showcase item not found for the specified school",
+      {
+        status: 404,
+      }
+    );
   }
 
   // Filter works by grade if there are still multiple matches
@@ -52,7 +54,7 @@ export async function GET(
 
   // If no works match the grade, return a 404 response
   if (gradeFilteredWorks.length === 0) {
-    return new Response("Showcase item not found for the specified grade", {
+    return new NextResponse("Showcase item not found for the specified grade", {
       status: 404,
     });
   }
@@ -60,7 +62,7 @@ export async function GET(
   // Return the first matching work (there should only be one at this point)
   const result = gradeFilteredWorks[0];
 
-  return new Response(JSON.stringify(result), {
+  return new NextResponse(JSON.stringify(result), {
     status: 200,
     headers: {
       "Content-Type": "application/json",
