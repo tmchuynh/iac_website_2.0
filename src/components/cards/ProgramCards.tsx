@@ -3,7 +3,6 @@ import { Program } from "@/lib/types/cards";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import DynamicButton from "../buttons/button-dynamic";
 
 export const ProgramCards = ({
@@ -13,7 +12,6 @@ export const ProgramCards = ({
   program: Program;
   index: number;
 }) => {
-  const router = useRouter();
   const { setDefaultTab } = useTabs();
   function handleClick(program: string) {
     setDefaultTab(program); // Ensure the active tab is set correctly
