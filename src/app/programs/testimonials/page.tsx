@@ -1,4 +1,4 @@
-import Testimonial from "@/components/testimonial/TestimonialCard";
+import TestimonialCard from "@/components/cards/TestimonialCard";
 import { testimonials } from "@/lib/constants/testimonials";
 import Image from "next/image";
 
@@ -21,7 +21,11 @@ export default function TestimonialsPage() {
       </div>
       <div className="gap-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((testimonial, index) => (
-          <Testimonial key={index} testimonial={testimonial} index={index} />
+          <TestimonialCard
+            key={index}
+            testimonial={testimonial}
+            index={index}
+          />
         ))}
       </div>
     </main>
