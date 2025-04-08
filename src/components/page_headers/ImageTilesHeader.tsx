@@ -1,5 +1,23 @@
 import Image from "next/image";
-export default function ImageTilesHeader() {
+import { JSX } from "react";
+
+/**
+ * A header component that displays a section with text content and image tiles in a mosaic layout.
+ *
+ * This component creates an attractive header with:
+ * - A primary headline introducing program offerings
+ * - Descriptive paragraphs about available programs
+ * - A visually appealing grid of images showcasing program activities
+ *
+ * The layout is responsive:
+ * - On large screens (lg and above): Shows text on the left side with a mosaic of images on the right
+ * - On smaller screens: Stacks content vertically with a simplified image arrangement
+ *
+ * The component uses Tailwind CSS for styling and responsive design.
+ *
+ * @returns {JSX.Element} A header component with text and image tiles
+ */
+export default function ImageTilesHeader(): JSX.Element {
   return (
     <div className="py-32 overflow-hidden">
       <div className="lg:flex mx-auto px-6 lg:px-8 max-w-7xl">
