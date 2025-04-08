@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FadedImage({ imageSrc }: { imageSrc: string }) {
   return (
-    <div className="relative pt-16 lg:pt-10 overflow-hidden">
+    <div className="lg:block relative hidden pt-16 lg:pt-10 overflow-hidden">
       <div className="mx-auto px-6 lg:px-8">
         <Image
           alt=""
