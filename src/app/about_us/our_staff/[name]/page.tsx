@@ -3,15 +3,40 @@ import DynamicButton from "@/components/buttons/button-dynamic";
 import LoadingIndicator from "@/components/loading/Loading";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 
-export default function StaffPage() {
+/**
+ * StaffPage Component
+ *
+ * Renders a detailed page for an individual staff member based on the name from URL parameters.
+ * Fetches staff member data from an API endpoint and displays their information including:
+ * - Profile image
+ * - Name and role
+ * - Biography
+ * - Contact information (email and phone if available)
+ * - Additional descriptive text
+ * - Gallery of additional images if available
+ *
+ * @returns {JSX.Element} A detailed staff member profile page with responsive layout
+ * that adapts between mobile (single column) and desktop (multi-column) views
+ *
+ * @example
+ * // Accessed via route: /about_us/our_staff/john-doe
+ * <StaffPage />
+ *
+ * @remarks
+ * - Shows a loading indicator while fetching data
+ * - Handles HTML content in the text field using dangerouslySetInnerHTML
+ * - Uses grid layout for responsive design
+ * - Image gallery supports multiple staff-related images
+ */
+export default function StaffPage(): JSX.Element {
   const { name } = useParams();
   const router = useRouter();
   const [loading, setLoading] = useState<boolean>(true);
-  const [staffMember, setStaffMember] = useState<any>(null); // Changed type to `any` for flexibility
+  const [staffMember, setStaffMember] = useState<any>(null);
 
   useEffect(() => {
     const fetchStaffMember = async () => {
@@ -21,7 +46,7 @@ export default function StaffPage() {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        setStaffMember(data); // Ensure state is updated with fetched data
+        setStaffMember(data);
       } catch (error) {
         console.error("Error fetching staff member:", error);
       } finally {
