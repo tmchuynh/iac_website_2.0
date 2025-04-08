@@ -24,9 +24,6 @@ export default function ProgramDetails({ title }: { title?: string }) {
 
   return (
     <>
-      <h2 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
-        Learn About Our Different Programs
-      </h2>
       <Tabs
         value={tabsValue}
         onValueChange={(value: string) => setProgramTitle(value)}
