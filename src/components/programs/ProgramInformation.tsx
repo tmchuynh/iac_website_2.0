@@ -24,6 +24,9 @@ export default function ProgramDetails({ title }: { title?: string }) {
 
   return (
     <>
+      <h2 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+        Learn About Our Different Programs
+      </h2>
       <Tabs
         value={tabsValue}
         onValueChange={(value: string) => setProgramTitle(value)}
@@ -70,7 +73,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     </>
                   )}
 
-                  <div>
+                  <div className="flex items-center gap-10">
                     {program.icons.map((Icon, iconIndex) => {
                       return (
                         <div
@@ -78,12 +81,12 @@ export default function ProgramDetails({ title }: { title?: string }) {
                           className="inline-block mr-2 -mb-2"
                         >
                           {typeof Icon === "string" ? (
-                            <div className="flex justify-center items-center w-5 md:w-8 lg:w-9 2xl:w-10 h-5 md:h-8 lg:h-9 2xl:h-10">
+                            <div className="w-10 lg:w-15 2xl:w-20 h-10 lg:h-15 2xl:h-20">
                               <Image
                                 src={Icon}
                                 alt={`${program.title}_${iconIndex}_${Icon}`}
-                                width={40}
-                                height={40}
+                                width={120}
+                                height={120}
                               />
                             </div>
                           ) : typeof Icon === "function" ? (
