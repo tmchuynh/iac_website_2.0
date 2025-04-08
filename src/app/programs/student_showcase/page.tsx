@@ -1,4 +1,5 @@
 "use client";
+import CenteredSimple from "@/components/CTA/CenteredSimple";
 import { RequestFormParentStudent } from "@/components/forms/RequestFormParentStudent";
 import PageHeaderTestimonial from "@/components/page_headers/PageHeaderTestimonial";
 import StudentsWorkSection from "@/components/programs/StudentsWorkSection";
@@ -83,13 +84,8 @@ export default function StudentShowcasePage(): JSX.Element {
           standards of integrity, inclusion, and respect.
         </p>
 
-        <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
-          CELEBRATING STUDENT VOICE
-        </h2>
-        <p>
-          ✨ When children are given the freedom to imagine, incredible things
-          happen. ✨
-        </p>
+        <CenteredSimple />
+
         <p>
           Thank you for being part of this meaningful celebration of student
           voice. By joining us, you are helping to uplift and honor the
