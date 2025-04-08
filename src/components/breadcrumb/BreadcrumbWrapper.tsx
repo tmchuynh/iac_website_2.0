@@ -52,6 +52,27 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
     [pathSegments]
   );
 
+  /**
+   * Generates breadcrumb items for navigation based on the current URL path and screen size.
+   *
+   * @returns {React.JSX.Element[] | null} An array of JSX elements representing breadcrumb items or null if at root path
+   *
+   * The function implements responsive behavior:
+   * - On small screens: Shows ellipsis (...) and only the current page segment
+   * - On medium screens: Shows "Home", ellipsis, and the current segment or segment hierarchy with limited depth
+   * - On large screens: Shows complete path hierarchy from Home to current page
+   *
+   * Each breadcrumb item includes:
+   * - A link to the corresponding path
+   * - Visual separators (slashes) between items
+   * - Proper styling for interactive elements
+   *
+   * Dependencies:
+   * - pathname: Current URL path
+   * - capitalizedSegments: Path segments with capitalized first letters
+   * - pathSegments: Raw path segments
+   * - isSmallScreen: Boolean indicating if viewport is small
+   */
   const breadcrumbItems = useMemo(() => {
     if (pathname === "/") return null;
 
