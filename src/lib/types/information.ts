@@ -1,13 +1,13 @@
+import { LucideProps } from "lucide-react";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 import { IconType } from "react-icons/lib";
-import { programIcons } from "../constants/programs"; // Import the programIcons array
-import { LucideProps } from "lucide-react";
+import { programIcons } from "../constants/programs";
 
 export type programInfo = {
   title: string;
   image: string;
   titleIcon: string;
-  icons: (typeof programIcons)[number]["icon"][]; // Use the type of icons from programIcons
+  icons: (typeof programIcons)[number]["icon"][];
   description: string;
   overview: string;
   keypoints: {
@@ -35,6 +35,7 @@ export type Work = {
   preview?: string;
   writing?: string;
   images?: string[];
+  icons?: string[];
 };
 
 export type staffInfo = {
