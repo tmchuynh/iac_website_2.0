@@ -40,7 +40,7 @@ export default function ContactUs() {
                     name="first-name"
                     type="text"
                     autoComplete="given-name"
-                    className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                    className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
                   />
                 </div>
               </div>
@@ -57,7 +57,7 @@ export default function ContactUs() {
                     name="last-name"
                     type="text"
                     autoComplete="family-name"
-                    className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                    className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
                   />
                 </div>
               </div>
@@ -73,7 +73,7 @@ export default function ContactUs() {
                     id="budget"
                     name="budget"
                     type="text"
-                    className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                    className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
                   />
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function ContactUs() {
                     id="website"
                     name="website"
                     type="url"
-                    className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                    className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
                   />
                 </div>
               </div>
@@ -105,7 +105,7 @@ export default function ContactUs() {
                     id="message"
                     name="message"
                     rows={4}
-                    className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                    className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
                     defaultValue={""}
                   />
                 </div>

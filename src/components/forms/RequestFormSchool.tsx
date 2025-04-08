@@ -14,7 +14,7 @@ export default function RequestFormSchool() {
               name="first-name"
               type="text"
               autoComplete="given-name"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -28,7 +28,7 @@ export default function RequestFormSchool() {
               name="last-name"
               type="text"
               autoComplete="family-name"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function RequestFormSchool() {
               name="email"
               type="email"
               autoComplete="email"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function RequestFormSchool() {
               type="tel"
               autoComplete="tel"
               aria-describedby="phone-description"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function RequestFormSchool() {
               id="school"
               name="school"
               type="text"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function RequestFormSchool() {
               id="principal"
               name="principal"
               type="text"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function RequestFormSchool() {
               id="schoolContact"
               name="schoolContact"
               type="email"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function RequestFormSchool() {
               id="grades"
               name="grades"
               type="text"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>

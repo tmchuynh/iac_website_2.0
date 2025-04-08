@@ -5,7 +5,7 @@ import { FaCheckDouble } from "react-icons/fa6";
 import DynamicButton from "../buttons/button-dynamic";
 import { Card } from "../ui/card";
 
-export default function PhotoAndList() {
+export default function ApplyToJoinCTA() {
   const router = useRouter();
 
   return (

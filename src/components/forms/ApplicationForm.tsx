@@ -24,7 +24,7 @@ export default function ApplicationForm() {
                 required
                 type="text"
                 autoComplete="given-name"
-                className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
               />
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function ApplicationForm() {
                 required
                 type="text"
                 autoComplete="family-name"
-                className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
               />
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function ApplicationForm() {
                 required
                 type="email"
                 autoComplete="email"
-                className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
               />
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function ApplicationForm() {
                 required
                 type="tel"
                 autoComplete="tel"
-                className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
               />
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function ApplicationForm() {
                   id="resume-upload"
                   name="resume-upload"
                   type="file"
-                  className="sr-only"
+                  className="dark:placeholder:text-accent placeholder:text-muted sr-only"
                   accept=".pdf,.doc,.docx"
                   aria-describedby="resume-upload-description"
                   required
@@ -134,7 +134,7 @@ export default function ApplicationForm() {
                   id="cover-letter-upload"
                   name="cover-letter-upload"
                   type="file"
-                  className="sr-only"
+                  className="dark:placeholder:text-accent placeholder:text-muted sr-only"
                   accept=".pdf,.doc,.docx"
                   aria-describedby="cover-letter-upload-description"
                   required
@@ -152,7 +152,7 @@ export default function ApplicationForm() {
                 name="city"
                 required
                 type="text"
-                className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
               />
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function ApplicationForm() {
                 name="state"
                 required
                 type="text"
-                className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
               />
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function ApplicationForm() {
                 id="message"
                 name="message"
                 rows={4}
-                className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+                className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
                 defaultValue={""}
               />
             </div>

@@ -36,7 +36,7 @@ export default function FeedbackForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function FeedbackForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function FeedbackForm() {
               value={formData.message}
               onChange={handleChange}
               required
-              className="block px-3.5 py-2 rounded-md w-full text-base outline-1 -outline-offset-1"
+              className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
           </div>
         </div>

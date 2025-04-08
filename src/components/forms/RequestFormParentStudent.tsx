@@ -71,7 +71,7 @@ export function RequestFormParentStudent() {
                   <Input
                     placeholder="John Smith"
                     name="name"
-                    className="placeholder:text-muted"
+                    className="dark:placeholder:text-accent placeholder:text-muted"
                   />
                 </div>
                 <div>
@@ -81,7 +81,7 @@ export function RequestFormParentStudent() {
                   <Input
                     placeholder="1-5"
                     name="grades"
-                    className="placeholder:text-muted"
+                    className="dark:placeholder:text-accent placeholder:text-muted"
                   />
                 </div>
               </div>
@@ -91,7 +91,7 @@ export function RequestFormParentStudent() {
                   <Input
                     placeholder="Cerro Villa Middle School"
                     name="school"
-                    className="placeholder:text-muted"
+                    className="dark:placeholder:text-accent placeholder:text-muted"
                   />
                 </div>
                 <div>
@@ -101,7 +101,7 @@ export function RequestFormParentStudent() {
                   <Input
                     placeholder="Karen Smith"
                     name="principal"
-                    className="placeholder:text-muted"
+                    className="dark:placeholder:text-accent placeholder:text-muted"
                   />
                 </div>
                 <div>
@@ -111,7 +111,7 @@ export function RequestFormParentStudent() {
                   <Input
                     placeholder="karensmith@orangeusd.org.org"
                     name="contact_info"
-                    className="placeholder:text-muted"
+                    className="dark:placeholder:text-accent placeholder:text-muted"
                   />
                 </div>
               </div>
@@ -122,7 +122,7 @@ export function RequestFormParentStudent() {
                 <Textarea
                   placeholder="Message"
                   name="message"
-                  className="placeholder:text-muted"
+                  className="dark:placeholder:text-accent placeholder:text-muted"
                 />
               </div>
               <Button className="w-full" type="submit">

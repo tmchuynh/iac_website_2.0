@@ -1,5 +1,5 @@
-import { JSX } from "react";
 import Image from "next/image";
+import { JSX } from "react";
 
 interface NavigationItem {
   name: string;
@@ -192,7 +192,7 @@ export default function Example() {
               required
               placeholder="Enter your email"
               autoComplete="email"
-              className="px-3 py-1.5 rounded-md w-full sm:w-56 min-w-0 text-base sm:text-sm/6 outline-1 -outline-offset-1"
+              className="px-3 py-1.5 rounded-md w-full sm:w-56 min-w-0 text-base sm:text-sm/6 dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
             />
             <div className="mt-4 sm:mt-0 sm:ml-4 sm:shrink-0">
               <button

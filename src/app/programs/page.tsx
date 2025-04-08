@@ -1,10 +1,10 @@
 "use client";
 
 import { useTabs } from "@/app/context/TabsContext";
+import ApplyToJoinCTA from "@/components/CTA/ApplyToJoinCTA";
 import DoughnutChartLabel from "@/components/images/PieChart";
 import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import LoadingIndicator from "@/components/loading/Loading";
-import PhotoAndList from "@/components/page_headers/PhotoAndList";
 import ProgramDetails from "@/components/programs/ProgramInformation";
 import { class_breakdown } from "@/lib/constants/list";
 import Image from "next/image";
@@ -85,7 +85,7 @@ export default function ProgramsPage() {
         </ul>
       </section>
 
-      <PhotoAndList />
+      <ApplyToJoinCTA />
     </div>
   );
 }
