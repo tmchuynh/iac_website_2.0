@@ -64,31 +64,6 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
         </BreadcrumbItem>
       );
 
-      if (pathSegments.length > 0) {
-        const firstHref = `/${pathSegments[0]}`;
-        const firstSegment = capitalizedSegments[0];
-
-        items.push(
-          <BreadcrumbSeparator
-            key={`sep-${firstHref}-${firstSegment}`}
-            className="mr-0 ml-1"
-          >
-            <TbSlashes />
-          </BreadcrumbSeparator>
-        );
-
-        items.push(
-          <BreadcrumbItem key={`${firstHref}-${firstSegment}`} className="mx-1">
-            <BreadcrumbLink
-              href={firstHref}
-              className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
-            >
-              {firstSegment}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        );
-      }
-
       const currentHref = `/${pathSegments.join("/")}`;
       const currentSegment = capitalizedSegments[pathSegments.length - 1];
 
