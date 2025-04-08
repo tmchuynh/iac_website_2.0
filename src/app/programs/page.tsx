@@ -1,36 +1,29 @@
 "use client";
+
 import { useTabs } from "@/app/context/TabsContext";
 import DoughnutChartLabel from "@/components/images/PieChart";
 import ResponsiveLogo from "@/components/images/ResponsiveLogo";
+import LoadingIndicator from "@/components/loading/Loading";
 import PhotoAndList from "@/components/page_headers/PhotoAndList";
 import ProgramDetails from "@/components/programs/ProgramInformation";
 import { class_breakdown } from "@/lib/constants/list";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { JSX, useEffect } from "react";
+import { Suspense } from "react";
 
-/**
- * Renders the Programs page component.
- * This component displays program details based on either the URL search parameter 'title'
- * or falls back to a default tab value from context.
- *
- * @component
- * @returns {JSX.Element} A centered container with program details
- *
- * @example
- * // URL: /programs?title=someProgramTitle
- * <ProgramsPage />
- */
-export default function ProgramsPage(): JSX.Element {
+function ProgramContent() {
   const searchParams = useSearchParams();
-  const { defaultTab } = useTabs(); // Access defaultTab from context
+  const { defaultTab } = useTabs();
 
-  const title = searchParams.get("title") || defaultTab; // Use defaultTab if title is not provided
+  const getTitleFromSearchParams = (): string => {
+    const title = searchParams.get("title");
+    return title ? title : defaultTab;
+  };
 
-  useEffect(() => {
-    console.log(title); // Debugging log
-  }, [title]);
+  return <ProgramDetails title={getTitleFromSearchParams()} />;
+}
 
+export default function ProgramsPage() {
   return (
     <div className="flex flex-col justify-center items-center mx-auto px-4 py-10 lg:py-20 w-11/12">
       <div className="xl:mx-auto xl:px-8 py-3 md:py-6 lg:py-9 2xl:py-20 xl:py-12 lg:max-w-7xl">
@@ -42,6 +35,7 @@ export default function ProgramsPage(): JSX.Element {
           height={1130}
         />
       </div>
+
       <section>
         <code className="font-semibold text-base/7">
           Looking for a program that’s right for you?
@@ -49,7 +43,10 @@ export default function ProgramsPage(): JSX.Element {
         <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Our Program Details
         </h1>
-        <ProgramDetails title={title} />
+
+        <Suspense fallback={<LoadingIndicator />}>
+          <ProgramContent />
+        </Suspense>
       </section>
 
       <ResponsiveLogo />
