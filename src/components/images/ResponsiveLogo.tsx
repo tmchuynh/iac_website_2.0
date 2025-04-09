@@ -17,7 +17,7 @@ export default function ResponsiveLogo({ className }: { className?: string }) {
   }
 
   return (
-    <div className={`md:max-w-lg 2xl:max-w-none ${className}`}>
+    <div className={`md:max-w-lg 2xl:max-w-none mx-auto ${className}`}>
       {theme === "dark" ? (
         <Image
           alt="IAC Logo"

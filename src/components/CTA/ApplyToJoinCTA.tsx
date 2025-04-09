@@ -12,7 +12,7 @@ export default function ApplyToJoinCTA() {
     <>
       <section className="gap-3 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-9 py-5 md:py-10 lg:py-16 2xl:py-20">
         <div className="md:col-span-2 xl:col-span-3">
-          <h2 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             We’re always looking for awesome people to join us
           </h2>
           <p className="mt-6 text-xl/8">
@@ -39,7 +39,7 @@ export default function ApplyToJoinCTA() {
           {jobOpenings.map((opening, index) => (
             <Card key={index} className="shadow-lg p-8">
               <div className="relative flex flex-wrap gap-x-3">
-                <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+                <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
                   {opening.role}
                 </h3>
                 <p className="flex-none mt-2 w-full text-base/7">

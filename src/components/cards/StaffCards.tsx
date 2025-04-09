@@ -30,10 +30,10 @@ export const StaffCards = (person: Person) => {
       <div className="flex flex-col justify-between p-6 h-full">
         <section className="flex flex-col justify-between gap-4 h-full">
           <div>
-            <h3 className="font-semibold text-xl tracking-tight">
+            <h3 className="font-[Caveat] font-semibold text-xl tracking-tight">
               {person.name}
             </h3>
-            <p className="text-sm">{person.role}</p>
+            <p className="font-[PatrickHandSC] text-sm">{person.role}</p>
           </div>
           {person.icons && (
             <div className="flex gap-3 h-full">

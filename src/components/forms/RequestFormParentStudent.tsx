@@ -12,11 +12,11 @@ export function RequestFormParentStudent() {
   return (
     <section>
       <div className="mx-auto">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Request Us @ Your School
         </h1>
         <div className="mb-4 text-pretty leading-relaxed">
-          <h2 className="font-bold text-lg text-secondary md:text-xl lg:text-2xl">
+          <h2 className="font-[PermanentMarker] font-bold text-lg text-secondary md:text-xl lg:text-2xl">
             We’re Excited to Connect With You!
           </h2>
           <p>
@@ -32,7 +32,7 @@ export function RequestFormParentStudent() {
             partnership options, or looking to schedule a consultation, we’re
             here to help every step of the way.
           </p>
-          <h2 className="font-bold text-lg text-secondary md:text-xl lg:text-2xl">
+          <h2 className="font-[PermanentMarker] font-bold text-lg text-secondary md:text-xl lg:text-2xl">
             Here’s What to Expect:
           </h2>
           <ul className="flex flex-col gap-2 py-2 list-disc list-inside">
@@ -49,7 +49,7 @@ export function RequestFormParentStudent() {
               reach out directly by phone.
             </li>
           </ul>
-          <h2 className="font-bold text-lg text-secondary md:text-xl lg:text-2xl">
+          <h2 className="font-[PermanentMarker] font-bold text-lg text-secondary md:text-xl lg:text-2xl">
             Need Immediate Assistance?
           </h2>
           <p>

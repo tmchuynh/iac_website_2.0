@@ -107,7 +107,9 @@ export default function Example() {
           <div className="gap-8 grid grid-cols-2 xl:col-span-2 mt-16 xl:mt-0">
             <div className="md:gap-8 md:grid md:grid-cols-2">
               <div>
-                <h3 className="font-semibold text-sm/6">Solutions</h3>
+                <h3 className="font-[Caveat] font-semibold text-sm/6">
+                  Solutions
+                </h3>
                 <ul role="list" className="space-y-4 mt-6">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
@@ -122,7 +124,9 @@ export default function Example() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="font-semibold text-sm/6">Support</h3>
+                <h3 className="font-[Caveat] font-semibold text-sm/6">
+                  Support
+                </h3>
                 <ul role="list" className="space-y-4 mt-6">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
@@ -139,7 +143,9 @@ export default function Example() {
             </div>
             <div className="md:gap-8 md:grid md:grid-cols-2">
               <div>
-                <h3 className="font-semibold text-sm/6">Company</h3>
+                <h3 className="font-[Caveat] font-semibold text-sm/6">
+                  Company
+                </h3>
                 <ul role="list" className="space-y-4 mt-6">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
@@ -154,7 +160,7 @@ export default function Example() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="font-semibold text-sm/6">Legal</h3>
+                <h3 className="font-[Caveat] font-semibold text-sm/6">Legal</h3>
                 <ul role="list" className="space-y-4 mt-6">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
@@ -173,7 +179,7 @@ export default function Example() {
         </div>
         <div className="lg:flex lg:justify-between lg:items-center mt-16 sm:mt-20 lg:mt-24 pt-8 border-t">
           <div>
-            <h3 className="font-semibold text-sm/6">
+            <h3 className="font-[Caveat] font-semibold text-sm/6">
               Subscribe to our newsletter
             </h3>
             <p className="mt-2 text-sm/6">

@@ -10,7 +10,7 @@ export default function CenteredSimple() {
           width={50}
           height={50}
         />
-        <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
           When children are given the freedom to imagine, incredible things
           happen.
         </h3>

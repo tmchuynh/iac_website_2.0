@@ -55,7 +55,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
             <div className="" id={`${programIndex}`}>
               {/* Content */}
               <div className="pb-6">
-                <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+                <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
                   {program.title}
                 </h1>
 
@@ -63,7 +63,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                   {/* Overview */}
                   {program.overview && (
                     <>
-                      <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                      <h4 className="pt-6 font-[PatrickHandSC] font-bold text-accent text-lg md:text-xl lg:text-2xl">
                         Overview
                       </h4>
                       <p className="mb-4">{program.overview}</p>
@@ -100,7 +100,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Goals */}
                 {program.goal && (
                   <>
-                    <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                    <h4 className="pt-6 font-[PatrickHandSC] font-bold text-accent text-lg md:text-xl lg:text-2xl">
                       Program Goals
                     </h4>
                     <p className="">{program.goal}</p>
@@ -142,7 +142,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     </div>
                   </div>
                 ) : (
-                  <h2 className="pt-6 font-bold text-lg text-tertiary/50 md:text-xl lg:text-2xl">
+                  <h2 className="pt-6 font-[PermanentMarker] font-bold text-lg text-tertiary/50 md:text-xl lg:text-2xl">
                     Class Photos To Come
                   </h2>
                 )}
@@ -150,7 +150,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Outcomes */}
                 {program.outcome && (
                   <>
-                    <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                    <h4 className="pt-6 font-[PatrickHandSC] font-bold text-accent text-lg md:text-xl lg:text-2xl">
                       Learning Outcomes
                     </h4>
                     <p className="mb-4">{program.outcome}</p>
@@ -160,13 +160,13 @@ export default function ProgramDetails({ title }: { title?: string }) {
                 {/* Keypoints */}
                 {program.keypoints.length > 0 && (
                   <>
-                    <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                    <h4 className="pt-6 font-[PatrickHandSC] font-bold text-accent text-lg md:text-xl lg:text-2xl">
                       Key Components
                     </h4>
                     <ul className="space-y-2 py-3 list-disc">
                       {program.keypoints.map((point, pointIndex) => (
                         <li key={pointIndex}>
-                          <strong>{point.title}:</strong> {point.description}
+                          <strong>{point.title}</strong>: {point.description}
                         </li>
                       ))}
                     </ul>
