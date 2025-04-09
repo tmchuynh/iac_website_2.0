@@ -7,8 +7,10 @@ import { staffCategories } from "@/lib/constants/staff";
 export default function OurStaffPage() {
   return (
     <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-20 2xl:py-40 xl:py-32 w-11/12">
-      <code className="font-semibold text-base/7">Dedicated to Excellence</code>
-      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+      <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
+        Dedicated to Excellence
+      </p>
+      <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         Our Staff
       </h1>
       <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
@@ -69,7 +71,7 @@ export default function OurStaffPage() {
           return category.category === "Founder" ||
             category.category === "Senior Instructors" ? (
             <section key={index} className="mb-12">
-              <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+              <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
                 {category.category}
               </h1>
 
@@ -89,7 +91,7 @@ export default function OurStaffPage() {
             </section>
           ) : (
             <section key={index} className="mb-12">
-              <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+              <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
                 {category.category}
               </h1>
 

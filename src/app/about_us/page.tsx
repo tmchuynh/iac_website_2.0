@@ -6,10 +6,10 @@ export default function AboutUsPage() {
       <div className="py-16 md:py-25">
         <div className="mx-auto">
           <div className="max-w-4xl">
-            <code className="font-semibold text-base/7">
+            <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
               Where Passion Meets Purpose
-            </code>
-            <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+            </p>
+            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
               A Vision Born from the Heart
             </h1>
             <ResponsiveLogo />
@@ -25,7 +25,7 @@ export default function AboutUsPage() {
 
           <section className="lg:gap-x-8 lg:gap-y-16 grid grid-cols-1 lg:grid-cols-2 mt-20">
             <div className="lg:pr-8">
-              <p className="mt-6 text-base/7">
+              <p className="text-base/7">
                 The journey of the International Activities Club (IAC) is deeply
                 rooted in Justin's unwavering passion and heartfelt commitment
                 to education. Before founding IAC, Justin established himself as
@@ -36,7 +36,7 @@ export default function AboutUsPage() {
                 tool, cultivating essential life skills, strategic thinking, and
                 personal growth.
               </p>
-              <p className="mt-8 text-base/7">
+              <p className="text-base/7">
                 Inspired by these meaningful experiences, Justin envisioned an
                 inclusive educational community that transcends traditional
                 methods. His dream was to create a nurturing environment where
@@ -168,35 +168,43 @@ export default function AboutUsPage() {
               </p>
             </div>
             <div className="lg:col-span-1 max-lg:mt-16">
-              <code className="font-semibold text-base/7">The numbers</code>
+              <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
+                The numbers
+              </p>
               <hr className="mt-6 dark:border-chart-1 border-t" />
               <dl className="gap-x-8 gap-y-4 grid grid-cols-1 sm:grid-cols-2 mt-6">
                 <div className="flex flex-col gap-y-2 pb-4 dark:border-accent border-b border-dotted">
-                  <dt className="text-sm/6">Students Impacted</dt>
-                  <dd className="order-first font-semibold text-5xl tracking-tight">
+                  <dt className="font-[PatrickHandSC] text-sm/6">
+                    Students Impacted
+                  </dt>
+                  <dd className="order-first font-[Caveat] font-semibold text-5xl tracking-tight">
                     ~<span>9.5</span>K
                   </dd>
                 </div>
                 <div className="flex flex-col gap-y-2 pb-4 dark:border-accent border-b border-dotted">
-                  <dt className="text-sm/6">
+                  <dt className="font-[PatrickHandSC] text-sm/6">
                     Happy Employees{" "}
                     <p className="-mt-2 ml-5 text-[0.75em] text-tertiary">
                       **(Past Employees Included)
                     </p>
                   </dt>
-                  <dd className="order-first font-semibold text-5xl tracking-tight">
+                  <dd className="order-first font-[Caveat] font-semibold text-5xl tracking-tight">
                     <span>50</span>
                   </dd>
                 </div>
                 <div className="flex flex-col gap-y-2 max-sm:pb-4">
-                  <dt className="text-sm/6">Successful Classes</dt>
-                  <dd className="order-first font-semibold text-5xl tracking-tight">
+                  <dt className="font-[PatrickHandSC] text-sm/6">
+                    Successful Classes
+                  </dt>
+                  <dd className="order-first font-[Caveat] font-semibold text-5xl tracking-tight">
                     ~<span>3.9</span>K
                   </dd>
                 </div>
                 <div className="flex flex-col gap-y-2">
-                  <dt className="text-sm/6">Happy Parents</dt>
-                  <dd className="order-first font-semibold text-5xl tracking-tight">
+                  <dt className="font-[PatrickHandSC] text-sm/6">
+                    Happy Parents
+                  </dt>
+                  <dd className="order-first font-[Caveat] font-semibold text-5xl tracking-tight">
                     ~<span>20.23</span>K
                   </dd>
                 </div>

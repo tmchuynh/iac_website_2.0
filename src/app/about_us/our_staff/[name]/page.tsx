@@ -63,9 +63,9 @@ export default function StaffPage(): JSX.Element {
 
   return (
     <main className="relative mx-auto px-4 py-10 lg:py-30 w-11/12">
-      <code className="font-semibold text-base/7">
+      <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
         {staffMember.moreInfo.bio}
-      </code>
+      </p>
       <section className="gap-1 grid grid-cols-1 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <Image
@@ -77,7 +77,7 @@ export default function StaffPage(): JSX.Element {
           />
           {(staffMember.moreInfo.email || staffMember.moreInfo.phone) && (
             <div className="px-2 py-8">
-              <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+              <h3 className="font-[PatrickHandSC] font-bold text-accent text-lg md:text-xl lg:text-2xl xl:text-3xl">
                 Contact Me:
               </h3>
               {staffMember.moreInfo.email && (
@@ -113,8 +113,10 @@ export default function StaffPage(): JSX.Element {
           )}
         </div>
         <div className="lg:col-span-3">
-          <code className="font-semibold text-base/7">{staffMember.role}</code>
-          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+          <p className="mt-5 font-[PatrickHandSC] font-semibold">
+            {staffMember.role}
+          </p>
+          <h1 className="mb-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
             {staffMember.name}
           </h1>
           <p

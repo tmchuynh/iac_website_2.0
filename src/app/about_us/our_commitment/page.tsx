@@ -20,7 +20,7 @@ export default function OurCommitmentPage() {
           </p>
 
           <section className="py-4">
-            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Refined and Relevant Curriculum
             </h3>
             <p>
@@ -37,7 +37,7 @@ export default function OurCommitmentPage() {
           </section>
 
           <section className="py-4">
-            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Access to Advanced Resources and Technology
             </h3>
             <p>
@@ -53,7 +53,7 @@ export default function OurCommitmentPage() {
           </section>
 
           <section className="py-4">
-            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Holistic Development for Lifelong Success
             </h3>
             <p>
@@ -78,7 +78,7 @@ export default function OurCommitmentPage() {
       </section>
 
       <section className="py-4">
-        <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
           Strategic Multi-Year Success Plans
         </h3>
         <p>
@@ -94,7 +94,7 @@ export default function OurCommitmentPage() {
       </section>
 
       <section className="py-4">
-        <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
           Continuous Feedback and Improvement
         </h3>
         <p>
@@ -159,7 +159,7 @@ export default function OurCommitmentPage() {
         </div>
         <div className="col-span-5 lg:col-span-9 2xl:col-span-9 xl:col-span-5">
           <section className="py-4">
-            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Collaborative and Engaging Learning Environments
             </h3>
             <p>
@@ -176,7 +176,7 @@ export default function OurCommitmentPage() {
           </section>
 
           <section className="py-4">
-            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Preparation for Future Opportunities
             </h3>
             <p>
@@ -192,7 +192,7 @@ export default function OurCommitmentPage() {
           </section>
 
           <section className="py-4">
-            <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
               Commitment to Equity and Inclusion
             </h3>
             <p>
