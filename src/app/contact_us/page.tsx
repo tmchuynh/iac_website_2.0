@@ -24,8 +24,8 @@ export default function ContactUs() {
         </p>
         <ResponsiveLogo />
 
-        <div className="flex lg:flex-row flex-col gap-16 sm:gap-y-20 mt-16">
-          <form action="#" method="POST" className="lg:flex-auto">
+        <div className="gap-7 grid grid-cols-1 md:grid-cols-3 mt-16">
+          <form action="#" method="POST" className="md:col-span-2">
             <div className="gap-x-8 gap-y-6 grid grid-cols-1 sm:grid-cols-2">
               <div>
                 <label
@@ -122,13 +122,14 @@ export default function ContactUs() {
               .
             </p>
           </form>
-          <div className="lg:flex-none lg:mt-6 lg:w-80">
+          <div className="md:col-span-1">
             <figure className="mt-10">
-              <blockquote className="text-sm md:text-lg leading-4 md:leading-7">
-                "Watching my once-shy daughter perform confidently on stage was
-                a dream come true. The theater staff at IAC excel at nurturing
-                talent and fostering self-esteem. Her enthusiasm for school has
-                grown significantly, and she comes home eager to share her
+              <blockquote className="font-[Caveat] text-lg md:text-xl leading-4 md:leading-8">
+                "Watching my once-shy daughter perform confidently on stage was{" "}
+                <mark>a dream come true</mark>. The theater staff at
+                International Activities Club excel at nurturing talent and
+                fostering self-esteem. Her enthusiasm for school has grown
+                significantly, and she comes home eager to share her
                 experiences."
               </blockquote>
               <figcaption className="flex items-center gap-x-4 mt-8">
@@ -140,7 +141,9 @@ export default function ContactUs() {
                   height={96}
                 />
                 <div>
-                  <div className="font-semibold text-base">Theater Parent</div>
+                  <cite className="font-[GrapeNuts] font-semibold">
+                    Theater Parent
+                  </cite>
                   <div className="text-sm/6">Arroyo Elementary School</div>
                 </div>
               </figcaption>
