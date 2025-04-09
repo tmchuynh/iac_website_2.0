@@ -100,6 +100,16 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
       "SwankyandMooMoo",
       "WaitingfortheSunrise",
       "YujiBoku",
+      "LovedbytheKing",
+      "GloriaHallelujah",
+      "GrapeNuts",
+      "IndieFlower",
+      "LaBelleAurore",
+      "Mansalva",
+      "TheGirlNextDoor",
+      "GiveYouGlory",
+      "CedarvilleCursive",
+      "GrechenFuemen",
     ];
 
     const pageKey = `${window.location.pathname}-font`;
