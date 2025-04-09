@@ -13,10 +13,10 @@ export default function Example() {
       <ResponsiveLogo />
 
       <section>
-        <code className="font-semibold text-base/7">
+        <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           Have a question? We’ve got answers!
-        </code>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        </p>
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Frequently Asked Questions
         </h1>
         <p className="mt-6 max-w-2xl">
@@ -44,12 +44,12 @@ export default function Example() {
                 index > 0 && "border-t dark:border-chart-1"
               )}
             >
-              <h2 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+              <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
                 {faq.category}
               </h2>
               {faq.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="space-y-2">
-                  <h4 className="pt-6 font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                  <h4 className="pt-6 font-[PatrickHandSC] font-bold text-accent text-lg md:text-xl lg:text-2xl">
                     {item.question}
                   </h4>
                   <p>{item.answer}</p>

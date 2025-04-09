@@ -37,10 +37,10 @@ export default function SchoolInformationPage() {
   return (
     <main className="mx-auto px-4 py-8 w-11/12">
       <section className="pt-12">
-        <code className="font-semibold text-base/7">
+        <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           The Schools We Work With
-        </code>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        </p>
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Our Partners in Innovation
         </h1>
         <p>
@@ -76,7 +76,7 @@ export default function SchoolInformationPage() {
 
       <section className="gap-6 grid grid-cols-1 lg:grid-cols-2 py-6 lg:py-12">
         <div className="flex flex-col gap-3 text-pretty">
-          <h2 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             After-School Programs
           </h2>
           <p>
@@ -135,7 +135,7 @@ export default function SchoolInformationPage() {
         </div>
         <div className="flex flex-col gap-3 text-pretty">
           <ResponsiveLogo />
-          <h2 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
             Proactive and Passionate
           </h2>
           <p>
@@ -198,7 +198,7 @@ export default function SchoolInformationPage() {
       <FadedImage imageSrc="/images/Class_Photos/Soccer/53995092_141122.jpg" />
 
       <section className="py-6">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Join Our Growing Network
         </h1>
         <p>
@@ -247,7 +247,7 @@ export default function SchoolInformationPage() {
       </section>
 
       <section className="py-5 lg:py-12">
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Get Involved Today
         </h1>
         <p>
@@ -266,7 +266,7 @@ export default function SchoolInformationPage() {
           students with essential tools for both academic success and future
           career readiness.
         </p>
-        <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+        <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
           Ready to Bring A.R.C. to Your School?
         </h3>
         <p>
