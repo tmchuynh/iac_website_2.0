@@ -12,38 +12,16 @@
   --font-LuckiestGuy: var(--font-LuckiestGuy);
   --font-Caveat: var(--font-Caveat);
   --font-Chewy: var(--font-Chewy);
+  --font-ComingSoon: var(--font-ComingSoon);
   --font-PatrickHandSC: var(--font-PatrickHandSC);
   --font-PermanentMarker: var(--font-PermanentMarker);
-  --font-YanoneKaffeesatz: var(--font-YanoneKaffeesatz);
-  /* ------------------------------------------------ */
-
-  --font-JustMeAgainDownHere: var(--font-JustMeAgainDownHere);
-  /* ------------------------------------------------ */
-
-  --font-AnnieUseYourTelescope: var(--font-AnnieUseYourTelescope);
-
-  --font-ComingSoon: var(--font-ComingSoon);
-
-  --font-CoveredByYourGrace: var(--font-CoveredByYourGrace);
-  --font-CuteRabbit: var(--font-CuteRabbit);
-  --font-GrechenFuemen: var(--font-GrechenFuemen);
-
-  --font-Instink: var(--font-Instink);
-
-  --font-Magic-Bubble: var(--font-Magic-Bubble);
-  --font-modernline: var(--font-modernline);
-
-  --font-OvertheRainbow: var(--font-OvertheRainbow);
-  --font-ReenieBeanie: var(--font-ReenieBeanie);
-
-  --font-RockSalt: var(--font-RockSalt);
   --font-SingleDay: var(--font-SingleDay);
-
   --font-SueEllenFrancisco: var(--font-SueEllenFrancisco);
   --font-SwankyandMooMoo: var(--font-SwankyandMooMoo);
   --font-WaitingfortheSunrise: var(--font-WaitingfortheSunrise);
-
   --font-YujiBoku: var(--font-YujiBoku);
+  --font-YanoneKaffeesatz: var(--font-YanoneKaffeesatz);
+  /* ------------------------------------------------ */
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -158,15 +136,6 @@
   --sidebar-ring: oklch(0.5 0.2 286.26);
 }
 
-/* AnnieUseYourTelescope */
-@font-face {
-  font-family: "AnnieUseYourTelescope";
-  src: url("/fonts/AnnieUseYourTelescope-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
 /* Caveat (Variable Font) */
 @font-face {
   font-family: "Caveat";
@@ -194,51 +163,6 @@
   font-display: auto;
 }
 
-/* CoveredByYourGrace */
-@font-face {
-  font-family: "CoveredByYourGrace";
-  src: url("/fonts/CoveredByYourGrace-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* Cute_Rabbit */
-@font-face {
-  font-family: "CuteRabbit";
-  src: url("/fonts/Cute_Rabbit.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* GrechenFuemen */
-@font-face {
-  font-family: "GrechenFuemen";
-  src: url("/fonts/GrechenFuemen-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* Instink */
-@font-face {
-  font-family: "Instink";
-  src: url("/fonts/Instink.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* JustMeAgainDownHere */
-@font-face {
-  font-family: "JustMeAgainDownHere";
-  src: url("/fonts/JustMeAgainDownHere-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
 /* LuckiestGuy */
 @font-face {
   font-family: "LuckiestGuy";
@@ -248,37 +172,10 @@
   font-display: auto;
 }
 
-/* Magic-Bubble */
-@font-face {
-  font-family: "Magic-Bubble";
-  src: url("/fonts/Magic-Bubble.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* modernline */
-@font-face {
-  font-family: "modernline";
-  src: url("/fonts/modernline.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
 /* NothingYouCouldDo */
 @font-face {
   font-family: "NothingYouCouldDo";
   src: url("/fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* OvertheRainbow */
-@font-face {
-  font-family: "OvertheRainbow";
-  src: url("/fonts/OvertheRainbow-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: auto;
@@ -297,24 +194,6 @@
 @font-face {
   font-family: "PermanentMarker";
   src: url("/fonts/PermanentMarker-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* ReenieBeanie */
-@font-face {
-  font-family: "ReenieBeanie";
-  src: url("/fonts/ReenieBeanie-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* RockSalt */
-@font-face {
-  font-family: "RockSalt";
-  src: url("/fonts/RockSalt-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: auto;
