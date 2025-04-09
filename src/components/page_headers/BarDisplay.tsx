@@ -2,9 +2,9 @@ export default function BarDisplay() {
   return (
     <div className="mx-auto mt-32 sm:mt-40 px-6 lg:px-8 max-w-7xl">
       <div className="mx-auto lg:mx-0 max-w-2xl">
-        <h2 className="font-semibold text-4xl text-pretty sm:text-5xl tracking-tight">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           We approach work as a place to make the world better
-        </h2>
+        </h1>
         <p className="mt-6 text-base/7">
           Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod
           lacus. Est non placerat nam arcu. Cras purus nibh cursus sit eu in id.

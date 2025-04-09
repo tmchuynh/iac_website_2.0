@@ -4,8 +4,10 @@ export default function PageHeaderTestimonial() {
   return (
     <div className="relative overflow-hidden isolate">
       <div className="mx-auto lg:mx-0 max-w-2xl">
-        <code className="font-semibold text-base/7">The IAC Advantage</code>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
+          The IAC Advantage
+        </p>
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Empowering Student Creativity
         </h1>
         <p className="mt-6 text-xl/8">
@@ -64,7 +66,7 @@ export default function PageHeaderTestimonial() {
               </div>
             </figcaption>
           </figure>
-          <h2 className="mt-16 font-bold text-2xl tracking-tight">
+          <h2 className="mt-16 font-[PermanentMarker] font-bold text-2xl tracking-tight">
             No Barriers, Just Opportunity
           </h2>
           <p className="mt-6">
@@ -126,7 +128,7 @@ export default function PageHeaderTestimonial() {
             </li>
           </ul>
           <div className="py-6">
-            <h2 className="font-bold text-2xl tracking-tight">
+            <h2 className="font-[PermanentMarker] font-bold text-2xl tracking-tight">
               Nurturing the Whole Child
             </h2>
             <p className="mt-6">

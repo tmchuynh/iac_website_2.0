@@ -251,7 +251,7 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
         aria-label="Breadcrumb"
         className="flex flex-row items-center gap-2 w-full text-sm"
       >
-        <ul className="flex flex-row items-center gap-2 px-4 text-secondary">
+        <ul className="flex flex-row items-center gap-2 px-4 font-[Chewy]">
           {breadcrumbItems}
         </ul>
       </nav>

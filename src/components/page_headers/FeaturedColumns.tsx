@@ -23,14 +23,14 @@ export default function FeaturedColumns() {
   return (
     <div className="py-16 md:py-24 lg:py-32">
       <div className="mx-auto lg:mx-0">
-        <code className="font-semibold text-base/7">
+        <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           Shaping the Future Through Innovation, Excellence, and Equity - Our
           Commitment
-        </code>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        </p>
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           The Quality of Our Classes is Unmatched
         </h1>
-        <p className="mt-6 max-w-4xl text-lg/8">
+        <p className="max-w-4xl text-lg/8">
           Parents and school partners trust IAC because of our unwavering
           commitment to excellence. The result? Confident, inspired learners who
           leave our programs not just with new skills—but with a deeper passion
@@ -61,7 +61,9 @@ export default function FeaturedColumns() {
                     aria-hidden="true"
                   />
                 </div>
-                <p>{feature.name}</p>
+                <h4 className="pt-4 font-[PatrickHandSC] font-bold text-accent text-lg md:text-xl lg:text-2xl">
+                  {feature.name}
+                </h4>
                 <p>{feature.description}</p>
               </div>
               <DynamicButton

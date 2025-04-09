@@ -5,11 +5,11 @@ export default function OffsetImage() {
     <div className="relative -z-10 bg-linear-to-b pt-14 overflow-hidden isolate">
       <div className="gap-4 lg:gap-8 grid grid-cols-1 md:grid-cols-2">
         <div>
-          <code className="font-semibold text-base/7">
+          <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
             Empowering Students through Immersion, Effectiveness, and
             Inclusivity
-          </code>
-          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+          </p>
+          <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
             Our Mission
           </h1>
           <p>
