@@ -61,22 +61,7 @@ export function NavBar() {
                           className="col-span-2 xl:col-span-3 row-span-3 xl:row-span-2 m-0"
                           key={index}
                         >
-                          <NavigationMenuLink
-                            className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
-                            href={`${link.href}`}
-                            style={{
-                              backgroundImage: `url(${link.imageUrl})`,
-                            }}
-                          >
-                            {/* Gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/50 rounded-md"></div>
-                            <div className="relative mt-4 mb-2 font-medium text-foreground text-lg">
-                              {link.title}
-                            </div>
-                            <p className="relative text-foreground text-sm leading-tight">
-                              {link.description}
-                            </p>
-                          </NavigationMenuLink>
+                          {NavigationImageItem(link)}
                         </li>
                       ))}
                       {about.map((link, index) => (
@@ -97,22 +82,7 @@ export function NavBar() {
                     <ul className="gap-3 grid lg:grid-cols-4 lg:grid-rows-2 p-4 md:w-[35em] lg:w-[50em]">
                       {programsFeaturedLinks.map((link, index) => (
                         <li className="col-span-2 row-span-2 m-0" key={index}>
-                          <NavigationMenuLink
-                            className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
-                            href={`${link.href}`}
-                            style={{
-                              backgroundImage: `url(${link.imageUrl})`,
-                            }}
-                          >
-                            {/* Gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/50 rounded-md"></div>
-                            <div className="relative mt-4 mb-2 font-medium text-foreground text-lg">
-                              {link.title}
-                            </div>
-                            <p className="relative text-foreground text-sm leading-tight">
-                              {link.description}
-                            </p>
-                          </NavigationMenuLink>
+                          {NavigationImageItem(link)}
                         </li>
                       ))}
                       {programs.map((program, index) => (
@@ -136,22 +106,7 @@ export function NavBar() {
                           className="col-span-2 lg:col-span-1 lg:row-span-3 m-0"
                           key={index}
                         >
-                          <NavigationMenuLink
-                            className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
-                            href={`${link.href}`}
-                            style={{
-                              backgroundImage: `url(${link.imageUrl})`,
-                            }}
-                          >
-                            {/* Gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/50 rounded-md"></div>
-                            <div className="relative mt-4 mb-2 font-medium text-foreground text-lg">
-                              {link.title}
-                            </div>
-                            <p className="relative text-foreground text-sm leading-tight">
-                              {link.description}
-                            </p>
-                          </NavigationMenuLink>
+                          {NavigationImageItem(link)}
                         </li>
                       ))}
                       {contact.map((link, index) => (
@@ -194,7 +149,7 @@ const ListItem = React.forwardRef<
           <div className="font-medium text-sm underline-offset-2 group-hover:underline leading-none">
             {title}
           </div>
-          <p className="text-sm group-hover:text-background leading-snug">
+          <p className="font-[YanoneKaffeesatz] text-sm group-hover:text-background leading-snug">
             {children}
           </p>
         </a>
@@ -203,3 +158,30 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
+
+function NavigationImageItem(link: {
+  id: number;
+  title: string;
+  href: string;
+  imageUrl: string;
+  description: string;
+}) {
+  return (
+    <NavigationMenuLink
+      className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
+      href={`${link.href}`}
+      style={{
+        backgroundImage: `url(${link.imageUrl})`,
+      }}
+    >
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/50 rounded-md"></div>
+      <div className="relative mt-4 mb-2 font-medium text-foreground text-lg">
+        {link.title}
+      </div>
+      <p className="relative font-[NothingYouCouldDo] text-foreground text-sm leading-tight">
+        {link.description}
+      </p>
+    </NavigationMenuLink>
+  );
+}
