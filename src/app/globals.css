@@ -402,13 +402,13 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-[YanoneKaffeesatz] tracking-wider;
   }
   strong {
     @apply underline underline-offset-4 decoration-foreground/50;
   }
   p {
-    @apply py-2 text-base/8;
+    @apply py-2 text-lg/8;
   }
   li {
     @apply ml-8 text-base/8;
