@@ -14,16 +14,16 @@ const Register: FC = () => {
 
   return (
     <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-24 2xl:py-40 xl:py-32 w-11/12">
-      <code className="font-semibold text-base/7">
+      <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
         Come Join Us for an Unforgettable Experience!
-      </code>
-      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+      </p>
+      <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         Register Today
       </h1>
 
       <FadedImage imageSrc="/images/Class_Photos/Basketball/20156202_141123.JPG" />
 
-      <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+      <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
         New Credit Card Processing Procedure
       </h3>
       <ol className="flex flex-col gap-2 my-3 list-decimal">

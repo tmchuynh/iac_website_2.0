@@ -10,7 +10,7 @@ export default function OurMissionPage() {
 
       <section>
         <section className="py-4">
-          <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+          <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Immersion: Active, Engaged Learning
           </h3>
           <p>
@@ -64,7 +64,7 @@ export default function OurMissionPage() {
         </div>
 
         <section className="py-4">
-          <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+          <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Effectiveness: Results-Driven Education
           </h3>
 
@@ -117,7 +117,7 @@ export default function OurMissionPage() {
         </section>
 
         <section className="py-4">
-          <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+          <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             Inclusivity: Supporting Every Learner
           </h3>
 
@@ -166,7 +166,7 @@ export default function OurMissionPage() {
         </section>
 
         <section className="py-4">
-          <h3 className="font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
+          <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
             A Mission to Transform Education and Lives
           </h3>
 

@@ -6,10 +6,10 @@ export default function ContactUs() {
   return (
     <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-24 2xl:py-40 xl:py-32 w-11/12">
       <section className="mx-auto w-11/12">
-        <code className="font-semibold text-base/7">
+        <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           We Would Love to Hear From You!
-        </code>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        </p>
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Contact Us
         </h1>
         <p className="mt-2 pb-4 md:pb-7 lg:pb-9 xl:pb-12 text-lg/8">
