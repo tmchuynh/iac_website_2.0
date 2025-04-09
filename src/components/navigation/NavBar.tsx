@@ -1,7 +1,4 @@
 "use client";
-import Link from "next/link";
-import * as React from "react";
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,12 +9,17 @@ import {
 } from "@/components/ui/navigation-menu";
 import {
   about,
+  aboutFeaturedLinks,
   contact,
-  featuredLinks,
+  contactFeaturedLinks,
   programs,
+  programsFeaturedLinks,
 } from "@/lib/constants/navigation";
 import { cn } from "@/lib/utils";
 import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
+import Image from "next/image";
+import Link from "next/link";
+import * as React from "react";
 import { ThemeToggle } from "../buttons/ThemeToggle";
 import DockNavigation from "./DockNavigation";
 
@@ -31,24 +33,34 @@ export function NavBar() {
       ) : (
         <div className="bg-primary py-5">
           <div className="flex mx-auto w-11/12 text-primary-foreground">
-            <div className="flex justify-between items-center mx-auto w-11/12 text-white">
-              International Activities Club
-            </div>
+            <Image
+              src="/images/initials_logo.png"
+              alt="IAC intials logo"
+              className="object-cover"
+              priority
+              width={100}
+              height={100}
+            />
 
-            <NavigationMenu className="flex justify-center mx-auto w-full text-white">
+            <NavigationMenu className="flex justify-end w-full font-[LuckiestGuy] text-white">
               <NavigationMenuList>
-                <NavigationMenuItem className="p-4">
+                <NavigationMenuItem className="mt-2 p-4">
                   <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink>Home</NavigationMenuLink>
+                    <NavigationMenuLink className="text-lg 2xl:text-2xl xl:text-xl">
+                      Home
+                    </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About IAC</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
-                      {featuredLinks.map((link, index) => (
-                        <li className="col-span-1 row-span-3 m-0" key={index}>
+                    <ul className="gap-3 grid lg:grid-cols-3 lg:grid-rows-3 p-4 md:w-[35em] lg:w-[45em]">
+                      {aboutFeaturedLinks.map((link, index) => (
+                        <li
+                          className="col-span-2 xl:col-span-3 row-span-3 xl:row-span-2 m-0"
+                          key={index}
+                        >
                           <NavigationMenuLink
                             className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
                             href={`${link.href}`}
@@ -80,9 +92,29 @@ export function NavBar() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Our Programs</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>Programs</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="gap-3 grid lg:grid-cols-3 p-4 md:w-[35em] lg:w-[45em]">
+                    <ul className="gap-3 grid lg:grid-cols-4 lg:grid-rows-2 p-4 md:w-[35em] lg:w-[50em]">
+                      {programsFeaturedLinks.map((link, index) => (
+                        <li className="col-span-2 row-span-2 m-0" key={index}>
+                          <NavigationMenuLink
+                            className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
+                            href={`${link.href}`}
+                            style={{
+                              backgroundImage: `url(${link.imageUrl})`,
+                            }}
+                          >
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/50 rounded-md"></div>
+                            <div className="relative mt-4 mb-2 font-medium text-foreground text-lg">
+                              {link.title}
+                            </div>
+                            <p className="relative text-foreground text-sm leading-tight">
+                              {link.description}
+                            </p>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
                       {programs.map((program, index) => (
                         <ListItem
                           key={index}
@@ -91,6 +123,36 @@ export function NavBar() {
                         >
                           {program.description}
                         </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="gap-3 grid lg:grid-cols-2 lg:grid-rows-5 p-4 md:w-[35em] lg:w-[45em]">
+                      {contactFeaturedLinks.map((link, index) => (
+                        <li
+                          className="col-span-2 lg:col-span-1 lg:row-span-3 m-0"
+                          key={index}
+                        >
+                          <NavigationMenuLink
+                            className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
+                            href={`${link.href}`}
+                            style={{
+                              backgroundImage: `url(${link.imageUrl})`,
+                            }}
+                          >
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/50 rounded-md"></div>
+                            <div className="relative mt-4 mb-2 font-medium text-foreground text-lg">
+                              {link.title}
+                            </div>
+                            <p className="relative text-foreground text-sm leading-tight">
+                              {link.description}
+                            </p>
+                          </NavigationMenuLink>
+                        </li>
                       ))}
                       {contact.map((link, index) => (
                         <ListItem
