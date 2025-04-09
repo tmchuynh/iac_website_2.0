@@ -19,7 +19,7 @@ export default function TestimonialCard({
         width={500}
         height={500}
       />
-      <blockquote className="font-semibold text-lg/8">
+      <blockquote className="font-[Caveat] font-semibold text-lg/8">
         {`“${testimonial.text}”`}
       </blockquote>
       <figcaption className="flex justify-end items-center gap-x-4 mt-6">

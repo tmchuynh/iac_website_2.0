@@ -32,15 +32,19 @@ export const ProgramCards = ({
         />
         <div className="flex flex-col justify-between px-6 xl:px-5 pt-7 xl:pt-2 pb-6 xl:pb-5 h-full">
           <div className="flex flex-col justify-between items-center gap-x-4">
-            <h3
+            <h2
               id={program.title}
               className={cn(
-                index % 3 === 0 ? "md:text-secondary" : "md:text-foreground",
-                "font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl"
+                index % 3 === 0
+                  ? "md:text-secondary"
+                  : index % 2 === 0
+                    ? "md:text-accent"
+                    : "md:text-tertiary",
+                "font-bold text-lg text-tertiary font-[PermanentMarker] md:text-xl lg:text-2xl xl:text-3xl"
               )}
             >
               {program.title}
-            </h3>
+            </h2>
             <p>{program.description}</p>
           </div>
           <DynamicButton
