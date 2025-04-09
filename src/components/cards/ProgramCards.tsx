@@ -30,13 +30,13 @@ export const ProgramCards = ({
           height={100}
           className="rounded-t-3xl min-w-full h-48 object-cover object-center"
         />
-        <div className="flex flex-col justify-between px-2 xl:px-5 xl:pt-2 pb-2 xl:pb-5 h-full">
+        <div className="flex flex-col justify-between px-6 xl:px-5 pt-7 xl:pt-2 pb-6 xl:pb-5 h-full">
           <div className="flex flex-col justify-between items-center gap-x-4">
             <h3
               id={program.title}
               className={cn(
                 index % 3 === 0 ? "md:text-secondary" : "md:text-foreground",
-                "text-xl font-semibold"
+                "font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl"
               )}
             >
               {program.title}
