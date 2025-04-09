@@ -5,8 +5,10 @@ import FadedImage from "@/components/images/FadedImage";
 export default function ProvideFeedbackPage() {
   return (
     <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-24 2xl:py-40 xl:py-32 w-11/12">
-      <code className="font-semibold text-base/7">Your voice matters.</code>
-      <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+      <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
+        Your voice matters.
+      </p>
+      <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
         We Value Your Feedback
       </h1>
       <FadedImage imageSrc="/images/Class_Photos/Basketball/20156202_141123.JPG" />
@@ -29,7 +31,7 @@ export default function ProvideFeedbackPage() {
         Together, with your input, we can continue to grow, evolve, and create
         experiences that truly make a difference.
       </p>
-      <h2 className="my-4 font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+      <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
         How You Can Help
       </h2>
       <p>

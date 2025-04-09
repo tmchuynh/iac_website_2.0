@@ -127,7 +127,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
           )}
         </div>
       )}
-      <h2 className="my-4 font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+      <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
         {showcaseItem.title}
       </h2>
       <p className="mt-4 max-w-2xl text-lg">{showcaseItem.description}</p>
