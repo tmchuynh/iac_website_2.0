@@ -6,7 +6,6 @@ import {
   FaSchool,
   FaTrophy,
 } from "react-icons/fa";
-import { FaPencil } from "react-icons/fa6";
 import { HiMiniInboxArrowDown } from "react-icons/hi2";
 import { MdMarkEmailRead } from "react-icons/md";
 
@@ -67,21 +66,9 @@ export const contact = [
     icon: HiMiniInboxArrowDown,
   },
   {
-    name: "Register For A Class",
-    href: "/contact_us/register",
-    description: "Sign up for classes and start your learning journey.",
-    icon: FaPencil,
-  },
-  {
     name: "Apply to Work With Us",
     href: "/contact_us/apply",
     description: "Join our team and make an impact on students' lives.",
-    icon: FaChalkboardTeacher,
-  },
-  {
-    name: "Provide Us Feedback",
-    href: "/contact_us/provide_feedback",
-    description: "Share your thoughts and suggestions with us.",
     icon: FaChalkboardTeacher,
   },
   {
@@ -92,7 +79,7 @@ export const contact = [
   },
 ];
 
-export const featuredLinks = [
+export const aboutFeaturedLinks = [
   {
     id: 1,
     title: "The Staff Behind The Curtains",
@@ -102,13 +89,35 @@ export const featuredLinks = [
     description:
       "Meet the dedicated staff who ensure the success of our programs, working behind the scenes to support student growth.",
   },
+];
+
+export const programsFeaturedLinks = [
   {
-    id: 2,
+    id: 3,
     title: "The Students' Projects Throughout Their Journey",
     href: "/programs/student_showcase",
     imageUrl:
       "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80",
     description:
       "Explore the innovative projects students create, showcasing their skills and creativity throughout their learning journey.",
+  },
+];
+
+export const contactFeaturedLinks = [
+  {
+    id: 4,
+    title: "Register For A Class",
+    href: "/contact_us/register",
+    imageUrl:
+      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80",
+    description: "Sign up for classes and start your learning journey",
+  },
+  {
+    id: 5,
+    title: "Provide Us Feedback",
+    href: "/contact_us/provide_feedback",
+    imageUrl:
+      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80",
+    description: "Share your thoughts and suggestions with us.",
   },
 ];
