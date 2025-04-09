@@ -8,30 +8,33 @@
   --color-foreground: var(--foreground);
 
   /* Custom Fonts */
-  --font-AnnieUseYourTelescope: var(--font-AnnieUseYourTelescope);
-
+  --font-NothingYouCouldDo: var(--font-NothingYouCouldDo);
+  --font-LuckiestGuy: var(--font-LuckiestGuy);
   --font-Caveat: var(--font-Caveat);
   --font-Chewy: var(--font-Chewy);
+  --font-PatrickHandSC: var(--font-PatrickHandSC);
+  --font-PermanentMarker: var(--font-PermanentMarker);
+  --font-YanoneKaffeesatz: var(--font-YanoneKaffeesatz);
+  /* ------------------------------------------------ */
+
+  --font-JustMeAgainDownHere: var(--font-JustMeAgainDownHere);
+  /* ------------------------------------------------ */
+
+  --font-AnnieUseYourTelescope: var(--font-AnnieUseYourTelescope);
 
   --font-ComingSoon: var(--font-ComingSoon);
 
   --font-CoveredByYourGrace: var(--font-CoveredByYourGrace);
   --font-CuteRabbit: var(--font-CuteRabbit);
-
   --font-GrechenFuemen: var(--font-GrechenFuemen);
+
   --font-Instink: var(--font-Instink);
 
-  --font-JustMeAgainDownHere: var(--font-JustMeAgainDownHere);
-  --font-LuckiestGuy: var(--font-LuckiestGuy);
   --font-Magic-Bubble: var(--font-Magic-Bubble);
   --font-modernline: var(--font-modernline);
-  --font-NothingYouCouldDo: var(--font-NothingYouCouldDo);
 
   --font-OvertheRainbow: var(--font-OvertheRainbow);
-  --font-PatrickHandSC: var(--font-PatrickHandSC);
-  --font-PermanentMarker: var(--font-PermanentMarker);
   --font-ReenieBeanie: var(--font-ReenieBeanie);
-  --font-Roboto: var(--font-Roboto);
 
   --font-RockSalt: var(--font-RockSalt);
   --font-SingleDay: var(--font-SingleDay);
@@ -39,7 +42,6 @@
   --font-SueEllenFrancisco: var(--font-SueEllenFrancisco);
   --font-SwankyandMooMoo: var(--font-SwankyandMooMoo);
   --font-WaitingfortheSunrise: var(--font-WaitingfortheSunrise);
-  --font-YanoneKaffeesatz: var(--font-YanoneKaffeesatz);
 
   --font-YujiBoku: var(--font-YujiBoku);
 
@@ -305,15 +307,6 @@
   font-family: "ReenieBeanie";
   src: url("/fonts/ReenieBeanie-Regular.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-/* Roboto (Variable Font with Width and Weight axes) */
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
-  font-weight: 1 999;
   font-style: normal;
   font-display: auto;
 }
