@@ -45,15 +45,22 @@ export const ThemeToggle = (): JSX.Element | null => {
 
   return (
     <div className="flex items-center space-x-2">
+      <p className="sr-only">Toggle theme</p>
       <Toggle
         aria-label="Toggle theme"
         onClick={toggleTheme}
         className="flex justify-center items-center hover:bg-accent hover:text-accent-foreground"
       >
         {currentTheme === "dark" ? (
-          <FiMoon className="w-4 h-4" />
+          <>
+            <p className="sr-only">Toggle to dark mode</p>
+            <FiMoon className="w-4 h-4" />
+          </>
         ) : (
-          <FiSun className="w-4 h-4" />
+          <>
+            <p className="sr-only">Toggle to light mode</p>
+            <FiSun className="w-4 h-4" />
+          </>
         )}
       </Toggle>
     </div>
