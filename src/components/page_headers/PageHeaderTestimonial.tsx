@@ -43,14 +43,15 @@ export default function PageHeaderTestimonial() {
           </svg>
 
           <figure className="pl-8 dark:border-tertiary border-l">
-            <blockquote className="font-[YanoneKaffeesatz] font-semibold text-xl/8">
-              "Due to one of my children's severe food allergies, we have been
-              denied by multiple camps and classes who did not want the risk of
-              having them as a student. However, Justin was very responsive and
-              collaborated with me on ways to adapt the class to be a safe
-              space. Both of my kids love learning about chess and practicing
-              among their peers. I'm excited they are able to learn a game that
-              teaches critical thinking and persistence.",
+            <blockquote className="font-[WindSong] font-semibold text-xl/loose">
+              "Due to one of my children's <mark>severe food allergies</mark>,
+              we have been denied by multiple camps and classes who did not want
+              the risk of having them as a student. However, Justin was very
+              responsive and collaborated with me on ways to adapt the class to
+              be a safe space. Both of my kids{" "}
+              <mark>love learning about chess</mark> and practicing among their
+              peers. I'm excited they are able to learn a game that teaches
+              critical thinking and persistence.",
             </blockquote>
             <figcaption className="flex items-center gap-x-4 mt-8">
               <Image
@@ -61,21 +62,13 @@ export default function PageHeaderTestimonial() {
                 height={200}
               />
               <div className="text-sm/6">
-                <div className="font-semibold">Chess Parent</div>
+                <cite className="font-[GrapeNuts] font-semibold">
+                  Chess Parent
+                </cite>
                 <div>Peters Canyon Elementary School</div>
               </div>
             </figcaption>
           </figure>
-          <h2 className="mt-16 font-[PermanentMarker] font-bold text-2xl tracking-tight">
-            No Barriers, Just Opportunity
-          </h2>
-          <p>
-            Our team brings everything needed—curriculum, instructors, and
-            materials—right to your school site. With no need for additional
-            staff or resources, schools can focus on student engagement while we
-            handle the logistics. It’s enrichment made simple, effective, and
-            impactful.
-          </p>
         </div>
         <div className="lg:col-span-7 max-w-2xl text-base/7">
           <ul role="list" className="space-y-8">
@@ -138,6 +131,16 @@ export default function PageHeaderTestimonial() {
               resilience, emotional intelligence, and leadership skills. It’s
               about developing well-rounded individuals who are confident in who
               they are and what they can achieve.
+            </p>
+            <h2 className="mt-16 font-[PermanentMarker] font-bold text-2xl tracking-tight">
+              No Barriers, Just Opportunity
+            </h2>
+            <p>
+              Our team brings everything needed—curriculum, instructors, and
+              materials—right to your school site. With no need for additional
+              staff or resources, schools can focus on student engagement while
+              we handle the logistics. It’s enrichment made simple, effective,
+              and impactful.
             </p>
           </div>
         </div>
