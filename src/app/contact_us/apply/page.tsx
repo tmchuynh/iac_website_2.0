@@ -27,13 +27,14 @@ export default function Apply() {
             </p>
             <div className="lg:flex-none lg:mt-6">
               <figure className="mt-10">
-                <blockquote className="font-semibold text-lg/8">
+                <blockquote className="font-[WaitingfortheSunrise] font-semibold text-lg/8">
                   "I am at a loss for words; upon reading [Justin's] email, I
-                  couldn't help but feel an overwhelming sense of relief. The
-                  appreciation of the scholarship is truly a blessing to me, and
-                  the many years of [my son's] participation have made such an
-                  impact on his life! People like [Justin] really do make such
-                  an impact.”
+                  couldn't help but feel{" "}
+                  <mark>an overwhelming sense of relief</mark>. The appreciation
+                  of the scholarship is truly a blessing to me, and the many
+                  years of [my son's] participation have made{" "}
+                  <mark>such an impact on his life</mark>! People like [Justin]
+                  really do make such an impact.”
                 </blockquote>
                 <figcaption className="flex items-center gap-x-4 mt-8">
                   <Image
@@ -44,7 +45,9 @@ export default function Apply() {
                     height={96}
                   />
                   <div>
-                    <div className="font-semibold text-base">Chess Parent</div>
+                    <cite className="font-[GrapeNuts] font-semibold">
+                      Chess Parent
+                    </cite>
                     <div className="text-sm/6">
                       Peters Canyon Elementary School
                     </div>
