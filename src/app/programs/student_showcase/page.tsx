@@ -22,10 +22,10 @@ export default function StudentShowcasePage(): JSX.Element {
   return (
     <main className="mx-auto px-4 py-10 lg:py-20 w-11/12">
       <section className="mb-12">
-        <code className="font-semibold text-base/7">
+        <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           A Celebration of Imagination, Innovation, and Expression
-        </code>
-        <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        </p>
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
           Showcasing Children's Creativity
         </h1>
 
@@ -46,7 +46,7 @@ export default function StudentShowcasePage(): JSX.Element {
           empowered to think independently, explore without limits, and
           communicate their ideas with confidence.
         </p>
-        <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
+        <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
           WHY WE SHOWCASE
         </h2>
         <p>
@@ -66,7 +66,7 @@ export default function StudentShowcasePage(): JSX.Element {
           Every sketch, sentence, experiment, and presentation reveals something
           powerful: the unfiltered brilliance of youth.
         </p>
-        <h2 className="my-4 font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
+        <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
           Respecting Student Privacy
         </h2>
         <p>
@@ -105,7 +105,7 @@ export default function StudentShowcasePage(): JSX.Element {
       </section>
 
       <section className="mb-12">
-        <h3 className="mb-2 font-semibold text-2xl tracking-widest">
+        <h3 className="mb-2 font-[Caveat] font-semibold text-2xl tracking-widest">
           QuickLinks
         </h3>
         <StudentsWorkSection />

@@ -45,7 +45,7 @@ export default function ProgramsPage() {
         <ResponsiveLogo />
 
         <section>
-          <h1 className="my-4 pb-4 font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+          <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
             Class Breakdown
           </h1>
           <p>
@@ -73,7 +73,7 @@ export default function ProgramsPage() {
           <ul className="flex flex-col gap-y-3 py-4 list-disc">
             {class_breakdown.map((list, index) => (
               <li key={index}>
-                <strong>{list.title}</strong> {list.description}
+                <strong>{list.title}</strong>: {list.description}
               </li>
             ))}
           </ul>
