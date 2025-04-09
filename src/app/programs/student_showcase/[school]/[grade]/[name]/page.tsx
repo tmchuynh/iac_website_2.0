@@ -35,6 +35,7 @@ import { JSX, useEffect, useState } from "react";
  */
 export default function StudentIndividualShowcasePage(): JSX.Element {
   const searchParams = useSearchParams();
+  const [font, setFont] = useState<string>("");
   const { school, grade, name } = useParams();
   const [loading, setLoading] = useState<boolean>(true);
   const [showcaseItem, setShowcaseItem] = useState<any>(null);
@@ -92,6 +93,26 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
     fetchShowcaseItem();
   }, [searchParams]);
 
+  useEffect(() => {
+    const fonts = [
+      "SingleDay",
+      "SueEllenFrancisco",
+      "SwankyandMooMoo",
+      "WaitingfortheSunrise",
+      "YujiBoku",
+    ];
+
+    const pageKey = `${window.location.pathname}-font`;
+    let selectedFont = localStorage.getItem(pageKey);
+
+    if (!selectedFont) {
+      selectedFont = fonts[Math.floor(Math.random() * fonts.length)];
+      localStorage.setItem(pageKey, selectedFont);
+    }
+
+    setFont(selectedFont);
+  }, []);
+
   if (loading) {
     return <LoadingIndicator />;
   }
@@ -130,7 +151,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
       <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
         {showcaseItem.title}
       </h2>
-      <p className="mt-4 max-w-2xl text-lg">{showcaseItem.description}</p>
+      <p className="max-w-2xl font-[ComingSoon]">{showcaseItem.description}</p>
       <div className="flex md:flex-row flex-col justify-center items-center gap-6 lg:gap-10 xl:gap-20 mt-4">
         {showcaseItem.author !== "Anonymous" && (
           <div className="flex flex-col justify-center items-center">
@@ -169,10 +190,11 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
         </div>
       </div>
 
-      <div className="pb-8 md:pb-10 lg:pb-14 2xl:pb-32 xl:pb-20">
+      <div className="px-2 pb-8 md:pb-10 lg:pb-14 2xl:pb-32 xl:pb-20">
         {showcaseItem.writing && (
           <p
-            className="mt-4 indent-8"
+            className="mt-4 text-2xl indent-8"
+            style={{ fontFamily: font }}
             dangerouslySetInnerHTML={{
               __html: showcaseItem.writing
                 .split("\n")

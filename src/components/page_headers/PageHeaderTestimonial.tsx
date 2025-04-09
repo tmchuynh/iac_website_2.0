@@ -43,7 +43,7 @@ export default function PageHeaderTestimonial() {
           </svg>
 
           <figure className="pl-8 dark:border-tertiary border-l">
-            <blockquote className="font-semibold text-xl/8">
+            <blockquote className="font-[YanoneKaffeesatz] font-semibold text-xl/8">
               "Due to one of my children's severe food allergies, we have been
               denied by multiple camps and classes who did not want the risk of
               having them as a student. However, Justin was very responsive and
@@ -69,7 +69,7 @@ export default function PageHeaderTestimonial() {
           <h2 className="mt-16 font-[PermanentMarker] font-bold text-2xl tracking-tight">
             No Barriers, Just Opportunity
           </h2>
-          <p className="mt-6">
+          <p>
             Our team brings everything needed—curriculum, instructors, and
             materials—right to your school site. With no need for additional
             staff or resources, schools can focus on student engagement while we
@@ -88,7 +88,7 @@ export default function PageHeaderTestimonial() {
                 height={100}
               />
               <span>
-                <strong className="font-semibold">Creative Confidence</strong>{" "}
+                <strong className="font-semibold">Creative Confidence</strong>:
                 Students are encouraged to express their ideas freely, take
                 creative risks, and develop a strong sense of self.
               </span>
@@ -104,9 +104,10 @@ export default function PageHeaderTestimonial() {
               <span>
                 <strong className="font-semibold">
                   Multi-Disciplinary Learning
-                </strong>{" "}
-                From public speaking and performing arts to chess and comic book
-                design, our offerings span a wide range of interests and skills.
+                </strong>
+                : From public speaking and performing arts to chess and comic
+                book design, our offerings span a wide range of interests and
+                skills.
               </span>
             </li>
             <li className="flex gap-x-3">
@@ -120,8 +121,8 @@ export default function PageHeaderTestimonial() {
               <span>
                 <strong className="font-semibold">
                   Collaboration & Community
-                </strong>{" "}
-                We cultivate a positive, inclusive environment where students
+                </strong>
+                : We cultivate a positive, inclusive environment where students
                 build teamwork, empathy, and communication through shared
                 projects.
               </span>
@@ -131,7 +132,7 @@ export default function PageHeaderTestimonial() {
             <h2 className="font-[PermanentMarker] font-bold text-2xl tracking-tight">
               Nurturing the Whole Child
             </h2>
-            <p className="mt-6">
+            <p>
               We focus on more than just academics. Through hands-on exploration
               and expressive outlets, our programs help students build
               resilience, emotional intelligence, and leadership skills. It’s

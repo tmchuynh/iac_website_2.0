@@ -1,7 +1,8 @@
 import { Work } from "@/lib/types/information";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { MdStarRate } from "react-icons/md";
+import DynamicButton from "../buttons/button-dynamic";
 
 export default function StudentWorkCard({
   work,
@@ -36,30 +37,15 @@ export default function StudentWorkCard({
             />
           </div>
           <div className="-mt-2 p-6 border rounded-b-2xl">
-            <h3 className="mb-2 font-bold text-xl">{work.title}</h3>
-            <p className="mb-4 text-sm">{work.grade}</p>
+            <h3 className="font-[Caveat] font-bold text-xl">{work.title}</h3>
+            <p className="mb-4 font-[PatrickHandSC] text-sm">{work.grade}</p>
             <div className="flex justify-between items-center">
               <span className="bg-clip-text bg-gradient-to-r from-secondary dark:from-chart-1 via-primary/90 dark:via-secondary to-tertiary/75 dark:to-tertiary font-bold text-2xl text-transparent">
                 {work.school}
               </span>
-              <Button className="group-hover:scale-105">
-                <svg
-                  className="icon icon-tabler icons-tabler-outline icon-tabler-sparkles"
-                  fill="none"
-                  height={24}
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  width={24}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 0h24v24H0z" fill="none" stroke="none" />
-                  <path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z" />
-                </svg>
+              <DynamicButton hoverEffect="spin" icon={MdStarRate}>
                 View Project
-              </Button>
+              </DynamicButton>
             </div>
           </div>
         </div>

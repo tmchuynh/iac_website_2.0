@@ -31,7 +31,7 @@ export default function DynamicButton({
 }: Omit<DynamicButtonProps, "text"> & {
   children: React.ReactNode;
   iconPosition?: "left" | "right" | "top" | "bottom";
-  hoverEffect?: "translate" | "rotate" | "scale";
+  hoverEffect?: "translate" | "rotate" | "scale" | "spin" | "bounce";
 }): JSX.Element {
   const iconPositionClasses = {
     left: "flex-row-reverse",
@@ -44,6 +44,8 @@ export default function DynamicButton({
     translate: "group-hover:translate-x-2",
     rotate: "group-hover:rotate-45",
     scale: "group-hover:scale-110",
+    spin: "group-hover:animate-spin",
+    bounce: "group-hover:animate-bounce",
   };
 
   return (
@@ -63,10 +65,14 @@ export default function DynamicButton({
       {Icon && (
         <span
           className={cn(
-            "inline-block px-4 transition-transform duration-300 ease-in-out group-hover:translate-x-2",
+            "inline-block px-4 transition-transform duration-300 ease-in-out",
             {
               "group-hover:translate-x-2 group-hover:-translate-y-2 pl-3 duration-500":
                 variant === "link" && hoverEffect === undefined,
+            },
+            {
+              "group-hover:translate-x-2":
+                hoverEffect !== "spin" && hoverEffect !== "bounce",
             },
             hoverEffect && hoverEffectClasses[hoverEffect],
             iconClassName
