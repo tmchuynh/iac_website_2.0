@@ -218,24 +218,34 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
         const capitalizedSegment = capitalizedSegments[index];
 
         items.push(
-          <BreadcrumbSeparator key={`sep-${href}`} className="mr-0 ml-4">
+          <BreadcrumbSeparator key={`sep-${href}`} className="mx-4">
             <TbSlashes />
           </BreadcrumbSeparator>
         );
 
-        items.push(
-          <BreadcrumbItem
-            key={`${href}-${capitalizedSegment}`}
-            className="mx-1"
-          >
-            <BreadcrumbLink
-              href={href}
-              className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
+        if (index > 1 && index < pathSegments.length - 1) {
+          items.push(
+            <BreadcrumbItem key={`dots-${index}`} className="-mx-1">
+              <span className="py-1 rounded-md text-primary dark:text-foreground cursor-default">
+                {capitalizedSegment}
+              </span>
+            </BreadcrumbItem>
+          );
+        } else {
+          items.push(
+            <BreadcrumbItem
+              key={`${href}-${capitalizedSegment}`}
+              className="mx-1"
             >
-              {capitalizedSegment}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        );
+              <BreadcrumbLink
+                href={href}
+                className="py-1 rounded-md text-primary dark:text-foreground underline-offset-4 hover:underline"
+              >
+                {capitalizedSegment}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          );
+        }
       });
     }
 
@@ -249,7 +259,7 @@ const StaticBreadcrumb: React.FC = (): JSX.Element | null => {
       <ResponsiveLogo className="md:hidden" />
       <nav
         aria-label="Breadcrumb"
-        className="flex flex-row items-center gap-2 w-full text-sm"
+        className="flex flex-row items-center gap-2 w-full text-xs lg:text-sm"
       >
         <ul className="flex flex-row items-center gap-2 px-4 font-[Chewy]">
           {breadcrumbItems}
