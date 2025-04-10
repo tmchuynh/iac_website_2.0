@@ -70,7 +70,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     </>
                   )}
 
-                  <div className="flex items-center gap-10">
+                  <div className="flex items-center md:gap-4 lg:gap-10">
                     {program.icons.map((Icon, iconIndex) => {
                       return (
                         <div
@@ -78,7 +78,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                           className="inline-block mr-2 -mb-2"
                         >
                           {typeof Icon === "string" ? (
-                            <div className="w-10 lg:w-15 2xl:w-20 h-10 lg:h-15 2xl:h-20">
+                            <div className="w-7 md:w-10 lg:w-15 2xl:w-20 h-7 md:h-10 lg:h-15 2xl:h-20">
                               <Image
                                 src={Icon}
                                 alt={`${program.title}_${iconIndex}_${Icon}`}

@@ -10,7 +10,7 @@ export default function ContentAndScreenshot() {
     <div className="py-24 md:py-32">
       <div className="mx-auto px-6 lg:px-8">
         <div className="mx-auto lg:mx-0 lg:max-w-none">
-          <ResponsiveLogo />
+          <ResponsiveLogo className="lg:mx-0" />
           <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
             Bringing Enrichment to Your School
           </p>
@@ -30,6 +30,7 @@ export default function ContentAndScreenshot() {
                 excel in areas they love—while also introducing them to new and
                 exciting opportunities they may not have encountered before.
               </p>
+
               <p>
                 Led by experienced instructors who are passionate about their
                 fields, our program blends fun with purpose. Each session is
@@ -40,6 +41,12 @@ export default function ContentAndScreenshot() {
                 team ensures that learning is always engaging, hands-on, and
                 meaningful.
               </p>
+              <DynamicButton
+                onClick={() => router.push("/about_us")}
+                className="md:hidden mb-3 w-full"
+              >
+                More About Us
+              </DynamicButton>
               <p>
                 We take pride in our innovative approach, which integrates the
                 best practices from both academic and enrichment models. Our
@@ -73,7 +80,13 @@ export default function ContentAndScreenshot() {
                 creating meaningful, memorable, and student-centered learning
                 opportunities.
               </p>
-              <p className="mt-8">
+              <DynamicButton
+                onClick={() => router.push("/about_us/our_mission")}
+                className="md:hidden mb-3 w-full"
+              >
+                Our Mission
+              </DynamicButton>
+              <p className="md:mt-8">
                 At IAC, we pride ourselves on consistently maintaining high
                 standards of quality and excellence across all activities. Every
                 program is thoughtfully designed, led by passionate educators,
@@ -92,8 +105,7 @@ export default function ContentAndScreenshot() {
                 our community.
               </p>
               <DynamicButton
-                className="mx-0 w-2/3"
-                onClick={() => router.push("/")}
+                onClick={() => router.push("/contact_us/register")}
               >
                 Get Started Today
               </DynamicButton>

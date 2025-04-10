@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { JSX } from "react";
+import DynamicButton from "../buttons/button-dynamic";
 
 /**
  * A header component that displays a section with text content and image tiles in a mosaic layout.
@@ -18,6 +20,8 @@ import { JSX } from "react";
  * @returns {JSX.Element} A header component with text and image tiles
  */
 export default function ImageTilesHeader(): JSX.Element {
+  const router = useRouter();
+
   return (
     <div className="py-32 overflow-hidden">
       <div className="lg:flex mx-auto px-6 lg:px-8 max-w-7xl">
@@ -35,6 +39,18 @@ export default function ImageTilesHeader(): JSX.Element {
               each crafted to spark curiosity, foster growth, and meet you where
               you are.
             </p>
+            <DynamicButton
+              onClick={() => router.push("/programs/school_information")}
+              className="md:hidden w-full"
+            >
+              Learn About Partnering Schools
+            </DynamicButton>
+            <DynamicButton
+              onClick={() => router.push("/programs/student_showcase")}
+              className="md:hidden w-full"
+            >
+              View Class Projects
+            </DynamicButton>
             <p className="mt-6 text-base/7">
               With options tailored to a variety of interests, age groups, and
               learning styles, you’ll have the tools to confidently explore
@@ -69,7 +85,7 @@ export default function ImageTilesHeader(): JSX.Element {
               <div className="flex flex-auto lg:flex-none justify-end w-96 lg:w-auto">
                 <Image
                   alt=""
-                  src="/images/Class_Photos/Flag_Football/20250402_141937.jpg"
+                  src="/images/Class_Photos/Basketball/20156202_141123.JPG"
                   className="flex-none rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
                   width={1152}
                   height={842}
@@ -78,7 +94,7 @@ export default function ImageTilesHeader(): JSX.Element {
               <div className="sm:block sm:flex-auto lg:flex-none hidden sm:w-0 lg:w-auto">
                 <Image
                   alt=""
-                  src="/images/Class_Photos/Soccer/53995092_144851.jpg"
+                  src="/images/Class_Photos/Flag_Football/56924856_265426.jpg"
                   className="rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
                   width={768}
                   height={604}
