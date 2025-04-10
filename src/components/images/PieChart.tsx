@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Doughnut } from "react-chartjs-2";
 import {
-  Chart as ChartJS,
   ArcElement,
-  Tooltip,
-  Legend,
+  Chart as ChartJS,
   ChartOptions,
+  Legend,
+  Tooltip,
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
@@ -65,23 +65,23 @@ const DoughnutChartLabel = () => {
       {
         data: dataSource.map((item) => item.value),
         backgroundColor: backgroundColors,
+        hoverBackgroundColor: backgroundColors,
+        borderColor: backgroundColors,
         borderWidth: 0,
       },
     ],
   };
 
   const options: ChartOptions<"doughnut"> = {
-    responsive: true,
     plugins: {
       legend: {
         display: true,
-        position: "right",
+        position: "bottom",
         align: "start",
         labels: {
           color: getCSSVariable("--foreground"),
-          boxWidth: 20,
-          boxHeight: 20,
-          usePointStyle: false,
+          boxWidth: 10,
+          boxHeight: 10,
           padding: 10,
         },
       },
