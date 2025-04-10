@@ -1,9 +1,12 @@
 "use client";
 
+import DynamicButton from "@/components/buttons/button-dynamic";
 import OffsetImage from "@/components/page_headers/OffsetImage";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function OurMissionPage() {
+  const router = useRouter();
   return (
     <main className="relative mx-auto px-4 py-10 lg:py-30 w-11/12">
       <OffsetImage />
@@ -31,7 +34,12 @@ export default function OurMissionPage() {
             community initiative, they are consistently challenged to apply
             their knowledge in meaningful, real-world contexts.
           </p>
-
+          <DynamicButton
+            onClick={() => router.push("/about_us/our_commitment")}
+            className="md:hidden mb-3 w-full"
+          >
+            Our Commitment
+          </DynamicButton>
           <p>
             By embedding learning in authentic scenarios, we awaken curiosity,
             nurture creativity, and promote intellectual risk-taking. Students
