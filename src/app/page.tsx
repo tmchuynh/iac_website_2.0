@@ -8,7 +8,7 @@ export default function Home() {
     <main className="relative mx-auto px-4 py-8 w-11/12">
       <ContentAndScreenshot />
       <FadedImage
-        imageSrc={"/images/Class_Photos/Soccer/53995092_144851.jpg"}
+        imageSrc={"/images/Class_Photos/Soccer/53995092_146958.jpg"}
       />
       <section className="mb-12">
         <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">

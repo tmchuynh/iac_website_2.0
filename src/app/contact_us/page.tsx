@@ -1,8 +1,12 @@
+"use client";
+
 import DynamicButton from "@/components/buttons/button-dynamic";
 import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ContactUs() {
+  const router = useRouter();
   return (
     <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-24 2xl:py-40 xl:py-32 w-11/12">
       <section className="mx-auto w-11/12">
@@ -22,7 +26,33 @@ export default function ContactUs() {
           ready to assist and guide you every step of the way. Don’t hesitate to
           reach out—we look forward to starting the conversation with you!
         </p>
+        <DynamicButton
+          onClick={() => router.push("/contact_us/register")}
+          className="md:hidden w-full"
+        >
+          Register For a Program!
+        </DynamicButton>
+        <DynamicButton
+          onClick={() => router.push("/contact_us/provide_feedback")}
+          className="md:hidden w-full"
+        >
+          Provide Feedback
+        </DynamicButton>
+
         <ResponsiveLogo />
+
+        <DynamicButton
+          onClick={() => router.push("/contact_us/request_us")}
+          className="md:hidden w-full"
+        >
+          Request a Program
+        </DynamicButton>
+        <DynamicButton
+          onClick={() => router.push("/contact_us/apply")}
+          className="md:hidden w-full"
+        >
+          Want to Join Us?
+        </DynamicButton>
 
         <div className="gap-7 grid grid-cols-1 md:grid-cols-3 mt-16">
           <form action="#" method="POST" className="md:col-span-2">

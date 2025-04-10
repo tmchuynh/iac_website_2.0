@@ -1,5 +1,6 @@
 "use client";
 import { useTabs } from "@/app/context/TabsContext";
+import DynamicButton from "@/components/buttons/button-dynamic";
 import ApplyToJoinCTA from "@/components/CTA/ApplyToJoinCTA";
 import DoughnutChartLabel from "@/components/images/PieChart";
 import ResponsiveLogo from "@/components/images/ResponsiveLogo";
@@ -7,7 +8,7 @@ import LoadingIndicator from "@/components/loading/Loading";
 import ImageTilesHeader from "@/components/page_headers/ImageTilesHeader";
 import ProgramDetails from "@/components/programs/ProgramInformation";
 import { class_breakdown } from "@/lib/constants/list";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
 /**
@@ -32,9 +33,12 @@ function ProgramContent() {
 }
 
 export default function ProgramsPage() {
+  const router = useRouter();
+
   return (
     <>
       <ImageTilesHeader />
+
       <div className="flex flex-col justify-center items-center mx-auto px-4 w-11/12">
         <section>
           <Suspense fallback={<LoadingIndicator />}>
@@ -58,6 +62,18 @@ export default function ProgramsPage() {
             educational benefits by targeting specific skills and knowledge
             areas at the right time, enhancing the overall learning process.
           </p>
+          <DynamicButton
+            onClick={() => router.push("/programs/testimonials")}
+            className="md:hidden w-full"
+          >
+            Hear From Our Community
+          </DynamicButton>
+          <DynamicButton
+            onClick={() => router.push("/programs/frequently_asked_questions")}
+            className="md:hidden w-full"
+          >
+            Frequently Asked Questions
+          </DynamicButton>
           <DoughnutChartLabel />
           <p>
             By dividing the class into well-defined parts, we ensure that
