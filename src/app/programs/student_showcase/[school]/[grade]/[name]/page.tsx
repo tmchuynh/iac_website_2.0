@@ -161,7 +161,9 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
       <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
         {showcaseItem.title}
       </h2>
-      <p className="max-w-2xl font-[ComingSoon]">{showcaseItem.description}</p>
+      <p className="max-w-4xl font-[ComingSoon] text-pretty">
+        {showcaseItem.description}
+      </p>
       <div className="flex md:flex-row flex-col justify-center items-center gap-6 lg:gap-10 xl:gap-20 mt-4">
         {showcaseItem.author !== "Anonymous" && (
           <div className="flex flex-col justify-center items-center">
@@ -171,7 +173,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
               width={40}
               height={40}
             />
-            <p className="text-sm/6">
+            <p className="text-md/6">
               <strong>Author</strong>: {showcaseItem.author}
             </p>
           </div>
@@ -183,7 +185,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
             width={40}
             height={40}
           />
-          <p className="text-sm/6">
+          <p className="text-md/6">
             <strong>Date</strong>: {showcaseItem.date}
           </p>
         </div>
@@ -194,7 +196,7 @@ export default function StudentIndividualShowcasePage(): JSX.Element {
             width={40}
             height={40}
           />
-          <p className="text-sm/6">
+          <p className="text-md/6">
             <strong>School</strong>: {showcaseItem.school}
           </p>
         </div>
