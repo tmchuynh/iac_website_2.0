@@ -146,9 +146,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="font-medium text-sm underline-offset-2 group-hover:underline leading-none">
-            {title}
-          </div>
+          <div className="font-medium text-sm leading-none">{title}</div>
           <p className="font-[YanoneKaffeesatz] text-sm group-hover:text-background leading-snug">
             {children}
           </p>
