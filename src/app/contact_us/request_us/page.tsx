@@ -10,22 +10,22 @@ export default function RequestUs() {
 
   return (
     <main className="relative mx-auto px-4 py-8">
-      <div className="lg:left-1/2 lg:absolute lg:inset-0">
+      <div className="lg:absolute lg:inset-0 lg:left-1/2">
         <Image
           alt=""
           src="/images/Class_Photos/Soccer/52195092_265855.jpg"
-          className="lg:absolute w-full h-64 sm:h-80 lg:h-full object-cover"
+          className="lg:absolute h-64 sm:h-80 lg:h-full w-full object-cover"
           width={600}
           height={800}
         />
       </div>
-      <div className="lg:grid lg:grid-cols-2 mx-auto pt-16 sm:pt-24 lg:pt-32 pb-24 sm:pb-32 w-11/12">
+      <div className="lg:grid lg:grid-cols-2 mx-auto pb-24 sm:pb-32 pt-16 sm:pt-24 lg:pt-32 w-11/12">
         <div className="px-6 lg:px-8">
           <div className="mx-auto lg:mx-0 max-w-3xl lg:max-w-7xl text-pretty">
             <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
               Your students deserve the best.
             </p>
-            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
               Bring Our Programs to Your Campus
             </h1>
             <p className="mt-2 text-md">
