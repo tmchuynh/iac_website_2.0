@@ -5,11 +5,11 @@ import { Resend } from "resend";
 export async function POST(request: Request) {
   try {
     // Parse the JSON body from the request
-    const { firstName, lastName, email, phoneNumber, message } =
+    const { firstName, lastName, email, phoneNumber, inquiryType, message } =
       await request.json();
 
     // Basic validation: ensure required fields are present.
-    if (!firstName || !lastName || !email || !message) {
+    if (!firstName || !lastName || !email || !inquiryType || !message) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -23,12 +23,13 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: process.env.FROM_CONTACT_US_EMAIL as string, // Verified sender email.
       to: process.env.TO_EMAIL as string, // Recipient email.
-      subject: `Contact Us Message from ${name}`,
+      subject: `Contact Us Message from ${firstName} ${lastName} - ${inquiryType}`,
       react: ContactUsTemplate({
         firstName,
         lastName,
         email,
         phoneNumber,
+        inquiryType,
         message,
       }),
     });

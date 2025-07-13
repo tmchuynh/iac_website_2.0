@@ -5,12 +5,40 @@ import { Resend } from "resend";
 export async function POST(request: Request) {
   try {
     // Parse the JSON body from the request
-    const { name, email, message } = await request.json();
+    const {
+      name,
+      email,
+      participationType,
+      program,
+      school,
+      overallRating,
+      feedbackType,
+      specificAreas,
+      programSuggestions,
+      staffRecognition,
+      improvements,
+      additionalComments,
+      anonymous,
+      contactBack,
+    } = await request.json();
 
     // Basic validation: ensure required fields are present.
-    if (!name || !email || !message) {
+    if (
+      !participationType ||
+      !overallRating ||
+      !feedbackType ||
+      feedbackType.length === 0
+    ) {
       return NextResponse.json(
         { error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    // Additional validation for non-anonymous submissions
+    if (!anonymous && (!name || !email)) {
+      return NextResponse.json(
+        { error: "Name and email are required for non-anonymous feedback" },
         { status: 400 }
       );
     }
@@ -22,8 +50,23 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: process.env.FROM_FEEDBACK_EMAIL as string, // Verified sender email.
       to: process.env.TO_EMAIL as string, // Recipient email.
-      subject: `Feedback from ${name}`,
-      react: FeedbackTemplate({ name, email, message }),
+      subject: `Feedback from ${anonymous ? "Anonymous User" : name}${program ? ` - ${program}` : ""}`,
+      react: FeedbackTemplate({
+        name: anonymous ? "Anonymous" : name,
+        email: anonymous ? "anonymous@feedback.com" : email,
+        participationType,
+        program,
+        school,
+        overallRating,
+        feedbackType,
+        specificAreas,
+        programSuggestions,
+        staffRecognition,
+        improvements,
+        additionalComments,
+        anonymous,
+        contactBack,
+      }),
     });
 
     return NextResponse.json(
