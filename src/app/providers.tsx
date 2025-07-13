@@ -1,10 +1,9 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { JSX, ReactNode } from "react";
 import { NotFoundProvider } from "./context/NotFoundContext";
 import { TabsProvider } from "./context/TabsContext";
-import { TooltipProvider } from "@/components/ui/tooltip";
 
 /**
  * A component that wraps the application with various context providers.
@@ -28,12 +27,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
  */
 export function Providers({ children }: { children: ReactNode }): JSX.Element {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
-      <NotFoundProvider>
-        <TabsProvider>
-          <TooltipProvider>{children}</TooltipProvider>
-        </TabsProvider>
-      </NotFoundProvider>
-    </ThemeProvider>
+    <NotFoundProvider>
+      <TabsProvider>
+        <TooltipProvider>{children}</TooltipProvider>
+      </TabsProvider>
+    </NotFoundProvider>
   );
 }
