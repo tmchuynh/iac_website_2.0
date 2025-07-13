@@ -1,18 +1,30 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-export default function FadedImage({ imageSrc }: { imageSrc: string }) {
+export default function FadedImage({
+  imageSrc,
+  className,
+}: {
+  imageSrc: string;
+  className?: string;
+}) {
   return (
-    <div className="lg:block relative hidden pt-16 lg:pt-10 overflow-hidden">
-      <div className="mx-auto px-6 lg:px-8">
+    <div
+      className={cn(
+        "lg:block relative hidden pt-16 lg:pt-10 overflow-hidden",
+        className
+      )}
+    >
+      <div className="mx-auto">
         <Image
           alt=""
           src={imageSrc}
-          className="shadow-2xl mb-[-12%] rounded-xl ring-1 ring-gray-900/10 aspect-video object-cover"
+          className="shadow-2xl mb-[-12%] ring-1 ring-gray-900/10 rounded-xl aspect-video object-cover"
           width={3600}
           height={1200}
         />
         <div aria-hidden="true" className="relative">
-          <div className="bottom-0 absolute -inset-x-20 bg-linear-to-t from-background pt-[27%]" />
+          <div className="absolute bottom-0 -inset-x-20 bg-linear-to-t from-background pt-[27%]" />
         </div>
       </div>
     </div>

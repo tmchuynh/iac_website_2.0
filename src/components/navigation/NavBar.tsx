@@ -20,7 +20,6 @@ import useSmallScreen from "@/lib/utils/screens/useSmallScreen";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-import { ThemeToggle } from "../buttons/ThemeToggle";
 import DockNavigation from "./DockNavigation";
 
 export function NavBar() {
@@ -31,7 +30,7 @@ export function NavBar() {
       {isSmallScreen ? (
         <DockNavigation />
       ) : (
-        <div className="bg-primary py-5">
+        <div className="bg-navigation py-5">
           <div className="flex mx-auto w-11/12 text-primary-foreground">
             <Image
               src="/images/initials_logo.png"
@@ -122,7 +121,6 @@ export function NavBar() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
-              <ThemeToggle />
             </NavigationMenu>
           </div>
         </div>
@@ -146,8 +144,8 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="font-medium text-sm leading-none">{title}</div>
-          <p className="font-[YanoneKaffeesatz] text-sm group-hover:text-background leading-snug">
+          <div className="font-medium leading-none text-sm">{title}</div>
+          <p className="font-[YanoneKaffeesatz] leading-snug text-sm group-hover:text-background">
             {children}
           </p>
         </a>
@@ -166,7 +164,7 @@ function NavigationImageItem(link: {
 }) {
   return (
     <NavigationMenuLink
-      className="relative flex flex-col justify-end bg-cover bg-center focus:shadow-md p-6 rounded-md w-full h-full no-underline select-none outline-none"
+      className="relative flex flex-col justify-end bg-center bg-cover focus:shadow-md p-6 rounded-md h-full w-full no-underline select-none outline-none"
       href={`${link.href}`}
       style={{
         backgroundImage: `url(${link.imageUrl})`,
@@ -174,10 +172,10 @@ function NavigationImageItem(link: {
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/50 rounded-md"></div>
-      <div className="relative mt-4 mb-2 font-medium text-foreground text-lg">
+      <div className="relative mb-2 mt-4 font-medium text-foreground text-lg">
         {link.title}
       </div>
-      <p className="relative font-[NothingYouCouldDo] text-foreground text-sm leading-tight">
+      <p className="relative font-[NothingYouCouldDo] leading-tight text-foreground text-sm">
         {link.description}
       </p>
     </NavigationMenuLink>

@@ -30,14 +30,14 @@ export default function ProgramDetails({ title }: { title?: string }) {
         className="w-full"
         id="programTabs"
       >
-        <TabsList className="flex-wrap justify-start gap-3 mb-10 py-3 h-full">
+        <TabsList className="flex-wrap gap-3 justify-start mb-10 py-3 h-full">
           {programs.map((program) => (
             <TabsTrigger
               value={program.title}
               key={program.title}
-              className="group flex items-center gap-3 data-[state=active]:font-bold data-[state=active]:text-primary md:text-md lg:text-lg dark:text-accent data-[state=active]:uppercas"
+              className="group flex gap-3 items-center data-[state=active]:font-bold data-[state=active]:text-primary md:text-md lg:text-lg dark:text-accent data-[state=active]:uppercas"
             >
-              <div className="flex justify-center items-center w-5 md:w-8 lg:w-9 2xl:w-10 h-5 md:h-8 lg:h-9 2xl:h-10">
+              <div className="flex items-center justify-center h-5 md:h-8 lg:h-9 2xl:h-10 w-5 md:w-8 lg:w-9 2xl:w-10">
                 <Image
                   src={program.titleIcon}
                   alt=""
@@ -55,7 +55,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
             <div className="" id={`${programIndex}`}>
               {/* Content */}
               <div className="pb-6">
-                <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+                <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
                   {program.title}
                 </h1>
 
@@ -70,15 +70,15 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     </>
                   )}
 
-                  <div className="flex items-center md:gap-4 lg:gap-10">
+                  <div className="flex md:gap-4 lg:gap-10 items-center">
                     {program.icons.map((Icon, iconIndex) => {
                       return (
                         <div
                           key={`icon-${program.title}-${iconIndex}`}
-                          className="inline-block mr-2 -mb-2"
+                          className="inline-block -mb-2 mr-2"
                         >
                           {typeof Icon === "string" ? (
-                            <div className="w-7 md:w-10 lg:w-15 2xl:w-20 h-7 md:h-10 lg:h-15 2xl:h-20">
+                            <div className="h-7 md:h-10 lg:h-15 2xl:h-20 w-7 md:w-10 lg:w-15 2xl:w-20">
                               <Image
                                 src={Icon}
                                 alt={`${program.title}_${iconIndex}_${Icon}`}
@@ -126,7 +126,7 @@ export default function ProgramDetails({ title }: { title?: string }) {
                     </div>
                     <div>
                       {activeIndex === programIndex && (
-                        <div className="flex flex-wrap justify-between gap-5">
+                        <div className="flex flex-wrap gap-5 justify-between">
                           {program.images.map((image, imageIndex) => (
                             <Image
                               key={imageIndex}

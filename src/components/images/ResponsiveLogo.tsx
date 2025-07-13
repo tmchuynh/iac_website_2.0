@@ -22,7 +22,7 @@ export default function ResponsiveLogo({ className }: { className?: string }) {
         <Image
           alt="IAC Logo"
           src="/images/white_logo.png"
-          className="w-auto h-40 xl:h-52 object-contain"
+          className="h-40 xl:h-52 w-auto object-contain"
           priority={true}
           width={3600}
           height={1200}
@@ -31,7 +31,7 @@ export default function ResponsiveLogo({ className }: { className?: string }) {
         <Image
           alt="IAC Logo"
           src="/images/purple_logo.png"
-          className="w-auto h-40 xl:h-52 object-contain"
+          className="h-40 xl:h-52 w-auto object-contain"
           priority={true}
           width={3600}
           height={1200}

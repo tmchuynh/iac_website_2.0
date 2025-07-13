@@ -34,9 +34,9 @@ export default function DockNavigation() {
   ];
 
   return (
-    <nav className="bottom-0 z-10 fixed sm:hidden bg-background dark:border-chart-1 border-t w-full text-foreground">
+    <nav className="bottom-0 fixed z-10 sm:hidden bg-background dark:border-chart-1 border-t w-full text-foreground">
       <div className="mx-auto px-6">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           {navigation.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -44,13 +44,13 @@ export default function DockNavigation() {
                 key={item.name}
                 href={item.href}
                 className={`group flex flex-col items-center gap-1 p-3 text-sm transition-transform hover:-translate-y-1 ${
-                  isActive ? "text-primary dark:text-chart-2" : "text-accent"
+                  isActive ? "text-primary" : "text-accent"
                 }`}
               >
                 {isActive ? (
-                  <item.activeIcon className="w-6 h-6" />
+                  <item.activeIcon className="h-6 w-6" />
                 ) : (
-                  <item.inactiveIcon className="w-6 h-6" />
+                  <item.inactiveIcon className="h-6 w-6" />
                 )}
                 <span className="text-xs">{item.name}</span>
               </Link>

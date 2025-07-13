@@ -1,11 +1,11 @@
 import Image from "next/image";
 export default function FeaturedTestimonial() {
   return (
-    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24 xl:pb-32">
+    <div className="pb-16 sm:pb-24 xl:pb-32 pt-24 sm:pt-32">
       <div className="pb-20 sm:pb-24 xl:pb-0">
-        <div className="flex xl:flex-row flex-col items-center xl:items-stretch gap-x-8 gap-y-10 sm:gap-y-8 mx-auto px-6 lg:px-8">
-          <div className="xl:flex-none -mt-8 xl:-mb-8 w-full xl:w-96 max-w-4xl">
-            <div className="relative md:-mx-8 xl:mx-0 w-full h-full aspect-4/3 xl:aspect-auto">
+        <div className="flex flex-col xl:flex-row gap-x-8 gap-y-10 sm:gap-y-8 items-center xl:items-stretch mx-auto px-6 lg:px-8">
+          <div className="xl:flex-none xl:-mb-8 -mt-8 max-w-4xl w-full xl:w-96">
+            <div className="relative md:-mx-8 xl:mx-0 h-full w-full aspect-4/3 xl:aspect-auto">
               <Image
                 alt="Chess Medals"
                 src="/images/Class_Photos/Chess/20996992_141111.jpg"
@@ -17,7 +17,7 @@ export default function FeaturedTestimonial() {
           </div>
           <div className="xl:flex-auto xl:px-16 xl:py-24 w-full">
             <figure className="relative pt-6 sm:pt-12 isolate">
-              <blockquote className="font-[WindSong] font-semibold text-lg/8 md:text-xl/8 xl:text-2xl/9 leading-8">
+              <blockquote className="font-[WaitingfortheSunrise] font-semibold leading-8 text-lg/8 md:text-xl/8 xl:text-2xl/9">
                 "...my sons attend Hicks Canyon Elementary and have been in
                 several after-school programs provided by IAC. They always have
                 a great time, and [instructors]{" "}
@@ -31,11 +31,11 @@ export default function FeaturedTestimonial() {
                 kids' well-being and opportunities to experience wholesome
                 activities."
               </blockquote>
-              <figcaption className="flex items-center gap-x-4 mt-8">
+              <figcaption className="flex gap-x-4 items-center mt-8">
                 <Image
                   alt="Hicks Canyon Elementary School"
                   src="/images/School_Icons/hicks.png"
-                  className="flex-none rounded-full w-20 h-20 object-cover"
+                  className="flex-none rounded-full h-20 w-20 object-cover"
                   width={96}
                   height={96}
                 />
