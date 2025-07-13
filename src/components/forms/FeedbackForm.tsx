@@ -101,7 +101,7 @@ export default function FeedbackForm() {
         </div>
       </div>
       <div className="mt-10">
-        <DynamicButton>Submit Feedback</DynamicButton>
+        <DynamicButton className="mx-0">Submit Feedback</DynamicButton>
       </div>
       <p className="mt-4 text-sm">{status}</p>
       <p className="mt-4 text-sm">
