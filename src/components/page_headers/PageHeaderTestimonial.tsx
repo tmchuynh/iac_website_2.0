@@ -7,7 +7,7 @@ export default function PageHeaderTestimonial() {
         <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           The IAC Advantage
         </p>
-        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
           Empowering Student Creativity
         </h1>
         <p className="mt-6 text-xl/8">
@@ -18,11 +18,11 @@ export default function PageHeaderTestimonial() {
           performance and collaboration, every experience is built with purpose.
         </p>
       </div>
-      <div className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-12 mx-auto lg:mx-0 mt-16 lg:mt-10 max-w-2xl lg:max-w-none">
+      <div className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-12 mt-16 lg:mt-10 mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
         <div className="relative lg:order-last lg:col-span-5">
           <svg
             aria-hidden="true"
-            className="-top-[40rem] left-1 -z-10 absolute w-[175.5rem] h-[64rem] -translate-x-1/2 stroke-gray-900/10 [mask-image:radial-gradient(64rem_64rem_at_111.5rem_0%,white,transparent)]"
+            className="absolute left-1 -top-[40rem] -z-10 h-[64rem] w-[175.5rem] -translate-x-1/2 stroke-gray-900/10 [mask-image:radial-gradient(64rem_64rem_at_111.5rem_0%,white,transparent)]"
           >
             <defs>
               <pattern
@@ -42,8 +42,8 @@ export default function PageHeaderTestimonial() {
             />
           </svg>
 
-          <figure className="pl-8 dark:border-tertiary border-l">
-            <blockquote className="font-[WindSong] font-semibold text-xl/loose">
+          <figure className="pl-8 border-l dark:border-tertiary">
+            <blockquote className="font-[WaitingfortheSunrise] font-semibold text-lg/8">
               "Due to one of my children's <mark>severe food allergies</mark>,
               we have been denied by multiple camps and classes who did not want
               the risk of having them as a student. However, Justin was very
@@ -53,11 +53,11 @@ export default function PageHeaderTestimonial() {
               peers. I'm excited they are able to learn a game that teaches
               critical thinking and persistence.",
             </blockquote>
-            <figcaption className="flex items-center gap-x-4 mt-8">
+            <figcaption className="flex gap-x-4 items-center mt-8">
               <Image
                 alt="Peters Canyon Elementary School"
                 src="/images/School_Icons/peterscanyon.png"
-                className="flex-none rounded-full w-20 h-20 object-cover"
+                className="flex-none rounded-full h-20 w-20 object-cover"
                 width={200}
                 height={200}
               />
@@ -76,7 +76,7 @@ export default function PageHeaderTestimonial() {
               <Image
                 src="/images/icons/extra/design-thinking.png"
                 alt="IAC Logo"
-                className="flex-none mt-1 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10"
+                className="flex-none mt-1 h-5 md:h-7 lg:h-8 xl:h-10 md:w-7 lg:w-8 xl:w-10"
                 width={100}
                 height={100}
               />
@@ -90,7 +90,7 @@ export default function PageHeaderTestimonial() {
               <Image
                 src="/images/icons/extra/learning-journey.png"
                 alt="IAC Logo"
-                className="flex-none mt-1 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10"
+                className="flex-none mt-1 h-5 md:h-7 lg:h-8 xl:h-10 md:w-7 lg:w-8 xl:w-10"
                 width={100}
                 height={100}
               />
@@ -107,7 +107,7 @@ export default function PageHeaderTestimonial() {
               <Image
                 src="/images/icons/extra/collaboration.png"
                 alt="IAC Logo"
-                className="flex-none mt-1 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10"
+                className="flex-none mt-1 h-5 md:h-7 lg:h-8 xl:h-10 md:w-7 lg:w-8 xl:w-10"
                 width={100}
                 height={100}
               />
