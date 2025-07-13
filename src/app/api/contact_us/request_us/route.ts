@@ -9,11 +9,13 @@ export async function POST(request: Request) {
       firstName,
       lastName,
       email,
-      school,
+      phone,
+      schoolName,
       principalName,
-      schoolContact,
-      grades,
-      programs,
+      schoolEmail,
+      gradeLevels,
+      interestedPrograms,
+      additionalInfo,
     } = await request.json();
 
     // Basic validation: ensure required fields are present.
@@ -21,11 +23,13 @@ export async function POST(request: Request) {
       !firstName ||
       !lastName ||
       !email ||
-      !school ||
+      !schoolName ||
       !principalName ||
-      !schoolContact ||
-      !grades ||
-      !programs
+      !schoolEmail ||
+      !gradeLevels ||
+      gradeLevels.length === 0 ||
+      !interestedPrograms ||
+      interestedPrograms.length === 0
     ) {
       return NextResponse.json(
         { error: "Missing required fields" },
@@ -40,16 +44,18 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: process.env.FROM_REQUEST_US_EMAIL as string, // Verified sender email.
       to: process.env.TO_EMAIL as string, // Recipient email.
-      subject: `Request from ${firstName} ${lastName}`,
+      subject: `School Program Request from ${schoolName} - ${firstName} ${lastName}`,
       react: RequestUsTemplate({
         firstName,
         lastName,
         email,
-        school,
+        phone,
+        schoolName,
         principalName,
-        schoolContact,
-        grades,
-        programs,
+        schoolEmail,
+        gradeLevels,
+        interestedPrograms,
+        additionalInfo,
       }),
     });
 
