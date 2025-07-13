@@ -77,22 +77,39 @@ export default function ContactUs() {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("/api/contact_us", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    console.log("Contact form submitted:", formData);
+      if (response.ok) {
+        console.log("Contact form submitted:", formData);
+        setShowDialog(true);
+
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          inquiryType: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert(
+        "An error occurred while submitting your message. Please try again."
+      );
+    }
+
     setIsSubmitting(false);
-    setShowDialog(true);
-
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phoneNumber: "",
-      inquiryType: "",
-      message: "",
-    });
   };
   return (
     <main className="relative mx-auto px-4 py-8 md:py-12 lg:py-24 2xl:py-40 xl:py-32 w-11/12">
