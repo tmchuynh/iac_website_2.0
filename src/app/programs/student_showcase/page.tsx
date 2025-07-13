@@ -25,7 +25,7 @@ export default function StudentShowcasePage(): JSX.Element {
         <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           A Celebration of Imagination, Innovation, and Expression
         </p>
-        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
           Showcasing Children's Creativity
         </h1>
 
@@ -46,7 +46,7 @@ export default function StudentShowcasePage(): JSX.Element {
           empowered to think independently, explore without limits, and
           communicate their ideas with confidence.
         </p>
-        <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
+        <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl tracking-wider uppercase">
           WHY WE SHOWCASE
         </h2>
         <p>
@@ -66,7 +66,7 @@ export default function StudentShowcasePage(): JSX.Element {
           Every sketch, sentence, experiment, and presentation reveals something
           powerful: the unfiltered brilliance of youth.
         </p>
-        <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl uppercase tracking-wider">
+        <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary md:text-2xl lg:text-3xl tracking-wider uppercase">
           Respecting Student Privacy
         </h2>
         <p>

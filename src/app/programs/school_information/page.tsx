@@ -19,7 +19,6 @@ import {
   FaMoneyBillAlt,
 } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
-import { LuArrowBigRightDash } from "react-icons/lu";
 
 export default function SchoolInformationPage() {
   const router = useRouter();
@@ -40,7 +39,7 @@ export default function SchoolInformationPage() {
         <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           The Schools We Work With
         </p>
-        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
           Our Partners in Innovation
         </h1>
         <p>
@@ -76,7 +75,7 @@ export default function SchoolInformationPage() {
 
       <section className="gap-6 grid grid-cols-1 lg:grid-cols-2 py-6 lg:py-12">
         <div className="flex flex-col gap-3 text-pretty">
-          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl tracking-wider uppercase">
             After-School Programs
           </h2>
           <p>
@@ -90,20 +89,20 @@ export default function SchoolInformationPage() {
             structured, and meaningful way.
           </p>
           <div className="gap-3 lg:gap-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 mx-auto 2xl:w-10/12">
-            <div className="flex flex-col items-center gap-2 text-center">
-              <FaBook className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
+            <div className="flex flex-col gap-2 items-center text-center">
+              <FaBook className="h-5 md:h-7 lg:h-8 xl:h-10 w-5 md:w-7 lg:w-8 xl:w-10 text-tertiary/75" />
               <p>No additional resources needed</p>
             </div>
-            <div className="flex flex-col items-center gap-2 text-center">
-              <FaChalkboardTeacher className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
+            <div className="flex flex-col gap-2 items-center text-center">
+              <FaChalkboardTeacher className="h-5 md:h-7 lg:h-8 xl:h-10 w-5 md:w-7 lg:w-8 xl:w-10 text-tertiary/75" />
               <p>No extra staff needed</p>
             </div>
-            <div className="flex flex-col items-center gap-2 text-center">
-              <FaComputer className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
+            <div className="flex flex-col gap-2 items-center text-center">
+              <FaComputer className="h-5 md:h-7 lg:h-8 xl:h-10 w-5 md:w-7 lg:w-8 xl:w-10 text-tertiary/75" />
               <p>No IT support needed</p>
             </div>
-            <div className="flex flex-col items-center gap-2 text-center">
-              <FaBrain className="w-5 md:w-7 lg:w-8 xl:w-10 h-5 md:h-7 lg:h-8 xl:h-10 text-tertiary/75" />
+            <div className="flex flex-col gap-2 items-center text-center">
+              <FaBrain className="h-5 md:h-7 lg:h-8 xl:h-10 w-5 md:w-7 lg:w-8 xl:w-10 text-tertiary/75" />
               <p>No headaches and no stress</p>
             </div>
           </div>
@@ -135,7 +134,7 @@ export default function SchoolInformationPage() {
         </div>
         <div className="flex flex-col gap-3 text-pretty">
           <ResponsiveLogo />
-          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-center text-lg text-secondary lg:text-4xl tracking-wider uppercase">
             Proactive and Passionate
           </h2>
           <p>
@@ -159,16 +158,16 @@ export default function SchoolInformationPage() {
             array of extracurricular activities without the usual stress or
             logistical hurdles.
           </p>
-          <div className="flex flex-wrap justify-around gap-5 mx-auto md:w-2/3 lg:w-11/12 2xl:w-full">
+          <div className="flex flex-wrap gap-5 justify-around mx-auto md:w-2/3 lg:w-11/12">
             {programs.map((program, index) => (
               <div
                 key={index}
-                className="flex justify-center items-center bg-accent p-3 rounded-2xl lg:w-15 xl:w-20 lg:h-15 xl:h-20 text-background"
+                className="flex items-center justify-center bg-accent p-3 rounded-2xl lg:h-15 xl:h-20 lg:w-15 xl:w-20 text-background"
               >
                 <Image
                   src={program.titleIcon}
                   alt=""
-                  className="xl:w-10 xl:h-10"
+                  className="xl:h-10 xl:w-10"
                   width={30}
                   height={30}
                 />
@@ -197,8 +196,8 @@ export default function SchoolInformationPage() {
 
       <FadedImage imageSrc="/images/Class_Photos/Soccer/53995092_141122.jpg" />
 
-      <section className="py-6">
-        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+      <section className="mx-3 py-6">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
           Join Our Growing Network
         </h1>
         <p>
@@ -223,9 +222,9 @@ export default function SchoolInformationPage() {
         </p>
         <DynamicButton
           onClick={() => router.push("/contact_us")}
-          className="mx-0 mb-3"
+          className="mb-3 mx-0"
         >
-          Get In Touch
+          Invest in Your Students' Future
         </DynamicButton>
         <p>
           Through our partnerships, we’ve had the privilege of working alongside
@@ -247,7 +246,7 @@ export default function SchoolInformationPage() {
       </section>
 
       <section className="py-5 lg:py-12">
-        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
           Get Involved Today
         </h1>
         <p>
@@ -276,12 +275,10 @@ export default function SchoolInformationPage() {
         </p>
 
         <ul className="flex flex-col justify-center space-y-6 py-6">
-          <li className="flex items-start gap-4">
+          <li className="flex gap-4 items-start">
             <FaCalendarAlt
               className={cn(
-                "-mt-1 lg:-mt-2 w-6 md:w-7 lg:w-8 xl:w-9 h-6 md:h-7 lg:h-8 xl:h-9 shrink-0",
-                { "text-secondary": theme === "light" },
-                { "text-foreground": theme === "dark" }
+                "-mt-1 lg:-mt-2 w-6 md:w-7 lg:w-8 xl:w-9 text-secondary h-6 md:h-7 lg:h-8 xl:h-9 shrink-0"
               )}
             />
             <span>
@@ -290,12 +287,10 @@ export default function SchoolInformationPage() {
             </span>
           </li>
 
-          <li className="flex items-start gap-4">
+          <li className="flex gap-4 items-start">
             <FaMoneyBillAlt
               className={cn(
-                "-mt-1 lg:-mt-2 w-6 md:w-7 lg:w-8 xl:w-9 h-6 md:h-7 lg:h-8 xl:h-9 shrink-0",
-                { "text-secondary": theme === "light" },
-                { "text-foreground": theme === "dark" }
+                "-mt-1 lg:-mt-2 w-6 md:w-7 lg:w-8 xl:w-9 h-6 text-secondary md:h-7 lg:h-8 xl:h-9 shrink-0"
               )}
             />
             <span>
@@ -304,12 +299,10 @@ export default function SchoolInformationPage() {
             </span>
           </li>
 
-          <li className="flex items-start gap-4">
+          <li className="flex gap-4 items-start">
             <FaCheckDouble
               className={cn(
-                "-mt-1 lg:-mt-2 w-6 md:w-7 lg:w-8 xl:w-9 h-6 md:h-7 lg:h-8 xl:h-9 shrink-0",
-                { "text-secondary": theme === "light" },
-                { "text-foreground": theme === "dark" }
+                "-mt-1 lg:-mt-2 w-6 md:w-7 text-secondary lg:w-8 xl:w-9 h-6 md:h-7 lg:h-8 xl:h-9 shrink-0"
               )}
             />
             <span>
@@ -337,12 +330,12 @@ export default function SchoolInformationPage() {
           empowered to learn, grow, and thrive. We look forward to working with
           you in support of your school’s vision for student success.
         </p>
-        <Button onClick={() => router.push("/contact")} className="group mt-2">
+        <DynamicButton
+          onClick={() => router.push("/contact_us")}
+          className="mx-0"
+        >
           Get In Touch
-          <span className="inline-block transition-transform group-hover:translate-x-4 duration-300 ease-in-out">
-            <LuArrowBigRightDash />
-          </span>
-        </Button>
+        </DynamicButton>
       </section>
     </main>
   );
