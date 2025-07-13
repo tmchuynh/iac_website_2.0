@@ -25,12 +25,12 @@ export default function ImageTilesHeader(): JSX.Element {
   return (
     <div className="py-32 overflow-hidden">
       <div className="lg:flex mx-auto px-6 lg:px-8 max-w-7xl">
-        <div className="lg:flex-none gap-x-12 gap-y-16 lg:gap-y-8 grid grid-cols-1 mx-auto lg:mx-0 lg:min-w-full max-w-2xl lg:max-w-none">
-          <div className="lg:col-end-1 lg:pb-8 lg:w-full lg:max-w-lg">
+        <div className="lg:flex-none gap-x-12 gap-y-16 lg:gap-y-8 grid grid-cols-1 mx-auto lg:mx-0 max-w-2xl lg:max-w-none lg:min-w-full">
+          <div className="lg:col-end-1 lg:pb-8 lg:max-w-lg lg:w-full">
             <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
               Discover the Perfect Fit for Your Journey
             </p>
-            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
               Learn About Our Different Programs
             </h1>
             <p className="mt-6 text-xl/8">
@@ -62,22 +62,22 @@ export default function ImageTilesHeader(): JSX.Element {
               than ever to choose a path that inspires and empowers you.
             </p>
           </div>
-          <div className="flex flex-wrap justify-end items-start gap-6 sm:gap-8 lg:contents">
+          <div className="flex flex-wrap gap-6 sm:gap-8 items-start justify-end lg:contents">
             <div className="flex-auto lg:flex-none lg:ml-auto w-0 lg:w-auto lg:self-end">
               <Image
                 alt=""
                 src="/images/Class_Photos/Chess/20996202_141199.jpg"
-                className="rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
+                className="rounded-2xl max-w-none w-[37rem] aspect-7/5 object-cover"
                 width={1152}
                 height={842}
               />
             </div>
-            <div className="lg:flex lg:justify-end lg:items-start lg:gap-x-8 lg:col-span-2 lg:col-end-2 lg:ml-auto lg:w-[37rem] contents">
+            <div className="lg:flex lg:gap-x-8 lg:items-start lg:justify-end lg:col-end-2 lg:col-span-2 lg:ml-auto lg:w-[37rem] contents">
               <div className="flex flex-none justify-end order-first w-64 lg:w-auto self-end">
                 <Image
                   alt=""
                   src="/images/Class_Photos/Dance/52005092_269955.jpg"
-                  className="flex-none rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
+                  className="flex-none rounded-2xl max-w-none w-[24rem] aspect-4/3 object-cover"
                   width={768}
                   height={604}
                 />
@@ -86,7 +86,7 @@ export default function ImageTilesHeader(): JSX.Element {
                 <Image
                   alt=""
                   src="/images/Class_Photos/Basketball/20156202_141123.JPG"
-                  className="flex-none rounded-2xl w-[37rem] max-w-none aspect-7/5 object-cover"
+                  className="flex-none rounded-2xl max-w-none w-[37rem] aspect-7/5 object-cover"
                   width={1152}
                   height={842}
                 />
@@ -95,7 +95,7 @@ export default function ImageTilesHeader(): JSX.Element {
                 <Image
                   alt=""
                   src="/images/Class_Photos/Flag_Football/56924856_265426.jpg"
-                  className="rounded-2xl w-[24rem] max-w-none aspect-4/3 object-cover"
+                  className="rounded-2xl max-w-none w-[24rem] aspect-4/3 object-cover"
                   width={768}
                   height={604}
                 />

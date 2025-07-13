@@ -27,7 +27,7 @@ export default function FeaturedColumns() {
           Shaping the Future Through Innovation, Excellence, and Equity - Our
           Commitment
         </p>
-        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
           The Quality of Our Classes is Unmatched
         </h1>
         <p className="max-w-4xl text-lg/8">
@@ -39,7 +39,7 @@ export default function FeaturedColumns() {
           unmatched—and we wouldn’t have it any other way.
         </p>
       </div>
-      <div className="mx-auto mt-16 sm:mt-20 lg:mt-24 max-w-2xl lg:max-w-none">
+      <div className="mt-16 sm:mt-20 lg:mt-24 mx-auto max-w-2xl lg:max-w-none">
         <dl className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-none">
           {features.map((feature) => (
             <div key={feature.name} className="flex flex-col justify-between">

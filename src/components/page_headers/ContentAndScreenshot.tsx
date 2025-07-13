@@ -14,7 +14,7 @@ export default function ContentAndScreenshot() {
           <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
             Bringing Enrichment to Your School
           </p>
-          <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+          <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
             Superior classes, exceptional instructors, outstanding outcomes.
           </h1>
           <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mt-5 max-w-xl lg:max-w-none">
@@ -105,6 +105,7 @@ export default function ContentAndScreenshot() {
                 our community.
               </p>
               <DynamicButton
+                className="mt-8 mx-0 w-full md:w-auto"
                 onClick={() => router.push("/contact_us/register")}
               >
                 Get Started Today

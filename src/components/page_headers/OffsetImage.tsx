@@ -9,7 +9,7 @@ export default function OffsetImage() {
             Empowering Students through Immersion, Effectiveness, and
             Inclusivity
           </p>
-          <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+          <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
             Our Mission
           </h1>
           <p>
@@ -30,7 +30,7 @@ export default function OffsetImage() {
             journey:
           </p>
         </div>
-        <div className="mx-auto md:pt-64 lg:pt-48 2xl:pt-24 pb-5 md:pb-24 2xl:pb-2 2xl:w-5/6">
+        <div className="mx-auto pb-5 md:pb-24 2xl:pb-2 md:pt-64 lg:pt-48 2xl:pt-24 2xl:w-5/6">
           <Image
             alt=""
             src="/images/Class_Photos/Performing_Arts/22195092_265855.jpg"
