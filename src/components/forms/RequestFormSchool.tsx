@@ -11,13 +11,6 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { CheckCircle, Send } from "lucide-react";
 import { useState } from "react";
 
@@ -29,7 +22,7 @@ interface SchoolFormData {
   schoolName: string;
   principalName: string;
   schoolEmail: string;
-  gradeLevel: string;
+  gradeLevels: string[];
   interestedPrograms: string[];
   additionalInfo: string;
 }
@@ -75,7 +68,7 @@ export default function RequestFormSchool() {
     schoolName: "",
     principalName: "",
     schoolEmail: "",
-    gradeLevel: "",
+    gradeLevels: [],
     interestedPrograms: [],
     additionalInfo: "",
   });
@@ -93,6 +86,15 @@ export default function RequestFormSchool() {
     }));
   };
 
+  const handleGradeLevelChange = (gradeLevel: string, checked: boolean) => {
+    setFormData((prev) => ({
+      ...prev,
+      gradeLevels: checked
+        ? [...prev.gradeLevels, gradeLevel]
+        : prev.gradeLevels.filter((g) => g !== gradeLevel),
+    }));
+  };
+
   const isFormValid = () => {
     return (
       formData.firstName &&
@@ -101,7 +103,7 @@ export default function RequestFormSchool() {
       formData.schoolName &&
       formData.principalName &&
       formData.schoolEmail &&
-      formData.gradeLevel &&
+      formData.gradeLevels.length > 0 &&
       formData.interestedPrograms.length > 0
     );
   };
@@ -112,12 +114,29 @@ export default function RequestFormSchool() {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("/api/contact_us/request_us", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    console.log("School request form submitted:", formData);
+      if (response.ok) {
+        console.log("School request form submitted:", formData);
+        setShowDialog(true);
+      } else {
+        throw new Error("Failed to submit request");
+      }
+    } catch (error) {
+      console.error("Error submitting request:", error);
+      alert(
+        "An error occurred while submitting your request. Please try again."
+      );
+    }
+
     setIsSubmitting(false);
-    setShowDialog(true);
   };
 
   return (
@@ -244,27 +263,6 @@ export default function RequestFormSchool() {
                   />
                 </div>
               </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="gradeLevel">
-                  Grade Level(s) <span className="text-red-500">*</span>
-                </Label>
-                <Select
-                  value={formData.gradeLevel}
-                  onValueChange={(value) => updateFormData("gradeLevel", value)}
-                >
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select grade level(s)" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {gradeLevels.map((grade) => (
-                      <SelectItem key={grade} value={grade}>
-                        {grade}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
             </div>
           </div>
 
@@ -275,6 +273,31 @@ export default function RequestFormSchool() {
             </h3>
 
             <div className="space-y-4">
+              <div className="space-y-2">
+                <Label>
+                  Grade Level(s) <span className="text-red-500">*</span>
+                </Label>
+                <p className="text-muted-foreground text-sm">
+                  Select all grade levels you would like to serve
+                </p>
+                <div className="gap-3 grid grid-cols-2 md:grid-cols-3">
+                  {gradeLevels.map((grade) => (
+                    <div key={grade} className="flex items-center space-x-2">
+                      <Checkbox
+                        id={grade}
+                        checked={formData.gradeLevels.includes(grade)}
+                        onCheckedChange={(checked) =>
+                          handleGradeLevelChange(grade, checked as boolean)
+                        }
+                      />
+                      <Label htmlFor={grade} className="text-sm">
+                        {grade}
+                      </Label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="space-y-2">
                 <Label>
                   What programs are you interested in?{" "}
@@ -356,24 +379,24 @@ export default function RequestFormSchool() {
               Request Submitted Successfully!
             </DialogTitle>
             <DialogDescription className="space-y-2">
-              <p>
+              <span className="block">
                 Thank you for your interest in bringing our programs to{" "}
                 {formData.schoolName}!
-              </p>
-              <p>
+              </span>
+              <span className="block">
                 We have received your request and will contact you at{" "}
                 <strong>{formData.email}</strong> within 2-3 business days to
                 discuss program options, scheduling, and next steps.
-              </p>
-              <p>
+              </span>
+              <span className="block">
                 If you have any immediate questions, please feel free to call
                 our office at <strong>(714) 509-0069</strong> during business
                 hours.
-              </p>
-              <p className="text-muted-foreground text-sm">
+              </span>
+              <span className="text-muted-foreground text-sm">
                 We look forward to partnering with your school to provide
                 engaging educational experiences for your students!
-              </p>
+              </span>
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-end">

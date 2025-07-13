@@ -81,6 +81,7 @@ const afterCareOptions = [
 export default function RegisterForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [showDialog, setShowDialog] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     studentName: "",
     preferredName: "",
@@ -148,12 +149,35 @@ export default function RegisterForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isStepValid()) {
-      console.log("Form submitted:", formData);
-      setShowDialog(true);
+    if (!isStepValid()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact_us/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Registration form submitted:", formData);
+        setShowDialog(true);
+      } else {
+        throw new Error("Failed to submit registration");
+      }
+    } catch (error) {
+      console.error("Error submitting registration:", error);
+      alert(
+        "An error occurred while submitting your registration. Please try again."
+      );
     }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -536,11 +560,20 @@ export default function RegisterForm() {
           ) : (
             <Button
               type="submit"
-              disabled={!isStepValid()}
+              disabled={!isStepValid() || isSubmitting}
               className="flex gap-2 items-center"
             >
-              Submit Registration
-              <CheckCircle className="h-4 w-4" />
+              {isSubmitting ? (
+                <>
+                  <div className="border-2 border-white/30 border-t-white rounded-full h-4 w-4 animate-spin" />
+                  Submitting Registration...
+                </>
+              ) : (
+                <>
+                  Submit Registration
+                  <CheckCircle className="h-4 w-4" />
+                </>
+              )}
             </Button>
           )}
         </div>
@@ -555,16 +588,18 @@ export default function RegisterForm() {
               Registration Submitted Successfully!
             </DialogTitle>
             <DialogDescription className="space-y-2">
-              <p>Thank you for registering for our classes!</p>
-              <p>
+              <span className="block">
+                Thank you for registering for our classes!
+              </span>
+              <span className="block">
                 An email will be sent to{" "}
                 <strong>{formData.emailAddress}</strong> with an invoice that
                 should be paid in a reasonable and timely manner.
-              </p>
-              <p>
+              </span>
+              <span className="block">
                 We appreciate your enrollment and look forward to seeing your
                 child in class!
-              </p>
+              </span>
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-end">

@@ -288,8 +288,8 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
       <div className="lg:flex-auto space-y-6 mt-8">
         {/* Progress Bar */}
         <div className="space-y-4">
-          <div className="flex justify-between items-center">
-            <h2 className="font-semibold text-primary text-2xl">
+          <div className="flex items-center justify-between">
+            <h2 className="font-semibold text-2xl text-primary">
               {getStepTitle()}
             </h2>
             <span className="text-muted-foreground text-sm">
@@ -345,7 +345,9 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                         id="email"
                         type="email"
                         value={formData.email}
-                        onChange={(e) => updateFormData("email", e.target.value)}
+                        onChange={(e) =>
+                          updateFormData("email", e.target.value)
+                        }
                         required={!formData.anonymous}
                       />
                     </div>
@@ -383,7 +385,9 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                     </Label>
                     <Select
                       value={formData.program}
-                      onValueChange={(value) => updateFormData("program", value)}
+                      onValueChange={(value) =>
+                        updateFormData("program", value)
+                      }
                     >
                       <SelectTrigger className="w-full">
                         <SelectValue placeholder="Select program" />
@@ -400,7 +404,9 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="school">School/Location (if applicable)</Label>
+                  <Label htmlFor="school">
+                    School/Location (if applicable)
+                  </Label>
                   <Input
                     id="school"
                     type="text"
@@ -482,7 +488,9 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                 </h3>
 
                 <div className="space-y-2">
-                  <Label>Which specific areas would you like to comment on?</Label>
+                  <Label>
+                    Which specific areas would you like to comment on?
+                  </Label>
                   <div className="gap-2 grid grid-cols-2 md:grid-cols-3">
                     {specificAreas.map((area) => (
                       <div key={area} className="flex items-center space-x-2">
@@ -519,7 +527,9 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
 
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="programSuggestions">New Program Ideas</Label>
+                    <Label htmlFor="programSuggestions">
+                      New Program Ideas
+                    </Label>
                     <textarea
                       id="programSuggestions"
                       rows={3}
@@ -552,14 +562,18 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                       id="improvements"
                       rows={3}
                       value={formData.improvements}
-                      onChange={(e) => updateFormData("improvements", e.target.value)}
+                      onChange={(e) =>
+                        updateFormData("improvements", e.target.value)
+                      }
                       className="flex bg-background disabled:opacity-50 px-3 py-2 border border-input focus-visible:ring-2 focus-visible:ring-ring ring-offset-background focus-visible:ring-offset-2 rounded-md min-h-[60px] w-full text-sm placeholder:text-muted-foreground disabled:cursor-not-allowed focus-visible:outline-none"
                       placeholder="Share suggestions for how we can improve our programs or services..."
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="additionalComments">Additional Comments</Label>
+                    <Label htmlFor="additionalComments">
+                      Additional Comments
+                    </Label>
                     <textarea
                       id="additionalComments"
                       rows={4}
@@ -590,8 +604,8 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                       }
                     />
                     <Label htmlFor="contactBack" className="text-sm">
-                      I would like someone from IAC to follow up with me about my
-                      feedback
+                      I would like someone from IAC to follow up with me about
+                      my feedback
                     </Label>
                   </div>
                 </div>
@@ -675,25 +689,28 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                 Thank you for taking the time to share your valuable feedback
                 with us!
               </p>
-              
+
               {formData.contactBack && !formData.anonymous ? (
-                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 space-y-2">
+                <div className="space-y-2 bg-blue-50 dark:bg-blue-900/20 p-4 border border-blue-200 dark:border-blue-800 rounded-lg">
                   <p className="font-medium text-blue-900 dark:text-blue-100">
                     📧 We'll be in touch soon!
                   </p>
-                  <p className="text-blue-800 dark:text-blue-200 text-sm">
-                    Since you requested follow-up, someone from our team will contact you at{" "}
-                    <strong>{formData.email}</strong> within 3-5 business days to discuss your feedback further.
+                  <p className="text-blue-800 text-sm dark:text-blue-200">
+                    Since you requested follow-up, someone from our team will
+                    contact you at <strong>{formData.email}</strong> within 3-5
+                    business days to discuss your feedback further.
                   </p>
                 </div>
               ) : (
-                <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-                  <p className="text-green-800 dark:text-green-200 text-sm">
-                    Your feedback is incredibly valuable to us and will be carefully reviewed by our team to help improve our programs and services.
+                <div className="bg-green-50 dark:bg-green-900/20 p-4 border border-green-200 dark:border-green-800 rounded-lg">
+                  <p className="text-green-800 text-sm dark:text-green-200">
+                    Your feedback is incredibly valuable to us and will be
+                    carefully reviewed by our team to help improve our programs
+                    and services.
                   </p>
                 </div>
               )}
-              
+
               <p className="text-muted-foreground text-sm">
                 We truly appreciate your partnership in helping us create
                 meaningful educational experiences for our community!
