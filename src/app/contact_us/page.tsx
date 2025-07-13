@@ -1,16 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import DynamicButton from "@/components/buttons/button-dynamic";
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
-} from "@/components/ui/select";
 import {
   Dialog,
   DialogContent,
@@ -18,11 +10,19 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import DynamicButton from "@/components/buttons/button-dynamic";
-import ResponsiveLogo from "@/components/images/ResponsiveLogo";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { CheckCircle, Send } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Send, CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 interface ContactFormData {
   firstName: string;
@@ -41,7 +41,7 @@ const inquiryTypes = [
   "Employment opportunity",
   "Feedback or suggestion",
   "Technical support",
-  "Other"
+  "Other",
 ];
 
 export default function ContactUs() {
@@ -58,15 +58,17 @@ export default function ContactUs() {
   });
 
   const updateFormData = (field: keyof ContactFormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const isFormValid = () => {
-    return formData.firstName && 
-           formData.lastName && 
-           formData.email && 
-           formData.inquiryType &&
-           formData.message;
+    return (
+      formData.firstName &&
+      formData.lastName &&
+      formData.email &&
+      formData.inquiryType &&
+      formData.message
+    );
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -74,14 +76,14 @@ export default function ContactUs() {
     if (!isFormValid()) return;
 
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     console.log("Contact form submitted:", formData);
     setIsSubmitting(false);
     setShowDialog(true);
-    
+
     // Reset form
     setFormData({
       firstName: "",
@@ -111,9 +113,9 @@ export default function ContactUs() {
           ready to assist and guide you every step of the way. Don’t hesitate to
           reach out—we look forward to starting the conversation with you!
         </p>
-        
+
         {/* Quick Action Buttons for Mobile */}
-        <div className="md:hidden space-y-3 mb-8">
+        <div className="space-y-3 md:hidden mb-8">
           <DynamicButton
             onClick={() => router.push("/contact_us/register")}
             className="w-full"
@@ -143,13 +145,13 @@ export default function ContactUs() {
         <ResponsiveLogo />
 
         <div className="gap-7 grid grid-cols-1 md:grid-cols-3 mt-16">
-          <form onSubmit={handleSubmit} className="md:col-span-2 space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 md:col-span-2">
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-primary border-b border-border pb-2">
+              <h3 className="pb-2 border-b border-border font-semibold text-primary text-xl">
                 Get in Touch
               </h3>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+              <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">
                     First Name <span className="text-red-500">*</span>
@@ -158,12 +160,14 @@ export default function ContactUs() {
                     id="firstName"
                     type="text"
                     value={formData.firstName}
-                    onChange={(e) => updateFormData("firstName", e.target.value)}
+                    onChange={(e) =>
+                      updateFormData("firstName", e.target.value)
+                    }
                     autoComplete="given-name"
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="lastName">
                     Last Name <span className="text-red-500">*</span>
@@ -178,68 +182,111 @@ export default function ContactUs() {
                   />
                 </div>
               </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block font-semibold text-sm/6"
-                >
-                  Email
-                </label>
-                <div className="mt-2.5">
-                  <input
+
+              <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="email">
+                    Email Address <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
                     id="email"
-                    name="email"
-                    type="text"
-                    className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => updateFormData("email", e.target.value)}
+                    autoComplete="email"
                     required
                   />
                 </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="phoneNumber"
-                  className="block font-semibold text-sm/6"
-                >
-                  Phone number
-                </label>
-                <div className="mt-2.5">
-                  <input
+
+                <div className="space-y-2">
+                  <Label htmlFor="phoneNumber">
+                    Phone Number{" "}
+                    <span className="text-muted-foreground text-xs">
+                      (Optional)
+                    </span>
+                  </Label>
+                  <Input
                     id="phoneNumber"
-                    name="phoneNumber"
-                    type="url"
-                    className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
+                    type="tel"
+                    value={formData.phoneNumber}
+                    onChange={(e) =>
+                      updateFormData("phoneNumber", e.target.value)
+                    }
+                    autoComplete="tel"
                   />
                 </div>
               </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="message"
-                  className="block font-semibold text-sm/6"
+
+              <div className="space-y-2">
+                <Label htmlFor="inquiryType">
+                  What can we help you with?{" "}
+                  <span className="text-red-500">*</span>
+                </Label>
+                <Select
+                  value={formData.inquiryType}
+                  onValueChange={(value) =>
+                    updateFormData("inquiryType", value)
+                  }
                 >
-                  Message
-                </label>
-                <div className="mt-2.5">
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="block px-3.5 py-2 rounded-md w-full text-base dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-                    defaultValue={""}
-                  />
-                </div>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select inquiry type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {inquiryTypes.map((type) => (
+                      <SelectItem key={type} value={type}>
+                        {type}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="message">
+                  Message <span className="text-red-500">*</span>
+                </Label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  value={formData.message}
+                  onChange={(e) => updateFormData("message", e.target.value)}
+                  className="flex bg-background disabled:opacity-50 px-3 py-2 border border-input focus-visible:ring-2 focus-visible:ring-ring ring-offset-background focus-visible:ring-offset-2 rounded-md min-h-[80px] w-full text-sm placeholder:text-muted-foreground disabled:cursor-not-allowed focus-visible:outline-none"
+                  placeholder="Tell us more about your inquiry..."
+                  required
+                />
               </div>
             </div>
-            <div className="mt-10 w-full">
-              <DynamicButton className="mx-0">Let’s talk</DynamicButton>
+
+            <div className="pt-4">
+              <Button
+                type="submit"
+                disabled={!isFormValid() || isSubmitting}
+                className="flex gap-2 items-center"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="border-2 border-white/30 border-t-white rounded-full h-4 w-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-4 w-4" />
+                    Let's Talk
+                  </>
+                )}
+              </Button>
             </div>
-            <p className="mt-4 text-sm/6">
+
+            <p className="text-muted-foreground text-sm">
               By submitting this form, I agree to the{" "}
-              <a href="#" className="font-semibold">
-                privacy&nbsp;policy
+              <a href="#" className="font-semibold underline">
+                privacy policy
               </a>
               .
             </p>
           </form>
+
+          {/* Testimonial */}
           <div className="md:col-span-1">
             <figure className="mt-10">
               <blockquote className="font-[WaitingfortheSunrise] leading-4 md:leading-8 text-lg md:text-xl">
@@ -269,6 +316,8 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
+
+      {/* Hero Image */}
       <div className="xl:mx-auto xl:px-8 py-10 lg:max-w-7xl">
         <Image
           alt=""
@@ -278,6 +327,40 @@ export default function ContactUs() {
           height={1130}
         />
       </div>
+
+      {/* Success Dialog */}
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle className="flex gap-2 items-center">
+              <CheckCircle className="h-5 w-5 text-green-500" />
+              Message Sent Successfully!
+            </DialogTitle>
+            <DialogDescription className="space-y-2">
+              <p>Thank you for reaching out to us, {formData.firstName}!</p>
+              <p>
+                We have received your message about{" "}
+                <strong>"{formData.inquiryType}"</strong> and will respond to
+                you at <strong>{formData.email}</strong> within 1-2 business
+                days.
+              </p>
+              {formData.phoneNumber && (
+                <p>
+                  If we need to reach you sooner, we'll call you at{" "}
+                  <strong>{formData.phoneNumber}</strong>.
+                </p>
+              )}
+              <p className="text-muted-foreground text-sm">
+                We appreciate your interest in International Activities Club and
+                look forward to connecting with you soon!
+              </p>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-end">
+            <Button onClick={() => setShowDialog(false)}>Close</Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }
