@@ -53,6 +53,7 @@
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
+  --color-navigation: var(--navigation);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -88,17 +89,18 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.45 0.2076 265.09);
   --secondary-foreground: oklch(0.985 0 0);
-  --tertiary: oklch(43.6% 0.148 142.5);
+  --tertiary: oklch(62.949% 0.2008 142.615);
   --tertiary-foreground: oklch(0.985 0 0);
   --muted: oklch(65.89% 0.029 273.9);
   --muted-foreground: oklch(0.205 0 0);
-  --accent: oklch(46.16% 0.025 157.82);
+  --accent: oklch(70.986% 0.15772 292.809);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(37.33% 0.146 30.21);
   --destructive-foregound: oklch(0.985 0 0);
-  --border: oklch(0.34 0.1909 278.63);
-  --input: oklch(0.29 0.1719 275.97);
-  --ring: oklch(0.31 0.1368 286.26);
+  --border: oklch(82.656% 0.00009 271.152);
+  --input: oklch(72.838% 0.00008 271.152);
+  --ring: oklch(65.335% 0.00007 271.152);
+  --navigation: oklch(28.61% 0.159 293.25);
   --chart-1: oklch(63.8% 0.189 290.99);
   --chart-2: oklch(51.78% 0.206 287.6);
   --chart-3: oklch(41.18% 0.219 281.44);
@@ -117,13 +119,13 @@
 }
 
 .dark {
-  --background: oklch(0.12 0 0);
+  --background: oklch(11.492% 0.00001 271.152);
   --foreground: oklch(0.98 0 0);
-  --card: oklch(0.18 0 0);
+  --card: oklch(9.693% 0.00001 271.152);
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.18 0 0);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(26.08% 0.13 279.34);
+  --primary: oklch(28.61% 0.159 293.25);
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.55 0.246 261.7);
   --secondary-foreground: oklch(0.18 0 0);
@@ -135,9 +137,10 @@
   --accent-foreground: oklch(0.18 0 0);
   --destructive: oklch(59.83% 0.245 28.82);
   --destructive-foregound: oklch(0.18 0 0);
-  --border: oklch(0.4 0.2 278.63);
+  --border: oklch(31.714% 0.00004 271.152);
   --input: oklch(0.25 0.15 275.97);
   --ring: oklch(0.5 0.2 286.26);
+  --navigation: oklch(28.61% 0.159 293.25);
   --chart-1: oklch(0.7 0.25 290.99);
   --chart-2: oklch(0.6 0.25 287.6);
   --chart-3: oklch(0.5 0.25 281.44);
