@@ -1,154 +1,386 @@
-import { Button } from "../ui/button";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { CheckCircle, Send } from "lucide-react";
+import { useState } from "react";
+
+interface SchoolFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  schoolName: string;
+  principalName: string;
+  schoolEmail: string;
+  gradeLevel: string;
+  interestedPrograms: string[];
+  additionalInfo: string;
+}
+
+const programOptions = [
+  "Chess",
+  "Volleyball",
+  "Basketball",
+  "Soccer",
+  "Performing Arts",
+  "Creative Writing",
+  "Art Club",
+  "Comic Book Art Club",
+  "Public Speaking Class",
+  "Flag Football",
+  "Dance",
+  "Science Exploration",
+  "Other",
+];
+
+const gradeLevels = [
+  "Pre-K",
+  "Kindergarten",
+  "1st Grade",
+  "2nd Grade",
+  "3rd Grade",
+  "4th Grade",
+  "5th Grade",
+  "6th Grade",
+  "7th Grade",
+  "8th Grade",
+  "Mixed Grade Levels",
+];
 
 export default function RequestFormSchool() {
+  const [showDialog, setShowDialog] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<SchoolFormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    schoolName: "",
+    principalName: "",
+    schoolEmail: "",
+    gradeLevel: "",
+    interestedPrograms: [],
+    additionalInfo: "",
+  });
+
+  const updateFormData = (field: keyof SchoolFormData, value: any) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleProgramChange = (program: string, checked: boolean) => {
+    setFormData((prev) => ({
+      ...prev,
+      interestedPrograms: checked
+        ? [...prev.interestedPrograms, program]
+        : prev.interestedPrograms.filter((p) => p !== program),
+    }));
+  };
+
+  const isFormValid = () => {
+    return (
+      formData.firstName &&
+      formData.lastName &&
+      formData.email &&
+      formData.schoolName &&
+      formData.principalName &&
+      formData.schoolEmail &&
+      formData.gradeLevel &&
+      formData.interestedPrograms.length > 0
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!isFormValid()) return;
+
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    console.log("School request form submitted:", formData);
+    setIsSubmitting(false);
+    setShowDialog(true);
+  };
+
   return (
-    <form action="#" method="POST" className="mt-16">
-      <div className="gap-x-8 gap-y-6 grid grid-cols-1 sm:grid-cols-2">
-        <div>
-          <label htmlFor="first-name" className="block font-semibold">
-            First name
-          </label>
-          <div className="mt-2.5">
-            <input
-              id="first-name"
-              name="first-name"
-              type="text"
-              autoComplete="given-name"
-              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-            />
+    <>
+      <form onSubmit={handleSubmit} className="space-y-6 mt-16">
+        <div className="space-y-6">
+          {/* Contact Information */}
+          <div className="space-y-4">
+            <h3 className="pb-2 border-b border-border font-semibold text-primary text-xl">
+              Contact Information
+            </h3>
+
+            <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="firstName">
+                  First Name <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="firstName"
+                  type="text"
+                  value={formData.firstName}
+                  onChange={(e) => updateFormData("firstName", e.target.value)}
+                  autoComplete="given-name"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="lastName">
+                  Last Name <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="lastName"
+                  type="text"
+                  value={formData.lastName}
+                  onChange={(e) => updateFormData("lastName", e.target.value)}
+                  autoComplete="family-name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="email">
+                  Email Address <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => updateFormData("email", e.target.value)}
+                  autoComplete="email"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="phone">
+                  Phone Number{" "}
+                  <span className="text-muted-foreground text-xs">
+                    (Optional)
+                  </span>
+                </Label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => updateFormData("phone", e.target.value)}
+                  autoComplete="tel"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <label htmlFor="last-name" className="block font-semibold">
-            Last name
-          </label>
-          <div className="mt-2.5">
-            <input
-              id="last-name"
-              name="last-name"
-              type="text"
-              autoComplete="family-name"
-              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-            />
+
+          {/* School Information */}
+          <div className="space-y-4">
+            <h3 className="pb-2 border-b border-border font-semibold text-primary text-xl">
+              School Information
+            </h3>
+
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="schoolName">
+                  School Name <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="schoolName"
+                  type="text"
+                  value={formData.schoolName}
+                  onChange={(e) => updateFormData("schoolName", e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="principalName">
+                    Principal's Name <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="principalName"
+                    type="text"
+                    value={formData.principalName}
+                    onChange={(e) =>
+                      updateFormData("principalName", e.target.value)
+                    }
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="schoolEmail">
+                    School Contact Email <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="schoolEmail"
+                    type="email"
+                    value={formData.schoolEmail}
+                    onChange={(e) =>
+                      updateFormData("schoolEmail", e.target.value)
+                    }
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="gradeLevel">
+                  Grade Level(s) <span className="text-red-500">*</span>
+                </Label>
+                <Select
+                  value={formData.gradeLevel}
+                  onValueChange={(value) => updateFormData("gradeLevel", value)}
+                >
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select grade level(s)" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {gradeLevels.map((grade) => (
+                      <SelectItem key={grade} value={grade}>
+                        {grade}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="sm:col-span-2">
-          <label htmlFor="email" className="block font-semibold">
-            Email
-          </label>
-          <div className="mt-2.5">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-            />
-          </div>
-        </div>
-        <div className="sm:col-span-2">
-          <div className="flex md:flex-row flex-col items-end gap-4">
-            <label htmlFor="phone" className="block font-semibold">
-              Phone
-            </label>
-            <code id="phone-description" className="text-accent text-xs">
-              **Optional
-            </code>
-          </div>
-          <div className="mt-2.5">
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              autoComplete="tel"
-              aria-describedby="phone-description"
-              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-            />
-          </div>
-        </div>
-        <div className="sm:col-span-2">
-          <div className="flex justify-between">
-            <label htmlFor="school" className="block font-semibold">
-              School
-            </label>
-          </div>
-          <div className="mt-2.5">
-            <input
-              id="school"
-              name="school"
-              type="text"
-              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-            />
-          </div>
-        </div>
-        <div className="sm:col-span-2">
-          <div className="flex justify-between">
-            <label htmlFor="principal" className="block font-semibold">
-              Principal's Name
-            </label>
-          </div>
-          <div className="mt-2.5">
-            <input
-              id="principal"
-              name="principal"
-              type="text"
-              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-            />
-          </div>
-        </div>
-        <div className="sm:col-span-2">
-          <div className="flex justify-between">
-            <label htmlFor="schoolContact" className="block font-semibold">
-              School's Contact Email
-            </label>
-          </div>
-          <div className="mt-2.5">
-            <input
-              id="schoolContact"
-              name="schoolContact"
-              type="email"
-              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-            />
-          </div>
-        </div>
-        <div className="sm:col-span-2">
-          <label htmlFor="grades" className="block font-semibold">
-            Grade Level(s)
-          </label>
-          <div className="mt-2.5">
-            <input
-              id="grades"
-              name="grades"
-              type="text"
-              className="block px-3.5 py-2 rounded-md w-full dark:placeholder:text-accent placeholder:text-muted outline-1 -outline-offset-1"
-            />
+
+          {/* Program Interest */}
+          <div className="space-y-4">
+            <h3 className="pb-2 border-b border-border font-semibold text-primary text-xl">
+              Program Interest
+            </h3>
+
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <Label>
+                  What programs are you interested in?{" "}
+                  <span className="text-red-500">*</span>
+                </Label>
+                <p className="text-muted-foreground text-sm">
+                  Select all programs that would be a good fit for your students
+                </p>
+                <div className="gap-3 grid grid-cols-2 md:grid-cols-3">
+                  {programOptions.map((program) => (
+                    <div key={program} className="flex items-center space-x-2">
+                      <Checkbox
+                        id={program}
+                        checked={formData.interestedPrograms.includes(program)}
+                        onCheckedChange={(checked) =>
+                          handleProgramChange(program, checked as boolean)
+                        }
+                      />
+                      <Label htmlFor={program} className="text-sm">
+                        {program}
+                      </Label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="additionalInfo">Additional Information</Label>
+                <p className="text-muted-foreground text-sm">
+                  Tell us more about your needs, preferred timing, number of
+                  students, or any special requirements (Max 500 characters)
+                </p>
+                <textarea
+                  id="additionalInfo"
+                  rows={4}
+                  maxLength={500}
+                  value={formData.additionalInfo}
+                  onChange={(e) =>
+                    updateFormData("additionalInfo", e.target.value)
+                  }
+                  className="flex bg-background disabled:opacity-50 px-3 py-2 border border-input focus-visible:ring-2 focus-visible:ring-ring ring-offset-background focus-visible:ring-offset-2 rounded-md min-h-[80px] w-full text-sm placeholder:text-muted-foreground disabled:cursor-not-allowed focus-visible:outline-none"
+                  placeholder="Describe your program needs, preferred schedule, or any questions..."
+                />
+                <div className="text-right text-muted-foreground text-xs">
+                  {formData.additionalInfo.length}/500 characters
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="sm:col-span-2">
-          <div className="flex md:flex-row flex-col items-end gap-4">
-            <label htmlFor="message" className="block font-semibold">
-              What programs are you interested in?
-            </label>
-            <code id="message-description" className="text-accent text-xs">
-              **Max 500 characters
-            </code>
-          </div>
-          <div className="mt-2.5">
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              aria-describedby="message-description"
-              className="block px-3.5 py-2 rounded-md w-full outline-1 -outline-offset-1"
-              defaultValue={""}
-            />
-          </div>
+        <div className="pt-6">
+          <Button
+            type="submit"
+            disabled={!isFormValid() || isSubmitting}
+            className="flex gap-2 items-center"
+          >
+            {isSubmitting ? (
+              <>
+                <div className="border-2 border-white/30 border-t-white rounded-full h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                <Send className="h-4 w-4" />
+                Send Request
+              </>
+            )}
+          </Button>
         </div>
-      </div>
-      <div className="flex justify-end mt-10 pt-8">
-        <Button type="submit">Send message</Button>
-      </div>
-    </form>
+      </form>
+
+      {/* Success Dialog */}
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle className="flex gap-2 items-center">
+              <CheckCircle className="h-5 w-5 text-green-500" />
+              Request Submitted Successfully!
+            </DialogTitle>
+            <DialogDescription className="space-y-2">
+              <p>
+                Thank you for your interest in bringing our programs to{" "}
+                {formData.schoolName}!
+              </p>
+              <p>
+                We have received your request and will contact you at{" "}
+                <strong>{formData.email}</strong> within 2-3 business days to
+                discuss program options, scheduling, and next steps.
+              </p>
+              <p>
+                If you have any immediate questions, please feel free to call
+                our office at <strong>(714) 509-0069</strong> during business
+                hours.
+              </p>
+              <p className="text-muted-foreground text-sm">
+                We look forward to partnering with your school to provide
+                engaging educational experiences for your students!
+              </p>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-end">
+            <Button onClick={() => setShowDialog(false)}>Close</Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
