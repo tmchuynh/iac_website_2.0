@@ -16,13 +16,14 @@ export default function Example() {
         <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           Have a question? We’ve got answers!
         </p>
-        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+        <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
           Frequently Asked Questions
         </h1>
-        <p className="mt-6 max-w-2xl">
+        <p className="inline mt-6 max-w-2xl">
           Have a different question and can’t find the answer you’re looking
           for? Reach out to our support team by{" "}
           <DynamicButton
+            className="inline-flex p-0"
             variant="link"
             onClick={() => {
               router.push("/contact_us");
@@ -44,7 +45,7 @@ export default function Example() {
                 index > 0 && "border-t dark:border-chart-1"
               )}
             >
-              <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+              <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary lg:text-4xl tracking-wider uppercase">
                 {faq.category}
               </h2>
               {faq.items.map((item, itemIndex) => (
