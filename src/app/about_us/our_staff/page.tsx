@@ -10,7 +10,7 @@ export default function OurStaffPage() {
       <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
         Dedicated to Excellence
       </p>
-      <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+      <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
         Our Staff
       </h1>
       <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
@@ -71,13 +71,13 @@ export default function OurStaffPage() {
           return category.category === "Founder" ||
             category.category === "Senior Instructors" ? (
             <section key={index} className="mb-12">
-              <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+              <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
                 {category.category}
               </h1>
 
               <ul
                 role="list"
-                className="gap-x-6 gap-y-20 lg:gap-x-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 xl:grid-cols-5 xl:col-span-2 mx-auto lg:mx-0 max-w-2xl lg:max-w-none"
+                className="gap-x-6 gap-y-20 lg:gap-x-8 xl:col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 xl:grid-cols-5 mx-auto lg:mx-0 max-w-2xl lg:max-w-none"
               >
                 {category.members.map((staff, index) => (
                   <StaffCards
@@ -91,13 +91,13 @@ export default function OurStaffPage() {
             </section>
           ) : (
             <section key={index} className="mb-12">
-              <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+              <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
                 {category.category}
               </h1>
 
               <ul
                 role="list"
-                className="gap-x-6 gap-y-20 lg:gap-x-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 xl:grid-cols-5 xl:col-span-2 mx-auto lg:mx-0 max-w-2xl lg:max-w-none"
+                className="gap-x-6 gap-y-20 lg:gap-x-8 xl:col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 xl:grid-cols-5 mx-auto lg:mx-0 max-w-2xl lg:max-w-none"
               >
                 {sortedMembers.map((staff, index) => (
                   <StaffCards
