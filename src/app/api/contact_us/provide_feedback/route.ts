@@ -1,3 +1,4 @@
+import FeedbackTemplate from "@/components/email_templates/feedbackTemplate";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -22,13 +23,7 @@ export async function POST(request: Request) {
       from: process.env.FROM_FEEDBACK_EMAIL as string, // Verified sender email.
       to: process.env.TO_EMAIL as string, // Recipient email.
       subject: `Feedback from ${name}`,
-      html: `
-        <h2>New Feedback Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Feedback:</strong></p>
-        <p>${message}</p>
-      `,
+      react: FeedbackTemplate({ name, email, message }),
     });
 
     return NextResponse.json(
