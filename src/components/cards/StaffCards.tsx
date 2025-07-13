@@ -4,6 +4,7 @@ import { TooltipTrigger } from "@radix-ui/react-tooltip";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import DynamicButton from "../buttons/button-dynamic";
+import { Card } from "../ui/card";
 import { Tooltip, TooltipContent } from "../ui/tooltip";
 
 export const StaffCards = (person: Person) => {
@@ -14,9 +15,9 @@ export const StaffCards = (person: Person) => {
     }
   };
   return (
-    <section
+    <Card
       onClick={handleClick}
-      className="group flex flex-col justify-between"
+      className="group flex flex-col justify-between shadow-md p-0"
     >
       <div>
         <Image
@@ -24,13 +25,13 @@ export const StaffCards = (person: Person) => {
           src={person.image}
           width={400}
           height={300}
-          className="rounded-2xl w-full aspect-2/3 object-cover"
+          className="rounded-t-2xl w-full aspect-2/3 object-cover"
         />
       </div>
-      <div className="flex flex-col justify-between p-6 h-full">
-        <section className="flex flex-col justify-between gap-4 h-full">
+      <div className="flex flex-col justify-between pb-6 px-6 h-full">
+        <section className="flex flex-col gap-4 justify-between h-full">
           <div>
-            <h3 className="font-[Caveat] font-semibold text-xl tracking-tight">
+            <h3 className="font-[Caveat] font-semibold text-2xl tracking-tight">
               {person.name}
             </h3>
             <p className="font-[PatrickHandSC] text-sm">{person.role}</p>
@@ -40,7 +41,7 @@ export const StaffCards = (person: Person) => {
               {person.icons.map((Icon, index) => (
                 <Tooltip key={index}>
                   <TooltipTrigger>
-                    <Icon className="w-6 h-6 text-primary dark:text-chart-2 transition-colors" />
+                    <Icon className="h-6 w-6 text-secondary transition-colors" />
                   </TooltipTrigger>
                   <TooltipContent>{formatIconName(Icon.name)}</TooltipContent>
                 </Tooltip>
@@ -51,11 +52,11 @@ export const StaffCards = (person: Person) => {
 
         {person.description && (
           <>
-            <p className="pt-4 text-sm">{person.description}</p>
+            <p className="pt-4 leading-5">{person.description}</p>
             <DynamicButton className="w-full">Learn More</DynamicButton>
           </>
         )}
       </div>
-    </section>
+    </Card>
   );
 };

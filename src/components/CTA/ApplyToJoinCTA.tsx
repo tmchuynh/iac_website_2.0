@@ -12,7 +12,7 @@ export default function ApplyToJoinCTA() {
     <>
       <section className="gap-3 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-9 py-5 md:py-10 lg:py-16 2xl:py-20">
         <div className="md:col-span-2 xl:col-span-3">
-          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary lg:text-4xl uppercase tracking-wider">
+          <h2 className="my-4 font-[PermanentMarker] font-extrabold text-balance text-lg text-secondary lg:text-4xl tracking-wider uppercase">
             We’re always looking for awesome people to join us
           </h2>
           <p className="mt-6 text-xl/8">
@@ -29,7 +29,7 @@ export default function ApplyToJoinCTA() {
         <Image
           alt=""
           src="/images/Class_Photos/Soccer/52195092_265842.jpg"
-          className="md:col-span-3 xl:col-span-6 rounded-2xl w-full lg:h-[34.5rem] aspect-6/5 object-cover lg:aspect-auto"
+          className="md:col-span-3 xl:col-span-6 rounded-2xl lg:h-[34.5rem] w-full aspect-6/5 object-cover lg:aspect-auto"
           width={600}
           height={800}
         />
@@ -37,7 +37,7 @@ export default function ApplyToJoinCTA() {
       <section>
         <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
           {jobOpenings.map((opening, index) => (
-            <Card key={index} className="shadow-lg p-8">
+            <Card key={index} className="shadow-md p-8">
               <div className="relative flex flex-wrap gap-x-3">
                 <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
                   {opening.role}
@@ -50,7 +50,7 @@ export default function ApplyToJoinCTA() {
                 <ul className="flex flex-col gap-y-4 py-3">
                   {opening.preferredSkills.map((skill, index) => (
                     <li key={index} className="flex gap-x-2 ml-3">
-                      <FaCheckDouble className="mt-3 mr-2" />
+                      <FaCheckDouble className="mr-2 mt-3" />
                       {skill}
                     </li>
                   ))}

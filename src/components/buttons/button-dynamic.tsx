@@ -55,7 +55,7 @@ export default function DynamicButton({
       className={cn(
         "mt-2 group gap-0 flex mx-auto font-[PatrickHandSC] uppercase",
         {
-          "inline w-fit p-0 m-0": variant === "link",
+          "inline w-fit p-0 -ml-3": variant === "link",
         },
         iconPositionClasses[iconPosition],
         className
@@ -67,7 +67,7 @@ export default function DynamicButton({
           className={cn(
             "inline-block px-4  transition-transform duration-300 ease-in-out",
             {
-              "group-hover:translate-x-2 group-hover:-translate-y-2 pl-3 duration-500":
+              "group-hover:translate-x-2 group-hover:-translate-y-2 -ml-3 pr-3 duration-500":
                 variant === "link" && hoverEffect === undefined,
             },
             {
@@ -78,7 +78,7 @@ export default function DynamicButton({
             iconClassName
           )}
         >
-          <Icon className="w-4 h-4" />
+          <Icon className="h-4 w-4" />
         </span>
       )}
     </Button>
