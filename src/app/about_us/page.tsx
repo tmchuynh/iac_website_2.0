@@ -9,7 +9,7 @@ export default function AboutUsPage() {
             <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
               Where Passion Meets Purpose
             </p>
-            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
               A Vision Born from the Heart
             </h1>
             <ResponsiveLogo />
@@ -50,10 +50,10 @@ export default function AboutUsPage() {
                 resilience, and social growth.
               </p>
             </div>
-            <div className="lg:row-span-8 mx-auto lg:mt-8 lg:-mr-10 2xl:-mr-auto xl:-mr-15 pt-16 w-full">
-              <div className="flex flex-col justify-center gap-24">
-                <div className="flex flex-col flex-wrap justify-center items-start content-center gap-15 lg:gap-3 xl:gap-8 md:grid md:grid-cols-3 lg:grid-cols-2 mx-auto w-full xl:h-full">
-                  <div className="shadow-xl rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
+            <div className="lg:row-span-8 lg:-mr-10 2xl:-mr-auto xl:-mr-15 lg:mt-8 mx-auto pt-16 w-full">
+              <div className="flex flex-col gap-24 justify-center">
+                <div className="content-center flex flex-col flex-wrap gap-15 lg:gap-3 xl:gap-8 items-start justify-center md:grid md:grid-cols-3 lg:grid-cols-2 mx-auto xl:h-full w-full">
+                  <div className="shadow-xl rounded-xl h-[15em] 2xl:h-[25em] xl:h-[20em] w-[10em] 2xl:w-[20em] xl:w-[15em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin/image_combined.png"
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
                       height={150}
                     />
                   </div>
-                  <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl h-[15em] 2xl:h-[25em] xl:h-[20em] w-[10em] 2xl:w-[20em] xl:w-[15em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin_P.jpg"
@@ -71,7 +71,7 @@ export default function AboutUsPage() {
                       height={150}
                     />
                   </div>
-                  <div className="shadow-xl rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="shadow-xl rounded-xl h-[15em] 2xl:h-[25em] xl:h-[20em] w-[10em] 2xl:w-[20em] xl:w-[15em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin/Justin_award.jpg"
@@ -80,7 +80,7 @@ export default function AboutUsPage() {
                       height={150}
                     />
                   </div>
-                  <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="shadow-xl -mt-8 lg:-mt-40 rounded-xl h-[15em] 2xl:h-[25em] xl:h-[20em] w-[10em] 2xl:w-[20em] xl:w-[15em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin/frame_combined.png"
@@ -90,7 +90,7 @@ export default function AboutUsPage() {
                     />
                   </div>
 
-                  <div className="lg:inline-block shadow-xl rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
+                  <div className="lg:inline-block shadow-xl rounded-xl h-[15em] 2xl:h-[25em] xl:h-[20em] w-[10em] 2xl:w-[20em] xl:w-[15em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin/image11.jpg"
@@ -99,7 +99,7 @@ export default function AboutUsPage() {
                       height={150}
                     />
                   </div>
-                  <div className="lg:inline-block hidden shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="lg:inline-block hidden shadow-xl -mt-8 lg:-mt-40 rounded-xl h-[15em] 2xl:h-[25em] xl:h-[20em] w-[10em] 2xl:w-[20em] xl:w-[15em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin/image20.jpg"
@@ -108,7 +108,7 @@ export default function AboutUsPage() {
                       height={150}
                     />
                   </div>
-                  <div className="lg:inline-block shadow-xl rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
+                  <div className="lg:inline-block shadow-xl rounded-xl h-[15em] 2xl:h-[25em] xl:h-[20em] w-[10em] 2xl:w-[20em] xl:w-[15em] overflow-hidden aspect-auto outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin/image15.jpg"
@@ -117,7 +117,7 @@ export default function AboutUsPage() {
                       height={150}
                     />
                   </div>
-                  <div className="lg:inline-block hidden shadow-xl -mt-8 lg:-mt-40 rounded-xl w-[10em] 2xl:w-[20em] xl:w-[15em] h-[15em] 2xl:h-[25em] xl:h-[20em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
+                  <div className="lg:inline-block hidden shadow-xl -mt-8 lg:-mt-40 rounded-xl h-[15em] 2xl:h-[25em] xl:h-[20em] w-[10em] 2xl:w-[20em] xl:w-[15em] overflow-hidden outline-1 -outline-offset-1 outline-black/10">
                     <Image
                       alt=""
                       src="/images/Staff_Photos/Justin/image00.jpg"
@@ -184,7 +184,7 @@ export default function AboutUsPage() {
                 <div className="flex flex-col gap-y-2 pb-4 dark:border-accent border-b border-dotted">
                   <dt className="font-[PatrickHandSC] text-sm/6">
                     Happy Employees{" "}
-                    <p className="-mt-2 ml-5 text-[0.75em] text-tertiary">
+                    <p className="ml-5 -mt-2 text-[0.75em] text-tertiary">
                       **(Past Employees Included)
                     </p>
                   </dt>
