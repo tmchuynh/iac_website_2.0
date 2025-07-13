@@ -1,4 +1,4 @@
-import TestimonialCard from "@/components/cards/TestimonialCard";
+import TestimonialsPaginated from "@/components/testimonial/TestimonialsPaginated";
 import { testimonials } from "@/lib/constants/testimonials";
 import Image from "next/image";
 
@@ -8,7 +8,7 @@ export default function TestimonialsPage() {
       <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
         Hear From Our Community
       </p>
-      <h1 className="my-4 pb-4 max-w-7xl lg:max-w-4xl font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+      <h1 className="my-4 pb-4 max-w-7xl lg:max-w-4xl font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
         Thousands of amazing individuals have trusted us—and here’s what they
         have to say.
       </h1>
@@ -21,15 +21,7 @@ export default function TestimonialsPage() {
           height={1130}
         />
       </div>
-      <div className="gap-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard
-            key={index}
-            testimonial={testimonial}
-            index={index}
-          />
-        ))}
-      </div>
+      <TestimonialsPaginated testimonials={testimonials} />
     </main>
   );
 }
