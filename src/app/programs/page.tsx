@@ -36,10 +36,10 @@ export default function ProgramsPage() {
   const router = useRouter();
 
   return (
-    <>
+    <div className="pb-16 sm:pb-24 xl:pb-32">
       <ImageTilesHeader />
 
-      <div className="flex flex-col justify-center items-center mx-auto px-4 w-11/12">
+      <div className="flex flex-col items-center justify-center mx-auto px-4 w-11/12">
         <section>
           <Suspense fallback={<LoadingIndicator />}>
             <ProgramContent />
@@ -49,7 +49,7 @@ export default function ProgramsPage() {
         <ResponsiveLogo />
 
         <section>
-          <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+          <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
             Class Breakdown
           </h1>
           <p>
@@ -97,6 +97,6 @@ export default function ProgramsPage() {
 
         <ApplyToJoinCTA />
       </div>
-    </>
+    </div>
   );
 }
