@@ -20,7 +20,7 @@ const Register: FC = () => {
       <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
         Come Join Us for an Unforgettable Experience!
       </p>
-      <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+      <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
         Register Today
       </h1>
 
@@ -67,6 +67,8 @@ const Register: FC = () => {
 
       <FadedImage imageSrc="/images/Class_Photos/Flag_Football/36252635_241856.jpg" />
 
+      <RegisterForm />
+
       <h3 className="font-[Caveat] font-bold text-lg text-tertiary md:text-xl lg:text-2xl xl:text-3xl">
         New Credit Card Processing Procedure
       </h3>
@@ -89,12 +91,10 @@ const Register: FC = () => {
 
       <DynamicButton
         onClick={() => router.push("/contact_us/provide_feedback")}
-        className="md:hidden mb-12 w-full"
+        className="mb-12 mx-0"
       >
         Provide Feedback
       </DynamicButton>
-
-      <RegisterForm />
     </main>
   );
 };
