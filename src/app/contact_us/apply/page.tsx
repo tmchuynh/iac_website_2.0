@@ -4,15 +4,15 @@ import Image from "next/image";
 
 export default function Apply() {
   return (
-    <main className="relative mx-auto px-4 pt-24 pb-52 w-11/12">
+    <main className="relative mx-auto pb-52 pt-24 px-4 w-11/12">
       <FadedImage imageSrc="/images/Class_Photos/Chess/30990092_141156.jpg" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-7xl">
-        <div className="relative lg:static px-6 lg:px-8 pb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mx-6">
+        <div className="relative lg:static pb-20 px-6 lg:px-8">
           <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
             Join Our Team
           </p>
           <div className="mx-auto lg:mx-0">
-            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+            <h1 className="my-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
               Be Part of the Journey
             </h1>
             <p className="mt-6 text-lg/8">
@@ -36,11 +36,11 @@ export default function Apply() {
                   <mark>such an impact on his life</mark>! People like [Justin]
                   really do make such an impact.”
                 </blockquote>
-                <figcaption className="flex items-center gap-x-4 mt-8">
+                <figcaption className="flex gap-x-4 items-center mt-8">
                   <Image
                     alt="Peters Canyon Elementary School"
                     src="/images/School_Icons/peterscanyon.png"
-                    className="flex-none rounded-full w-20 h-20 object-cover"
+                    className="flex-none rounded-full h-20 w-20 object-cover"
                     width={96}
                     height={96}
                   />
