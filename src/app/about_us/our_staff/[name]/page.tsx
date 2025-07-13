@@ -116,7 +116,7 @@ export default function StaffPage(): JSX.Element {
           <p className="mt-5 font-[PatrickHandSC] font-semibold">
             {staffMember.role}
           </p>
-          <h1 className="mb-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl dark:text-chart-2 uppercase tracking-wider">
+          <h1 className="mb-4 pb-4 font-[LuckiestGuy] font-extrabold text-balance text-primary text-xl md:text-2xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
             {staffMember.name}
           </h1>
           <p
@@ -135,7 +135,7 @@ export default function StaffPage(): JSX.Element {
           />
         </div>
       </section>
-      <section className="flex flex-wrap justify-center items-center gap-10 mt-10">
+      <section className="flex flex-wrap gap-10 items-center justify-center mt-10">
         {staffMember?.moreInfo?.images?.map((image: string, index: number) => (
           <div key={index} className="mt-8">
             <Image
