@@ -354,21 +354,23 @@ export default function ContactUs() {
               Message Sent Successfully!
             </DialogTitle>
             <DialogDescription className="space-y-2">
-              <div>Thank you for reaching out to us, {formData.firstName}!</div>
-              <div>
+              <span className="block">
+                Thank you for reaching out to us, {formData.firstName}!
+              </span>
+              <span className="block">
                 We have received your message and will respond to you at{" "}
                 <strong>{formData.email}</strong> within 1-2 business days.
-              </div>
+              </span>
               {formData.phoneNumber && (
-                <div>
+                <span className="block">
                   If we need to reach you sooner, we'll call you at{" "}
                   <strong>{formData.phoneNumber}</strong>.
-                </div>
+                </span>
               )}
-              <div className="text-muted-foreground text-sm">
+              <span className="block text-muted-foreground text-sm">
                 We appreciate your interest in International Activities Club and
                 look forward to connecting with you soon!
-              </div>
+              </span>
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-end">
