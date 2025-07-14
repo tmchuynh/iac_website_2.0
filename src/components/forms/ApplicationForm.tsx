@@ -144,6 +144,9 @@ export default function ApplicationForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [showDialog, setShowDialog] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submittedFirstName, setSubmittedFirstName] = useState("");
+  const [submittedEmail, setSubmittedEmail] = useState("");
+  const [submittedPositions, setSubmittedPositions] = useState<string[]>([]);
   const [formData, setFormData] = useState<ApplicationFormData>({
     firstName: "",
     lastName: "",
@@ -318,6 +321,9 @@ export default function ApplicationForm() {
 
       if (response.ok) {
         console.log("Application form submitted:", formData);
+        setSubmittedFirstName(formData.firstName); // Store first name before clearing
+        setSubmittedEmail(formData.email); // Store email before clearing
+        setSubmittedPositions([...formData.positionsInterest]); // Store positions before clearing
         setShowDialog(true);
 
         // Reset form
@@ -1098,18 +1104,18 @@ export default function ApplicationForm() {
             </DialogTitle>
             <DialogDescription>
               Thank you for your interest in joining our team,{" "}
-              {formData.firstName}!
+              {submittedFirstName}!
             </DialogDescription>
             <div className="space-y-2">
               <div>
                 We have received your application for the{" "}
-                <strong>{formData.positionsInterest.join(", ")}</strong>{" "}
-                position{formData.positionsInterest.length > 1 ? "s" : ""} and
-                will review it carefully.
+                <strong>{submittedPositions.join(", ")}</strong> position
+                {submittedPositions.length > 1 ? "s" : ""} and will review it
+                carefully.
               </div>
               <div>
                 Our hiring team will contact you at{" "}
-                <strong>{formData.email}</strong> within 1-2 weeks if your
+                <strong>{submittedEmail}</strong> within 1-2 weeks if your
                 qualifications match our current openings.
               </div>
               <div className="bg-blue-50 mt-4 p-3 border border-blue-200 rounded-md">

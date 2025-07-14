@@ -60,6 +60,8 @@ const gradeLevels = [
 export default function RequestFormSchool() {
   const [showDialog, setShowDialog] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submittedSchoolName, setSubmittedSchoolName] = useState("");
+  const [submittedEmail, setSubmittedEmail] = useState("");
   const [formData, setFormData] = useState<SchoolFormData>({
     firstName: "",
     lastName: "",
@@ -125,7 +127,23 @@ export default function RequestFormSchool() {
 
       if (response.ok) {
         console.log("School request form submitted:", formData);
+        setSubmittedSchoolName(formData.schoolName); // Store school name before clearing
+        setSubmittedEmail(formData.email); // Store email before clearing
         setShowDialog(true);
+
+        // Reset form data
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          schoolName: "",
+          principalName: "",
+          schoolEmail: "",
+          gradeLevels: [],
+          interestedPrograms: [],
+          additionalInfo: "",
+        });
       } else {
         throw new Error("Failed to submit request");
       }
@@ -381,11 +399,11 @@ export default function RequestFormSchool() {
             <DialogDescription className="space-y-2">
               <span className="block">
                 Thank you for your interest in bringing our programs to{" "}
-                {formData.schoolName}!
+                {submittedSchoolName}!
               </span>
               <span className="block">
                 We have received your request and will contact you at{" "}
-                <strong>{formData.email}</strong> within 2-3 business days to
+                <strong>{submittedEmail}</strong> within 2-3 business days to
                 discuss program options, scheduling, and next steps.
               </span>
               <span className="block">

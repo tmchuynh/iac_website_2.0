@@ -24,6 +24,7 @@ export function RequestFormParentStudent() {
   const router = useRouter();
   const [showDialog, setShowDialog] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submittedSchoolName, setSubmittedSchoolName] = useState("");
   const [formData, setFormData] = useState<FormData>({
     name: "",
     grades: "",
@@ -65,6 +66,7 @@ export function RequestFormParentStudent() {
 
       if (response.ok) {
         console.log("Parent/Student request form submitted:", formData);
+        setSubmittedSchoolName(formData.school); // Store school name before clearing
         setShowDialog(true);
 
         // Reset form
@@ -104,7 +106,7 @@ export function RequestFormParentStudent() {
             <DialogDescription className="space-y-2">
               <p>
                 Thank you for your interest in bringing our programs to{" "}
-                <strong>{formData.school}</strong>!
+                <strong>{submittedSchoolName}</strong>!
               </p>
               <p>
                 We have received your request and will reach out to both you and

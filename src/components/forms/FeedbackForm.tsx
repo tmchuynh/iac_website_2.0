@@ -122,6 +122,9 @@ export default function FeedbackForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [showDialog, setShowDialog] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submittedContactBack, setSubmittedContactBack] = useState(false);
+  const [submittedAnonymous, setSubmittedAnonymous] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState("");
   const [formData, setFormData] = useState<FeedbackFormData>({
     name: "",
     email: "",
@@ -251,6 +254,12 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
       });
 
       if (res.ok) {
+        // Store values before clearing
+        setSubmittedContactBack(formData.contactBack);
+        setSubmittedAnonymous(formData.anonymous);
+        setSubmittedEmail(formData.email);
+        setShowDialog(true);
+
         setCurrentStep(1);
         // Reset form
         setFormData({
@@ -269,7 +278,6 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
           anonymous: false,
           contactBack: false,
         });
-        setShowDialog(true);
       } else {
         throw new Error("Failed to submit feedback");
       }
@@ -690,14 +698,14 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                 with us!
               </p>
 
-              {formData.contactBack && !formData.anonymous ? (
+              {submittedContactBack && !submittedAnonymous ? (
                 <div className="space-y-2 bg-blue-50 dark:bg-blue-900/20 p-4 border border-blue-200 dark:border-blue-800 rounded-lg">
                   <p className="font-medium text-blue-900 dark:text-blue-100">
                     📧 We'll be in touch soon!
                   </p>
                   <p className="text-blue-800 text-sm dark:text-blue-200">
                     Since you requested follow-up, someone from our team will
-                    contact you at <strong>{formData.email}</strong> within 3-5
+                    contact you at <strong>{submittedEmail}</strong> within 3-5
                     business days to discuss your feedback further.
                   </p>
                 </div>

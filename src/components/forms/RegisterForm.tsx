@@ -82,6 +82,7 @@ export default function RegisterForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [showDialog, setShowDialog] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submittedEmailAddress, setSubmittedEmailAddress] = useState("");
   const [formData, setFormData] = useState<FormData>({
     studentName: "",
     preferredName: "",
@@ -166,7 +167,27 @@ export default function RegisterForm() {
 
       if (response.ok) {
         console.log("Registration form submitted:", formData);
+        setSubmittedEmailAddress(formData.emailAddress); // Store email before clearing
         setShowDialog(true);
+
+        // Reset form data
+        setFormData({
+          studentName: "",
+          preferredName: "",
+          grade: "",
+          teacherName: "",
+          afterClassCare: "",
+          elementarySchool: "",
+          classTypes: [],
+          parentName: "",
+          phoneNumber: "",
+          emailAddress: "",
+          alternateContactName: "",
+          alternateContactPhone: "",
+          paymentType: "",
+          iacAuthorization: false,
+        });
+        setCurrentStep(1);
       } else {
         throw new Error("Failed to submit registration");
       }
@@ -593,7 +614,7 @@ export default function RegisterForm() {
               </span>
               <span className="block">
                 An email will be sent to{" "}
-                <strong>{formData.emailAddress}</strong> with an invoice that
+                <strong>{submittedEmailAddress}</strong> with an invoice that
                 should be paid in a reasonable and timely manner.
               </span>
               <span className="block">
