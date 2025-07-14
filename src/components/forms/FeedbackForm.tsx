@@ -19,7 +19,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle, ChevronLeft, ChevronRight, Send, Star } from "lucide-react";
+import {
+  CheckCircle,
+  ChevronLeft,
+  ChevronRight,
+  Send,
+  Star,
+} from "lucide-react";
 import { useState } from "react";
 
 interface FeedbackFormData {
@@ -219,30 +225,33 @@ export default function FeedbackForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Only allow submission on step 3
+    if (currentStep !== 3) {
+      return;
+    }
+
     if (!isFormValid()) return;
 
     setIsSubmitting(true);
 
     try {
-      // If using the existing API endpoint
+      // Send structured data to the feedback API endpoint
       const apiData = {
         name: formData.anonymous ? "Anonymous" : formData.name,
         email: formData.anonymous ? "anonymous@feedback.com" : formData.email,
-        message: `
-Participation Type: ${formData.participationType}
-Program: ${formData.program}
-School: ${formData.school}
-Overall Rating: ${formData.overallRating}/5 stars
-Feedback Type: ${formData.feedbackType.join(", ")}
-Specific Areas: ${formData.specificAreas.join(", ")}
-
-Program Suggestions: ${formData.programSuggestions}
-Staff Recognition: ${formData.staffRecognition}
-Improvements: ${formData.improvements}
-Additional Comments: ${formData.additionalComments}
-
-Contact Back: ${formData.contactBack ? "Yes" : "No"}
-        `.trim(),
+        participationType: formData.participationType,
+        program: formData.program,
+        school: formData.school,
+        overallRating: formData.overallRating,
+        feedbackType: formData.feedbackType,
+        specificAreas: formData.specificAreas,
+        programSuggestions: formData.programSuggestions,
+        staffRecognition: formData.staffRecognition,
+        improvements: formData.improvements,
+        additionalComments: formData.additionalComments,
+        anonymous: formData.anonymous,
+        contactBack: formData.contactBack,
       };
 
       const res = await fetch("/api/contact_us/provide_feedback", {
@@ -307,7 +316,16 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
           <Progress value={(currentStep / 3) * 100} className="w-full" />
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form
+          onSubmit={handleSubmit}
+          onKeyDown={(e) => {
+            // Prevent Enter key from submitting form unless on step 3
+            if (e.key === "Enter" && currentStep !== 3) {
+              e.preventDefault();
+            }
+          }}
+          className="space-y-8"
+        >
           {/* Step 1: Your Information & Overall Experience */}
           {currentStep === 1 && (
             <div className="space-y-8">
@@ -637,7 +655,11 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                 <Button
                   type="button"
                   variant="outline"
-                  onClick={prevStep}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    prevStep();
+                  }}
                   className="flex gap-2 items-center"
                 >
                   <ChevronLeft className="h-4 w-4" />
@@ -650,7 +672,11 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
               {currentStep < 3 ? (
                 <Button
                   type="button"
-                  onClick={nextStep}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    nextStep();
+                  }}
                   disabled={
                     (currentStep === 1 && !isStep1Valid()) ||
                     (currentStep === 2 && !isStep2Valid())
@@ -692,17 +718,17 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
               <CheckCircle className="h-5 w-5 text-green-500" />
               Feedback Submitted Successfully!
             </DialogTitle>
-            <DialogDescription className="space-y-3">
-              <p>
+            <div className="space-y-3">
+              <DialogDescription className="block">
                 Thank you for taking the time to share your valuable feedback
                 with us!
-              </p>
+              </DialogDescription>
 
               {submittedContactBack && !submittedAnonymous ? (
                 <div className="space-y-2 bg-blue-50 dark:bg-blue-900/20 p-4 border border-blue-200 dark:border-blue-800 rounded-lg">
-                  <p className="font-medium text-blue-900 dark:text-blue-100">
+                  <span className="block font-medium text-blue-900 dark:text-blue-100">
                     📧 We'll be in touch soon!
-                  </p>
+                  </span>
                   <p className="text-blue-800 text-sm dark:text-blue-200">
                     Since you requested follow-up, someone from our team will
                     contact you at <strong>{submittedEmail}</strong> within 3-5
@@ -711,11 +737,11 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                 </div>
               ) : (
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 border border-green-200 dark:border-green-800 rounded-lg">
-                  <p className="text-green-800 text-sm dark:text-green-200">
+                  <span className="block text-green-800 text-sm dark:text-green-200">
                     Your feedback is incredibly valuable to us and will be
                     carefully reviewed by our team to help improve our programs
                     and services.
-                  </p>
+                  </span>
                 </div>
               )}
 
@@ -723,7 +749,7 @@ Contact Back: ${formData.contactBack ? "Yes" : "No"}
                 We truly appreciate your partnership in helping us create
                 meaningful educational experiences for our community!
               </p>
-            </DialogDescription>
+            </div>
           </DialogHeader>
           <div className="flex justify-end">
             <Button onClick={() => setShowDialog(false)}>Close</Button>
