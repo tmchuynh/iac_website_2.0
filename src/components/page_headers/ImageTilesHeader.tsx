@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { JSX } from "react";
 import DynamicButton from "../buttons/button-dynamic";
+import ResponsiveLogo from "../images/ResponsiveLogo";
 
 /**
  * A header component that displays a section with text content and image tiles in a mosaic layout.
@@ -24,6 +25,7 @@ export default function ImageTilesHeader(): JSX.Element {
 
   return (
     <div className="py-32 overflow-hidden">
+      <ResponsiveLogo className="" />
       <div className="lg:flex mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="lg:flex-none gap-x-12 gap-y-16 lg:gap-y-8 grid grid-cols-1 mx-auto lg:mx-0 max-w-2xl lg:max-w-none lg:min-w-full">
           <div className="lg:col-end-1 lg:pb-8 lg:max-w-lg lg:w-full">
