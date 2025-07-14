@@ -196,12 +196,17 @@ export default function RegisterForm() {
       } else {
         const errorData = await response.json();
         console.error("Registration submission failed:", errorData);
+        console.error("Error details:", errorData.details);
+        console.error("Response status:", response.status);
+        console.error("Response statusText:", response.statusText);
         throw new Error(errorData.error || "Failed to submit registration");
       }
     } catch (error) {
       console.error("Error submitting registration:", error);
+      const errorMessage =
+        error instanceof Error ? error.message : "An unknown error occurred";
       alert(
-        "An error occurred while submitting your registration. Please try again."
+        `Registration submission failed: ${errorMessage}\n\nPlease check the console for more details and try again.`
       );
     }
 
