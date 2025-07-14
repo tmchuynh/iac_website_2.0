@@ -213,7 +213,7 @@ export const features = [
     name: "Skill-Rich, Purpose-Driven Learning",
     description:
       "Our programs are designed to equip students with practical, transferable skills. From teamwork and strategy in sports to storytelling and creative expression in the arts, every session strengthens confidence, communication, and critical thinking.",
-    href: "/about_us/our_commitment",
+    href: "/about_us/our_mission",
     button: "Learn About the Curriculum",
     icon: FaBookBookmark,
   },
