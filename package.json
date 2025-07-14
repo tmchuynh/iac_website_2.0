@@ -12,7 +12,20 @@
     "test:coverage": "jest --coverage",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:api": "node scripts/test-api.js"
+    "test:api": "node scripts/test-api.js",
+    "test:bulk": "node scripts/bulk-form-test.js",
+    "test:bulk:enhanced": "node scripts/enhanced-bulk-test.js",
+    "test:bulk:registration": "node scripts/enhanced-bulk-test.js --type registration",
+    "test:bulk:contact": "node scripts/enhanced-bulk-test.js --type contact",
+    "test:bulk:school": "node scripts/enhanced-bulk-test.js --type requestSchool",
+    "test:bulk:parent": "node scripts/enhanced-bulk-test.js --type requestParentStudent",
+    "test:bulk:application": "node scripts/enhanced-bulk-test.js --type application",
+    "test:bulk:feedback": "node scripts/enhanced-bulk-test.js --type feedback",
+    "test:bulk-random": "node scripts/bulk-form-test.js --random",
+    "test:stress": "node scripts/bulk-form-test.js --random --count=50",
+    "test:load": "node scripts/load-test.js",
+    "test:load-quick": "node scripts/load-test.js quick",
+    "test:load-concurrent": "node scripts/load-test.js concurrent"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.1",
