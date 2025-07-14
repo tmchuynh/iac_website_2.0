@@ -152,6 +152,10 @@ export default function RegisterForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Only allow submission on the final step
+    if (currentStep !== totalSteps) return;
+
     if (!isStepValid()) return;
 
     setIsSubmitting(true);
@@ -228,7 +232,16 @@ export default function RegisterForm() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form
+        onSubmit={handleSubmit}
+        onKeyDown={(e) => {
+          // Prevent Enter key from submitting form unless on final step
+          if (e.key === "Enter" && currentStep !== totalSteps) {
+            e.preventDefault();
+          }
+        }}
+        className="space-y-6"
+      >
         {/* Step 1: Student Information */}
         {currentStep === 1 && (
           <div className="space-y-6">

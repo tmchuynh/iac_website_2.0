@@ -255,6 +255,10 @@ export default function ApplicationForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Only allow submission on step 3
+    if (currentStep !== 3) return;
+
     if (!isFormValid()) return;
 
     setIsSubmitting(true);
@@ -451,7 +455,16 @@ export default function ApplicationForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="pb-24 sm:pb-32 py-24">
+      <form
+        onSubmit={handleSubmit}
+        onKeyDown={(e) => {
+          // Prevent Enter key from submitting form unless on step 3
+          if (e.key === "Enter" && currentStep !== 3) {
+            e.preventDefault();
+          }
+        }}
+        className="pb-24 sm:pb-32 py-24"
+      >
         <div className="space-y-6 lg:mr-0 mx-auto">
           {/* Progress Bar */}
           <div className="space-y-2">
