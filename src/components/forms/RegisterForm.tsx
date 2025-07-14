@@ -161,6 +161,7 @@ export default function RegisterForm() {
     setIsSubmitting(true);
 
     try {
+      console.log("Submitting registration with data:", formData);
       const response = await fetch("/api/contact_us/register", {
         method: "POST",
         headers: {
@@ -193,7 +194,9 @@ export default function RegisterForm() {
         });
         setCurrentStep(1);
       } else {
-        throw new Error("Failed to submit registration");
+        const errorData = await response.json();
+        console.error("Registration submission failed:", errorData);
+        throw new Error(errorData.error || "Failed to submit registration");
       }
     } catch (error) {
       console.error("Error submitting registration:", error);
