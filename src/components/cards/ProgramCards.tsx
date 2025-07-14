@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import DynamicButton from "../buttons/button-dynamic";
-import { Card, CardContent, CardHeader } from "../ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 
 export const ProgramCards = ({
   program,
@@ -22,7 +22,7 @@ export const ProgramCards = ({
     <Link href={`/programs?title=${program.title}`} className="group">
       <Card
         key={program.title}
-        className="flex flex-col gap-3 justify-between bg-card shadow-md p-0 border border-border rounded-3xl h-full"
+        className="flex flex-col gap-3 justify-start bg-card shadow-md pt-0 border border-border rounded-3xl h-full"
       >
         <CardHeader className="p-0">
           <Image
@@ -33,7 +33,7 @@ export const ProgramCards = ({
             className="rounded-t-3xl h-48 min-w-full object-cover object-center"
           />
         </CardHeader>
-        <CardContent className="p-0">
+        <CardContent className="p-0 h-full">
           <div className="flex flex-col justify-between pb-6 xl:pb-5 pt-7 xl:pt-2 px-6 xl:px-5 h-full">
             <div className="flex flex-col gap-x-4 items-center justify-between">
               <h2
@@ -51,14 +51,16 @@ export const ProgramCards = ({
               </h2>
               <p>{program.description}</p>
             </div>
-            <DynamicButton
-              onClick={() => handleClick(program.title)}
-              className="mt-2 w-full text-wrap"
-            >
-              More Information
-            </DynamicButton>
           </div>
         </CardContent>
+        <CardFooter>
+          <DynamicButton
+            onClick={() => handleClick(program.title)}
+            className="mt-2 w-full text-wrap"
+          >
+            More Information
+          </DynamicButton>
+        </CardFooter>
       </Card>
     </Link>
   );
