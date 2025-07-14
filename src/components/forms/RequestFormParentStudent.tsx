@@ -104,23 +104,23 @@ export function RequestFormParentStudent() {
               Request Sent Successfully!
             </DialogTitle>
             <DialogDescription className="space-y-2">
-              <div>
+              <span className="block">
                 Thank you for your interest in bringing our programs to{" "}
                 <strong>{submittedSchoolName}</strong>!
-              </div>
-              <div>
+              </span>
+              <span className="block">
                 We have received your request and will reach out to both you and
                 the school administration to discuss program options and next
                 steps.
-              </div>
-              <div>
+              </span>
+              <span className="block">
                 If you have any immediate questions, please feel free to call
                 our office at <strong>(714) 509-0069</strong> during business
                 hours.
-              </div>
-              <div className="text-muted-foreground text-sm">
+              </span>
+              <span className="block text-muted-foreground text-sm">
                 We appreciate your advocacy for quality educational programming!
-              </div>
+              </span>
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-end">
