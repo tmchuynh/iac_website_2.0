@@ -2,6 +2,7 @@
 import DynamicButton from "@/components/buttons/button-dynamic";
 import CenteredSimple from "@/components/CTA/CenteredSimple";
 import RequestFormSchool from "@/components/forms/RequestFormSchool";
+import ResponsiveLogo from "@/components/images/ResponsiveLogo";
 import PageHeaderTestimonial from "@/components/page_headers/PageHeaderTestimonial";
 import StudentsWorkSection from "@/components/programs/StudentsWorkSection";
 import { useRouter } from "next/navigation";
@@ -25,6 +26,7 @@ export default function StudentShowcasePage(): JSX.Element {
 
   return (
     <main className="mx-auto px-4 py-10 lg:py-20 w-11/12">
+      <ResponsiveLogo className="lg:mx-0" />
       <section className="mb-12">
         <p className="mt-5 font-[NothingYouCouldDo] font-semibold text-tertiary">
           A Celebration of Imagination, Innovation, and Expression
