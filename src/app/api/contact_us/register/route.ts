@@ -19,6 +19,7 @@ export async function POST(request: Request) {
       alternateContactName,
       alternateContactPhone,
       paymentType,
+      iacAuthorization,
     } = await request.json();
 
     // Basic validation: ensure required fields are present.
@@ -33,7 +34,8 @@ export async function POST(request: Request) {
       !parentName ||
       !phoneNumber ||
       !emailAddress ||
-      !paymentType
+      !paymentType ||
+      !iacAuthorization
     ) {
       return NextResponse.json(
         { error: "Missing required fields" },
