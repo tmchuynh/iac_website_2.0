@@ -356,10 +356,8 @@ export default function ContactUs() {
             <DialogDescription className="space-y-2">
               <p>Thank you for reaching out to us, {formData.firstName}!</p>
               <p>
-                We have received your message about{" "}
-                <strong>"{formData.inquiryType}"</strong> and will respond to
-                you at <strong>{formData.email}</strong> within 1-2 business
-                days.
+                We have received your message and will respond to you at{" "}
+                <strong>{formData.email}</strong> within 1-2 business days.
               </p>
               {formData.phoneNumber && (
                 <p>
